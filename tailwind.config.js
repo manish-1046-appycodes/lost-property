@@ -22,7 +22,9 @@ module.exports = {
         'blue-1': '#02177F'
       },
       fontSize: {
-        '21px': ['1.3rem', '1.3']
+        '18px': '1.125rem',
+        '21px': '1.3rem',
+        '32px': '2rem'
       },
       lineHeight: {
         '1.3': '1.3'

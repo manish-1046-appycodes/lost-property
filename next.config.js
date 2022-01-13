@@ -1,7 +1,8 @@
 module.exports = {
   reactStrictMode: true,
+  
   experimental: {
-    scrollRestoration: true,
+    scrollRestoration: false
   },
   
   

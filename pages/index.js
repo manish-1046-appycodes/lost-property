@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+
 import Layout from '../components/Layout/Layout'
 import MoreArrow from '../components/Links/MoreArrow'
 
@@ -19,32 +20,40 @@ export default function Home({test}) {
       
       <div className='min-h-screen w-full relative flex'>
         
-        <Image
-        src="/image/del/home-hero.jpg"
-        layout="fill"
-        objectFit="cover"
-        alt=""/>
+        <div className="absolute min-h-screen w-full js-parallax overflow-hidden">
+          <Image
+          src="/image/del/home-hero.jpg"
+          layout="fill"
+          objectFit="cover"
+          priority
+          alt=""/>
+        </div>
 
         <h1 className="font-display text-[100px] leading-[120px] text-white m-auto relative text-center">Find yourself in our <br/><em>neighbourhood?</em></h1>
       </div>
         
-      <div className="container mx-auto">
+      <div className="container">
 
-        <div className="flex">
-          <div className="w-6/12 max-w-[598px] mx-auto px-14 py-9 bg-blue-1 text-white text-center min-h-[700px] flex flex-col">
-            <h2 className="uppercase">Escapism</h2>
-            <div className="m-auto max-w-[416px]">
-              <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?
-Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?? {test}</p>
-            </div>
-            <div className="ml-auto">
-              <MoreArrow title="Our Story"/>
+        <div className="min-h-screen pb-36 relative overflow-hidden">
+          
+          <div className="flex relative z-10">
+            <div className="w-6/12 max-w-[598px] mx-auto px-14 py-9 bg-blue-1 text-white text-center min-h-[700px] flex flex-col">
+              <h2 className="text-16px lg:text-32px uppercase">Escapism</h2>
+              <div className="m-auto max-w-[416px]">
+                <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?? {test}</p>
+              </div>
+              <div className="ml-auto">
+                <MoreArrow title="Our Story"/>
+              </div>
             </div>
           </div>
+
+          <p className="font-display text-[200px] text-[18vh] leading-none absolute bottom-0 mb-[-6vh]">Lose <br/><em>yourself</em> <br/>in the <br/><em>moment</em></p>
         </div>
 
-        <p className="font-display text-[200px] leading-[200px]">Lose <br/><em>yourself</em> <br/>in the <br/><em>moment</em></p>
       </div>
+
+      
 
     </Layout>
   )
