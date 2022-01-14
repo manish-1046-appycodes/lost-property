@@ -18,7 +18,7 @@ export default function Home({test}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <div className='min-h-screen w-full relative flex'>
+      <div className='hero min-h-screen w-full relative flex'>
         
         <div className="absolute min-h-screen w-full js-parallax overflow-hidden">
           <Image
@@ -28,8 +28,9 @@ export default function Home({test}) {
           priority
           alt=""/>
         </div>
-
-        <h1 className="font-display text-[100px] leading-[120px] text-white m-auto relative text-center">Find yourself in our <br/><em>neighbourhood?</em></h1>
+        <div className="container text-white m-auto relative text-center">
+          <h1 className="font-display text-[100px] leading-[120px]">Find yourself in our <br/><em>neighbourhood?</em></h1>
+        </div>
       </div>
         
       <div className="container">
