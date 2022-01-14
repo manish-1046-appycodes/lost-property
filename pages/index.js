@@ -113,7 +113,7 @@ export default function Page({test}) {
               
               <div className="w-10/12 md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 bg-blue-1 text-white text-center min-h-[308px] lg:min-h-[700px] flex flex-col mx-auto">
                 <div className="heading-sub uppercase text-center py-2">
-                  <img className="inline-block" src="/image/del/found-bar-restaurant.svg" alt="Found Bar & Restaurant"/>
+                  <img className="inline-block" src="/image/del/found-bar-restaurant.svg" alt="Found Bar & Restaurant" loading="lazy"/>
                 </div>
                 <div className="m-auto py-5 max-w-[416px]">
                   <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus.</p>
@@ -148,10 +148,10 @@ export default function Page({test}) {
 
       </section>
 
-      <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.js"/>
-      <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.js"/>
-      <Script id="DRAGGABLE" strategy="beforeInteractive" src="/js/Draggable.js"/>
-      <Script id="INERTIA" strategy="beforeInteractive" src="/js/InertiaPlugin.js"/>
+      <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
+      <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
+      <Script id="DRAGGABLE" strategy="beforeInteractive" src="/js/Draggable.min.js"/>
+      <Script id="INERTIA" strategy="beforeInteractive" src="/js/InertiaPlugin.min.js"/>
       <Script id="GSAPSETTINGS" strategy="afterInteractive" src="/js/gsap-settings.js"
       onLoad=
       {
