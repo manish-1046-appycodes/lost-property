@@ -26,9 +26,22 @@ const gsapSettings = {
         
     },
 
+    carousels: () => {
+        Draggable.create('.carousel', {
+            type:"x",
+            bounds: document.querySelector(".carousel-wrap"),
+            //throwProps:true,
+            inertia: true
+            
+        });
+    },
+
     init: () => {
         gsapSettings.parallaxLoad();
+        gsapSettings.carousels();
     }
 
 
 }
+
+

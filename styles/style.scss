@@ -1,0 +1,60 @@
+@import url('../public/font/stylesheet.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .container {
+        @apply max-w-none;
+    }
+    
+    .heading-brand-small {
+        @apply font-display text-[100px] leading-[120px] leading-none;
+    }
+
+    .heading-brand-medium {
+        @apply font-display text-50px lg:text-140px leading-115;
+    }
+
+    .heading-brand-large {
+        @apply font-display text-[80px] lg:text-[200px] lg:text-[18vh] leading-none;
+    }
+
+    .heading-sub {
+        @apply text-18px lg:text-32px;
+    }
+
+
+    /* BUTTONS */
+    .button-secondary {
+        cursor: pointer;
+        
+        svg {
+            path {
+                @apply transition-all ease-in-out duration-500;
+            }
+        }
+
+        &:hover {
+            position: relative;
+            
+            svg {
+                .arrow-right-stretch_svg__s1 {
+                    d: path('M0 5.6h45v1H0z');
+                }
+                .arrow-right-stretch_svg__s2 {
+                    d: path('m40.7 12.1-.7-.7 5.3-5.3L40 .7l.7-.7 6 6.1z');
+                }
+
+                
+            }
+        }
+    }
+}
+
+
+.overflow-scrolling-touch {
+    -webkit-overflow-scrolling: touch;
+}

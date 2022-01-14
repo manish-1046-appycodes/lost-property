@@ -1,8 +1,11 @@
-import '../styles/globals.css'
+import '../styles/style.scss'
 
 function MyApp({ Component, pageProps }) {
+
+  const getLayout = Component.getLayout || ((page) => page)
+
   return (
-    <Component {...pageProps} />
+    getLayout(<Component {...pageProps} />)
   )
 }
 
