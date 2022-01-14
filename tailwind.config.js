@@ -21,7 +21,8 @@ module.exports = {
 
       colors: {
         'blue-1':   '#02177F',
-        'cream-1':  '#FAF7F3' 
+        'cream-1':  '#FAF7F3',
+        'beige-1':  '#DCD5CF'
       },
       fontSize: {
         '12px':   '0.75rem',

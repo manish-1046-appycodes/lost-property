@@ -43,7 +43,7 @@ export default function Page({test}) {
 
       <section className="container">
 
-        <div className="lg:min-h-screen pb-[255px] mb:pb-36 relative">
+        <div className="lg:min-h-screen pb-[255px] md:pb-36 relative">
           
           <div className="flex relative z-10">
             <div className="w-10/12 md:w-6/12 max-w-[598px] mx-auto p-4 lg:px-14 lg:py-9 bg-blue-1 text-white text-center min-h-[308px] lg:min-h-[700px] flex flex-col">
@@ -69,7 +69,7 @@ export default function Page({test}) {
       <section className="relative my-28">
 
         <div className="container">
-          <div className="lg:min-h-screen pb-[255px] mb:pb-36 relative">
+          <div className="lg:min-h-screen pb-[255px] md:pb-36 relative">
             
             <div className="flex relative z-10">
               
@@ -107,14 +107,14 @@ export default function Page({test}) {
       <section className="relative">
 
         <div className="container">
-          <div className="lg:min-h-screen pb-[255px] mb:pb-36 relative">
+          <div className="lg:min-h-screen pb-[255px] md:pb-36 relative">
             
             <div className="flex relative z-10">
               
               <div className="w-10/12 md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 bg-blue-1 text-white text-center min-h-[308px] lg:min-h-[700px] flex flex-col mx-auto">
-                <div className="heading-sub uppercase text-center py-2">
+                <h2 className="heading-sub uppercase text-center py-2">
                   <img className="inline-block" src="/image/del/found-bar-restaurant.svg" alt="Found Bar & Restaurant" loading="lazy"/>
-                </div>
+                </h2>
                 <div className="m-auto py-5 max-w-[416px]">
                   <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus.</p>
                 </div>
@@ -130,14 +130,65 @@ export default function Page({test}) {
 
         <div className="absolute w-1/2 left-0 top-1/2 ">
           <div className="container">
-            <h2 className="heading-brand-medium">Taste <br/>& tipple</h2>
+            <p className="heading-brand-medium">Taste <br/>& tipple</p>
           </div>
         </div>
 
-        <div className="absolute h-full w-1/2 top-0 left-0 md:left-1/2">
+        <div className="absolute h-full md:w-1/2 top-0 left-0 md:left-1/2">
           <div className="relative h-full w-full js-parallax overflow-hidden">
             <Image
             src="/image/del/found-bar-restaurant.jpg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            priority
+            alt=""/>
+          </div>
+        </div>
+
+      </section>
+
+      <section className="relative">
+
+        <div className="container">
+          <div className="lg:min-h-screen pt-[255px] md:pt-36 relative flex flex-col justify-end">
+            
+            <div className="flex relative z-10">
+              
+              <div className="w-10/12 md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 bg-beige-1 text-black text-center min-h-[308px] lg:min-h-[700px] flex flex-col mx-auto">
+                <h2 className="heading-sub uppercase text-center py-2">
+                  <img className="inline-block" src="/image/del/tattle-coffee-house.svg" alt="Found Bar & Restaurant" loading="lazy"/>
+                </h2>
+                
+                <div className="grow flex items-center justify-center py-10">
+                  <div className="relative w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]">
+                  <Image
+                  src="/image/del/tattle-coffee-house-inner.jpg"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  priority
+                  alt=""/>
+                  </div>
+                </div>
+                
+
+                <div className="m-auto py-5 max-w-[416px]">
+                  <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia.</p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+        <div className="absolute h-full md:w-1/2 top-0 left-0 md:left-0">
+          <div className="relative h-full w-full js-parallax overflow-hidden">
+            <Image
+            src="/image/del/tattle-coffee-house.jpg"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
