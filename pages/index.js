@@ -130,7 +130,7 @@ export default function Page({test}) {
 
         <div className="absolute w-1/2 left-0 top-1/2 ">
           <div className="container">
-            <h2 class="heading-brand-medium">Taste <br/>& tipple</h2>
+            <h2 className="heading-brand-medium">Taste <br/>& tipple</h2>
           </div>
         </div>
 
