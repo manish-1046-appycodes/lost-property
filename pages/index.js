@@ -32,6 +32,7 @@ export default function Home({test}) {
           <h1 className="font-display text-[100px] leading-[120px]">Find yourself in our <br/><em>neighbourhood?</em></h1>
         </div>
       </div>
+      
         
       <div className="container">
 
