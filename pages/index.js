@@ -104,7 +104,7 @@ export default function Page({test}) {
 
 
 
-      <section className="relative">
+      <section className="relative my-28">
 
         <div className="container">
           <div className="lg:min-h-screen pb-[255px] md:pb-36 relative">
@@ -148,7 +148,7 @@ export default function Page({test}) {
 
       </section>
 
-      <section className="relative">
+      <section className="relative my-28">
 
         <div className="container">
           <div className="lg:min-h-screen pt-[255px] md:pt-36 relative flex flex-col justify-end">
