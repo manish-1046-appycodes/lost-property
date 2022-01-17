@@ -4,11 +4,31 @@ import Script from 'next/script'
 
 import ButtonSecondary from '../components/Links/ButtonSecondary'
 import Layout from '../components/Layout/Layout'
-import Carousel from '../components/Carousel/Carousel'
+
 import BookingSection from '../components/BookingSection/BookingSection'
+import Billboard from '../components/Billboard/Billboard'
+import Carousel from '../components/Carousel/Carousel'
 
 
 export default function Page({test}) {
+
+  const Billboard_1 = {
+    title:  'ESCAPISM',
+    copy:   '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at??</p>',
+    cta:    {
+      cta_title:  'Our Story',
+      cta_url:    '#'
+    },
+    content_bg: 'bg-blue-1',
+    content_color: 'text-white',
+    content_alignment: 'center',
+    bg_type: 'caption_full', // caption_full / img_full
+    bg_caption: 'Lose <br/><em>yourself</em> <br/>in the <br/><em>moment</em>',
+    img: {
+      url: '/image/del/our-rooms.jpg'
+    },
+    margin_bottom: false
+  }
 
   return (
     <>
@@ -16,9 +36,7 @@ export default function Page({test}) {
       <Head>
         <title>Lost Property</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/favicon.ico" />
-
-        
+        <link rel="icon" href="/favicon.ico" />       
       </Head>
       
       <div className='hero min-h-screen w-full relative flex'>
@@ -40,27 +58,10 @@ export default function Page({test}) {
         </div>
 
       </div>
-
-      <section className="container">
-
-        <div className="lg:min-h-screen pb-[255px] md:pb-36 relative">
-          
-          <div className="flex relative z-10">
-            <div className="w-10/12 md:w-6/12 max-w-[598px] mx-auto p-4 lg:px-14 lg:py-9 bg-blue-1 text-white text-center min-h-[308px] lg:min-h-[700px] flex flex-col">
-              <h2 className="heading-sub uppercase">Escapism</h2>
-              <div className="m-auto py-5 max-w-[416px]">
-                <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?? {test}</p>
-              </div>
-              <div className="ml-auto text-white">
-                <ButtonSecondary title="Our Story"/>
-              </div>
-            </div>
-          </div>
-
-          <p className="heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-6vh]">Lose <br/><em>yourself</em> <br/>in the <br/><em>moment</em></p>
-        </div>
-
-      </section>
+      
+      <Billboard 
+      settings={Billboard_1}
+      />
       
       <Carousel/>
 
@@ -112,7 +113,7 @@ export default function Page({test}) {
             <div className="flex relative z-10">
               
               <div className="w-10/12 md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 bg-blue-1 text-white text-center min-h-[308px] lg:min-h-[700px] flex flex-col mx-auto">
-                <h2 className="heading-sub uppercase text-center py-2">
+                <h2 className="heading-sub uppercase text-center py-2 w-6/12 max-w-full mx-auto">
                   <img className="inline-block" src="/image/del/found-bar-restaurant.svg" alt="Found Bar & Restaurant" loading="lazy"/>
                 </h2>
                 <div className="m-auto py-5 max-w-[416px]">

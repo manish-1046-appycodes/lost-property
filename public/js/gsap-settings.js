@@ -5,7 +5,6 @@ const gsapSettings = {
         const parallaxItems = document.querySelectorAll('.js-parallax');
         
         parallaxItems.forEach(function(parallaxItem) {
-            console.log('g');
             const img = parallaxItem.childNodes[0];
 
 
@@ -19,7 +18,7 @@ const gsapSettings = {
 
             })
             .to(img, {
-                yPercent: 25
+                yPercent: 10
             });
             
         });
