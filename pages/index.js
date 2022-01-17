@@ -40,6 +40,8 @@ export default function Page({test}) {
     content_bg: 'bg-white',
     content_color: 'text-black',
     content_alignment: 'right',
+    content_alignment_mob: 'right',
+    content_alignment_vertical_mob: 'bottom',
     bg_type: 'img_full', // caption_full / img_full
     bg_caption: '',
     img: {
@@ -62,6 +64,9 @@ export default function Page({test}) {
     content_bg: 'bg-blue-1',
     content_color: 'text-white',
     content_alignment: 'center',
+    content_alignment_vertical: 'top',
+    content_alignment_mob: 'left',
+    content_alignment_vertical_mob: 'top',
     bg_type: 'caption_img', // caption_full / img_full / caption_img
     bg_caption: 'Taste <br/>& tipple',
     img: {
@@ -90,6 +95,8 @@ export default function Page({test}) {
     content_color: 'text-black',
     content_alignment: 'center',
     content_alignment_vertical: 'bottom',
+    content_alignment_mob: 'right',
+    content_alignment_vertical_mob: 'top',
     bg_type: 'caption_img', // caption_full / img_full / caption_img
     bg_caption: '',
     img: {
