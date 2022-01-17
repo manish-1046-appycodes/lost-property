@@ -30,12 +30,81 @@ export default function Page({test}) {
     margin_bottom: false
   }
 
+  const Billboard_2 = {
+    title:  'OUR ROOMS',
+    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at? Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?</p>',
+    cta:    {
+      cta_title:  'Find out more',
+      cta_url:    '#'
+    },
+    content_bg: 'bg-white',
+    content_color: 'text-black',
+    content_alignment: 'right',
+    bg_type: 'img_full', // caption_full / img_full
+    bg_caption: '',
+    img: {
+      url: '/image/del/our-rooms.jpg'
+    },
+    margin_bottom: true
+  }
+
+  const Billboard_3 = {
+    title:  'OUR ROOMS',
+    logo: {
+      url: '/image/del/found-bar-restaurant.svg',
+      alt: 'Found Bar & Restaurant'
+    },
+    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus.</p>',
+    cta:    {
+      cta_title:  'Find out more',
+      cta_url:    '#'
+    },
+    content_bg: 'bg-blue-1',
+    content_color: 'text-white',
+    content_alignment: 'center',
+    bg_type: 'caption_img', // caption_full / img_full / caption_img
+    bg_caption: 'Taste <br/>& tipple',
+    img: {
+      url: '/image/del/found-bar-restaurant.jpg',
+      img_pos: 'right'
+    },
+    margin_bottom: true
+  }
+
+  const Billboard_4 = {
+    title:  'OUR ROOMS',
+    logo: {
+      url: '/image/del/tattle-coffee-house.svg',
+      alt: 'Found Bar & Restaurant'
+    },
+    copy_img: {
+      url: '/image/del/tattle-coffee-house-inner.jpg',
+      alt: 'Tattle Coffee House'
+    },
+    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus.</p>',
+    cta:    {
+      cta_title:  '',
+      cta_url:    ''
+    },
+    content_bg: 'bg-beige-1',
+    content_color: 'text-black',
+    content_alignment: 'center',
+    content_alignment_vertical: 'bottom',
+    bg_type: 'caption_img', // caption_full / img_full / caption_img
+    bg_caption: '',
+    img: {
+      url: '/image/del/tattle-coffee-house.jpg',
+      img_pos: 'left'
+    },
+    margin_bottom: true
+  }
+
   return (
     <>
 
       <Head>
         <title>Lost Property</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Lost Property" />
         <link rel="icon" href="/favicon.ico" />       
       </Head>
       
@@ -62,143 +131,24 @@ export default function Page({test}) {
       <Billboard 
       settings={Billboard_1}
       />
+
+      
       
       <Carousel/>
 
       <BookingSection/>
 
-      <section className="relative my-28">
+      <Billboard 
+      settings={Billboard_2}
+      />
 
-        <div className="container">
-          <div className="lg:min-h-screen pb-[255px] md:pb-36 relative">
-            
-            <div className="flex relative z-10">
-              
-              <div className="w-10/12 md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 bg-white text-black text-center min-h-[308px] lg:min-h-[700px] flex flex-col md:mx-auto md:left-1/4 relative">
-                <h2 className="heading-sub uppercase">Escapism</h2>
-                <div className="m-auto py-5 max-w-[416px]">
-                  <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?? {test}</p>
-                </div>
-                <div className="ml-auto text-black">
-                  <ButtonSecondary title="FIND OUT MORE"/>
-                </div>
-              </div>
+      <Billboard 
+      settings={Billboard_3}
+      />
 
-            </div>
-
-          </div>
-        </div>
-
-        <div className="absolute h-full w-full top-0 left-0">
-          <div className="relative h-full w-full js-parallax overflow-hidden">
-            <Image
-            src="/image/del/our-rooms.jpg"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            priority
-            alt=""/>
-          </div>
-        </div>
-
-      </section>
-
-
-
-      <section className="relative my-28">
-
-        <div className="container">
-          <div className="lg:min-h-screen pb-[255px] md:pb-36 relative">
-            
-            <div className="flex relative z-10">
-              
-              <div className="w-10/12 md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 bg-blue-1 text-white text-center min-h-[308px] lg:min-h-[700px] flex flex-col mx-auto">
-                <h2 className="heading-sub uppercase text-center py-2 w-6/12 max-w-full mx-auto">
-                  <img className="inline-block" src="/image/del/found-bar-restaurant.svg" alt="Found Bar & Restaurant" loading="lazy"/>
-                </h2>
-                <div className="m-auto py-5 max-w-[416px]">
-                  <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus.</p>
-                </div>
-                <div className="ml-auto text-white">
-                  <ButtonSecondary title="FIND OUT MORE"/>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-        <div className="absolute w-1/2 left-0 top-1/2 ">
-          <div className="container">
-            <p className="heading-brand-medium">Taste <br/>& tipple</p>
-          </div>
-        </div>
-
-        <div className="absolute h-full md:w-1/2 top-0 left-0 md:left-1/2">
-          <div className="relative h-full w-full js-parallax overflow-hidden">
-            <Image
-            src="/image/del/found-bar-restaurant.jpg"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            priority
-            alt=""/>
-          </div>
-        </div>
-
-      </section>
-
-      <section className="relative my-28">
-
-        <div className="container">
-          <div className="lg:min-h-screen pt-[255px] md:pt-36 relative flex flex-col justify-end">
-            
-            <div className="flex relative z-10">
-              
-              <div className="w-10/12 md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 bg-beige-1 text-black text-center min-h-[308px] lg:min-h-[700px] flex flex-col mx-auto">
-                <h2 className="heading-sub uppercase text-center py-2">
-                  <img className="inline-block" src="/image/del/tattle-coffee-house.svg" alt="Found Bar & Restaurant" loading="lazy"/>
-                </h2>
-                
-                <div className="grow flex items-center justify-center py-10">
-                  <div className="relative w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]">
-                  <Image
-                  src="/image/del/tattle-coffee-house-inner.jpg"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
-                  priority
-                  alt=""/>
-                  </div>
-                </div>
-                
-
-                <div className="m-auto py-5 max-w-[416px]">
-                  <p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia.</p>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-
-        <div className="absolute h-full md:w-1/2 top-0 left-0 md:left-0">
-          <div className="relative h-full w-full js-parallax overflow-hidden">
-            <Image
-            src="/image/del/tattle-coffee-house.jpg"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            priority
-            alt=""/>
-          </div>
-        </div>
-
-      </section>
+      <Billboard 
+      settings={Billboard_4}
+      />     
 
       <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
       <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
