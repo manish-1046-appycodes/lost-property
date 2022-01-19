@@ -8,6 +8,7 @@ import Layout from '../components/Layout/Layout'
 import BookingSection from '../components/BookingSection/BookingSection'
 import Billboard from '../components/Billboard/Billboard'
 import Carousel from '../components/Carousel/Carousel'
+import AccordionRooms from '../components/Accordion/AccordionRooms'
 
 
 export default function Page({test}) {
@@ -154,8 +155,6 @@ export default function Page({test}) {
       settings={Billboard_1}
       />
 
-      
-      
       <Carousel/>
 
       <BookingSection/>
@@ -170,7 +169,9 @@ export default function Page({test}) {
 
       <Billboard 
       settings={Billboard_4}
-      />     
+      />
+
+      <AccordionRooms/>
 
       <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
       <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>

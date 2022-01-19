@@ -52,7 +52,14 @@
             }
         }
     }
+
+    /* Accordions */
+    .grid-5 {
+        grid-template-columns: 1fr 1fr 1fr 2fr min-content;
+    }
 }
+
+
 
 
 .overflow-scrolling-touch {

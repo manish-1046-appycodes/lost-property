@@ -2,7 +2,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js, jsx}",
     "./components/**/*.{js, jsx}",
-    "./public/**/*.svg"
+    "./public/**/*.{svg,js}"
   ],
   theme: {
     container: {
@@ -24,10 +24,12 @@ module.exports = {
         'cream-1':  '#FAF7F3',
         'beige-1':  '#DCD5CF',
         'red-1':    '#9E3123',
-        'green-1':  '#7E9679'
+        'green-1':  '#7E9679',
+        'grey-1':   '#707070'
       },
       fontSize: {
         '12px':   '0.75rem',
+        '16px':   '1rem',
         '18px':   '1.125rem',
         '21px':   '1.3rem',
         '32px':   '2rem',

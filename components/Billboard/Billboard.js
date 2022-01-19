@@ -88,13 +88,11 @@ const Billboard = ( {settings} ) => {
     const ButtonRoundClass = settings?.round_button?.bg_class;
     const ButtonRoundTitle = settings?.round_button?.title;
 
-    if ( ButtonRoundUrl && ButtonRoundClass && ButtonRoundTitle ) {
-        const ButtonRoundWrap = (
-            <div className={`absolute transform${ButtonRoundAlignmentMD}`}>
-                <ButtonRound url={ButtonRoundUrl} bg={ButtonRoundClass} title={ButtonRoundTitle}/>
-            </div>
-        )
-    }
+    const ButtonRoundWrap = ( ButtonRoundUrl && ButtonRoundClass && ButtonRoundTitle ) && (
+        <div className={`absolute transform${ButtonRoundAlignmentMD}`}>
+            <ButtonRound url={ButtonRoundUrl} bg={ButtonRoundClass} title={ButtonRoundTitle}/>
+        </div>
+    )
 
     return (
         <section className={`relative ${settings.margin_bottom ? "my-20 lg:my-28" : "n" }`}>
@@ -135,12 +133,12 @@ const Billboard = ( {settings} ) => {
                                 <ButtonSecondary title={settings.cta.cta_title}/>
                             </div>) }
                             
-                            { ( settings.bg_type == 'caption_img' || settings.bg_type == 'caption_full' ) && 
+                            { ( ButtonRoundWrap && settings.bg_type == 'caption_img' || settings.bg_type == 'caption_full' ) && 
                             ButtonRoundWrap}
 
                         </div>
                         
-                        { ( settings.bg_type !== 'caption_img' && settings.bg_type !== 'caption_full' ) && 
+                        { ( ButtonRoundWrap && settings.bg_type !== 'caption_img' && settings.bg_type !== 'caption_full' ) && 
                             ButtonRoundWrap}
 
                     </div>
