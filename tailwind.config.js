@@ -22,7 +22,9 @@ module.exports = {
       colors: {
         'blue-1':   '#02177F',
         'cream-1':  '#FAF7F3',
-        'beige-1':  '#DCD5CF'
+        'beige-1':  '#DCD5CF',
+        'red-1':    '#9E3123',
+        'green-1':  '#7E9679'
       },
       fontSize: {
         '12px':   '0.75rem',
@@ -33,8 +35,9 @@ module.exports = {
         '140px':  '8.75rem'
       },
       lineHeight: {
-        '115': '1.15',
-        '13': '1.3'
+        '115':  '1.15',
+        '125':  '1.25',
+        '13':   '1.3'
       }
 
     },

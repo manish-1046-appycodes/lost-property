@@ -47,7 +47,12 @@ export default function Page({test}) {
     img: {
       url: '/image/del/our-rooms.jpg'
     },
-    margin_bottom: true
+    margin_bottom: true,
+    round_button: {
+      url: '#',
+      bg_class: 'bg-blue-1',
+      title: 'Book Room'
+    }
   }
 
   const Billboard_3 = {
@@ -73,7 +78,12 @@ export default function Page({test}) {
       url: '/image/del/found-bar-restaurant.jpg',
       img_pos: 'right'
     },
-    margin_bottom: true
+    margin_bottom: true,
+    round_button: {
+      url: '#',
+      bg_class: 'bg-red-1',
+      title: 'Book Table'
+    }
   }
 
   const Billboard_4 = {
@@ -103,7 +113,12 @@ export default function Page({test}) {
       url: '/image/del/tattle-coffee-house.jpg',
       img_pos: 'left'
     },
-    margin_bottom: true
+    margin_bottom: true,
+    round_button: {
+      url: '#',
+      bg_class: 'bg-green-1',
+      title: 'Visit <br>Us'
+    }
   }
 
   return (
