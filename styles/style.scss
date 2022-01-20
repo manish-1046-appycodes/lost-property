@@ -70,6 +70,17 @@
             }
         }
     }
+    .accordion-group {
+        &:hover {
+            .accordion-row {
+                @apply opacity-50;
+
+                &:hover {
+                    @apply opacity-100;
+                }
+            }
+        }
+    }
 
     /* Slides */
     .slides-container {
