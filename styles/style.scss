@@ -71,6 +71,13 @@
         }
     }
 
+    /* Slides */
+    .slides-container {
+        .slide + .slide {
+            @apply absolute left-0 top-0;
+        }
+    }
+
     /* WYSIWYG */
     .wysiwyg {
         p {
@@ -83,6 +90,23 @@
     }
 }
 
+
+/* VH Hack */
+:root {
+	--vh: 1vh;
+}
+
+.min-vh100 {
+min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.max-vh100 {
+max-height: calc(var(--vh, 1vh) * 100);
+}
+
+.vh100 {
+height: calc(var(--vh, 1vh) * 100);
+}
 
 
 

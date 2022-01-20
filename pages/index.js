@@ -10,6 +10,7 @@ import Billboard from '../components/Billboard/Billboard'
 import Carousel from '../components/Carousel/Carousel'
 import AccordionEvents from '../components/Accordion/AccordionEvents'
 import Marquee from '../components/Marquee/Marquee'
+import ExploreCarousel from '../components/ExploreCarousel/ExploreCarousel'
 
 export default function Page({test}) {
 
@@ -174,6 +175,8 @@ export default function Page({test}) {
       
       <Marquee/>
       <AccordionEvents/>
+      
+      <ExploreCarousel/>
 
       <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
       <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
