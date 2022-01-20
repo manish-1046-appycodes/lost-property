@@ -17,7 +17,7 @@ const ExploreCarousel = () => {
                         objectPosition="center"
                     />
                 </div>
-                <h3 class="opacity-0 transform transition-all ease-in-out scale-50 group-hover:scale-100 group-hover:opacity-100 absolute inset-0 text-16px p-12 hidden lg:block">
+                <h3 className="opacity-0 transform transition-all ease-in-out scale-50 group-hover:scale-100 group-hover:opacity-100 absolute inset-0 text-16px p-12 hidden lg:block">
                     <div className="w-full h-full bg-white rounded-full flex items-center justify-center p-10 uppercase text-center">
                         <div className="lg:w-1/2">Whispering Gallery AT St Paul’s Cathedral</div>
                     </div>
@@ -39,7 +39,7 @@ const ExploreCarousel = () => {
                         objectPosition="center"
                     />
                 </div>
-                <h3 class="opacity-0 transform transition-all ease-in-out scale-50 group-hover:scale-100 group-hover:opacity-100 absolute inset-0 text-16px p-12 hidden lg:block">
+                <h3 className="opacity-0 transform transition-all ease-in-out scale-50 group-hover:scale-100 group-hover:opacity-100 absolute inset-0 text-16px p-12 hidden lg:block">
                     <div className="w-full h-full bg-white rounded-full flex items-center justify-center p-10 uppercase text-center">
                         <div className="lg:w-1/2">Whispering Gallery AT St Paul’s Cathedral</div>
                     </div>
