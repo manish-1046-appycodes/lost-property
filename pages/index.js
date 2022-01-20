@@ -9,7 +9,7 @@ import BookingSection from '../components/BookingSection/BookingSection'
 import Billboard from '../components/Billboard/Billboard'
 import Carousel from '../components/Carousel/Carousel'
 import AccordionEvents from '../components/Accordion/AccordionEvents'
-
+import Marquee from '../components/Marquee/Marquee'
 
 export default function Page({test}) {
 
@@ -171,6 +171,8 @@ export default function Page({test}) {
       settings={Billboard_4}
       />
 
+      
+      <Marquee/>
       <AccordionEvents/>
 
       <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
