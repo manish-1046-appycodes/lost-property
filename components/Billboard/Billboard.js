@@ -107,7 +107,14 @@ const Billboard = ( {settings} ) => {
                             
                             { settings?.logo?.url ?
                             (<h2 className="heading-sub uppercase text-center pt-2 w-6/12 max-w-full mx-auto">
-                                <img className="inline-block" src={settings.logo.url} alt={settings.logo.alt} loading="lazy"/>
+                                <Image
+                                    src={settings.logo.url}
+                                    width={270}
+                                    height={117}
+                                    objectFit="contain"
+                                    objectPosition="center"
+                                    layout="responsive"
+                                    alt={settings.logo.alt}/>
                             </h2>) :
                             (<h2 className="heading-sub uppercase">{settings.title}</h2>) }
                             
@@ -120,7 +127,6 @@ const Billboard = ( {settings} ) => {
                                     layout="fill"
                                     objectFit="cover"
                                     objectPosition="center"
-                                    priority
                                     alt=""/>
                                 </div>
                                 </div>
