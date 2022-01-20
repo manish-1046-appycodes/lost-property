@@ -7,7 +7,7 @@ const ExploreCarousel = () => {
     const carouselItem1 = (
         <article className="w-[150%] lg:w-10/12 relative shrink-0 ml-3 slide ">
                             
-            <div className="w-7/12 lg:w-8 relative group">
+            <div className="w-7/12 lg:w-6/12 relative group">
                 <div className="pt-[100%] relative">
                     <Image
                         src="/image/del/explorecarousel/example1.jpg"
