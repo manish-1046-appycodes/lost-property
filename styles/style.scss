@@ -57,6 +57,30 @@
     .grid-5 {
         grid-template-columns: 1fr 1fr 1fr 2.9fr min-content;
     }
+    .grid-4-mob {
+        grid-template-columns: 1fr 2fr  2.9fr min-content;
+    }
+    .grid-4-lg {
+        grid-template-columns: 1fr 1fr  2.9fr min-content;
+    }
+    .accordion-row {
+        &:hover {
+            .accordion-preview {
+                @apply visible;
+            }
+        }
+    }
+
+    /* WYSIWYG */
+    .wysiwyg {
+        p {
+            @apply mb-4 lg:mb-7;
+
+            &:last-child {
+                @apply mb-0;
+            }
+        }
+    }
 }
 
 
