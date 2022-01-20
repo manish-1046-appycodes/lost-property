@@ -34,7 +34,7 @@ const AccordionRooms = () => {
             <h2 className="text-[42px] lg:text-[72px] md:max-w-[500px] mb-6 lg:mb-16 col-span-2">Lost Sounds of the 20’s</h2>
 
             <div className=" md:max-w-[420px]  col-span-2 mb-6">
-                <div class="wysiwyg">
+                <div className="wysiwyg">
                     <p>7pm-til late</p>
                     <p>Felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?</p>
                 </div>
