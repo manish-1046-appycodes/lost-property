@@ -3,8 +3,6 @@ import ButtonSecondary from '../Links/ButtonSecondary'
 
 import Image from 'next/image'
 
-const { motion } = require("framer-motion");
-
 const Billboard = ( {settings} ) => {
 
     const captionImgClass = ( settings.bg_type === 'caption_img' && settings.img.img_pos === 'right' ) ? "md:left-1/2" : "md:left-0";
@@ -159,19 +157,15 @@ const Billboard = ( {settings} ) => {
 
             { settings.bg_type === 'img_full' &&
             (<div className={`absolute w-full top-0  left-0 ${imageMobPad}`}>
-                <motion.div
-                className="relative h-full w-full js-parallax overflow-hidden"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                >
+                <div
+                className="relative h-full w-full js-parallax overflow-hidden">
                     <Image
                     src={settings.img.url}
                     layout="fill"
                     objectFit="cover"
                     objectPosition="center"
                     alt=""/>
-                </motion.div>
+                </div>
             </div>)}
             
             { settings.bg_type === 'caption_img' &&
@@ -185,12 +179,8 @@ const Billboard = ( {settings} ) => {
             </div>) }
             
             <div className={`absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}>
-                <motion.div
-                className="relative h-full w-full js-parallax overflow-hidden"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                >
+                <div
+                className="relative h-full w-full js-parallax overflow-hidden">
                     <Image
                     src={settings.img.url}
                     layout="fill"
@@ -198,7 +188,7 @@ const Billboard = ( {settings} ) => {
                     objectPosition="center"
                     alt=""
                     />
-                </motion.div>
+                </div>
             </div></>) }
 
         </section>
