@@ -2,6 +2,7 @@ import ButtonRound from '../Links/ButtonRound'
 import ButtonSecondary from '../Links/ButtonSecondary'
 
 import Image from 'next/image'
+
 const { motion } = require("framer-motion");
 
 const Billboard = ( {settings} ) => {
