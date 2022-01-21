@@ -95,7 +95,7 @@ const Billboard = ( {settings} ) => {
     )
 
     return (
-        <section className={`relative ${settings.margin_bottom ? "my-20 lg:my-28" : "n" }`}>
+        <section className={`relative ${settings.margin_bottom ? "mb-20 lg:mb-28" : "n" }`}>
             <div className="container">
                 <div className={`lg:min-h-screen  md:relative  flex flex-col ${contentAlignmentVerticalMob} ${contentAlignmentVertical}`}>
                 

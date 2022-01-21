@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import Layout from '../components/Layout/Layout'
 
+import AccordionRooms from '../components/Accordion/AccordionRooms'
 import PageIntro from '../components/PageIntro/PageIntro'
 import Billboard from '../components/Billboard/Billboard'
 
@@ -12,6 +13,7 @@ import Star from '../public/image/icon/star.svg'
 import Blockquote from '../components/Blockquote/Blockquote'
 import Marquee from '../components/Marquee/Marquee'
 import Carousel from '../components/Carousel/Carousel'
+import BookingSection from '../components/BookingSection/BookingSection'
 
 
 
@@ -29,13 +31,13 @@ export default function Page({test}) {
     },
     content_bg: 'bg-white',
     content_color: 'text-black',
-    content_alignment: 'right',
+    content_alignment: 'left',
     content_alignment_mob: 'right',
     content_alignment_vertical_mob: 'bottom',
     bg_type: 'img_full', // caption_full / img_full
     bg_caption: '',
     img: {
-      url: '/image/del/story/billboard.jpg'
+      url: '/image/del/our-rooms.jpg'
     },
     margin_bottom: true,
     round_button: {
@@ -46,7 +48,7 @@ export default function Page({test}) {
   }
 
   const Carouselitems = ['/image/del/story/car1.jpg','/image/del/story/car2.jpg','/image/del/story/car3.jpg']
-  const MarqueeWords = '<em>peek</em>. stare. <em>look</em>.  glance.  <em>ponder</em>';
+  const MarqueeWords = 'kip.  sleep.  nap. dream.  slumber.';
 
   return (
     <>
@@ -58,21 +60,20 @@ export default function Page({test}) {
             <script>
             </script>
         </Head>
-        
+
+        <div className="spacer h-[80px] lg:h-[150px]"></div>
         
         <Billboard 
         settings={Billboard_2}
         />
 
-        <Blockquote/>
+        <div className="spacer h-[150px] lg:h-[150px]"></div>
         
-        <div className="lg:my-20">
-            <Marquee words={MarqueeWords}/>
-            <Carousel imgs={Carouselitems}/>
-        </div>
+        <Marquee words={MarqueeWords}/>
         
+        <AccordionRooms/>
 
-        <SubscribeForm/>
+        <BookingSection alt="alt"/>
 
     </>
   )

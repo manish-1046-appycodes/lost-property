@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Image from "next/image";
 import Script from 'next/script'
 
@@ -5,6 +7,8 @@ import ButtonRound from '../Links/ButtonRound'
 
 
 const AccordionRooms = () => {
+
+  useEffect(() => {Accordion.init()}, []);
 
   const row = (
   <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black ">
@@ -97,7 +101,7 @@ const AccordionRooms = () => {
       {row}
 
     </div>
-    <Script id="Accordion" strategy="afterInteractive" src="/js/accordion.js"/>
+    <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
   </section>
 
   

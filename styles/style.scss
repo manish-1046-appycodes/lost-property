@@ -69,6 +69,10 @@
                 @apply visible;
             }
         }
+
+        &:last-child {
+            @apply border-b;
+        }
     }
     .accordion-group {
         &:hover {
