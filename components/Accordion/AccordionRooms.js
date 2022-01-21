@@ -119,7 +119,6 @@ const AccordionRooms = () => {
     </div>
 
   </section>
-
   
   );
 };
