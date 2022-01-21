@@ -149,7 +149,7 @@ const Billboard = ( {settings} ) => {
                     </div>
 
                     {
-                    settings.bg_type === 'caption_full' && (<p className="heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-8vh]" dangerouslySetInnerHTML={ {__html: settings.bg_caption} }></p>)            
+                    settings.bg_type === 'caption_full' && (<p className="js-parallaxText heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-8vh]" dangerouslySetInnerHTML={ {__html: settings.bg_caption} }></p>)            
                     }
 
                 </div>

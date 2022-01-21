@@ -28,7 +28,6 @@ const Layout = ({children}) => {
 
                 <header className="flex">
                     <Logo className="my-12 mx-auto"/>
-                    
                 </header>
             </div>
 

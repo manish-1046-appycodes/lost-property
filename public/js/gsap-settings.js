@@ -22,6 +22,28 @@ const gsapSettings = {
             });
             
         });
+
+        const parallaxTextItems = document.querySelectorAll('.js-parallaxText');
+        
+        parallaxTextItems.forEach(function(parallaxItem) {
+            const img = parallaxItem.childNodes[0];
+
+            gsap.set(parallaxItem, {yPercent:50});
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: parallaxItem,
+                    scrub: true,
+                    start: "top bottom",
+                    end: "bottom top"
+                }
+
+            })
+            .to(parallaxItem, {
+                yPercent: -25
+            });
+            
+        });
         
     },
 
