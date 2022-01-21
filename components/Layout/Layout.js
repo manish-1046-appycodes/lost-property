@@ -34,6 +34,9 @@ const Layout = ({children}) => {
                         <Link href="/story">
                             <a>Story</a>
                         </Link>
+                        <Link href="/events">
+                            <a>Events</a>
+                        </Link>
                         <Link href="/rooms">
                             <a>Rooms</a>
                         </Link>
