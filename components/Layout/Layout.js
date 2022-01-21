@@ -27,15 +27,19 @@ const Layout = ({children}) => {
                 </div>
 
                 <header className="flex">
-                    <nav className="hidden lg:block p-5 text-red-1 space-x-5">
-                    <Link href="/">
+                    <nav className="hidden lg:block p-5 text-red-1 space-x-5 absolute">
+                        <Link href="/">
                             <a>Home</a>
                         </Link>
                         <Link href="/story">
                             <a>Story</a>
                         </Link>
                     </nav>
-                    <Logo className="my-12 mx-auto"/>
+                    <Link href="/">
+                        <a className="my-12 mx-auto">
+                            <Logo />
+                        </a>
+                    </Link>
                 </header>
             </div>
 
