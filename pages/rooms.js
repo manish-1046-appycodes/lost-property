@@ -32,8 +32,8 @@ export default function Page({test}) {
     content_bg: 'bg-white',
     content_color: 'text-black',
     content_alignment: 'left',
-    content_alignment_mob: 'right',
-    content_alignment_vertical_mob: 'bottom',
+    content_alignment_mob: 'center',
+    content_alignment_vertical_mob: 'top',
     bg_type: 'img_full', // caption_full / img_full
     bg_caption: '',
     img: {
@@ -47,7 +47,6 @@ export default function Page({test}) {
     }
   }
 
-  const Carouselitems = ['/image/del/story/car1.jpg','/image/del/story/car2.jpg','/image/del/story/car3.jpg']
   const MarqueeWords = 'kip.  sleep.  nap. dream.  slumber.';
 
   return (
@@ -67,7 +66,7 @@ export default function Page({test}) {
         settings={Billboard_2}
         />
 
-        <div className="spacer h-[150px] lg:h-[150px]"></div>
+        <div className="spacer h-[50px] lg:h-[150px]"></div>
         
         <Marquee words={MarqueeWords}/>
         
