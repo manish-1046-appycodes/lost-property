@@ -6,6 +6,7 @@ import ButtonSecondary from "../Links/ButtonSecondary"
 
 import Cross from "../../public/image/icon/cross.svg"
 import Logo from "../../public/image/lost-property-logo.svg"
+import Footer from "./Footer/Footer"
 
 const Layout = ({children}) => {
 
@@ -33,7 +34,7 @@ const Layout = ({children}) => {
 
             <main>{children}</main>
 
-            
+            <Footer/>
             
 
         </div>

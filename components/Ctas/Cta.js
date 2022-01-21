@@ -4,7 +4,7 @@ import ButtonSecondary from "../Links/ButtonSecondary";
 
 const Cta = ({ bgClass, textColor, copy, title, img, btnTitle, btnUrl}) => {
   return (
-    <div className={`w-full xl:w-1/2 ${bgClass} ${textColor}`}>
+    <div className={`w-full xl:w-1/2 overflow-hidden ${bgClass} ${textColor}`}>
             
         <div className="ml-auto w-8/12 2xl:w-1/2 my-6 lg:my-14">
             <div className="container pl-0">
