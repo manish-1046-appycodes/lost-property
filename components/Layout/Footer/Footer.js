@@ -21,7 +21,7 @@ const Footer = () => {
                         <h4 className="uppercase lg:mb-2">Stay in the know</h4>
                         <form className="inline-block max-w-[615px] w-full">
                             <div className="border-b border-black flex space-x-5 justify-between">
-                            <input className="bg-transparent py-3 flex-1 lg:text-[14px]" type="email" placeholder="Enter your email"/>
+                            <input className="bg-transparent py-3 flex-1 lg:text-[14px] outline-none" type="email" placeholder="Enter your email"/>
                             <button className="uppercase text-[12px] lg:text-[16px]" type="submit">Send</button>
                             </div>
                         </form>
