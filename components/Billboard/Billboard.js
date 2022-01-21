@@ -22,7 +22,7 @@ const Billboard = ( {settings} ) => {
     const contentAlignmentVerticalMob = ( settings.content_alignment_vertical_mob === 'bottom' ) ? "pt-[255px]" : "pb-[255px]";
     const contentAlignmentVertical = ( settings.content_alignment_vertical === 'bottom' ) ? "md:justify-end md:pb-0 md:pt-36" : "md:justify-start md:pt-0 md:pb-36";
 
-    const imageMobPad = ( settings.content_alignment_vertical_mob == 'bottom' ) ? "top-0 bottom-[150px] md:bottom-0" : "top-[150px] md:top-0";
+    const imageMobPad = ( settings.content_alignment_vertical_mob == 'bottom' ) ? "top-0 bottom-[150px] md:bottom-0" : "bottom-0 top-[150px] md:top-0";
 
     let ButtonRoundAlignmentMD = ""; 
 

@@ -31,7 +31,7 @@ export default function Page({test}) {
     content_color: 'text-black',
     content_alignment: 'right',
     content_alignment_mob: 'right',
-    content_alignment_vertical_mob: 'top',
+    content_alignment_vertical_mob: 'bottom',
     bg_type: 'img_full', // caption_full / img_full
     bg_caption: '',
     img: {
@@ -39,9 +39,9 @@ export default function Page({test}) {
     },
     margin_bottom: true,
     round_button: {
-      url: '',
-      bg_class: '',
-      title: ''
+      url: '#',
+      bg_class: 'bg-blue-1',
+      title: 'Book Room'
     }
   }
 
@@ -59,7 +59,6 @@ export default function Page({test}) {
             </script>
         </Head>
         
-        <PageIntro/>
         
         <Billboard 
         settings={Billboard_2}
