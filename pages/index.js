@@ -12,6 +12,7 @@ import AccordionEvents from '../components/Accordion/AccordionEvents'
 import Marquee from '../components/Marquee/Marquee'
 import ExploreCarousel from '../components/ExploreCarousel/ExploreCarousel'
 import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
+import Ctas from '../components/Ctas/Ctas'
 
 export default function Page({test}) {
 
@@ -180,6 +181,8 @@ export default function Page({test}) {
       <ExploreCarousel/>
 
       <SubscribeForm/>
+
+      <Ctas/>
 
       <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
       <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>

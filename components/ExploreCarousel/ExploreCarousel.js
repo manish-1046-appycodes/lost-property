@@ -51,7 +51,7 @@ const ExploreCarousel = () => {
 
 
     return (
-        <section className="min-vh100 py-28 flex items-center relative">
+        <section className="min-vh100 py-28 lg:py-52 flex items-center relative">
 
             <div className="container absolute text-center w-full">
                 <h2 className="heading-brand-medium"><em>Lose</em> yourself <br/>in the <em>City</em></h2>
