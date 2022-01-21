@@ -58,7 +58,7 @@ const Layout = ({children}) => {
             <Script id="DRAGGABLE" strategy="beforeInteractive" src="/js/Draggable.min.js"/>
             <Script id="INERTIA" strategy="beforeInteractive" src="/js/InertiaPlugin.min.js"/>
             <Script id="GSAPSETTINGS" strategy="beforeInteractive" src="/js/gsap-settings.js"/>
-
+            <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
         </div>
     )
 }

@@ -101,7 +101,7 @@ const AccordionRooms = () => {
       {row}
 
     </div>
-    <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
+    
   </section>
 
   
