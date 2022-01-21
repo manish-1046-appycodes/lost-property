@@ -41,9 +41,9 @@ export default function Page({test}) {
     },
     margin_bottom: true,
     round_button: {
-      url: '#',
-      bg_class: 'bg-blue-1',
-      title: 'Book Room'
+      url: '',
+      bg_class: '',
+      title: ''
     }
   }
 
@@ -60,7 +60,7 @@ export default function Page({test}) {
             </script>
         </Head>
 
-        <div className="spacer h-[80px] lg:h-[150px]"></div>
+        <div className="spacer h-[120px] lg:h-[150px]"></div>
         
         <Billboard 
         settings={Billboard_2}
