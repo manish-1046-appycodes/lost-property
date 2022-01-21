@@ -11,7 +11,7 @@ const Footer = () => {
                     <h3 className="font-display text-[50px] leading-none lg:mr-10 mb-14 lg:mb-0">Find <em>us</em></h3>
                     <address className="pl-20 lg:pl-0 not-italic mx-auto">3-5 Ludgate Hill, London<br/>info@thelostproperty.co.uk<br/>020 473 0057</address>
                 </aside>
-                <aside class="pl-20 lg:pl-0 lg:flex lg:w-1/2 lg:space-x-10 justify-between">
+                <aside className="pl-20 lg:pl-0 lg:flex lg:w-1/2 lg:space-x-10 justify-between">
                     <ul>
                         <li><a>Instagram</a></li>
                         <li><a>Facebook</a></li>
@@ -22,7 +22,7 @@ const Footer = () => {
                         <form className="inline-block max-w-[615px] w-full">
                             <div className="border-b border-black flex space-x-5 justify-between">
                             <input className="bg-transparent py-3 flex-1 lg:text-[14px]" type="email" placeholder="Enter your email"/>
-                            <button className="uppercase text-[16px]" type="submit">Send</button>
+                            <button className="uppercase text-[12px] lg:text-[16px]" type="submit">Send</button>
                             </div>
                         </form>
                     </div>
