@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
@@ -15,6 +17,8 @@ import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
 import Ctas from '../components/Ctas/Ctas'
 
 export default function Page({test}) {
+
+  useEffect(() => {gsapSettings.init()}, []);
 
   const Billboard_1 = {
     title:  'ESCAPISM',
@@ -125,6 +129,8 @@ export default function Page({test}) {
     }
   }
 
+  const MarqueeWords = 'craft.  <em>entertainment</em>.  art. events.  music.';
+
   return (
     <>
 
@@ -175,7 +181,7 @@ export default function Page({test}) {
       />
 
       
-      <Marquee/>
+      <Marquee words={MarqueeWords}/>
       <AccordionEvents/>
       
       <ExploreCarousel/>
@@ -184,23 +190,7 @@ export default function Page({test}) {
 
       <Ctas/>
 
-      <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
-      <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
-      <Script id="DRAGGABLE" strategy="beforeInteractive" src="/js/Draggable.min.js"/>
-      <Script id="INERTIA" strategy="beforeInteractive" src="/js/InertiaPlugin.min.js"/>
-      <Script id="GSAPSETTINGS" strategy="afterInteractive" src="/js/gsap-settings.js"
-      onLoad=
-      {
-        () => {
-          gsapSettings.init();
-        }
-      }
       
-      />
-
-      <Script id="GSAPINIT" strategy="afterInteractive">
-          
-      </Script>
 
     </>
   )

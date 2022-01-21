@@ -27,6 +27,14 @@ const Layout = ({children}) => {
                 </div>
 
                 <header className="flex">
+                    <nav className="hidden lg:block p-5 text-red-1 space-x-5">
+                    <Link href="/">
+                            <a>Home</a>
+                        </Link>
+                        <Link href="/story">
+                            <a>Story</a>
+                        </Link>
+                    </nav>
                     <Logo className="my-12 mx-auto"/>
                 </header>
             </div>
@@ -35,6 +43,11 @@ const Layout = ({children}) => {
 
             <Footer/>
             
+            <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
+            <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
+            <Script id="DRAGGABLE" strategy="beforeInteractive" src="/js/Draggable.min.js"/>
+            <Script id="INERTIA" strategy="beforeInteractive" src="/js/InertiaPlugin.min.js"/>
+            <Script id="GSAPSETTINGS" strategy="beforeInteractive" src="/js/gsap-settings.js"/>
 
         </div>
     )
