@@ -1,5 +1,6 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+
+const { motion } = require("framer-motion");
 
 const myAnimation = {
   initial: {

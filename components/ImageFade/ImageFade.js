@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
-import { motion } from "framer-motion"
+
+const { motion } = require("framer-motion");
 
 const variants = {
     open: { opacity: 1, transition: { duration: 0.25} },

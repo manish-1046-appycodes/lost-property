@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, ReactNode } from 'react'
-import { motion, useViewportScroll, useTransform, useSpring, useReducedMotion } from 'framer-motion'
+
+const { motion, useViewportScroll, useTransform, useSpring, useReducedMotion } = require("framer-motion");
 
 const rand = (min = 0, max = 100) => {
     return Math.floor(Math.random() * (+max - +min)) + +min;
