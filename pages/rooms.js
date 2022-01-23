@@ -14,6 +14,7 @@ import Blockquote from '../components/Blockquote/Blockquote'
 import Marquee from '../components/Marquee/Marquee'
 import Carousel from '../components/Carousel/Carousel'
 import BookingSection from '../components/BookingSection/BookingSection'
+import PageFade from '../components/PageFade'
 
 
 
@@ -51,7 +52,7 @@ export default function Page({test}) {
 
   return (
     <>
-
+      <PageFade>
         <Head>
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
@@ -73,7 +74,7 @@ export default function Page({test}) {
         <AccordionRooms/>
 
         <BookingSection alt="alt"/>
-
+      </PageFade>
     </>
   )
 }

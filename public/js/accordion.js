@@ -94,11 +94,18 @@ const Accordion = {
 
             const previews = el.querySelectorAll('.accordion-preview');
 
-            el.addEventListener('mouseover', (event) => {
+            el.addEventListener('mousemove', (event) => {
 
                 previews.forEach(function(preview) {
-                    //preview.classList.remove('opacity-0');
                     preview.classList.add('opacity-100');
+                });
+                
+            });
+
+            window.addEventListener('scroll', (event) => {
+
+                previews.forEach(function(preview) {
+                    preview.classList.remove('opacity-100');
                 });
                 
             });
@@ -108,7 +115,7 @@ const Accordion = {
             const notHoverables = el.querySelectorAll('.accordion-child, .button-round, [data-accordiontoggle]');
 
             notHoverables.forEach(function(notHoverable) {
-                notHoverable.addEventListener('mouseover', (event) => {
+                notHoverable.addEventListener('mousemove', (event) => {
                     event.stopPropagation();
                 });
             });

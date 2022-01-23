@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ImageFade from "../ImageFade/ImageFade";
 
 const PageIntro = () => {
   return (
@@ -8,7 +9,7 @@ const PageIntro = () => {
 
                 <div className="w-11/12 mx-auto max-w-[598px]">
                     <div className="pt-[100%] relative z-10">
-                        <Image
+                        <ImageFade
                             src="/image/del/story/intro1.jpg"
                             alt="Kindly be lost"
                             width="598"

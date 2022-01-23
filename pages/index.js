@@ -15,6 +15,10 @@ import Marquee from '../components/Marquee/Marquee'
 import ExploreCarousel from '../components/ExploreCarousel/ExploreCarousel'
 import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
 import Ctas from '../components/Ctas/Ctas'
+import ImageFade from '../components/ImageFade/ImageFade'
+import PageFade from '../components/PageFade'
+
+
 
 export default function Page({test}) {
 
@@ -133,7 +137,7 @@ export default function Page({test}) {
 
   return (
     <>
-
+      <PageFade>
       <Head>
         <title>Lost Property</title>
         <meta name="description" content="Lost Property" />
@@ -142,9 +146,10 @@ export default function Page({test}) {
       
       <div className='hero min-h-screen w-full relative flex'>
         
-        <div className="absolute h-full w-full">
-          <div className="relative h-full w-full js-parallax overflow-hidden">
-            <Image
+        <div className="absolute h-full w-full js-parallax overflow-hidden">
+          <div className="relative h-full w-full ">
+            
+            <ImageFade
             src="/image/del/home-hero.jpg"
             layout="fill"
             objectFit="cover"
@@ -190,8 +195,8 @@ export default function Page({test}) {
 
       <Ctas/>
 
+      </PageFade>
       
-
     </>
   )
 }

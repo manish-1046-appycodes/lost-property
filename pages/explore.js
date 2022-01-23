@@ -13,6 +13,8 @@ import Blockquote from '../components/Blockquote/Blockquote'
 import Marquee from '../components/Marquee/Marquee'
 import Carousel from '../components/Carousel/Carousel'
 import PageFade from '../components/PageFade'
+import ImageFade from '../components/ImageFade/ImageFade'
+import ParallaxItem from '../components/UI/ParallaxItem'
 
 
 
@@ -52,6 +54,7 @@ export default function Page({test}) {
   return (
     <>
       <PageFade>
+          
         <Head>
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
@@ -60,21 +63,65 @@ export default function Page({test}) {
             </script>
         </Head>
         
-        <PageIntro/>
-        
-        <Billboard 
-        settings={Billboard_2}
-        />
+        <div className="container grid grid-cols-2 items-start">
 
-        <Blockquote/>
-        
-        <div className="lg:my-20">
-            <Marquee words={MarqueeWords}/>
-            <Carousel imgs={Carouselitems}/>
+            
+            <div className="w-6/12 transform translate-x-1/4">
+                <ParallaxItem className="">
+                <div className="relative pt-[100%]">
+                    <ImageFade
+                        src="/image/del/explore/img1.jpg"
+                        layout="fill"
+                        width={476}
+                        height={476}
+                        alt="Ronnie Scotts"/>
+                </div>
+                </ParallaxItem>
+            </div>
+
+            <div className="w-6/12 ml-auto translate-y-1/2">
+                <ParallaxItem className="">
+                <div className="relative pt-[100%]">
+                    <ImageFade
+                        src="/image/del/explore/img1.jpg"
+                        layout="fill"
+                        width={476}
+                        height={476}
+                        alt="Ronnie Scotts"/>
+                </div>
+                </ParallaxItem>
+            </div>
+
+            <div className="w-6/12 ml-auto">
+                <ParallaxItem className="">
+                <div className="relative pt-[100%] mt-[50%]">
+                    <ImageFade
+                        src="/image/del/explore/img1.jpg"
+                        layout="fill"
+                        width={476}
+                        height={476}
+                        alt="Ronnie Scotts"/>
+                </div>
+                </ParallaxItem>
+            </div>
+
+            <div className="w-6/12 transform translate-x-2/3">
+                <ParallaxItem className="">
+                <div className="relative pt-[100%]">
+                    <ImageFade
+                        src="/image/del/explore/img1.jpg"
+                        layout="fill"
+                        width={476}
+                        height={476}
+                        alt="Ronnie Scotts"/>
+                </div>
+                </ParallaxItem>
+            </div>
+            
+
         </div>
-        
 
-        <SubscribeForm/>
+        
       </PageFade>
     </>
   )

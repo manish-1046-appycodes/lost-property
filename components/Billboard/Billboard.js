@@ -1,5 +1,6 @@
 import ButtonRound from '../Links/ButtonRound'
 import ButtonSecondary from '../Links/ButtonSecondary'
+import ImageFade from '../ImageFade/ImageFade';
 
 import Image from 'next/image'
 import Script from 'next/script';
@@ -157,10 +158,10 @@ const Billboard = ( {settings} ) => {
             </div>
 
             { settings.bg_type === 'img_full' &&
-            (<div className={`absolute w-full top-0  left-0 ${imageMobPad}`}>
+            (<div className={` js-parallax overflow-hidden absolute w-full top-0  left-0 ${imageMobPad}`}>
                 <div
-                className="relative h-full w-full js-parallax overflow-hidden">
-                    <Image
+                className="relative h-full w-full ">
+                    <ImageFade
                     src={settings.img.url}
                     layout="fill"
                     objectFit="cover"
@@ -179,10 +180,10 @@ const Billboard = ( {settings} ) => {
                 </div>
             </div>) }
             
-            <div className={`absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}>
+            <div className={`js-parallax overflow-hidden absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}>
                 <div
-                className="relative h-full w-full js-parallax overflow-hidden">
-                    <Image
+                className="relative h-full w-full">
+                    <ImageFade
                     src={settings.img.url}
                     layout="fill"
                     objectFit="cover"

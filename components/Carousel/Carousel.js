@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import ImageFade from "../ImageFade/ImageFade"
+
 const Carousel = ({imgs}) => {
     return (
         <div id="carousel" className="overflow-hidden w-screen carousel-wrap">
@@ -8,7 +10,7 @@ const Carousel = ({imgs}) => {
                 {  ( imgs && imgs.length ) && 
                     imgs.map( (img, key) => (
                         <article key={key} className="w-10/12 lg:w-1/2 relative pt-[103.5vw] lg:pt-[41.7vw] shrink-0 group ml-3 w-[83.333333vw] lg:w-[50vw]">
-                            <Image
+                            <ImageFade
                                 src={img}
                                 alt="ALT"
                                 layout="fill"
@@ -25,7 +27,7 @@ const Carousel = ({imgs}) => {
                 }
 
                 <article className="w-10/12 lg:w-1/2 relative pt-[103.5vw] lg:pt-[41.7vw] shrink-0 group ml-3 w-[83.333333vw] lg:w-[50vw]">
-                    <Image
+                    <ImageFade
                         src="/image/del/carousel/slide-1.jpg"
                         alt="ALT"
                         layout="fill"

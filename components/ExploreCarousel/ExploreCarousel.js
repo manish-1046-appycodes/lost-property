@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import ButtonRound from "../Links/ButtonRound"
+import ImageFade from "../ImageFade/ImageFade";
 
 const ExploreCarousel = () => {
 
@@ -9,7 +10,7 @@ const ExploreCarousel = () => {
                             
             <div className="w-7/12 lg:w-6/12 relative group">
                 <div className="pt-[100%] relative">
-                    <Image
+                    <ImageFade
                         src="/image/del/explorecarousel/example1.jpg"
                         alt="ALT"
                         layout="fill"
