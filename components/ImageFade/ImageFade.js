@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { useState, useEffect, useRef } from "react"
+import { useState, useLayoutEffect, useRef } from "react"
 
 const { motion } = require("framer-motion");
 
@@ -14,7 +14,7 @@ const ImageFade = (props) => {
 
     const ref = useRef(null)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if ( props.priority ) {
             setIsOpen(true)
         }
