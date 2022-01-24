@@ -178,7 +178,7 @@ export default function Page({test}) {
 
 Page.getLayout = function getLayout(page) {
   return (
-    <Layout colourTheme="blue">{page}</Layout>
+    <Layout border="true" colourTheme="blue">{page}</Layout>
   )
 }
 
