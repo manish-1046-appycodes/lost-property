@@ -4,7 +4,7 @@ import ImageFade from "../ImageFade/ImageFade"
 
 const Carousel = ({imgs}) => {
     return (
-        <div id="carousel" className="overflow-hidden w-screen carousel-wrap">
+        <div id="carousel" className="overflow-hidden w-full carousel-wrap">
             <div className="carousel overflow-hidden flex w-fit  overflow-scrolling-touc">
                 
                 {  ( imgs && imgs.length ) && 

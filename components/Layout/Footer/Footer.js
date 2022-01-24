@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 
-const Footer = () => {
+const Footer = ({border}) => {
   return (
-    <footer>
+    <footer className={`overflow-hidden ${ border && "border-t border-black"}`}>
         <div className="container mb-10 lg:mb-20">
             <div className="max-w-1430px mx-auto lg:flex mt-10 mb-20 lg:my-20">
                 <aside className="lg:flex lg:w-1/2 mb-10 lg:mb-0">

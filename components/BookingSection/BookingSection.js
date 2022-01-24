@@ -1,6 +1,6 @@
 const BookingSection = ({alt}) => {
     return (
-        <div className={`booking  ${ alt == 'alt' ? 'py-40 border-b border-black' : 'py-20 min-h-screen'} flex items-center`}>
+        <div className={`booking  ${ alt == 'alt' ? 'py-40' : 'py-20 min-h-screen'} flex items-center`}>
             <div className="container">
                 <div className="max-w-1430px mx-auto">
                     <div className="md:flex">

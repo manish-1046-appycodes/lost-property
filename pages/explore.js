@@ -4,53 +4,94 @@ import Head from 'next/head'
 
 import Layout from '../components/Layout/Layout'
 
-import PageIntro from '../components/PageIntro/PageIntro'
-import Billboard from '../components/Billboard/Billboard'
-
-import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
-import Star from '../public/image/icon/star.svg'
-import Blockquote from '../components/Blockquote/Blockquote'
-import Marquee from '../components/Marquee/Marquee'
-import Carousel from '../components/Carousel/Carousel'
+import ButtonRound from '../components/Links/ButtonRound'
 import PageFade from '../components/PageFade'
 import ImageFade from '../components/ImageFade/ImageFade'
 import ParallaxItem from '../components/UI/ParallaxItem'
 
-
+// Locations
+const locations = [
+  {
+    img: {
+      url: '/image/del/explore/img1.jpg',
+      caption: "Ronnie Scotts"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img2.jpg',
+      caption: "Twinnings Tea Palace"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img3.jpg',
+      caption: "St Paul's Whispering Gallery"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img4.jpg',
+      caption: "London Bus Tour"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img5.jpg',
+      caption: "Liberty London"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img6.jpg',
+      caption: "St Paul’s Whispering Gallery"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img1.jpg',
+      caption: "Ronnie Scotts"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img2.jpg',
+      caption: "Twinnings Tea Palace"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img3.jpg',
+      caption: "St Paul's Whispering Gallery"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img4.jpg',
+      caption: "London Bus Tour"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img5.jpg',
+      caption: "Liberty London"
+    } 
+  },
+  {
+    img: {
+      url: '/image/del/explore/img6.jpg',
+      caption: "St Paul’s Whispering Gallery"
+    } 
+  }
+]
 
 export default function Page({test}) {
 
 
-  useEffect(() => {gsapSettings.init()}, []);
-
-  const Billboard_2 = {
-    title:  'Our Story',
-    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at? Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?</p>',
-    cta:    {
-      cta_title:  'Find out more',
-      cta_url:    '#'
-    },
-    content_bg: 'bg-white',
-    content_color: 'text-black',
-    content_alignment: 'right',
-    content_alignment_mob: 'right',
-    content_alignment_vertical_mob: 'top',
-    bg_type: 'img_full', // caption_full / img_full
-    bg_caption: '',
-    img: {
-      url: '/image/del/story/billboard.jpg'
-    },
-    margin_bottom: true,
-    round_button: {
-      url: '',
-      bg_class: '',
-      title: ''
-    }
-  }
-
-  const Carouselitems = ['/image/del/story/car1.jpg','/image/del/story/car2.jpg','/image/del/story/car3.jpg']
-  const MarqueeWords = '<em>peek</em>. stare. <em>look</em>.  glance.  <em>ponder</em>';
-
+  useEffect(() => {
+    gsapSettings.init()
+  }, []);
+  
   return (
     <>
       <PageFade>
@@ -63,63 +104,95 @@ export default function Page({test}) {
             </script>
         </Head>
         
-        <div className="container grid grid-cols-2 items-start">
+        <section className="container relative">
 
+          <div className="absolute w-full h-full top-0 left-0 container">
+            <div className="sticky top-0 min-vh100 flex items-center justify-center flex-col">
+              <h1 className="heading-brand-medium text-center">Get <em>lost</em> in <br/>the <em>City</em></h1>
+            </div>
+          </div>
+
+          
+          <div className="lg:grid grid-cols-2 items-start overflow-hidden pb-20">
             
-            <div className="w-6/12 transform translate-x-1/4">
-                <ParallaxItem className="">
-                <div className="relative pt-[100%]">
-                    <ImageFade
-                        src="/image/del/explore/img1.jpg"
-                        layout="fill"
-                        width={476}
-                        height={476}
-                        alt="Ronnie Scotts"/>
-                </div>
-                </ParallaxItem>
-            </div>
+            { locations &&
+              locations.map( (location, i) => {
 
-            <div className="w-6/12 ml-auto translate-y-1/2">
-                <ParallaxItem className="">
-                <div className="relative pt-[100%]">
-                    <ImageFade
-                        src="/image/del/explore/img1.jpg"
-                        layout="fill"
-                        width={476}
-                        height={476}
-                        alt="Ronnie Scotts"/>
-                </div>
-                </ParallaxItem>
-            </div>
+                let count = i;
 
-            <div className="w-6/12 ml-auto">
-                <ParallaxItem className="">
-                <div className="relative pt-[100%] mt-[50%]">
-                    <ImageFade
-                        src="/image/del/explore/img1.jpg"
-                        layout="fill"
-                        width={476}
-                        height={476}
-                        alt="Ronnie Scotts"/>
-                </div>
-                </ParallaxItem>
-            </div>
+                if ( count >= 6 ) {
+                  count = count - 6;
+                }
 
-            <div className="w-6/12 transform translate-x-2/3">
-                <ParallaxItem className="">
-                <div className="relative pt-[100%]">
-                    <ImageFade
-                        src="/image/del/explore/img1.jpg"
-                        layout="fill"
-                        width={476}
-                        height={476}
-                        alt="Ronnie Scotts"/>
-                </div>
-                </ParallaxItem>
-            </div>
+                let caption;
+
+                ( location?.img?.caption ? caption = location.img.caption : null )
+
+                let classOuter = "";
+                let classInner = "";
+                
+
+                if ( count == 0 ) {
+                  classOuter = "lg:translate-x-1/4";
+                } else if ( count == 1 ) {
+                  classOuter = "mx-auto lg:mx-0 lg:ml-auto";
+                } else if ( count == 2 ) {
+                  classOuter = "lg:ml-auto";
+                } else if ( count == 3 ) {
+                  classOuter = "ml-auto lg:ml-0 lg:translate-x-2/3";
+                } else if ( count == 4 ) {
+                  classOuter = "";
+                } else if ( count == 5 ) {
+                  classOuter = "mx-auto lg:mx-0 lg:-translate-x-1/4";
+                }
+                
+
+                if ( count == 0 ) {
+                  classInner = "";
+                } else if ( count == 1 ) {
+                  classInner = "lg:mt-[50%]";
+                } else if ( count == 2 ) {
+                  classInner = "";
+                } else if ( count == 3 ) {
+                  classInner = "lg:mt-[50%]";
+                } else if ( count == 4 ) {
+                  classInner = "";
+                } else if ( count == 5 ) {
+                  classInner = "lg:mt-[50%]";
+                }
+
+                return (<div key={i} className={`explore-item mt-32 lg:mt-0 w-9/12 lg:w-6/12 transform ${classOuter}`}>
+                    <ParallaxItem className="">
+                      <div className={`relative  ${classInner}`}>
+
+                          <div className="relative pt-[100%] cursor-wrap">
+                            { location?.img?.url &&
+                            <ImageFade
+                                src={location.img.url}
+                                layout="fill"
+                                alt={caption}/>
+                            }
+                            
+                            <div className="absolute cursor">
+                              <ButtonRound url="#" title="View <br>on map" bg="bg-white" color="text-black"/>
+                            </div>
+
+                          </div>
+
+                          { caption &&
+                          <div className="absolute uppercase text-xs leading-13 lg:text-16px lg:leading-13 top-full left-0 mt-4">{caption}</div> }
+                      </div>
+                      </ParallaxItem>
+                  </div>)
+                }
+              )
+            }
+
+          
+          </div>
             
 
-        </div>
+        </section>
 
         
       </PageFade>
@@ -129,7 +202,7 @@ export default function Page({test}) {
 
 Page.getLayout = function getLayout(page) {
   return (
-    <Layout>{page}</Layout>
+    <Layout border="true">{page}</Layout>
   )
 }
 

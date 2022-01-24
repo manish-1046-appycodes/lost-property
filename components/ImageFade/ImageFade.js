@@ -20,7 +20,7 @@ const ImageFade = (props) => {
         }
     }, [ref, props.priority])
     
-
+    
     return (
         <motion.div
             ref={ref}

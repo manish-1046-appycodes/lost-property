@@ -12,15 +12,15 @@ import Footer from "./Footer/Footer"
 
 
 
-const Layout = ({children}) => {
+const Layout = ({children, border}) => {
     const [notice, setNotice] = useState(false);
     
     useEffect( () => {
-        console.log(notice)
+        Cursors.init();
     });
 
     return (
-        <div className="leading-13 text-sm lg:leading-13 lg:text-21px overflow-hidden bg-cream-1">
+        <div className="leading-13 text-sm lg:leading-13 lg:text-21px bg-cream-1">
             
             <div className={`absolute top-0 left-0 w-full z-40 `}>
                 
@@ -49,6 +49,9 @@ const Layout = ({children}) => {
                         <Link href="/rooms">
                             <a>Rooms</a>
                         </Link>
+                        <Link href="/explore">
+                            <a>Explore</a>
+                        </Link>
                         
                     </nav>
                     <Link href="/">
@@ -62,7 +65,7 @@ const Layout = ({children}) => {
             
             <main>{children}</main>
 
-            <Footer/>
+            <Footer border={border}/>
             
             <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
             <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
@@ -70,6 +73,7 @@ const Layout = ({children}) => {
             <Script id="INERTIA" strategy="beforeInteractive" src="/js/InertiaPlugin.min.js"/>
             <Script id="GSAPSETTINGS" strategy="beforeInteractive" src="/js/gsap-settings.js"/>
             <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
+            <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
         </div>
     )
 }

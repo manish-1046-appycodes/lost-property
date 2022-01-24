@@ -6,25 +6,30 @@ const rand = (min = 0, max = 100) => {
     return Math.floor(Math.random() * (+max - +min)) + +min;
   };
 
-const ParallaxItem = ({ children, offset = 457 }) => {
+const ParallaxItem = ({ children, offset = 292 }) => {
   const prefersReducedMotion = useReducedMotion()
   const [elementTop, setElementTop] = useState(0)
+  const [elementHeight, setElementHeight] = useState(0)
   const [clientHeight, setClientHeight] = useState(0)
   const ref = useRef(null)
 
   const { scrollY } = useViewportScroll()
 
-  const initial = elementTop - clientHeight
-  const final = elementTop + offset
+  const initial = (elementTop - clientHeight)
+  const final = (elementTop - (clientHeight)) + elementHeight
 
-  const yRange = useTransform(scrollY, [initial, final], [offset, -offset])
-  const y = useSpring(yRange, { stiffness: 400, damping: 90, mass: rand(1, 3) })
+  
+
+  const yRange = useTransform(scrollY, [initial, final], [elementHeight, 0])
+  const y = useSpring(yRange, { stiffness: 400, damping: 90, mass: rand(1, 10) })
 
   useEffect(() => {
     const element = ref.current
     const onResize = () => {
-      setElementTop(element.getBoundingClientRect().top + window.scrollY || window.pageYOffset)
+      setElementTop(element.closest('div').getBoundingClientRect().top)
       setClientHeight(window.innerHeight)
+      setElementHeight(element.offsetHeight)
+      
     }
     onResize()
     window.addEventListener('resize', onResize)
@@ -37,7 +42,7 @@ const ParallaxItem = ({ children, offset = 457 }) => {
   }
 
   return (
-    <motion.div ref={ref} style={{ y }}>
+    <motion.div ref={ref} style={{y}}>
       {children}
     </motion.div>
   )
