@@ -4,7 +4,7 @@ import { useState, useLayoutEffect, useRef } from "react"
 const { motion } = require("framer-motion");
 
 const variants = {
-    open: { opacity: 1, transition: { duration: 0.25} },
+    open: { opacity: 1, transition: { duration: 0.5} },
     closed: { opacity: 0 },
 }
 

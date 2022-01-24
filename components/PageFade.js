@@ -4,7 +4,7 @@ const { motion } = require("framer-motion");
 
 const myAnimation = {
   initial: {
-    opacity: 0,
+    opacity: 1,
     top: "0"
   },
   animate: {
@@ -12,7 +12,7 @@ const myAnimation = {
     top: "0"
   },
   exit: {
-    opacity: 0,
+    opacity: 1,
     top: "0"
   },
   transition: {
