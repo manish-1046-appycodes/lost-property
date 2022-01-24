@@ -135,6 +135,63 @@ export default function Page({test}) {
 
   const MarqueeWords = 'craft.  <em>entertainment</em>.  art. events.  music.';
 
+  const carouselItems1 = [
+    {
+      name: 'Keys,<br/>By Wrapped Studios',
+      img: {
+        url: '/image/del/carousel/slide-1.jpg',
+        alt: 'Keys, By Wrapped Studios'
+      }
+    },
+    {
+      name: 'Keys,<br/>By Wrapped Studios',
+      img: {
+        url: '/image/del/carousel/slide-2.jpg',
+        alt: 'Keys, By Wrapped Studios'
+      }
+    },
+    {
+      name: 'Keys,<br/>By Wrapped Studios',
+      img: {
+        url: '/image/del/carousel/slide-3.jpg',
+        alt: 'Keys, By Wrapped Studios'
+      }
+    }
+  ];
+  
+  const carouselItems2 = [
+    {   
+        name: "Whispering Gallery AT St Paul’s Cathedral",
+        img: {
+            url: "/image/del/explorecarousel/example1.jpg",
+            alt: "Alt"
+        }
+    },
+    {   
+        name: "Whispering Gallery AT St Paul’s Cathedral",
+        img: {
+            url: "/image/del/explorecarousel/example2.jpg",
+            alt: "Alt"
+        }
+    },
+    {   
+      name: "Whispering Gallery AT St Paul’s Cathedral",
+      img: {
+          url: "/image/del/explorecarousel/example1.jpg",
+          alt: "Alt"
+      }
+    },
+    {   
+        name: "Whispering Gallery AT St Paul’s Cathedral",
+        img: {
+            url: "/image/del/explorecarousel/example2.jpg",
+            alt: "Alt"
+        }
+    }
+  ];
+
+  
+
   return (
     <>
       <PageFade>
@@ -169,7 +226,7 @@ export default function Page({test}) {
       settings={Billboard_1}
       />
 
-      <Carousel/>
+      <Carousel imgs={carouselItems1}/>
 
       <BookingSection/>
 
@@ -189,7 +246,7 @@ export default function Page({test}) {
       <Marquee words={MarqueeWords}/>
       <AccordionEvents/>
       
-      <ExploreCarousel/>
+      <ExploreCarousel carouselItems={carouselItems2}/>
 
       <SubscribeForm/>
 

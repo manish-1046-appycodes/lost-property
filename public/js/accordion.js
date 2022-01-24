@@ -37,7 +37,9 @@ const Accordion = {
                     }, 10);
 
                     par.querySelector('[data-accordiontoggle]').classList.add('rotate-45');
-                    par.querySelector('.accordion-btn-initial').classList.add('opacity-0');
+                    if ( par.querySelector('.accordion-btn-initial') ) {
+                        par.querySelector('.accordion-btn-initial').classList.add('opacity-0');
+                    }
 
                     setTimeout(function() {
                         accChild.classList.add('opacity-100');
@@ -53,7 +55,9 @@ const Accordion = {
                     setTimeout(function() {
                         accChild.style.height = '0' + 'px';
                         par.querySelector('[data-accordiontoggle]').classList.remove('rotate-45');
-                        par.querySelector('.accordion-btn-initial').classList.remove('opacity-0');
+                        if ( par.querySelector('.accordion-btn-initial') ) {
+                            par.querySelector('.accordion-btn-initial').classList.remove('opacity-0');
+                        }
                     }, 500);
                 }
             }

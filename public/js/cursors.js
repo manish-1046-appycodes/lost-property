@@ -37,7 +37,7 @@ const Cursors = {
                 var rect = e.target.getBoundingClientRect();
                 var x = e.clientX - rect.left; //x position within the element.
                 var y = e.clientY - rect.top;  //y position within the element.
-                console.log("Left? : " + x + " ; Top? : " + y + ".");
+
                 // get left
                 cursor.style.left = ( x - (cursor.offsetWidth / 2) )+'px';
                 cursor.style.top = ( y - (cursor.offsetHeight / 2) )+'px';

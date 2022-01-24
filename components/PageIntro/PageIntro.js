@@ -15,6 +15,7 @@ const PageIntro = () => {
                             width="598"
                             height="598"
                             layout="fill"
+                            priority
                         />
                     </div>
                 </div>

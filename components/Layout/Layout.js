@@ -12,15 +12,24 @@ import Footer from "./Footer/Footer"
 
 
 
-const Layout = ({children, border}) => {
+const Layout = ({children, border, colourTheme}) => {
     const [notice, setNotice] = useState(false);
+    const [theme, setTheme] = useState('white');
     
     useEffect( () => {
         Cursors.init();
+        
+        if ( colourTheme == 'blue' ) {
+            setTheme('blue');
+        }
+
+        return () => {
+            setTheme('white');
+        }
     });
 
     return (
-        <div className="leading-13 text-sm lg:leading-13 lg:text-21px bg-cream-1">
+        <div className={`leading-13 text-sm lg:leading-13 lg:text-21px  ${ theme == 'blue' ? "bg-blue-1 text-white" : "bg-cream-1"}`}>
             
             <div className={`absolute top-0 left-0 w-full z-40 `}>
                 
@@ -43,6 +52,9 @@ const Layout = ({children, border}) => {
                         <Link href="/story">
                             <a>Story</a>
                         </Link>
+                        <Link href="/food-drink">
+                            <a>Food & Drink</a>
+                        </Link>
                         <Link href="/events">
                             <a>Events</a>
                         </Link>
@@ -55,7 +67,7 @@ const Layout = ({children, border}) => {
                         
                     </nav>
                     <Link href="/">
-                        <a className="my-12 mx-auto">
+                        <a className="my-12 mx-auto hidden lg:block">
                             <Logo />
                         </a>
                     </Link>

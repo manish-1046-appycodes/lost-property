@@ -11,7 +11,7 @@ const AccordionRooms = () => {
   useEffect(() => {Accordion.init()}, []);
 
   const row = (
-  <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black ">
+  <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black cursor-none">
 
     <div className="container absolute">
       <div className="max-w-1430px mx-auto grid grid-5 gap-4 lg:gap-9  py-3 lg:py-4">

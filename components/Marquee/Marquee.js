@@ -1,17 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Script from "next/script";
 
 const Marquee = ({words}) => {
 
+    const ref = useRef(null)
+
     useEffect( () => {
+
+        const element = ref.current;
 
         let currentScroll = 0;
         let isScrollingDown = true;
 
-        let tween = gsap.to(".marquee__part", {xPercent: -100, repeat: -1, duration: 40, ease: "linear"}).totalProgress(0.5);
+        const part = element.querySelectorAll('.marquee__part');
+        const inner = element.querySelectorAll('.marquee__inner');
 
-        gsap.set(".marquee__inner", {xPercent: -50});
+        let tween = gsap.to(part, {xPercent: -100, repeat: -1, duration: 40, ease: "linear"}).totalProgress(0.5);
+
+        gsap.set(inner, {xPercent: -50});
 
         window.addEventListener("scroll", function(){
 
@@ -28,10 +35,10 @@ const Marquee = ({words}) => {
             currentScroll = window.pageYOffset
         });
 
-    }, []);
+    }, [ref]);
 
     return (
-    <section className="marquee overflow-hidden relative font-display text-[50px] lg:text-[140px] leading-none lg:leading-none">
+    <section  ref={ref} className="marquee overflow-hidden relative font-display text-[50px] lg:text-[140px] leading-none lg:leading-none select-none">
         <div className="marquee__inner w-fit flex flex-row" aria-hidden="true">
             
         <div className="marquee__part  shrink-0" dangerouslySetInnerHTML={ {__html: words}}/>

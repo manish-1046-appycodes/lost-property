@@ -46,7 +46,29 @@ export default function Page({test}) {
     }
   }
 
-  const Carouselitems = ['/image/del/story/car1.jpg','/image/del/story/car2.jpg','/image/del/story/car3.jpg']
+  const Carouselitems = [
+    {
+      name: 'Keys,<br/>By Wrapped Studios',
+      img: {
+        url: '/image/del/story/car1.jpg',
+        alt: 'Keys, By Wrapped Studios'
+      }
+    },
+    {
+      name: 'Keys,<br/>By Wrapped Studios',
+      img: {
+        url: '/image/del/story/car2.jpg',
+        alt: 'Keys, By Wrapped Studios'
+      }
+    },
+    {
+      name: 'Keys,<br/>By Wrapped Studios',
+      img: {
+        url: '/image/del/story/car3.jpg',
+        alt: 'Keys, By Wrapped Studios'
+      }
+    }
+  ];
   const MarqueeWords = '<em>peek</em>. stare. <em>look</em>.  glance.  <em>ponder</em>';
 
   return (

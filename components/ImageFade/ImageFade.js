@@ -18,6 +18,10 @@ const ImageFade = (props) => {
         if ( props.priority ) {
             setIsOpen(true)
         }
+
+        return () => {
+            setIsOpen(false)
+        }
     }, [ref, props.priority])
     
     

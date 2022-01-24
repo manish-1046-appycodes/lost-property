@@ -68,6 +68,11 @@
     .grid-4-lg {
         grid-template-columns: 1fr 1fr  2.9fr min-content;
     }
+
+    .grid-2-lg {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .accordion-row {
         &:hover {
             .accordion-preview {
@@ -77,6 +82,16 @@
 
         &:last-child {
             @apply border-b;
+        }
+
+        .btn-toggle {
+            @apply opacity-0;
+        }
+
+        &.active {
+            .btn-toggle {
+                @apply opacity-100;
+            }
         }
     }
     .accordion-group {
