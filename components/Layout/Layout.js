@@ -46,7 +46,7 @@ const Layout = ({children, border, colourTheme}) => {
 
             <Footer border={border}/>
             
-            <Script id="SITE" strategy="beforeInteractive" src="/js/site.js"/>
+            <Script id="SITE" strategy="beforeInteractive" src="/js/site-settings.js"/>
             <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
             <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
             <Script id="DRAGGABLE" strategy="beforeInteractive" src="/js/Draggable.min.js"/>

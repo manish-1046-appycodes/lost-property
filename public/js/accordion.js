@@ -101,7 +101,9 @@ const Accordion = {
             el.addEventListener('mousemove', (event) => {
 
                 previews.forEach(function(preview) {
+                    
                     preview.classList.add('opacity-100');
+                    preview.classList.remove('opacity-0');
                 });
                 
             });
@@ -109,6 +111,7 @@ const Accordion = {
             window.addEventListener('scroll', (event) => {
 
                 previews.forEach(function(preview) {
+                    preview.classList.add('opacity-0');
                     preview.classList.remove('opacity-100');
                 });
                 
