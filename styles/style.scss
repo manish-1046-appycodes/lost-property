@@ -31,6 +31,46 @@
         @apply text-18px lg:text-32px;
     }
 
+    /* Header */
+    .main-nav {
+        @apply text-white space-y-5 fixed bg-blue-1 min-vh100 w-full top-0 text-[60px] lg:text-[90px] uppercase flex items-end invisible opacity-0 transition-[opacity,visibility,transform];
+
+        ul {
+            @apply w-full;
+            
+            li {
+                @apply flex justify-center border-b border-white opacity-50 pointer-events-none;
+                
+                
+
+                &:nth-child(3n + 1) {
+                    a {
+                        @apply justify-end;
+                    }
+                }
+
+                &:nth-child(3n + 2) {
+                    a {
+                        @apply justify-center;
+                    }
+                }
+
+                &:hover {
+                    @apply opacity-100;
+
+                    a {
+                        @apply font-display;
+                    }
+                }
+
+                a {
+                    @apply block max-w-[810px] w-full flex pointer-events-auto;
+
+                    
+                }
+            }
+        }
+    }
 
     /* BUTTONS */
     .button-secondary {
