@@ -20,7 +20,7 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
             </div>
         </div>
 
-        <header className={`h-[120px] lg:h-[150px] flex fixed w-full transition-[top,background-color] pointer-events-none duration-500  ${ notice ? 'top-[0px]' : 'top-[40px]'} text-black ${ (!isScrolledState && headerThemeBgState == 'light')  && 'bg-transparent text-white'} ${ isScrolledState && headerThemeBgState == 'light' && 'bg-cream-1/80'} `}>
+        <header className={`h-[120px] lg:h-[150px] flex fixed w-full transition-[top,background-color] pointer-events-none duration-500  ${ notice ? 'top-[0px]' : 'top-[40px]'} text-black ${ (!isScrolledState && headerThemeBgState == 'light')  && 'bg-transparent text-white'} ${ isScrolledState && 'bg-cream-1/80'} `}>
 
             <nav className={`main-nav scale-95 pointer-events-auto user-select-none ${ navOpenState ? 'nav-open visible opacity-100 scale-100' : 'nav-closed'}`}>
                 <ul  onClick={toggleNavFunc}>
