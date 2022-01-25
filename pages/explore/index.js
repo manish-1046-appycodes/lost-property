@@ -2,12 +2,12 @@ import { useEffect } from 'react'
 
 import Head from 'next/head'
 
-import Layout from '../components/Layout/Layout'
+import Layout from '../../components/Layout/Layout'
 
-import ButtonRound from '../components/Links/ButtonRound'
-import PageFade from '../components/PageFade'
-import ImageFade from '../components/ImageFade/ImageFade'
-import ParallaxItem from '../components/UI/ParallaxItem'
+import ButtonRound from '../../components/Links/ButtonRound'
+import PageFade from '../../components/PageFade'
+import ImageFade from '../../components/ImageFade/ImageFade'
+import ParallaxItem from '../../components/UI/ParallaxItem'
 
 // Locations
 const locations = [
@@ -107,7 +107,7 @@ export default function Page({test}) {
         <section className="container relative">
 
           <div className="absolute w-full h-full top-0 left-0 container">
-            <div className="sticky top-0 min-vh100 flex items-center justify-center flex-col">
+            <div className="sticky top-0 min-h-screen flex items-center justify-center flex-col">
               <h1 className="heading-brand-medium text-center">Get <em>lost</em> in <br/>the <em>City</em></h1>
             </div>
           </div>

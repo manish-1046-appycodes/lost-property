@@ -106,6 +106,8 @@
         }
     }
 
+    
+
     /* Slides */
     .slides-container {
         .slide + .slide {
@@ -137,6 +139,26 @@
     }
 }
 
+/* Mapbox */
+.mapboxgl-popup-content {
+    @apply px-4 py-5;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+    @apply font-sans flex items-start min-w-[270px];
+}
+
+.mapboxgl-popup-close-button {
+    font-size: 29px;
+    line-height: 15px;
+    top: 15px;
+    right: 15px;
+    background: none !important;
+    @apply outline-0 ml-3 static select-none;
+}
+
+.mapboxgl-popup-content {
+    h3 {
+    }
+}
 
 /* VH Hack */
 :root {

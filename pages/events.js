@@ -62,8 +62,6 @@ export default function Page({test}) {
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
         
-        
-
         <div className="spacer h-[50px] lg:h-[150px]"></div>
         
         <Marquee words={MarqueeWords}/>

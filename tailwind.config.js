@@ -42,6 +42,10 @@ module.exports = {
         '125':  '1.25',
         '13':   '1.3'
       },
+      minHeight: {
+        mob_min_height: 'calc(100vh - 120px)',
+        lg_min_height: 'calc(100vh - 150px)'
+      },
       maxWidth: {
         '1430px': '1430px'
       },

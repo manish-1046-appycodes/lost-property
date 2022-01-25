@@ -64,6 +64,9 @@ const Layout = ({children, border, colourTheme}) => {
                         <Link href="/explore">
                             <a>Explore</a>
                         </Link>
+                        <Link href="/explore/map">
+                            <a>Explore/Map</a>
+                        </Link>
                         
                     </nav>
                     <Link href="/">

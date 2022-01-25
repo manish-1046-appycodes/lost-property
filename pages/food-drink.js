@@ -10,7 +10,6 @@ import AccordionMenu from '../components/Accordion/AccordionMenu'
 import Marquee from '../components/Marquee/Marquee'
 import FoodDrinkCarousel from '../components/FoodDrinkCarousel/FoodDrinkCarousel'
 import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
-import Ctas from '../components/Ctas/Ctas'
 import PageFade from '../components/PageFade'
 import ChevDown from '../public/image/icon/chev-down.svg'
 

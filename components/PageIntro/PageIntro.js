@@ -3,7 +3,7 @@ import ImageFade from "../ImageFade/ImageFade";
 
 const PageIntro = () => {
   return (
-        <header className="page-intro min-vh100 flex items-center py-20 lg:py-28">
+        <header className="page-intro min-h-screen flex items-center py-20 lg:py-28">
 
             <div className="container">
 

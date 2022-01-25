@@ -123,6 +123,7 @@ const gsapSettings = {
                     resize();
 
                     var draggable = new Draggable(proxy, {
+                    type:"x",
                     trigger: slide_container,
                     throwProps: true,
                     onPress: updateDraggable,

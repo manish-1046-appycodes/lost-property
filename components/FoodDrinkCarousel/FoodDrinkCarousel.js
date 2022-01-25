@@ -5,7 +5,7 @@ import ImageFade from "../ImageFade/ImageFade";
 const FoodDrinkCarousel = ({carouselItems}) => {
     
     return (
-        <section className="min-vh100 w-full py-28 lg:py-52 flex items-center relative overflow-hidden">
+        <section className="min-h-screen w-full py-28 lg:py-52 flex items-center relative overflow-hidden">
 
             <div className="container absolute text-center w-full">
                 <div>
