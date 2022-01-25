@@ -293,7 +293,9 @@ export default function Page({test}) {
 
             <div className="min-h-mob_min_height lg:min-h-lg_min_height flex flex-col">
                 
-                <div ref={mapContainer} id="my-map" className="w-full flex-1 order-2 lg:order-1" />
+                <div className={`w-full flex-1 order-2 lg:order-1 flex transition-[filter] ${ (filterOpen ? 'blur-sm' : '')}`}>
+                    <div ref={mapContainer} id="my-map" className={`grow w-full`} />
+                </div>
 
                 <div className={`h-[56px] lg:h-[73px] relative z-10 order-1 lg:order-2 ${ (filterOpen ? 'filterOpen' : '')}`}>
                     
