@@ -242,8 +242,8 @@ export default function Page({test}) {
       settings={Billboard_4}
       />
 
-      
       <Marquee words={MarqueeWords}/>
+      
       <AccordionEvents/>
       
       <ExploreCarousel carouselItems={carouselItems2}/>
