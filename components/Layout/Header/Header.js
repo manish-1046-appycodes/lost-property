@@ -4,7 +4,7 @@ import ButtonSecondary from "../../Links/ButtonSecondary"
 import Cross from "../../../public/image/icon/cross.svg"
 import Logo from "../../../public/image/lost-property-logo.svg"
 
-const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc}) => {
+const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledState, headerThemeBgState}) => {
 
   return (
     <div className={`absolute top-0 left-0 w-full z-40 `}>
@@ -20,9 +20,9 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc}) => {
             </div>
         </div>
 
-        <header className={`flex fixed w-full transition-[transform] pointer-events-none ${ notice ? 'top-[0px]' : 'top-[40px]'}`}>
+        <header className={`h-[120px] lg:h-[150px] flex fixed w-full transition-[top,background-color] pointer-events-none duration-500  ${ notice ? 'top-[0px]' : 'top-[40px]'} text-black ${ (!isScrolledState && headerThemeBgState == 'light')  && 'bg-transparent text-white'} ${ isScrolledState && headerThemeBgState == 'light' && 'bg-cream-1/80'} `}>
 
-            <nav className={`main-nav scale-95 pointer-events-auto ${ navOpenState ? 'nav-open visible opacity-100 scale-100' : 'nav-closed'}`}>
+            <nav className={`main-nav scale-95 pointer-events-auto user-select-none ${ navOpenState ? 'nav-open visible opacity-100 scale-100' : 'nav-closed'}`}>
                 <ul  onClick={toggleNavFunc}>
                     <li>
                         <Link href="/">
@@ -65,8 +65,8 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc}) => {
             <div className={`container flex items-center pointer-events-auto`}>
 
                 <button aria-hidden className="p-5 ml-3 relative z-10 cursor-pointer" onClick={toggleNavFunc}>
-                    <div className={`relative h-[2px] bg-white w-[48px] transition-all ease-in-out ${ navOpenState ? 'rotate-45 top-[9px]' : 'nav-closed'} `}></div>
-                    <div className={`relative h-[2px] bg-white w-[48px] transition-all ease-in-out mt-4 ${ navOpenState ? '-rotate-45 top-[-9px]' : 'nav-closed'}`}></div>
+                    <div className={`relative h-[2px] bg-current w-[48px] transition-all ease-in-out ${ navOpenState ? 'rotate-45 top-[9px] !bg-white' : 'nav-closed'} `}></div>
+                    <div className={`relative h-[2px] bg-current w-[48px] transition-all ease-in-out mt-4 ${ navOpenState ? '-rotate-45 top-[-9px] !bg-white' : 'nav-closed'}`}></div>
                 </button>
 
                 <Link href="/">

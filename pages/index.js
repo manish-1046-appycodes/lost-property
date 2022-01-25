@@ -243,7 +243,7 @@ export default function Page({test}) {
       />
 
       <Marquee words={MarqueeWords}/>
-      
+
       <AccordionEvents/>
       
       <ExploreCarousel carouselItems={carouselItems2}/>
@@ -260,7 +260,7 @@ export default function Page({test}) {
 
 Page.getLayout = function getLayout(page) {
   return (
-    <Layout>{page}</Layout>
+    <Layout headerBgColor="light">{page}</Layout>
   )
 }
 

@@ -10,39 +10,64 @@ import Header from "./Header/Header"
 
 
 
-const Layout = ({children, border, colourTheme}) => {
+const Layout = ({children, border, colourTheme, headerBgColor}) => {
     const [notice, setNotice] = useState(false);
-    const [theme, setTheme] = useState('white');
+    const [headerThemeBg, setHeaderThemeBg] = useState('dark');
+    const [themeBg, setThemeBg] = useState('white');
     const [navOpen, setNavOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     
     useEffect( () => {
         Cursors.init();
         
         if ( colourTheme == 'blue' ) {
-            setTheme('blue');
+            setThemeBg('blue');
         }
 
-        return () => {
-            setTheme('white');
+        if ( headerBgColor == 'light' ) {
+            setHeaderThemeBg('light');
+        } else {
+            setHeaderThemeBg('dark');
         }
+
+        
+
+        window.addEventListener('scroll', checkScroll);
+
+        return () => {
+            setThemeBg('white');
+            window.removeEventListener('scroll', checkScroll);
+        }
+        
     });
 
     const toggleNav = () => {
         setNavOpen( navOpen => !navOpen );
     }
 
+    const checkScroll = () => {
+        if ( window.scrollY > 0 ) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    }
+    
+
     
 
     return (
-        <div className={`leading-13 text-sm lg:leading-13 lg:text-21px  ${ theme == 'blue' ? "bg-blue-1 text-white" : "bg-cream-1"}`}>
+        <div className={`leading-13 text-sm lg:leading-13 lg:text-21px  ${ themeBg == 'blue' ? "bg-blue-1 text-white" : "bg-cream-1"}`}>
             
             <Header 
             notice={notice} 
             toggleNavFunc={toggleNav}
             navOpenState={navOpen}
-            setNoticeFunc={setNotice}/>
+            setNoticeFunc={setNotice}
+            isScrolledState={isScrolled}
+            headerThemeBgState={headerThemeBg}/>
             
-            <main>{children}</main>
+            <main className={`${ notice ? 'pt-[0px]' : 'pt-[40px]'}`}>{children}</main>
 
             <Footer border={border}/>
             
