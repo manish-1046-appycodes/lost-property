@@ -15,25 +15,25 @@ import ChevDown from '../public/image/icon/chev-down.svg'
 
 
 const carouselItems1 = [
-    {   
+    {
         img: {
             url: "/image/del/food-drink/car-1-1.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
         img: {
             url: "/image/del/food-drink/car-1-2.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
         img: {
             url: "/image/del/food-drink/car-1-1.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
         img: {
             url: "/image/del/food-drink/car-1-2.jpg",
             alt: "Alt"
@@ -42,28 +42,28 @@ const carouselItems1 = [
 ];
 
 const carouselItems2 = [
-    {   
+    {
         name: "Keys, <br/>By Wrapped Studios",
         img: {
             url: "/image/del/food-drink/img1.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
         name: "Keys, <br/>By Wrapped Studios",
         img: {
             url: "/image/del/food-drink/img2.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
       name: "Keys, <br/>By Wrapped Studios",
       img: {
         url: "/image/del/food-drink/img3.jpg",
           alt: "Alt"
       }
     },
-    {   
+    {
         name: "Keys, <br/>By Wrapped Studios",
         img: {
             url: "/image/del/food-drink/img2.jpg",
@@ -73,21 +73,21 @@ const carouselItems2 = [
 ];
 
 const carouselItems3 = [
-    {   
+    {
         name: "Blue Lagoon, <br/>Tequila, blue curacao and grapefruit",
         img: {
             url: "/image/del/food-drink/car-3-1.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
         name: "Blue Lagoon, <br/>Tequila, blue curacao and grapefruit",
         img: {
             url: "/image/del/food-drink/car-3-2.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
       name: "Blue Lagoon, <br/>Tequila, blue curacao and grapefruit",
       img: {
         url: "/image/del/food-drink/car-3-3.jpg",
@@ -96,8 +96,8 @@ const carouselItems3 = [
     }
 ];
 
-const MarqueeWords1 = '<em>eat</em>. scoff. <em>munch</em>.  stuff. <em>taste</em>.';
-const MarqueeWords2 = '<em>slurp.</em> drink. <em>sip</em>.  gulp.  <em>quaff</em>.  gargle';
+const MarqueeWords1 = '<em>eat</em>. scoff. <em>munch</em>. stuff. <em>taste.</em>. demolish. <em>savor.</em> chomp. <em>nibble.</em> nosh.';
+const MarqueeWords2 = '<em>drink.</em> gargle. <em>slurp.</em> sip. <em>quaff.</em> gulp. <em>swig.</em> swirl.';
 
 const Billboard_1 = {
     title:  '',
@@ -144,9 +144,9 @@ export default function Page({test}) {
         <Head>
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
-            <link rel="icon" href="/favicon.ico" />       
+            <link rel="icon" href="/favicon.ico" />
         </Head>
-        
+
         <FoodDrinkCarousel carouselItems={carouselItems1}/>
 
         <div className="pb-[170px] xl:pb-[200px]">
@@ -173,7 +173,7 @@ export default function Page({test}) {
 
         <Marquee words={MarqueeWords1}/>
         <Carousel imgs={carouselItems2} colourTheme="blue"/>
-        
+
         <div className="py-[170px] xl:py-[200px]">
 
         <AccordionMenu/>
@@ -182,18 +182,18 @@ export default function Page({test}) {
 
         <Marquee words={MarqueeWords2}/>
         <Carousel imgs={carouselItems3} colourTheme="blue"/>
-      
+
         <SubscribeForm/>
 
         <div className="bg-cream-1 pt-[80px] lg:pt-[120px]">
-            <Billboard 
+            <Billboard
             settings={Billboard_1}
             />
         </div>
 
 
     </PageFade>
-      
+
     </>
   )
 }

@@ -26,7 +26,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'ESCAPISM',
-    copy:   '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at??</p>',
+    copy:   '<p>Opening in Spring 2022 and situated in the heart of London next to St Pauls Cathedral, Lost Property invites you to lose yourself in the moment. Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner. With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, Lost Property Hotel is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience.</p>',
     cta:    {
       cta_title:  'Our Story',
       cta_url:    '#'
@@ -44,7 +44,7 @@ export default function Page({test}) {
 
   const Billboard_2 = {
     title:  'OUR ROOMS',
-    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at? Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?</p>',
+    copy: '<p>Each guest room is influenced by eclectic artwork and contemporary design touches inspired by London's rich and charming history. Guests will be encouraged to enjoy luxurious escapism and to discover something new and exciting beyond the boundaries of daily life...</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '#'
@@ -73,7 +73,7 @@ export default function Page({test}) {
       url: '/image/del/found-bar-restaurant.svg',
       alt: 'Found Bar & Restaurant'
     },
-    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus.</p>',
+    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists. Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '#'
@@ -108,7 +108,7 @@ export default function Page({test}) {
       url: '/image/del/tattle-coffee-house-inner.jpg',
       alt: 'Tattle Coffee House'
     },
-    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus.</p>',
+    copy: '<p>Where tattled tales of the town are told and spoken amongst the best freshly ground coffee in Lost Property's, Coffee House, Tattle.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
@@ -158,30 +158,30 @@ export default function Page({test}) {
       }
     }
   ];
-  
+
   const carouselItems2 = [
-    {   
+    {
         name: "Whispering Gallery AT St Paul’s Cathedral",
         img: {
             url: "/image/del/explorecarousel/example1.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
         name: "Whispering Gallery AT St Paul’s Cathedral",
         img: {
             url: "/image/del/explorecarousel/example2.jpg",
             alt: "Alt"
         }
     },
-    {   
+    {
       name: "Whispering Gallery AT St Paul’s Cathedral",
       img: {
           url: "/image/del/explorecarousel/example1.jpg",
           alt: "Alt"
       }
     },
-    {   
+    {
         name: "Whispering Gallery AT St Paul’s Cathedral",
         img: {
             url: "/image/del/explorecarousel/example2.jpg",
@@ -190,7 +190,7 @@ export default function Page({test}) {
     }
   ];
 
-  
+
 
   return (
     <>
@@ -198,14 +198,14 @@ export default function Page({test}) {
       <Head>
         <title>Lost Property</title>
         <meta name="description" content="Lost Property" />
-        <link rel="icon" href="/favicon.ico" />       
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       
       <div className='hero min-h-screen w-full relative flex'>
-        
+
         <div className="absolute h-full w-full js-parallax overflow-hidden">
           <div className="relative h-full w-full ">
-            
+
             <ImageFade
             src="/image/del/home-hero.jpg"
             layout="fill"
@@ -215,14 +215,14 @@ export default function Page({test}) {
             alt=""/>
           </div>
         </div>
-        
+
         <div className="container text-white m-auto relative text-center">
           <h1 className="heading-brand-small hidden lg:block">Find yourself in our <br/><em>neighbourhood?</em></h1>
         </div>
 
       </div>
-      
-      <Billboard 
+
+      <Billboard
       settings={Billboard_1}
       />
 
@@ -230,22 +230,22 @@ export default function Page({test}) {
 
       <BookingSection/>
 
-      <Billboard 
+      <Billboard
       settings={Billboard_2}
       />
 
-      <Billboard 
+      <Billboard
       settings={Billboard_3}
       />
 
-      <Billboard 
+      <Billboard
       settings={Billboard_4}
       />
 
       <Marquee words={MarqueeWords}/>
 
       <AccordionEvents/>
-      
+
       <ExploreCarousel carouselItems={carouselItems2}/>
 
       <SubscribeForm/>
@@ -253,7 +253,7 @@ export default function Page({test}) {
       <Ctas/>
 
       </PageFade>
-      
+
     </>
   )
 }

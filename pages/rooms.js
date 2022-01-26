@@ -25,7 +25,7 @@ export default function Page({test}) {
 
   const Billboard_2 = {
     title:  'Our Story',
-    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at? Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?</p>',
+    copy: '<p>Each bedroom offers guests a comfortable escapism influenced by London's rich history and charm through artwork, untique design touchpoints and luxurious bed linen.</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '#'
@@ -48,7 +48,7 @@ export default function Page({test}) {
     }
   }
 
-  const MarqueeWords = 'kip.  sleep.  nap. dream.  slumber.';
+  const MarqueeWords = '<em>kip.</em> sleep.  <em>nap.</em>  dream.  <em>slumber.</em>  doze.  <em>snooze.</em>  shut-eye.';
 
   return (
     <>
@@ -62,15 +62,15 @@ export default function Page({test}) {
         </Head>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
-        
-        <Billboard 
+
+        <Billboard
         settings={Billboard_2}
         />
 
         <div className="spacer h-[50px] lg:h-[150px]"></div>
-        
+
         <Marquee words={MarqueeWords}/>
-        
+
         <AccordionRooms/>
 
         <BookingSection alt="alt"/>
