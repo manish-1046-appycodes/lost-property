@@ -23,7 +23,7 @@ export default function Page({test}) {
 
   const Billboard_2 = {
     title:  'Our Story',
-    copy: '<p>A hotel unlike any other. Lost Property is Curio Collection by Hilton hotel designed to evoke the lost arts and activities of eccentric living with a plethora of curiosities around every corner. The walls are lined with visual spectacles, bespoke creations and ecclectic sculptures. Designed for losing yourself, just for a moment. Guests are invited to dine in Found, the hotel's bar and restaurant which celebrates unique and timeless classic British dishes and cocktails each with their own unusual and contemporary twist and Tattle, our neighbourly Coffee House, offers the finest brewed coffees and teas, freshly baked goods from local suppliers and takeaway options for those passing swiftly.</p>',
+    copy: '<p>A hotel unlike any other. Lost Property is Curio Collection by Hilton hotel designed to evoke the lost arts and activities of eccentric living with a plethora of curiosities around every corner. The walls are lined with visual spectacles, bespoke creations and ecclectic sculptures. Designed for losing yourself, just for a moment. Guests are invited to dine in Found, the hotel\'s bar and restaurant which celebrates unique and timeless classic British dishes and cocktails each with their own unusual and contemporary twist and Tattle, our neighbourly Coffee House, offers the finest brewed coffees and teas, freshly baked goods from local suppliers and takeaway options for those passing swiftly.</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '#'

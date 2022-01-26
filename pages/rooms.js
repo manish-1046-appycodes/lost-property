@@ -25,7 +25,7 @@ export default function Page({test}) {
 
   const Billboard_2 = {
     title:  'Our Story',
-    copy: '<p>Each bedroom offers guests a comfortable escapism influenced by London's rich history and charm through artwork, untique design touchpoints and luxurious bed linen.</p>',
+    copy: '<p>Each bedroom offers guests a comfortable escapism influenced by London\'s rich history and charm through artwork, untique design touchpoints and luxurious bed linen.</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '#'

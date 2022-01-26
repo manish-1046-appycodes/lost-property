@@ -44,7 +44,7 @@ export default function Page({test}) {
 
   const Billboard_2 = {
     title:  'OUR ROOMS',
-    copy: '<p>Each guest room is influenced by eclectic artwork and contemporary design touches inspired by London's rich and charming history. Guests will be encouraged to enjoy luxurious escapism and to discover something new and exciting beyond the boundaries of daily life...</p>',
+    copy: '<p>Each guest room is influenced by eclectic artwork and contemporary design touches inspired by London\'s rich and charming history. Guests will be encouraged to enjoy luxurious escapism and to discover something new and exciting beyond the boundaries of daily life...</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '#'
@@ -108,7 +108,7 @@ export default function Page({test}) {
       url: '/image/del/tattle-coffee-house-inner.jpg',
       alt: 'Tattle Coffee House'
     },
-    copy: '<p>Where tattled tales of the town are told and spoken amongst the best freshly ground coffee in Lost Property's, Coffee House, Tattle.</p>',
+    copy: '<p>Where tattled tales of the town are told and spoken amongst the best freshly ground coffee in Lost Property\'s, Coffee House, Tattle.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
@@ -200,7 +200,7 @@ export default function Page({test}) {
         <meta name="description" content="Lost Property" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <div className='hero min-h-screen w-full relative flex'>
 
         <div className="absolute h-full w-full js-parallax overflow-hidden">
