@@ -47,7 +47,7 @@ export default function Page({test}) {
     }
   }
 
-  const MarqueeWords = 'craft.  entertainment.  art. events.  music.';
+  const MarqueeWords = '<em>play.</em> watch. <em>listen.</em> participate. <em>dance.</em> celebrate. <em>attend.</em>';
 
   return (
     <>
@@ -61,11 +61,11 @@ export default function Page({test}) {
         </Head>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
-        
+
         <div className="spacer h-[50px] lg:h-[150px]"></div>
-        
+
         <Marquee words={MarqueeWords}/>
-        
+
         <AccordionEvents/>
 
         <SubscribeForm/>

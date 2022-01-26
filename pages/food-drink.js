@@ -109,7 +109,7 @@ const Billboard_1 = {
       url: '/image/del/tattle-coffee-house-inner.jpg',
       alt: 'Tattle Coffee House'
     },
-    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus.</p>',
+    copy: '<p>Tattle - Finding the lost art of conversation.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
