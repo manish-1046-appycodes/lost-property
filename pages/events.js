@@ -47,7 +47,7 @@ export default function Page({test}) {
     }
   }
 
-  const MarqueeWords = '<em>play.</em>  watch.  <em>listen.</em>  participate.  <em>dance.</em>  celebrate.  <em>attend.</em>  ';
+  const MarqueeWords = '<em>play.</em>  watch.  <em>listen.</em>  participate.  <em>dance.</em>  celebrate.  <em>attend.</em> ';
 
   return (
     <>
