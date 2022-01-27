@@ -32,14 +32,14 @@ const AccordionRooms = () => {
 
     <div className="accordion-child h-0 overflow-hidden opacity-0 duration-500 transition-[all] ease-in-out ">
       <div className="container">
-        
+
         <div className="max-w-1430px mx-auto lg:grid grid-5 gap-4 lg:gap-9 pt-[85px] lg:pt-0 pb-3 lg:pb-9 relative">
           <div className="col-span-3 lg:py-[130px] mb-8 lg:mb-0 xl:grid gap-x-4 lg:gap-x-9 grid-cols-3">
 
-            <h2 className="uppercase text-[32px] lg:text-[60px] mb-6 lg:mb-16 col-span-3">Double</h2>
+            <h2 className="uppercase text-[32px] lg:text-[60px] mb-6 lg:mb-16 col-span-3">Guests Rooms - Blue & Red</h2>
 
             <div className="text-12px lg:text-16px md:max-w-[355px]  col-span-2 mb-6">
-              <p>Felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, Felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, </p>
+              <p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>
             </div>
 
             <div className=" mb-8 lg:mb-0">
@@ -47,24 +47,22 @@ const AccordionRooms = () => {
                 <p className="uppercase mb-5">Ameneties</p>
                 <div className="pl-9">
                   <ul>
-                    <li>49” HD TV</li>
-                    <li>In-room app</li>
-                    <li>Free WiFi</li>
-                    <li>Chaise longue</li>
-                    <li>Tea and coffee making facilities</li>
-                    <li>Toiletries by Grown Alchemist</li>
-                    <li>Mini-fridge</li>
-                    <li>Laptop safe</li>
-                    <li>Table for dining or work</li>
-                    <li>Iron and board</li>
-                    <li>Floor level 2 - 5</li>
+                    <li>50” HD TV</li>
+                    <li>In-room safe</li>
+                    <li>Mini bar</li>
+                    <li>Iron</li>
+                    <li>Ironing Board</li>
+                    <li>Hairdryer</li>
+                    <li>Tea and Coffee maker</li>
+                    <li>Alarm Clock</li>
+                    <li>Nespresso Coffee Machine</li>
                   </ul>
                 </div>
               </div>
             </div>
 
           </div>
-          
+
           <div className=" w-1/2 lg:w-full lg:pt-9 ml-auto lg:ml-0">
             <div className="pt-[100%] relative">
               <Image
@@ -109,7 +107,7 @@ const AccordionRooms = () => {
 
   return (
   <section>
-    
+
     <div className="accordion-group ">
       {row}
       {row}
@@ -119,7 +117,7 @@ const AccordionRooms = () => {
     </div>
 
   </section>
-  
+
   );
 };
 
