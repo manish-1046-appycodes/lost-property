@@ -69,7 +69,7 @@ export default function Page({test}) {
       }
     }
   ];
-  const MarqueeWords = 'peek.  stare.  look.  glance.  ponder.  amuse.  contemplate.  examine.  reflect.  speculate.';
+  const MarqueeWords = '<em>peek.</em>  stare.  <em>look.</em>  glance.  <em>ponder.</em>  amuse.  <em>contemplate.</em>  examine.  <em>reflect.</.em>  speculate.';
 
   return (
     <>

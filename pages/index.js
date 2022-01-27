@@ -26,7 +26,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'ESCAPISM',
-    copy:   '<p>Opening in Spring 2022 and situated in the heart of London, the Lost Property Hotel near St. Paul\'s Cathedral invites you to lose yourself in the moment. Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner. With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, the Lost Property Hotel in St. Pauls is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience. Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
+    copy:   '<p>Opening in Spring 2022 and situated in the heart of London, the Lost Property Hotel near St. Paul\'s Cathedral invites you to lose yourself in the moment. Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner.<br>With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, the Lost Property Hotel in St. Pauls is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience. Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
     cta:    {
       cta_title:  'Our Story',
       cta_url:    '#'
@@ -73,7 +73,7 @@ export default function Page({test}) {
       url: '/image/del/found-bar-restaurant.svg',
       alt: 'Found Bar & Restaurant'
     },
-    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists. Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar. The Lost Property Hotel offers the finest dining and drinking in the Found Resturant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
+    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists. Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br>The Lost Property Hotel offers the finest dining and drinking in the Found Resturant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '#'
@@ -133,7 +133,7 @@ export default function Page({test}) {
     }
   }
 
-  const MarqueeWords = 'craft. <em>entertainment</em>. art. events. music.';
+  const MarqueeWords = '<em>craft.</em>  entertainment.  <em>art.</em>  events.  <em>music.</em>';
 
   const carouselItems1 = [
     {
@@ -217,7 +217,7 @@ export default function Page({test}) {
         </div>
 
         <div className="container text-white m-auto relative text-center">
-          <h1 className="heading-brand-small hidden lg:block">Find yourself in our <br/><em>neighbourhood?</em></h1>
+          <h1 className="heading-brand-small hidden lg:block">Found yourself in our <br/><em>neighbourhood?</em></h1>
         </div>
 
       </div>
