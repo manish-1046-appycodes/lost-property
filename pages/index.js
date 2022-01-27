@@ -133,7 +133,7 @@ export default function Page({test}) {
     }
   }
 
-  const MarqueeWords = '<em>craft.</em>  entertainment.  <em>art.</em>  events.  <em>music.</em> ';
+  const MarqueeWords = ' <em>craft.</em>  entertainment.  <em>art.</em>  events.  <em>music.</em> ';
 
   const carouselItems1 = [
     {
