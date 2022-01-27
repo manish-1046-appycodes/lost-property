@@ -73,7 +73,7 @@ export default function Page({test}) {
       url: '/image/del/found-bar-restaurant.svg',
       alt: 'Found Bar & Restaurant'
     },
-    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists. Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br>The Lost Property Hotel offers the finest dining and drinking in the Found Resturant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
+    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists. Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br>The Lost Property Hotel offers the<br>finest dining and drinking in the Found Resturant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '#'
