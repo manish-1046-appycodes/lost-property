@@ -10,7 +10,7 @@ function pad(num, size) {
 
 const Carousel = ({imgs, colourTheme}) => {
     return (
-        <div id="carousel" className={`overflow-hidden w-full carousel-wrap ${colourTheme == 'blue' ? 'text-blue-1' : 'text-white'}`}>
+        <div id="carousel" className={`overflow-hidden w-full carousel-wrap ${colourTheme == 'blue' ? 'text-blue-1' : 'text-cream-1'}`}>
             <div className="carousel overflow-hidden flex w-fit">
                 
                 {  ( imgs && imgs.length ) && 

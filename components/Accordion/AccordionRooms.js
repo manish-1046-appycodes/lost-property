@@ -11,7 +11,7 @@ const AccordionRooms = () => {
   useEffect(() => {Accordion.init()}, []);
 
   const row = (
-  <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black cursor-none">
+  <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black">
 
     <div className="container absolute">
       <div className="max-w-1430px mx-auto grid grid-5 gap-4 lg:gap-9  py-3 lg:py-4">
@@ -91,17 +91,7 @@ const AccordionRooms = () => {
       </div>
     </div>
 
-    <div className="accordion-preview fixed pointer-events-none invisible z-20 opacity-0 transition-[opacity] duration-500 ease-in-out">
-      <Image
-        src="/image/del/accordionrooms/example.jpg"
-        objectFit="cover"
-        objectPosition="center"
-        alt="ALT"
-        layout="fixed"
-        width={400}
-        height={300}
-      />
-    </div>
+    
 
   </div>)
 

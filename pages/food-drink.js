@@ -96,8 +96,8 @@ const carouselItems3 = [
     }
 ];
 
-const MarqueeWords1 = ' <em>eat.</em>  scoff.  <em>munch.</em>  stuff.  <em>taste.</em>  demolish.  <em>savor.</em>  chomp.  <em>nibble.</em>  nosh. ';
-const MarqueeWords2 = ' <em>drink.</em>  gargle.  <em>slurp.</em>  sip.  <em>quaff.</em>  gulp.  <em>swig.</em>  swirl. ';
+const MarqueeWords1 = '<em>eat.</em> &nbsp;scoff. &nbsp;<em>munch.</em> &nbsp;stuff. &nbsp;<em>taste.</em> &nbsp;demolish. &nbsp;<em>savor.</em> &nbsp;chomp. &nbsp;<em>nibble.</em> &nbsp;nosh. &nbsp;';
+const MarqueeWords2 = '<em>drink.</em> &nbsp;gargle. &nbsp;<em>slurp.</em> &nbsp;sip. &nbsp;<em>quaff.</em> &nbsp;gulp. &nbsp;<em>swig.</em> &nbsp;swirl. &nbsp;';
 
 const Billboard_1 = {
     title:  '',

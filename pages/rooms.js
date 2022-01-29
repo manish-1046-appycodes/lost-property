@@ -48,7 +48,7 @@ export default function Page({test}) {
     }
   }
 
-  const MarqueeWords = ' <em>kip.</em>  sleep.  <em>nap.</em>  dream.  <em>slumber.</em>  doze.  <em>snooze.</em>  shut-eye. ';
+  const MarqueeWords = '&nbsp;<em>kip.</em> &nbsp;sleep. &nbsp;<em>nap.</em> &nbsp;dream. &nbsp;<em>slumber.</em> &nbsp;doze. &nbsp;<em>snooze.</em> &nbsp;shut-eye. &nbsp;';
 
   return (
     <>

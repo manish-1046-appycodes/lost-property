@@ -94,8 +94,9 @@ const Accordion = {
         const accordionRows = document.querySelectorAll('.accordion-row');
         const accordionGroups = document.querySelectorAll('.accordion-group');
 
+        /*
         accordionGroups.forEach(function(el) {
-
+            
             const previews = el.querySelectorAll('.accordion-preview');
 
             el.addEventListener('mousemove', (event) => {
@@ -136,7 +137,9 @@ const Accordion = {
                 
             });
         });
+        */
 
+        /*
         accordionRows.forEach(function(el) {
 
             const preview = el.querySelector('.accordion-preview');
@@ -161,5 +164,6 @@ const Accordion = {
             
 
         });
+        */
     }
 }
