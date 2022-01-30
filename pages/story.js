@@ -58,7 +58,7 @@ export default function Page({test}) {
     },
     content_bg: 'bg-white',
     content_color: 'text-black',
-    content_alignment: 'right',
+    content_alignment: 'left',
     content_alignment_mob: 'right',
     content_alignment_vertical_mob: 'top',
     bg_type: 'img_full', // caption_full / img_full
