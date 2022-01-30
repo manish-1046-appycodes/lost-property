@@ -118,6 +118,8 @@
     }
 
     .accordion-row {
+        @apply transition-opacity duration-200;
+
         &:hover {
             .accordion-preview {
                 @apply visible;

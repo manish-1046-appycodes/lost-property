@@ -102,7 +102,7 @@ export default function Page({test}) {
 
   const ctas = [
     {
-      bgClass: "bg-white",
+      bgClass: "bg-cream-1",
       textColor: "text-black",
       copy: "<p>Our superbly placed hotel also provides design led and impressive meeting spaces with all the facilities you would expect from a modern London hotel. An alternative to off the rack and vanilla shared work spaces, our rooms offer the opportunity to impress clients, seal the deal and let staff know they’re important.</p><p>Our excellent location ensures the meeting will be memorable and valued and with our expert staff supporting your event you can concentrate on the event itself.</p>",
       title: "Room to <br/>Impress",

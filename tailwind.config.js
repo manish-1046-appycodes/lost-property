@@ -28,6 +28,7 @@ module.exports = {
         'grey-1':   '#707070'
       },
       fontSize: {
+        '10px':   '0.625rem',
         '12px':   '0.75rem',
         '16px':   '1rem',
         '18px':   '1.125rem',

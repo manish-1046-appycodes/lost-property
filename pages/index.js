@@ -1,10 +1,7 @@
 import { useEffect } from 'react'
 
 import Head from 'next/head'
-import Image from 'next/image'
-import Script from 'next/script'
 
-import ButtonSecondary from '../components/Links/ButtonSecondary'
 import Layout from '../components/Layout/Layout'
 
 import BookingSection from '../components/BookingSection/BookingSection'
@@ -208,7 +205,7 @@ export default function Page({test}) {
 
   const ctas = [
     {
-      bgClass: "bg-white",
+      bgClass: "bg-cream-1",
       textColor: "text-black",
       copy: "Looking to host a team away day in central London or the St. Pauls area? Need somewhere for a workshop, client meeting or gathering? We've got lots of spaces for you across our hotel to suit your requirements and the perfect backdrop for a productive and successful meeting.",
       title: "Need Space",
@@ -296,7 +293,7 @@ export default function Page({test}) {
 
 Page.getLayout = function getLayout(page) {
   return (
-    <Layout headerBgColor="light">{page}</Layout>
+    <Layout headerBgColor="light" border="true">{page}</Layout>
   )
 }
 

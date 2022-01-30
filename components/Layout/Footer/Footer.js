@@ -1,24 +1,33 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import RailWay1 from "../../../public/image/icon/railway-1.svg";
+import RailWay2 from "../../../public/image/icon/railway-2.svg";
 
 const Footer = ({border}) => {
   return (
     <footer className={`overflow-hidden bg-cream-1 text-black ${ border && "border-t border-black"}`}>
         <div className="container mb-10 lg:mb-20">
-            <div className="max-w-1430px mx-auto lg:flex mt-10 mb-20 lg:my-20">
-                <aside className="lg:flex lg:w-1/2 mb-10 lg:mb-0">
-                    <h3 className="font-display text-[50px] leading-none lg:mr-10 mb-14 lg:mb-0">Find <em>us</em></h3>
-                    <address className="pl-20 lg:pl-0 not-italic mx-auto">3-5 Ludgate Hill, London<br/>info@thelostproperty.co.uk<br/>020 473 0057</address>
+            <div className="mx-auto lg:flex mt-10 mb-20 lg:my-20 lg:space-x-10">
+                <aside className="lg:flex lg:flex-wrap lg:w-1/2 mb-5 lg:-mb-14">
+                    <h3 className="font-display text-[50px] leading-none mb-14 lg:mr-28">Find <em>us</em></h3>
+                    <address className="pl-20 lg:pl-0 not-italic mr-auto">3-5 Ludgate Hill, London<br/>info@thelostproperty.co.uk<br/>020 473 0057</address>
                 </aside>
-                <aside className="pl-20 lg:pl-0 lg:flex lg:w-1/2 lg:space-x-10 justify-between">
+
+                <aside className="pl-20 mb-10 lg:hidden">
+                    <h3>Nearest station:</h3>
+                    <p><RailWay1 className="inline align-baseline mr-2"/>St Paul’s</p>
+                    <p><RailWay1 className="inline align-baseline mr-2"/>Blackfriars</p>
+                    <p><RailWay2 className="inline align-baseline mr-2"/>City Thameslink</p>
+                </aside>
+                <aside className="pl-20 lg:pl-0 lg:flex lg:w-1/2 lg:space-x-12 justify-end">
                     <ul>
                         <li><a>Instagram</a></li>
                         <li><a>Facebook</a></li>
                     </ul>
 
-                    <div className="lg:w-[58%] mt-20 lg:mt-0">
-                        <h4 className="uppercase lg:mb-2">Stay in the know</h4>
+                    <div className="max-w-[415px] mt-20 lg:mt-0 lg:flex-grow">
+                        <h4 className="uppercase lg:mb-2 lg:text-right">Stay in the know</h4>
                         <form className="inline-block max-w-[615px] w-full">
                             <div className="border-b border-black flex space-x-5 justify-between">
                             <input className="bg-transparent py-3 flex-1 lg:text-[14px] outline-none" type="email" placeholder="Enter your email"/>
@@ -29,11 +38,29 @@ const Footer = ({border}) => {
                 </aside>
             </div>
 
-            <div className="text-left pl-20 lg:pl-0 lg:text-center mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:mt-28">
                 
-                <div className="inline-block text-left lg:text-center">
+                <nav className="text-10px lg:text-16px self-end order-2 sm:order-1">
+                    <ul className="space-y-1 lg:space-y-2 opacity-[0.6]">
+                        <li>
+                            <a href="#">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#">Global Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Site Usage Agreement</a>
+                        </li>
+                        <li>
+                            <a href="#">Cookies Statement</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div className="inline-block text-left text-center order-1 sm:order-2  col-span-2 sm:col-span-1 mb-7 sm:mb-0">
+
                     <Link href="/">
-                        <a className="block w-[143px] lg:w-[185px] mb-5 lg:mb-6 lg:inline-block" >
+                        <a className="block w-[143px] lg:w-[185px] mb-5 lg:mb-5 inline-block text-[0px]" >
                             <Image
                             src="/image/curio.png"
                             alt="Curio"
@@ -44,11 +71,27 @@ const Footer = ({border}) => {
                     </Link>
 
 
-                    <div className="opacity-[0.6] text-[10px] leading-[1.8] lg:text-16px inline-block lg:flex lg:space-x-10 lg:space-x-reverse">
-                        <p className="lg:order-2">Copyright Lost Property Hotel 2021</p>   
-                        <nav className="lg:flex space-x-5 lg:space-x-10"><a href="#">Cookies</a><a href="#">Privacy</a></nav>
+                    <div className="opacity-[0.6] text-[10px] leading-[1.8] lg:text-16px block">
+                        <p className="lg:order-2">Hilton Copyright ©2020 Hilton</p>   
                     </div>
                 </div>
+
+                <nav className="text-10px lg:text-16px text-right self-end order-3">
+                    <ul className="space-y-1 lg:space-y-2 opacity-[0.6]">
+                        <li>
+                            <a href="#">Personal Data Requests</a>
+                        </li>
+                        <li>
+                            <a href="#">Do Not Sell My Information</a>
+                        </li>
+                        <li>
+                            <a href="#">Ad Choices</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </nav>
 
             </div>
         </div>
