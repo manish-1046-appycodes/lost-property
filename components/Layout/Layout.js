@@ -31,7 +31,7 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
         }
 
         
-
+        
         window.addEventListener('scroll', checkScroll);
 
         return () => {

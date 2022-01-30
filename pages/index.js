@@ -39,6 +39,7 @@ export default function Page({test}) {
     img: {
       url: '/image/del/our-rooms.jpg'
     },
+    margin_top: false,
     margin_bottom: false
   }
 
@@ -59,6 +60,7 @@ export default function Page({test}) {
     img: {
       url: '/image/del/our-rooms.jpg'
     },
+    margin_top: true,
     margin_bottom: true,
     round_button: {
       url: '#',
