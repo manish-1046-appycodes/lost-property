@@ -19,7 +19,7 @@ const PageIntro = () => {
                         />
                     </div>
                 </div>
-                <h1 className="js-parallaxTextDown heading-brand-medium text-center transform translate-y-[-25px] lg:translate-y-[-40%] mx-auto max-w-[183px] lg:max-w-full">Kindly be lost</h1>
+                <h1 className="js-parallaxTextDown heading-brand-medium text-center transform translate-y-[-25px] lg:translate-y-[-70px] mx-auto "><em>Loose yourself</em> <span className="inline-block">with us</span></h1>
             </div>
 
         </header>

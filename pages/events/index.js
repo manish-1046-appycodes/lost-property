@@ -2,18 +2,18 @@ import { useEffect } from 'react'
 
 import Head from 'next/head'
 
-import Layout from '../components/Layout/Layout'
+import Layout from '../../components/Layout/Layout'
 
-import AccordionEvents from '../components/Accordion/AccordionEvents'
-import Billboard from '../components/Billboard/Billboard'
+import AccordionEvents from '../../components/Accordion/AccordionEvents'
+import Billboard from '../../components/Billboard/Billboard'
 
-import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
-import Star from '../public/image/icon/star.svg'
-import Blockquote from '../components/Blockquote/Blockquote'
-import Marquee from '../components/Marquee/Marquee'
-import Carousel from '../components/Carousel/Carousel'
-import BookingSection from '../components/BookingSection/BookingSection'
-import PageFade from '../components/PageFade'
+import SubscribeForm from '../../components/SubscribeForm/SubscribeForm'
+import Star from '../../public/image/icon/star.svg'
+import Blockquote from '../../components/Blockquote/Blockquote'
+import Marquee from '../../components/Marquee/Marquee'
+import Carousel from '../../components/Carousel/Carousel'
+import BookingSection from '../../components/BookingSection/BookingSection'
+import PageFade from '../../components/PageFade'
 
 
 
@@ -47,7 +47,7 @@ export default function Page({test}) {
     }
   }
 
-  const MarqueeWords = ' <em>play.</em>  watch.  <em>listen.</em>  participate.  <em>dance.</em>  celebrate.  <em>attend.</em> ';
+  const MarqueeWords = '<em>play.</em> &nbsp;watch. &nbsp;<em>listen.</em> &nbsp;participate. &nbsp;<em>dance.</em> &nbsp;celebrate. &nbsp;<em>attend.</em> &nbsp;';
 
   return (
     <>

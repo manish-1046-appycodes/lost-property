@@ -1,14 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Script from 'next/script'
 
 import ButtonRound from '../Links/ButtonRound'
-
+import ImageFade from "../ImageFade/ImageFade";
 
 const AccordionRooms = () => {
 
-  useEffect(() => {Accordion.init()}, []);
+  const ref = useRef(null)
+
+  useEffect(() => {
+    Accordion.init(ref.current)}, []
+  );
 
   const row = (
   <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black">
@@ -35,12 +39,20 @@ const AccordionRooms = () => {
         <div className="max-w-1430px mx-auto lg:grid grid-4-mob lg:grid-4-lg gap-4 lg:gap-9 pt-[85px] lg:pt-0 pb-3 lg:pb-9 relative">
           <div className="col-span-2 lg:py-[130px] lg:pb-[200px] mb-8 lg:mb-0 xl:grid gap-x-4 lg:gap-x-9">
 
-            <h2 className="text-[42px] lg:text-[72px] md:max-w-[500px] mb-6 lg:mb-16 col-span-2">Lost Sounds of the 20’s</h2>
+            <h2 className="text-[42px] lg:text-[72px] md:max-w-[500px] mb-6 lg:mb-16 col-span-2 leading-12">London’s best Secret spots</h2>
 
             <div className=" md:max-w-[420px]  col-span-2 mb-6">
                 <div className="wysiwyg">
-                    <p>7pm-til late</p>
-                    <p>Felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?</p>
+                    <p>Hidden gems to explore</p>
+                    
+                    <ol>
+                      <li>1. Whispering Gallery, St. Paul’s Cathedral</li>
+                      <li>2. Saint Dunstan in the East</li>
+                      <li>3. The Vaults in Waterloo</li>
+                    </ol>
+
+                    <p>And many more…</p>
+
                 </div>
 
             </div>
@@ -51,7 +63,7 @@ const AccordionRooms = () => {
           
           <div className=" w-1/2 lg:w-full lg:pt-9 ml-auto lg:ml-0">
             <div className="pt-[100%] lg:pt-[82%] relative">
-              <Image
+              <ImageFade
                 src="/image/del/accordionevents/example.jpg"
                 objectFit="cover"
                 objectPosition="center"
@@ -84,7 +96,7 @@ const AccordionRooms = () => {
   return (
   <section>
     
-    <div className="accordion-group ">
+    <div ref={ref} className="accordion-group ">
       {row}
       {row}
       {row}

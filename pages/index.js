@@ -139,21 +139,35 @@ export default function Page({test}) {
     {
       name: 'Keys,<br/>By Wrapped Studios',
       img: {
-        url: '/image/del/carousel/slide-1.jpg',
+        url: '/image/del/carousel/item-1.jpg',
         alt: 'Keys, By Wrapped Studios'
       }
     },
     {
       name: 'Keys,<br/>By Wrapped Studios',
       img: {
-        url: '/image/del/carousel/slide-2.jpg',
+        url: '/image/del/carousel/item-2.jpg',
         alt: 'Keys, By Wrapped Studios'
       }
     },
     {
       name: 'Keys,<br/>By Wrapped Studios',
       img: {
-        url: '/image/del/carousel/slide-3.jpg',
+        url: '/image/del/carousel/item-3.jpg',
+        alt: 'Keys, By Wrapped Studios'
+      }
+    },
+    {
+      name: 'Keys,<br/>By Wrapped Studios',
+      img: {
+        url: '/image/del/carousel/item-4.jpg',
+        alt: 'Keys, By Wrapped Studios'
+      }
+    },
+    {
+      name: 'Keys,<br/>By Wrapped Studios',
+      img: {
+        url: '/image/del/carousel/item-5.jpg',
         alt: 'Keys, By Wrapped Studios'
       }
     }
@@ -187,6 +201,27 @@ export default function Page({test}) {
             url: "/image/del/explorecarousel/example2.jpg",
             alt: "Alt"
         }
+    }
+  ];
+
+  const ctas = [
+    {
+      bgClass: "bg-white",
+      textColor: "text-black",
+      copy: "Looking to host a team away day in central London or the St. Pauls area? Need somewhere for a workshop, client meeting or gathering? We've got lots of spaces for you across our hotel to suit your requirements and the perfect backdrop for a productive and successful meeting.",
+      title: "Need Space",
+      img: "/image/del/cta/cta1.jpg",
+      btnTitle: "Enquire",
+      btnUrl: "#"
+    },
+    {
+      bgClass: "bg-blue-1",
+      textColor: "text-white",
+      copy: "Celebrate occasions big and small, with our private spaces. Whatever the occasion we have the ideal function rooms for your event. You just bring your glam-rags, and we'll sort the rest.",
+      title: "Let’s Partaay",
+      img: "/image/del/cta/cta2.jpg",
+      btnTitle: "Enquire" ,
+      btnUrl: "#"
     }
   ];
 
@@ -228,7 +263,6 @@ export default function Page({test}) {
 
       <Carousel imgs={carouselItems1}/>
 
-      <BookingSection/>
 
       <Billboard
       settings={Billboard_2}
@@ -250,7 +284,7 @@ export default function Page({test}) {
 
       <SubscribeForm/>
 
-      <Ctas/>
+      <Ctas ctas={ctas}/>
 
       </PageFade>
 

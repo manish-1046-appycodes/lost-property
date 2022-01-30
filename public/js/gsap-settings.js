@@ -48,9 +48,7 @@ const gsapSettings = {
         const parallaxTextItemsDown = document.querySelectorAll('.js-parallaxTextDown');
         
         parallaxTextItemsDown.forEach(function(parallaxItem) {
-            const img = parallaxItem.childNodes[0];
 
-            gsap.set(parallaxItem, {yPercent:0});
 
             gsap.timeline({
                 scrollTrigger: {
@@ -62,7 +60,7 @@ const gsapSettings = {
 
             })
             .to(parallaxItem, {
-                yPercent: 200
+                y: '30vh'
             });
             
         });

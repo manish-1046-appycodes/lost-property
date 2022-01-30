@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Script from 'next/script'
@@ -8,7 +8,11 @@ import ButtonRound from '../Links/ButtonRound'
 
 const AccordionRooms = () => {
 
-  useEffect(() => {Accordion.init()}, []);
+  const ref = useRef(null)
+
+  useEffect(() => {
+    Accordion.init(ref.current)}, []
+  );
 
   const row = (
   <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black">
@@ -98,7 +102,7 @@ const AccordionRooms = () => {
   return (
   <section>
 
-    <div className="accordion-group ">
+    <div ref={ref} className="accordion-group ">
       {row}
       {row}
       {row}

@@ -113,6 +113,10 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    .grid-2-off-lg {
+        grid-template-columns: 1.5fr 1fr;
+    }
+
     .accordion-row {
         &:hover {
             .accordion-preview {
@@ -125,7 +129,7 @@
         }
 
         .btn-toggle {
-            @apply opacity-0;
+            @apply opacity-0 transition-opacity duration-500;
         }
 
         &.active {
@@ -157,7 +161,7 @@
 
     /* WYSIWYG */
     .wysiwyg {
-        p {
+        p, ul, ol {
             @apply mb-4 lg:mb-7;
 
             &:last-child {
@@ -176,6 +180,14 @@
                 @apply opacity-100;
             }
         }
+    }
+
+    .min-vh100-exHeadMob {
+        min-height: calc( (var(--vh, 1vh) * 100) - 120px);
+    }
+    
+    .min-vh100-exHeadDesk {
+        min-height: calc( (var(--vh, 1vh) * 100) - 150px);
     }
 }
 
@@ -206,8 +218,10 @@
 }
 
 .min-vh100 {
-min-height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
 }
+
+
 
 .max-vh100 {
 max-height: calc(var(--vh, 1vh) * 100);

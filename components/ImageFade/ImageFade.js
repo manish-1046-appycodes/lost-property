@@ -1,10 +1,10 @@
 import Image from "next/image"
-import { useState, useLayoutEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 
 const { motion } = require("framer-motion");
 
 const variants = {
-    open: { opacity: 1, transition: { duration: 0.5} },
+    open: { opacity: 1, transition: { duration: 0.25} },
     closed: { opacity: 0 },
 }
 
@@ -12,22 +12,13 @@ const ImageFade = (props) => {
 
     const [isOpen, setIsOpen] = useState(false)
 
-    const ref = useRef(null)
-
-    useLayoutEffect(() => {
-        if ( props.priority ) {
-            setIsOpen(true)
-        }
-
-        return () => {
-            setIsOpen(false)
-        }
-    }, [ref, props.priority])
+    useEffect(() => {
+        
+    }, [])
     
     
     return (
         <motion.div
-            ref={ref}
             initial="closed"
             animate={isOpen ? "open" : "closed"}
             variants={variants}
@@ -35,7 +26,7 @@ const ImageFade = (props) => {
         >
             <Image
             {...props}
-            onLoad={
+            onLoadingComplete={
                 () => {
                     setIsOpen(true)
                 }

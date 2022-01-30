@@ -1,11 +1,23 @@
+import { useState } from 'react';
+
 import ButtonRound from '../Links/ButtonRound'
 import ButtonSecondary from '../Links/ButtonSecondary'
 import ImageFade from '../ImageFade/ImageFade';
+import ChevDown from '../../public/image/icon/chev-down.svg'
 
 import Image from 'next/image'
-import Script from 'next/script';
+
+
+const { motion } = require("framer-motion");
+
+const variants = {
+    open: { height: 'auto', opacity: 1, transition: { duration: 0.5} },
+    closed: { height: 0, opacity: 0 },
+}
 
 const Billboard = ( {settings} ) => {
+
+    const [isOpen, setIsOpen] = useState(false);
 
     const captionImgClass = ( settings.bg_type === 'caption_img' && settings.img.img_pos === 'right' ) ? "md:left-1/2" : "md:left-0";
     
@@ -96,14 +108,14 @@ const Billboard = ( {settings} ) => {
     )
 
     return (
-        <section className={`relative ${settings.margin_bottom ? "mb-20 lg:mb-28" : "n" }`}>
+        <section className={`relative ${settings.margin_bottom ? "mb-20 lg:mb-28" : "" } ${settings.margin_top ? "mt-20 lg:mt-28" : "" }`}>
             <div className="container">
                 <div className={`lg:min-h-screen  md:relative  flex flex-col ${contentAlignmentVerticalMob} ${contentAlignmentVertical}`}>
                 
                     <div className={`flex ${contentAlignmentHorizMob} md:justify-around md:relative z-10`}>
                         
                         <div 
-                        className={`w-9/12 w-[262px] md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 text-center min-h-[308px] lg:min-h-[700px] flex flex-col justify-between items-center space-y-4 md:relative ${settings.content_color} ${settings.content_bg} ${settings.content_alignment === 'left' ? 'md:-left-1/4' : ''} ${settings.content_alignment === 'right' ? 'md:left-1/4' : ''}`}>
+                        className={`w-9/12 w-[280px] md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 text-center  flex flex-col justify-between items-center space-y-4 md:relative ${settings.content_color} ${settings.content_bg} ${settings.content_alignment === 'left' ? 'md:-left-1/4' : ''} ${settings.content_alignment === 'right' ? 'md:left-1/4' : ''}`}>
                             
                             { settings?.logo?.url ?
                             (<h2 className="heading-sub uppercase text-center pt-2 w-6/12 max-w-full mx-auto">
@@ -120,20 +132,40 @@ const Billboard = ( {settings} ) => {
                             
                             { settings?.copy_img?.url && 
                             (<>
-                                <div className="grow flex items-center justify-center py-0">
-                                <div className="relative w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]">
-                                    <Image
-                                    src={settings.copy_img.url}
-                                    layout="fill"
-                                    objectFit="cover"
-                                    objectPosition="center"
-                                    alt=""/>
-                                </div>
+                                <div className="grow flex items-center justify-center py-0 !my-5 !mb-1 lg:!my-20 lg:!mb-16">
+                                    <div className="relative w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]">
+                                        <Image
+                                        src={settings.copy_img.url}
+                                        layout="fill"
+                                        objectFit="cover"
+                                        objectPosition="center"
+                                        alt=""/>
+                                    </div>
                                 </div>
                             </>) }
 
+                            
+                            <div className={` ${ !settings?.copy_img?.url ? 'py-6 lg:py-20' : ''} space-y-4`}>
+                                <div className={`py-0 ${settings?.copy_expanded ? 'max-w-[470px]' : 'max-w-[416px]'}`} 
+                                dangerouslySetInnerHTML={ {__html: settings.copy} }></div>
 
-                            <div className="py-0 max-w-[416px]" dangerouslySetInnerHTML={ {__html: settings.copy} }/>
+                                { settings?.copy_expanded &&
+                                (<div className="copy-expand relative">
+                                    
+                                    <motion.div 
+                                    initial="closed"
+                                    animate={isOpen ? "open" : "closed"}
+                                    variants={variants}
+                                    className="py-0 max-w-[470px] overflow-hidden" 
+                                    dangerouslySetInnerHTML={ {__html: settings.copy_expanded} }/>
+
+                                    
+                                </div>)
+                                }
+                            </div>
+                            
+                            { settings?.copy_expanded &&
+                            <div className={`lg:hidden bottom-0 right-0 ml-auto uppercase flex items-center justify-end cursor-pointer space-x-3 ${isOpen ? 'invisible' : null}`} onClick={() => {setIsOpen(true)}}><span>Read More</span> <ChevDown/></div>}
                             
                             { settings.cta.cta_title && 
                             (<div className="ml-auto">

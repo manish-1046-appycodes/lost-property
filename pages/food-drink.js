@@ -12,6 +12,7 @@ import FoodDrinkCarousel from '../components/FoodDrinkCarousel/FoodDrinkCarousel
 import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
 import PageFade from '../components/PageFade'
 import ChevDown from '../public/image/icon/chev-down.svg'
+import AccordionMenu2 from '../components/Accordion/AccordionMenu2'
 
 
 const carouselItems1 = [
@@ -126,7 +127,7 @@ const Billboard_1 = {
       url: '/image/del/tattle-coffee-house.jpg',
       img_pos: 'left'
     },
-    margin_bottom: false,
+    margin_bottom: true,
     round_button: {
       url: '#',
       bg_class: 'bg-green-1',
@@ -189,6 +190,8 @@ export default function Page({test}) {
             <Billboard
             settings={Billboard_1}
             />
+
+            <AccordionMenu2/>
         </div>
 
 

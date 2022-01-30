@@ -1,6 +1,6 @@
 const Accordion = {
-    init: () => {
-        let accordionToggles = document.querySelectorAll('[data-accordiontoggle]');
+    init: (ref) => {
+        let accordionToggles = ref.querySelectorAll('[data-accordiontoggle]');
         accordionToggles.forEach(function(el) {
             const group = el.closest('.accordion-group');
             const par = el.closest('.accordion-row');
@@ -81,7 +81,9 @@ const Accordion = {
                         setTimeout(function() {
                             accChild.style.height = '0' + 'px';
                             el.querySelector('[data-accordiontoggle]').classList.remove('rotate-45');
-                            el.querySelector('.accordion-btn-initial').classList.remove('opacity-0');
+                            if ( par.querySelector('.accordion-btn-initial') ) {
+                                el.querySelector('.accordion-btn-initial').classList.remove('opacity-0');
+                            }
 
                             
                         }, 500);

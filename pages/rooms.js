@@ -73,7 +73,6 @@ export default function Page({test}) {
 
         <AccordionRooms/>
 
-        <BookingSection alt="alt"/>
       </PageFade>
     </>
   )
