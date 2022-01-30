@@ -54,11 +54,7 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                         <a>Events</a>
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/explore/map">
-                        <a>Map</a>
-                        </Link>
-                    </li>
+                    
                 </ul>
             </nav>
 
