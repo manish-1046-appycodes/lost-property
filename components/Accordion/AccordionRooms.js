@@ -22,8 +22,8 @@ const AccordionRooms = ( {accordionData} ) => {
     <div ref={ref} className="accordion-group ">
       
       { accordionData && 
-        accordionData.map( (row) => (
-          <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black">
+        accordionData.map( (row, key) => (
+          <div key={key} className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-black">
 
             <div className="container absolute">
               <div className="max-w-1430px mx-auto grid grid-5 gap-4 lg:gap-9  py-3 lg:py-4">
@@ -60,8 +60,8 @@ const AccordionRooms = ( {accordionData} ) => {
                         <p className="uppercase mb-5">Ameneties</p>
                         <div className="pl-9">
                           <ul>
-                            {row.content.ameneties.map( (amenetie) => (
-                                <li>{amenetie}</li>
+                            {row.content.ameneties.map( (amenetie, key) => (
+                                <li key={key}>{amenetie}</li>
                             ))}
                           </ul>
                         </div>
