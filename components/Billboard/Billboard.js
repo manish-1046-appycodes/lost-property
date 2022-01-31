@@ -145,7 +145,7 @@ const Billboard = ( {settings} ) => {
                             </>) }
 
                             
-                            <div className={` ${ !settings?.copy_img?.url ? 'py-6 lg:py-20' : ''} space-y-4`}>
+                            <div className={` ${ !settings?.copy_img?.url ? 'py-6 lg:py-20' : ''} space-y-4 pb-4`}>
                                 <div className={`py-0 ${settings?.copy_expanded ? 'max-w-[470px]' : 'max-w-[470px]'}`} 
                                 dangerouslySetInnerHTML={ {__html: settings.copy} }></div>
 

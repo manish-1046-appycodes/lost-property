@@ -12,7 +12,7 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
         <div className={`${ notice ? 'h-[0px]' : 'h-[40px]'} overflow-hidden transition-[height,opacity] bg-blue-1 fixed w-full`}>
             <div className="container text-white h-[40px] flex justify-between items-center">
                 
-                <ButtonSecondary title="Covid-19 Updates"/>
+                <ButtonSecondary url="/" title="Covid-19 Updates"/>
                 
                 <div className="p-2 cursor-pointer" onClick={() => {setNoticeFunc(true)}}>
                     <Cross/>

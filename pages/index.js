@@ -122,7 +122,7 @@ export default function Page({test}) {
     content_alignment_mob: 'right',
     content_alignment_vertical_mob: 'top',
     bg_type: 'caption_img', // caption_full / img_full / caption_img
-    bg_caption: '',
+    bg_caption: 'Sip it',
     img: {
       url: '/image/del/tattle-coffee-house.jpg',
       img_pos: 'left'
@@ -301,11 +301,8 @@ export default function Page({test}) {
       settings={Billboard_4}
       />
 
-      <Marquee words={MarqueeWords}/>
 
-      <AccordionEvents/>
 
-      <ExploreCarousel carouselItems={carouselItems2}/>
 
       <SubscribeForm/>
 

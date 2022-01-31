@@ -129,9 +129,9 @@ const Billboard_1 = {
     },
     margin_bottom: true,
     round_button: {
-      url: '#',
-      bg_class: 'bg-green-1',
-      title: 'Visit <br>Us'
+      url: '',
+      bg_class: '',
+      title: ''
     }
   }
 
@@ -203,7 +203,7 @@ export default function Page({test}) {
 
 Page.getLayout = function getLayout(page) {
   return (
-    <Layout border="true" colourTheme="blue" headerBgColor="light">{page}</Layout>
+    <Layout border="" colourTheme="blue" headerBgColor="light">{page}</Layout>
   )
 }
 
