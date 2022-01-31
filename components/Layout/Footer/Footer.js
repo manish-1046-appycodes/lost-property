@@ -39,20 +39,17 @@ const Footer = ({border}) => {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:mt-28">
-                
+
                 <nav className="text-10px lg:text-16px self-end order-2 sm:order-1">
                     <ul className="space-y-1 lg:space-y-2 opacity-[0.6]">
                         <li>
-                            <a href="#">FAQs</a>
+                            <a href="https://hiltonhonors3.hilton.com/en/policy/global-privacy-statement/index.html" target="_blank">Global Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#">Global Privacy Policy</a>
+                            <a href="https://hiltonhonors3.hilton.com/en/terms/usage-agreement/index.html" target="_blank">Site Usage Agreement</a>
                         </li>
                         <li>
-                            <a href="#">Site Usage Agreement</a>
-                        </li>
-                        <li>
-                            <a href="#">Cookies Statement</a>
+                            <a href="https://hiltonhonors3.hilton.com/en/policy/cookies-statement/english.html" target="_blank">Cookies Statement</a>
                         </li>
                     </ul>
                 </nav>
@@ -72,23 +69,20 @@ const Footer = ({border}) => {
 
 
                     <div className="opacity-[0.6] text-[10px] leading-[1.8] lg:text-16px block">
-                        <p className="lg:order-2">Hilton Copyright ©2020 Hilton</p>   
+                        <p className="lg:order-2">Hilton Copyright ©2020 Hilton</p>
                     </div>
                 </div>
 
                 <nav className="text-10px lg:text-16px text-right self-end order-3">
                     <ul className="space-y-1 lg:space-y-2 opacity-[0.6]">
                         <li>
-                            <a href="#">Personal Data Requests</a>
+                            <a href="https://www.hilton.com/en/hilton-honors/personal-data-requests/" target="_blank">Personal Data Requests</a>
                         </li>
                         <li>
-                            <a href="#">Do Not Sell My Information</a>
+                            <a href="https://www.hilton.com/en/hilton-honors/personal-data-requests/" target="_blank">Do Not Sell My Information</a>
                         </li>
                         <li>
-                            <a href="#">Ad Choices</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms &amp; Conditions</a>
+                            <a href="https://www.aboutads.info/choices" target="_blank">Ad Choices</a>
                         </li>
                     </ul>
                 </nav>
