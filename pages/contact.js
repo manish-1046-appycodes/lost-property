@@ -49,7 +49,7 @@ const Page = () => {
                         <div className="md:w-1/2">
                         
                         <form className="form">
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label className="hidden" htmlFor='enquiry'>Enquiry Type</label>
                                 <select type='text' name='enquiry' 
                                 onChange={(e)=>{setEnquiry(e.target.value)}}>
@@ -58,12 +58,12 @@ const Page = () => {
                                     <option>Option 3</option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label className="hidden" htmlFor='email'>Email</label>
                                 <input placeholder="Enter your email" type='email' name='email'
                                 onChange={(e)=>{setEmail(e.target.value)}} />
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label className="hidden" htmlFor='message'>Message</label>
                                 <textarea placeholder="Message" type='text' name='message'
                                 onChange={(e)=>{setMessage(e.target.value)}}></textarea>

@@ -243,25 +243,18 @@ export default function Page({test}) {
         <div className="absolute h-full w-full overflow-hidden js-parallax">
           
           <div className="relative h-full w-full">
-            <div className="relative h-full w-full md:hidden">
-              <ImageFade
-              src="/image/del/home-hero-mob.jpg"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              priority
-              alt=""/>
-            </div>
 
-            <div className="relative h-full w-full hidden md:block">
+
+            <div className="relative h-full w-full block md:block">
               <ImageFade
               src="/image/del/home-hero.jpg"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
               priority
-              alt=""/>
+              alt="Lost Property - St Paul's, London"/>
             </div>
+
           </div>
 
           <div className="bg-black absolute inset-0 opacity-50"></div>
