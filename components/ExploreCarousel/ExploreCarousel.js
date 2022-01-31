@@ -14,7 +14,7 @@ const ExploreCarousel = ({carouselItems}) => {
             <div className="container">
                 <div className="max-w-1430px mx-auto ">
                     <div className=" w-full slides-container">
-                        <div className="w-full slides-inner relative">
+                        <div className="transform translate-x-[-60%] lg:translate-x-0 w-full slides-inner relative">
                         
                         {( carouselItems && 
                             carouselItems.map( (carouselItem,i) => (

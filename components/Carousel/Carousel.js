@@ -21,6 +21,8 @@ const Carousel = ({imgs, colourTheme}) => {
                                 src={img.img.url}
                                 alt={img.img.alt}
                                 layout="fill"
+                                objectFit="cover"
+                                objectPosition="center"
                             />
 
                             { img?.name && 
