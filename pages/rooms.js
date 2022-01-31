@@ -23,7 +23,7 @@ export default function Page({test}) {
 
   useEffect(() => {gsapSettings.init()}, []);
 
-  const Billboard_2 = {
+  const Billboard_1 = {
     title:  'Our Story',
     copy: '<p>Each bedroom offers guests a comfortable escapism influenced by London\'s rich history and charm through artwork, untique design touchpoints and luxurious bed linen.</p>',
     cta:    {
@@ -49,6 +49,83 @@ export default function Page({test}) {
   }
 
   const MarqueeWords = '&nbsp;<em>kip.</em> &nbsp;sleep. &nbsp;<em>nap.</em> &nbsp;dream. &nbsp;<em>slumber.</em> &nbsp;doze. &nbsp;<em>snooze.</em> &nbsp;shut-eye. &nbsp;';
+  
+  const accordionData = [
+    
+    {
+      table_row: {
+        name:     "Penthouse",
+        bed:      "2 x King Bed",
+        sleeps:   "Sleeps x4",
+      },
+      content: {
+        title: "GUESTS ROOMS - BLUE & RED",
+        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        ameneties: [
+          "50” HD TV",
+          "In-room safe",
+          "Mini bar",
+          "Iron",
+          "Ironing Board",
+          "Hairdryer",
+          "Tea and Coffee maker",
+          "Alarm Clock",
+          "Nespresso Coffee Machine"
+        ],
+        img: "/image/del/accordionrooms/example.jpg"
+      },
+      book_btn: ""
+    },
+    {
+      table_row: {
+        name:     "Penthouse",
+        bed:      "2 x King Bed",
+        sleeps:   "Sleeps x4",
+      },
+      content: {
+        title: "GUESTS ROOMS - BLUE & RED",
+        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        ameneties: [
+          "50” HD TV",
+          "In-room safe",
+          "Mini bar",
+          "Iron",
+          "Ironing Board",
+          "Hairdryer",
+          "Tea and Coffee maker",
+          "Alarm Clock",
+          "Nespresso Coffee Machine"
+        ],
+        img: "/image/del/accordionrooms/example.jpg"
+      },
+      book_btn: ""
+    },
+    {
+      table_row: {
+        name:     "Penthouse",
+        bed:      "2 x King Bed",
+        sleeps:   "Sleeps x4",
+      },
+      content: {
+        title: "GUESTS ROOMS - BLUE & RED",
+        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        ameneties: [
+          "50” HD TV",
+          "In-room safe",
+          "Mini bar",
+          "Iron",
+          "Ironing Board",
+          "Hairdryer",
+          "Tea and Coffee maker",
+          "Alarm Clock",
+          "Nespresso Coffee Machine"
+        ],
+        img: "/image/del/accordionrooms/example.jpg"
+      },
+      book_btn: ""
+    }
+
+  ]
 
   return (
     <>
@@ -64,14 +141,14 @@ export default function Page({test}) {
         <div className="spacer h-[120px] lg:h-[150px]"></div>
 
         <Billboard
-        settings={Billboard_2}
+        settings={Billboard_1}
         />
 
         <div className="spacer h-[50px] lg:h-[150px]"></div>
 
         <Marquee words={MarqueeWords}/>
 
-        <AccordionRooms/>
+        <AccordionRooms accordionData={accordionData}/>
 
       </PageFade>
     </>
