@@ -49,17 +49,17 @@ export default function Page({test}) {
   }
 
   const MarqueeWords = '&nbsp;<em>kip.</em> &nbsp;sleep. &nbsp;<em>nap.</em> &nbsp;dream. &nbsp;<em>slumber.</em> &nbsp;doze. &nbsp;<em>snooze.</em> &nbsp;shut-eye. &nbsp;';
-  
+
   const accordionData = [
-    
+
     {
       table_row: {
-        name:     "Penthouse",
-        bed:      "2 x King Bed",
-        sleeps:   "Sleeps x4",
+        name:     "Name",
+        bed:      "1 x Double",
+        sleeps:   "Sleeps x2",
       },
       content: {
-        title: "GUESTS ROOMS - BLUE & RED",
+        title: "Guest Rooms - Blue & Red",
         copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
         ameneties: [
           "50” HD TV",
@@ -78,13 +78,13 @@ export default function Page({test}) {
     },
     {
       table_row: {
-        name:     "Penthouse",
+        name:     "Name",
         bed:      "2 x King Bed",
         sleeps:   "Sleeps x4",
       },
       content: {
-        title: "GUESTS ROOMS - BLUE & RED",
-        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        title: "Superior Rooms",
+        copy: "<p>Located on the higher floors of Lost Property and offering views overlooking St Pauls, our large floor to ceiling windows. The Superior Rooms, offer guests a bright and balanced guestroom. </p>",
         ameneties: [
           "50” HD TV",
           "In-room safe",
@@ -102,7 +102,7 @@ export default function Page({test}) {
     },
     {
       table_row: {
-        name:     "Penthouse",
+        name:     "Name",
         bed:      "2 x King Bed",
         sleeps:   "Sleeps x4",
       },
