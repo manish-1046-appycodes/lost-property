@@ -214,7 +214,7 @@ export default function Page({test}) {
       title: "Need Space",
       img: "/image/del/cta/cta1.jpg",
       btnTitle: "Enquire",
-      btnUrl: "#"
+      btnUrl: "/contact"
     },
     {
       bgClass: "bg-blue-1",
@@ -223,7 +223,7 @@ export default function Page({test}) {
       title: "Let’s Partaay",
       img: "/image/del/cta/cta2.jpg",
       btnTitle: "Enquire" ,
-      btnUrl: "#"
+      btnUrl: "/contact"
     }
   ];
 
