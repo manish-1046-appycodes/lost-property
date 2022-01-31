@@ -49,12 +49,12 @@ export default function Page({test}) {
 
     {
       table_row: {
-        name:     "Queen",
+        name:     "Guest Rooms",
         bed:      "1 x Double",
         sleeps:   "Sleeps x2",
       },
       content: {
-        title: "Guest Rooms - Blue & Red",
+        title: "Guest Rooms",
         copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
         ameneties: [
           "50 inch HD TV",
@@ -73,7 +73,7 @@ export default function Page({test}) {
     },
     {
       table_row: {
-        name:     "NO NAME SUPPLIED",
+        name:     "Superior Rooms",
         bed:      "King",
         sleeps:   "Sleeps x2",
       },
@@ -97,7 +97,7 @@ export default function Page({test}) {
     },
     {
       table_row: {
-        name:     "NO NAME SUPPLIED",
+        name:     "Deluxe Rooms",
         bed:      "King",
         sleeps:   "Sleeps x2",
       },
@@ -122,7 +122,7 @@ export default function Page({test}) {
     },
     {
       table_row: {
-        name:     "NO NAME SUPPLIED",
+        name:     "Junior Suite",
         bed:      "Super King",
         sleeps:   "Sleeps x2",
       },
@@ -172,7 +172,7 @@ export default function Page({test}) {
     },
     {
       table_row: {
-        name:     "NO NAME SUPPLIED",
+        name:     "Family Rooms",
         bed:      "Super King",
         sleeps:   "Sleeps x2",
       },
