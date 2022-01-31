@@ -20,6 +20,8 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
     useEffect( () => {
         Cursors.init();
         
+        
+        
         if ( colourTheme == 'blue' ) {
             setThemeBg('blue');
         }
@@ -37,6 +39,7 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
         return () => {
             setThemeBg('white');
             window.removeEventListener('scroll', checkScroll);
+            
         }
         
     });

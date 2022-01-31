@@ -98,6 +98,10 @@
         }
     }
 
+    .button-tertiary {
+        @apply h-[48px] lg:h-[62px] uppercase block w-full rounded-full bg-black text-white text-center text-[14px] lg:text-[20px] hover:bg-black/50 transition-colors;
+    }
+
     /* Accordions */
     .grid-5 {
         grid-template-columns: 1fr 1fr 1fr 2.9fr min-content;
@@ -190,6 +194,28 @@
     
     .min-vh100-exHeadDesk {
         min-height: calc( (var(--vh, 1vh) * 100) - 150px);
+    }
+
+
+    /* forms */
+    .form {
+
+        .form-group {
+            @apply mb-10 lg:mb-12;
+        }
+
+        input[type="text"], input[type="email"], select, textarea{
+            @apply block w-full placeholder:text-black/50 border-0 border-b border-black bg-transparent pb-2 lg:pb-4 outline-0;
+
+        }
+
+        select {
+            @apply uppercase;
+        }
+
+        textarea {
+            @apply h-[240px] lg:h-[330px] border p-2 lg:p-4 resize-none;
+        }
     }
 }
 

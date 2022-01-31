@@ -23,7 +23,7 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
         <header className={`h-[70px] lg:h-[150px] flex fixed w-full transition-[top,background-color] pointer-events-none duration-500  ${ notice ? 'top-[0px]' : 'top-[40px]'} text-black ${ (!isScrolledState && headerThemeBgState == 'light')  && 'bg-transparent !text-white'} ${ isScrolledState && 'bg-cream-1/80'} `}>
 
             <nav style={{opacity: 0}} className={`main-nav z-10 scale-95 pointer-events-auto user-select-none ${ navOpenState ? 'nav-open visible !opacity-100 scale-100' : 'nav-closed'} ${ notice ? 'top-[0px]' : 'top-[40px]'}`}>
-                <ul  onClick={toggleNavFunc}>
+                <ul onClick={toggleNavFunc}>
                     <li>
                         <Link href="/">
                             <a>Home</a>

@@ -8,7 +8,7 @@ const FoodDrinkCarousel = ({carouselItems}) => {
         <section className="min-h-screen w-full py-28 lg:py-52 flex items-center relative overflow-hidden">
 
             <div className="container absolute text-center w-full">
-                <div>
+                <div className="max-w-[246px] mx-auto lg:max-w-none">
                 <ImageFade
                     src="/image/del/found-bar-restaurant.svg"
                     width="476"
@@ -20,7 +20,7 @@ const FoodDrinkCarousel = ({carouselItems}) => {
             <div className="container">
                 <div className="max-w-1430px mx-auto ">
                     <div className=" w-full slides-container">
-                        <div className="w-full slides-inner relative">
+                        <div className="transform translate-x-[-60%] lg:translate-x-0 w-full slides-inner relative">
                         
                         {( carouselItems && 
                             carouselItems.map( (carouselItem, i) => (

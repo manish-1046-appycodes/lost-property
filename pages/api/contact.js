@@ -5,7 +5,8 @@ export default function (req, res) {
 
   require('dotenv').config()
   
-  let nodemailer = require('nodemailer')
+  let nodemailer = require('nodemailer');
+  
   const transporter = nodemailer.createTransport({
     port: 587,
     host: "smtp.postmarkapp.com",
@@ -16,7 +17,7 @@ export default function (req, res) {
     secure: false,
   })
   const mailData = {
-    from: 'dazpowell@gmail.com',
+    from: 'hello@bigpepperdesign.com',
     to: 'dazpowell@gmail.com',
     subject: `Message From ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email,

@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout";
 
 const Page = () => {
 
-    const [name, setName] = useState('')
+    const [enquiry, setEnquiry] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [submitted, setSubmitted] = useState(false)
@@ -14,7 +14,7 @@ const Page = () => {
         console.log('Sending')
         
         let data = {
-            name,
+            enquiry,
             email,
             message
         }
@@ -31,7 +31,7 @@ const Page = () => {
             if (res.status === 200) {
                 console.log('Response succeeded!')
                 setSubmitted(true)
-                setName('')
+                setEnquiry('')
                 setEmail('')
                 setBody('')
             }
@@ -43,28 +43,32 @@ const Page = () => {
             <div className="container">
                 <div className="max-w-1430px mx-auto">
                     <div className="md:flex">
-                        <div className="md:w-1/2 flex">
-                            <h3 className="heading-brand-medium inline-block">Get in <br/><em>touch</em></h3>
+                        <div className="md:w-1/2 md:flex">
+                            <h3 className="heading-brand-medium block mb-10 text-center">Get in <br className="hidden md:block"/><em>touch</em></h3>
                         </div>
                         <div className="md:w-1/2">
                         
-                        < form >
-                            <div>
-                                <label htmlFor='name'>Name</label>
-                                <input type='text' name='name' 
-                                onChange={(e)=>{setName(e.target.value)}} />  
+                        <form className="form">
+                            <div class="form-group">
+                                <label className="hidden" htmlFor='enquiry'>Enquiry Type</label>
+                                <select type='text' name='enquiry' 
+                                onChange={(e)=>{setEnquiry(e.target.value)}}>
+                                    <option>General Enquiry</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
                             </div>
-                            <div>
-                                <label htmlFor='email'>Email</label>
-                                <input type='email' name='email'
+                            <div class="form-group">
+                                <label className="hidden" htmlFor='email'>Email</label>
+                                <input placeholder="Enter your email" type='email' name='email'
                                 onChange={(e)=>{setEmail(e.target.value)}} />
                             </div>
-                            <div>
-                                <label htmlFor='message'>Message</label>
-                                <input type='text' name='message'
-                                onChange={(e)=>{setMessage(e.target.value)}} />
+                            <div class="form-group">
+                                <label className="hidden" htmlFor='message'>Message</label>
+                                <textarea placeholder="Message" type='text' name='message'
+                                onChange={(e)=>{setMessage(e.target.value)}}></textarea>
                             </div>
-                            <input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
+                            <button className="button-tertiary" type='submit' onClick={(e)=>{handleSubmit(e)}}>Submit</button>
                         </form >
 
                         </div>
