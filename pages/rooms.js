@@ -19,11 +19,11 @@ export default function Page({test}) {
   useEffect(() => {gsapSettings.init()}, []);
 
   const Billboard_1 = {
-    title:  'Our Story',
-    copy: '<p>Each bedroom offers guests a comfortable escapism influenced by London\'s rich history and charm through artwork, untique design touchpoints and luxurious bed linen.</p>',
+    title:  'Our Rooms',
+    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?</p>',
     cta:    {
-      cta_title:  'Find out more',
-      cta_url:    '#'
+      cta_title:  '',
+      cta_url:    ''
     },
     content_bg: 'bg-white',
     content_color: 'text-black',

@@ -146,7 +146,7 @@ const Billboard = ( {settings} ) => {
 
                             
                             <div className={` ${ !settings?.copy_img?.url ? 'py-6 lg:py-20' : ''} space-y-4`}>
-                                <div className={`py-0 ${settings?.copy_expanded ? 'max-w-[470px]' : 'max-w-[416px]'}`} 
+                                <div className={`py-0 ${settings?.copy_expanded ? 'max-w-[470px]' : 'max-w-[470px]'}`} 
                                 dangerouslySetInnerHTML={ {__html: settings.copy} }></div>
 
                                 { settings?.copy_expanded &&
@@ -167,9 +167,9 @@ const Billboard = ( {settings} ) => {
                             { settings?.copy_expanded &&
                             <div className={`lg:hidden bottom-0 right-0 ml-auto uppercase flex items-center justify-end cursor-pointer space-x-3 ${isOpen ? 'invisible' : null}`} onClick={() => {setIsOpen(true)}}><span>Read More</span> <ChevDown/></div>}
                             
-                            { settings.cta.cta_title && 
+                            { settings.cta.cta_title && settings.cta.cta_url && 
                             (<div className="ml-auto">
-                                <ButtonSecondary title={settings.cta.cta_title}/>
+                                <ButtonSecondary title={settings.cta.cta_title} url={settings?.cta?.cta_url}/>
                             </div>) }
                             
                             { ( ButtonRoundWrap && settings.bg_type == 'caption_img' || settings.bg_type == 'caption_full' ) && 
