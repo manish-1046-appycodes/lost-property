@@ -157,7 +157,7 @@ export default function Page({test}) {
 
 Page.getLayout = function getLayout(page) {
   return (
-    <Layout border="true">{page}</Layout>
+    <Layout border="">{page}</Layout>
   )
 }
 
