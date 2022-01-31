@@ -33,13 +33,13 @@
 
     /* Header */
     .main-nav {
-        @apply text-white space-y-5 fixed bg-blue-1 min-vh100 w-full top-0 text-[60px] lg:text-[90px] uppercase flex items-end invisible opacity-0 transition-[opacity,visibility,transform];
+        @apply text-white space-y-5 fixed bg-blue-1 max-vh100 w-full bottom-0 text-[50px] sm:text-[90px] uppercase flex items-end invisible opacity-0 transition-[opacity,visibility,transform]  flex;
 
         ul {
-            @apply w-full;
+            @apply w-full overflow-auto max-h-full;
             
             li {
-                @apply flex justify-center border-b border-white opacity-50 pointer-events-none;
+                @apply flex justify-center border-b border-white opacity-50 pointer-events-none px-2;
                 
                 
 
@@ -185,7 +185,7 @@
     }
 
     .min-vh100-exHeadMob {
-        min-height: calc( (var(--vh, 1vh) * 100) - 120px);
+        min-height: calc( (var(--vh, 1vh) * 100) - 70px);
     }
     
     .min-vh100-exHeadDesk {

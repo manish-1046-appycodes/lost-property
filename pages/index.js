@@ -15,6 +15,9 @@ import Ctas from '../components/Ctas/Ctas'
 import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
 
+/* SVG */
+import lpLogo from '../public/image/lost-property-logo-mob.svg';
+
 
 
 export default function Page({test}) {
@@ -238,8 +241,17 @@ export default function Page({test}) {
       <div className='hero min-h-screen w-full relative flex'>
 
         <div className="absolute h-full w-full js-parallax overflow-hidden">
-          <div className="relative h-full w-full ">
+        <div className="relative h-full w-full md:hidden">
+            <ImageFade
+            src="/image/del/home-hero-mob.jpg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            priority
+            alt=""/>
+          </div>
 
+          <div className="relative h-full w-full hidden md:block">
             <ImageFade
             src="/image/del/home-hero.jpg"
             layout="fill"
@@ -248,10 +260,19 @@ export default function Page({test}) {
             priority
             alt=""/>
           </div>
+
         </div>
 
-        <div className="container text-white m-auto relative text-center">
-          <h1 className="heading-brand-small hidden lg:block">Found yourself in our <br/><em>neighbourhood?</em></h1>
+        <div className="container text-white m-auto relative lg:text-center">
+          <p className="heading-brand-small hidden lg:block">Found yourself in our <br/><em>neighbourhood?</em></p>
+          <h1 className="lg:hidden">
+            <ImageFade
+            src="/image/lost-property-logo-mob.svg"
+            width="277"
+            height="119"
+            alt="Lost Property - St Paul's London"
+            />
+          </h1>
         </div>
 
       </div>
