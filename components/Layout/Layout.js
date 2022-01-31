@@ -70,6 +70,7 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
             <main className={`${ notice ? 'pt-[0px]' : 'pt-[40px]'}`}>{children}</main>
 
             <Footer border={border}/>
+
             
             <Script id="SITE" strategy="beforeInteractive" src="/js/site-settings.js"/>
             <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>

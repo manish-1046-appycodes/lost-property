@@ -5,15 +5,10 @@ import Head from 'next/head'
 import Layout from '../components/Layout/Layout'
 
 import AccordionRooms from '../components/Accordion/AccordionRooms'
-import PageIntro from '../components/PageIntro/PageIntro'
 import Billboard from '../components/Billboard/Billboard'
 
-import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
-import Star from '../public/image/icon/star.svg'
-import Blockquote from '../components/Blockquote/Blockquote'
 import Marquee from '../components/Marquee/Marquee'
-import Carousel from '../components/Carousel/Carousel'
-import BookingSection from '../components/BookingSection/BookingSection'
+
 import PageFade from '../components/PageFade'
 
 
@@ -49,18 +44,42 @@ export default function Page({test}) {
   }
 
   const MarqueeWords = '&nbsp;<em>kip.</em> &nbsp;sleep. &nbsp;<em>nap.</em> &nbsp;dream. &nbsp;<em>slumber.</em> &nbsp;doze. &nbsp;<em>snooze.</em> &nbsp;shut-eye. &nbsp;';
-  
+
   const accordionData = [
-    
+
     {
       table_row: {
-        name:     "Penthouse",
-        bed:      "2 x King Bed",
-        sleeps:   "Sleeps x4",
+        name:     "Queen",
+        bed:      "1 x Double",
+        sleeps:   "Sleeps x2",
       },
       content: {
-        title: "GUESTS ROOMS - BLUE & RED",
+        title: "Guest Rooms - Blue & Red",
         copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        ameneties: [
+          "50 inch HD TV",
+          "Mini Bar",
+          "In Room Safe",
+          "Iron",
+          "Ironing Board",
+          "Hairdryer",
+          "Tea and Coffee Maker",
+          "Alarm Clock",
+          "Espresso Coffee Machine"
+        ],
+        img: "/image/del/accordionrooms/example.jpg"
+      },
+      book_btn: ""
+    },
+    {
+      table_row: {
+        name:     "NO NAME SUPPLIED",
+        bed:      "King",
+        sleeps:   "Sleeps x2",
+      },
+      content: {
+        title: "Superior Rooms",
+        copy: "<p>Located on the higher floors of Lost Property and offering views overlooking St Pauls, our large floor to ceiling windows. The Superior Rooms, offer guests a bright and balanced guestroom.</p>",
         ameneties: [
           "50” HD TV",
           "In-room safe",
@@ -78,23 +97,24 @@ export default function Page({test}) {
     },
     {
       table_row: {
-        name:     "Penthouse",
-        bed:      "2 x King Bed",
-        sleeps:   "Sleeps x4",
+        name:     "NO NAME SUPPLIED",
+        bed:      "King",
+        sleeps:   "Sleeps x2",
       },
       content: {
-        title: "GUESTS ROOMS - BLUE & RED",
-        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        title: "Deluxe Rooms",
+        copy: "<p>NO DESCRIPTION SUPPLIED</p>",
         ameneties: [
-          "50” HD TV",
-          "In-room safe",
-          "Mini bar",
+          "50 inch HD TV",
+          "Mini Bar",
+          "In Room Safe",
           "Iron",
           "Ironing Board",
           "Hairdryer",
-          "Tea and Coffee maker",
+          "Tea and Coffee Maker",
           "Alarm Clock",
-          "Nespresso Coffee Machine"
+          "Bathrobe and Sleepers",
+          "Espresso Coffee Machine"
         ],
         img: "/image/del/accordionrooms/example.jpg"
       },
@@ -102,23 +122,73 @@ export default function Page({test}) {
     },
     {
       table_row: {
-        name:     "Penthouse",
-        bed:      "2 x King Bed",
-        sleeps:   "Sleeps x4",
+        name:     "NO NAME SUPPLIED",
+        bed:      "Super King",
+        sleeps:   "Sleeps x2",
       },
       content: {
-        title: "GUESTS ROOMS - BLUE & RED",
-        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        title: "Junior Suite",
+        copy: "<p>Spacious and bright , our Junior Suites include a large lounge area with a comfortable sofa bed. The added touch includes a barista-like experience from our Nespresso machines that you can enjoy within your room throughout the day.</p>",
         ameneties: [
-          "50” HD TV",
-          "In-room safe",
-          "Mini bar",
+          "65 inch HD TV",
+          "Mini Bar",
+          "In Room Safe",
           "Iron",
           "Ironing Board",
           "Hairdryer",
-          "Tea and Coffee maker",
+          "Tea and Coffee Maker",
           "Alarm Clock",
-          "Nespresso Coffee Machine"
+          "Bathrobe and Sleepers",
+          "Espresso Coffee Machine"
+        ],
+        img: "/image/del/accordionrooms/example.jpg"
+      },
+      book_btn: ""
+    },
+    {
+      table_row: {
+        name:     "St Paul's Junior Suite",
+        bed:      "Super King",
+        sleeps:   "Sleeps x2",
+      },
+      content: {
+        title: "St Paul's Junior Suite",
+        copy: "<p>In our luxurious St Paul's Junior Suite Within guests can enjoy the extra comfort of a large room with a separate living area including a dining table and 2 bathrooms. Take in the incredible views of the City and overlooking St Paul's cathedral. </p>",
+        ameneties: [
+          "65 inch HD TV",
+          "Mini Bar",
+          "In Room Safe",
+          "Iron",
+          "Ironing Board",
+          "Hairdryer",
+          "Tea and Coffee Maker",
+          "Alarm Clock",
+          "Bathrobe and Sleepers",
+          "Espresso Coffee Machine"
+        ],
+        img: "/image/del/accordionrooms/example.jpg"
+      },
+      book_btn: ""
+    },
+    {
+      table_row: {
+        name:     "NO NAME SUPPLIED",
+        bed:      "Super King",
+        sleeps:   "Sleeps x2",
+      },
+      content: {
+        title: "Family Rooms",
+        copy: "<p>NO DESCRIPTION SUPPLIED</p>",
+        ameneties: [
+          "50 inch HD TV",
+          "Mini Bar",
+          "In Room Safe",
+          "Iron",
+          "Ironing Board",
+          "Hairdryer",
+          "Tea and Coffee Maker",
+          "Alarm Clock",
+          "Espresso Coffee Machine"
         ],
         img: "/image/del/accordionrooms/example.jpg"
       },
