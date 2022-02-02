@@ -20,7 +20,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'Our Rooms',
-    copy: '<p>Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?Etiam sed lorem eleifend, consequat felis nec, bibendum ante. Pellentesque dui urna, imperdiet lacinia lacus at?</p>',
+    copy: '<p>Each bedroom offers guests a comfortable escapism influenced by Londons rich history and charm through artwork, unique design touchpoints and luxurious bed linen.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
