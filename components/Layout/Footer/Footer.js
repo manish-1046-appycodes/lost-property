@@ -22,8 +22,8 @@ const Footer = ({border}) => {
                 </aside>
                 <aside className="pl-20 lg:pl-0 lg:flex lg:w-1/2 lg:space-x-12 justify-end">
                     <ul>
-                        <li><a>Instagram</a></li>
-                        <li><a>Facebook</a></li>
+                        <li><a href="https://www.instagram.com/lostpropertystpauls/" target="_blank" rel="noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/lostpropertystpauls/" target="_blank" rel="noreferrer">Facebook</a></li>
                     </ul>
 
                     <div className="max-w-[415px] mt-20 lg:mt-0 lg:flex-grow">
