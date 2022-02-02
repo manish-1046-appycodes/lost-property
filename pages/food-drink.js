@@ -44,57 +44,77 @@ const carouselItems1 = [
 
 const carouselItems2 = [
     {
-        name: "Keys, <br/>By Wrapped Studios",
+        name: ",Afternoon Tea at Found, <br/>Lost Property, St. Paul\'s",
         img: {
             url: "/image/del/food-drink/img1.jpg",
-            alt: "Alt"
+            alt: "Afternoon Tea at Found, Lost Property, St. Paul\'s"
         }
     },
     {
-        name: "Keys, <br/>By Wrapped Studios",
+        name: "Found - Bar and Restaurant, <br/>Lost Property, St. Paul\'s",
         img: {
             url: "/image/del/food-drink/img2.jpg",
-            alt: "Alt"
+            alt: "Found - Bar and Restuarant, Lost Property, St. Paul\'s"
         }
     },
     {
-      name: "Keys, <br/>By Wrapped Studios",
+      name: "Found - Bar and Restaurant, <br/>Lost Property, St. Paul\'s",
       img: {
         url: "/image/del/food-drink/img3.jpg",
-          alt: "Alt"
+          alt: "Found - Bar and Restuarant, Lost Property, St. Paul\'s"
       }
     },
     {
-        name: "Keys, <br/>By Wrapped Studios",
+        name: "Found - Bar and Restaurant, <br/>Lost Property, St. Paul\'s",
         img: {
             url: "/image/del/food-drink/img2.jpg",
-            alt: "Alt"
+            alt: "Found - Bar and Restuarant, Lost Property, St. Paul\'s"
+        }
+    }
+    {
+        name: "Found - Bar and Restaurant, <br/>Lost Property, St. Paul\'s",
+        img: {
+            url: "/image/del/food-drink/img2.jpg",
+            alt: "Found - Bar and Restuarant, Lost Property, St. Paul\'s"
         }
     }
 ];
 
 const carouselItems3 = [
     {
-        name: "Blue Lagoon, <br/>Tequila, blue curacao and grapefruit",
+        name: "Bitter Rocks, <br/>By Wrapped Media",
         img: {
             url: "/image/del/food-drink/car-3-1.jpg",
-            alt: "Alt"
+            alt: "Bitter Rocks, By Wrapped Media"
         }
     },
     {
         name: "Blue Lagoon, <br/>Tequila, blue curacao and grapefruit",
         img: {
             url: "/image/del/food-drink/car-3-2.jpg",
-            alt: "Alt"
+            alt: "Blue Lagoon, Tequila, blue curacao and grapefruit"
         }
     },
     {
-      name: "Blue Lagoon, <br/>Tequila, blue curacao and grapefruit",
+      name: "Tequila Sunrise, <br/>Tequila, Vanilla Vodka, Passionfruit",
       img: {
         url: "/image/del/food-drink/car-3-3.jpg",
-          alt: "Alt"
-      }
+          alt: "Tequila Sunrise, Tequila, Vanilla Vodka, Passionfruit"
+       }
     }
+    {
+        name: "Cox's Cuban Canary, <br/>By Wrapped Media",
+        img: {
+            url: "/image/del/food-drink/car-3-1.jpg",
+            alt: "Cox's Cuban Canary, By Wrapped Media"
+        }
+    },
+    {
+        name: "Cocktails at Found, <br/>Lost Property, St. Paul\'s",
+        img: {
+            url: "/image/del/food-drink/car-3-2.jpg",
+            alt: "Cocktails at Found, Lost Property, St. Paul\'s"
+        }
 ];
 
 const MarqueeWords1 = '<em>eat.</em> &nbsp;scoff. &nbsp;<em>munch.</em> &nbsp;stuff. &nbsp;<em>taste.</em> &nbsp;demolish. &nbsp;<em>savor.</em> &nbsp;chomp. &nbsp;<em>nibble.</em> &nbsp;nosh. &nbsp;';
