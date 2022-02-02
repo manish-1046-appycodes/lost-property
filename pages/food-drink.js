@@ -70,14 +70,14 @@ const carouselItems2 = [
             url: "/image/del/food-drink/img2.jpg",
             alt: "Found - Bar and Restuarant, Lost Property, St. Paul\'s"
         }
-    }
+    },
     {
         name: "Found - Bar and Restaurant, <br/>Lost Property, St. Paul\'s",
         img: {
             url: "/image/del/food-drink/img2.jpg",
             alt: "Found - Bar and Restuarant, Lost Property, St. Paul\'s"
         }
-    }
+    },
 ];
 
 const carouselItems3 = [
@@ -101,7 +101,7 @@ const carouselItems3 = [
         url: "/image/del/food-drink/car-3-3.jpg",
           alt: "Tequila Sunrise, Tequila, Vanilla Vodka, Passionfruit"
        }
-    }
+    },
     {
         name: "Cox's Cuban Canary, <br/>By Wrapped Media",
         img: {
@@ -115,6 +115,7 @@ const carouselItems3 = [
             url: "/image/del/food-drink/car-3-2.jpg",
             alt: "Cocktails at Found, Lost Property, St. Paul\'s"
         }
+      },
 ];
 
 const MarqueeWords1 = '<em>eat.</em> &nbsp;scoff. &nbsp;<em>munch.</em> &nbsp;stuff. &nbsp;<em>taste.</em> &nbsp;demolish. &nbsp;<em>savor.</em> &nbsp;chomp. &nbsp;<em>nibble.</em> &nbsp;nosh. &nbsp;';
