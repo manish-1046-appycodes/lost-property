@@ -20,7 +20,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'Our Rooms',
-    copy: '<p>Each bedroom offers guests a comfortable escapism influenced by London&#39;s rich history and charm through artwork, unique design touchpoints and luxurious bed linen.</p>',
+    copy: '<p>A new, unique London hotel, a short step from the historic St Paul\'s Cathedral and the surrounding area.</p><p>Each bedroom offers guests a comfortable escapism influenced by London\'s rich history and charm through artwork, unique design touchpoints and luxurious bed linen.</p><p>Each room is designed to offer a distinctive and stylish feel and ensure each stay with us feels fresh and new.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
@@ -50,7 +50,7 @@ export default function Page({test}) {
     {
       table_row: {
         name:     "Guest Rooms",
-        bed:      "1 x Double",
+        bed:      "Queen/King",
         sleeps:   "Sleeps x2",
       },
       content: {
@@ -74,12 +74,12 @@ export default function Page({test}) {
     {
       table_row: {
         name:     "Superior Rooms",
-        bed:      "King",
+        bed:      "Queen/King",
         sleeps:   "Sleeps x2",
       },
       content: {
         title: "Superior Rooms",
-        copy: "<p>Located on the higher floors of Lost Property and offering views overlooking St Pauls, our large floor to ceiling windows. The Superior Rooms, offer guests a bright and balanced guestroom.</p>",
+        copy: "<p>The Lost Property Superior Rooms are bright and balanced, carefully designed to include exuberant artwork influenced by London's forgotten past. Added luxuries such as the Nespresso Machine, bathrobes and slippers ensure guests feel relaxed throughout their stay.</p>",
         ameneties: [
           "50” HD TV",
           "In-room safe",
@@ -89,7 +89,7 @@ export default function Page({test}) {
           "Hairdryer",
           "Tea and Coffee maker",
           "Alarm Clock",
-          "Nespresso Coffee Machine"
+          "Espresso Coffee Machine"
         ],
         img: "/image/del/accordionrooms/example.jpg"
       },
@@ -98,12 +98,12 @@ export default function Page({test}) {
     {
       table_row: {
         name:     "Deluxe Rooms",
-        bed:      "King",
+        bed:      "Queen/King",
         sleeps:   "Sleeps x2",
       },
       content: {
         title: "Deluxe Rooms",
-        copy: "<p>NO DESCRIPTION SUPPLIED</p>",
+        copy: "<p>Within our Deluxe Rooms guests can enjoy the extra comfort of a spacious suite with the added touch including a barista-like experience from our Nespresso machines that you can enjoy within your room throughout the day.</p>",
         ameneties: [
           "50 inch HD TV",
           "Mini Bar",
@@ -173,12 +173,12 @@ export default function Page({test}) {
     {
       table_row: {
         name:     "Family Rooms",
-        bed:      "Super King",
-        sleeps:   "Sleeps x2",
+        bed:      "Super King/2x Singles",
+        sleeps:   "Sleeps x4",
       },
       content: {
         title: "Family Rooms",
-        copy: "<p>NO DESCRIPTION SUPPLIED</p>",
+        copy: "<p>It's fun for all the family in our connected rooms. Guests and little ones can enjoy the space of a superior twin room connected to a Standard King room. Upon arrival, we'll provide kids with a playkit and local map to encourge creativity and adventure during their stay! </p>",
         ameneties: [
           "50 inch HD TV",
           "Mini Bar",
