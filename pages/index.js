@@ -26,7 +26,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'ESCAPISM',
-    copy:   '<p>Opening in Spring 2022 and situated in the heart of London, the Lost Property Hotel near St. Paul\'s Cathedral invites you to lose yourself in the moment. Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner.<br>With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, the Lost Property Hotel in St. Pauls is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience. Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
+    copy:   '<p>Opening in Spring 2022 and situated in the heart of London, the Lost Property Hotel near St. Paul\'s Cathedral invites you to lose yourself in the moment. Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner.<br><br>With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, the Lost Property Hotel in St. Pauls is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience. Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
     cta:    {
       cta_title:  'Our Story',
       cta_url:    '/story'
@@ -241,7 +241,7 @@ export default function Page({test}) {
       <div className='hero min-h-screen w-full relative flex'>
 
         <div className="absolute h-full w-full overflow-hidden js-parallax">
-          
+
           <div className="relative h-full w-full">
 
 
