@@ -55,7 +55,7 @@ export default function Page({test}) {
       },
       content: {
         title: "Guest Rooms",
-        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience in our unique London Hotel. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
         ameneties: [
           "50 inch HD TV",
           "Mini Bar",
@@ -79,7 +79,7 @@ export default function Page({test}) {
       },
       content: {
         title: "Superior Rooms",
-        copy: "<p>The Lost Property Superior Rooms are bright and balanced, carefully designed to include exuberant artwork influenced by London's forgotten past. Added luxuries such as the Nespresso Machine, bathrobes and slippers ensure guests feel relaxed throughout their stay.</p>",
+        copy: "<p>Located on the higher floors of Lost Property and offering views overlooking St Pauls through our large floor to ceiling windows. The Superior Rooms, offer guests a bright and balanced guestroom.</p>",
         ameneties: [
           "50” HD TV",
           "In-room safe",
@@ -128,7 +128,7 @@ export default function Page({test}) {
       },
       content: {
         title: "Junior Suite",
-        copy: "<p>Spacious and bright , our Junior Suites include a large lounge area with a comfortable sofa bed. The added touch includes a barista-like experience from our Nespresso machines that you can enjoy within your room throughout the day.</p>",
+        copy: "<p>Spacious and bright , our Junior Suites include a lounge area with a comfortable sofa bed. The added touch includes a barista-like experience from our Nespresso machines that you can enjoy within your room throughout the day.</p>",
         ameneties: [
           "65 inch HD TV",
           "Mini Bar",
