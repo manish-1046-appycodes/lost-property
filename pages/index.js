@@ -139,38 +139,38 @@ export default function Page({test}) {
 
   const carouselItems1 = [
     {
-      name: 'Keys,<br/>By Wrapped Studios',
+      name: 'Franklin\'s Philosophy,<br/>By Wrapped Studios',
       img: {
         url: '/image/del/carousel/item-1.jpg',
-        alt: 'Keys, By Wrapped Studios'
+        alt: 'Franklin\'s Philosophy, By Wrapped Studios'
       }
     },
     {
-      name: 'Keys,<br/>By Wrapped Studios',
+      name: 'St. Paul\'s Cathedral,<br/>London',
       img: {
         url: '/image/del/carousel/item-2.jpg',
-        alt: 'Keys, By Wrapped Studios'
+        alt: 'St Paul\'s cathedral, London'
       }
     },
     {
-      name: 'Keys,<br/>By Wrapped Studios',
+      name: 'Guest Room,<br/>Lost Property, St. Paul\'s',
       img: {
         url: '/image/del/carousel/item-3.jpg',
-        alt: 'Keys, By Wrapped Studios'
+        alt: 'Guest Room,Lost Property, St. Paul\'s'
       }
     },
     {
-      name: 'Keys,<br/>By Wrapped Studios',
+      name: 'Tattle - Coffee House,<br/>Lost property, St Paul\'s',
       img: {
         url: '/image/del/carousel/item-4.jpg',
-        alt: 'Keys, By Wrapped Studios'
+        alt: 'Tattle - Coffee House, Lost Property St. Paul\'s'
       }
     },
     {
-      name: 'Keys,<br/>By Wrapped Studios',
+      name: 'Found - Bar and Restaurant,<br/>Lost Property, St Paul\'s',
       img: {
         url: '/image/del/carousel/item-5.jpg',
-        alt: 'Keys, By Wrapped Studios'
+        alt: 'Found - Bar and Restaurant, Lost Property, St Paul\'s'
       }
     }
   ];

@@ -5,15 +5,15 @@ import Cross from "../../../public/image/icon/cross.svg"
 import Logo from "../../../public/image/lost-property-logo.svg"
 
 const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledState, headerThemeBgState}) => {
-    
+
   return (
     <div className={`absolute top-0 left-0 w-full z-40 `}>
-                
+
         <div className={`${ notice ? 'h-[0px]' : 'h-[40px]'} overflow-hidden transition-[height,opacity] bg-blue-1 fixed w-full`}>
             <div className="container text-white h-[40px] flex justify-between items-center">
-                
+
                 <ButtonSecondary url="/" title="Covid-19 Updates"/>
-                
+
                 <div className="p-2 cursor-pointer" onClick={() => {setNoticeFunc(true)}}>
                     <Cross/>
                 </div>
@@ -49,8 +49,8 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                         <a>Contact</a>
                         </Link>
                     </li>
-                    
-                    
+
+
                 </ul>
             </nav>
 
@@ -69,13 +69,13 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                 </Link>
 
                 <ul className={`text-18px xl:text-32px flex space-x-6 m-auto mr-0 z-10 ${ navOpenState ? 'opacity-100' : 'opacity-0'}`}>
-                    <li><a>Instagram</a></li>
-                    <li><a>Facebook</a></li>
+                  <li><a href="https://www.instagram.com/lostpropertystpauls/" target="_blank" rel="noreferrer">Instagram</a></li>
+                  <li><a href="https://www.facebook.com/lostpropertystpauls/" target="_blank" rel="noreferrer">Facebook</a></li>
                 </ul>
 
             </div>
         </header>
-        
+
     </div>);
 };
 
