@@ -25,7 +25,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'Our Story',
-    copy: '<p>A modern London hotel unlike any other. Lost Property is Curio Collection by Hilton hotel designed to evoke the lost arts and activities of eccentric living with a plethora of curiosities around every corner. The walls are lined with visual spectacles, bespoke creations and eclectic sculptures.  Our stylish London hotel is designed for losing yourself, just for a moment.</p>',
+    copy: '<p>A modern London hotel unlike any other. Lost Property is Curio Collection by Hilton hotel designed to evoke the lost arts and activities of eccentric living with a plethora of curiosities around every corner. The walls are lined with visual spectacles, bespoke creations and eclectic sculptures. Our stylish London hotel is designed for losing yourself, just for a moment. </p>',
     copy_expanded: '<p>Offering a sanctuary in the heart of the historic City of London, the Curio “LOST PROPERTY” hotel has unrivalled proximity to some of the city’s most iconic landmarks, such as St. Paul’s Cathedral, the Tate Modern, and the Millennium Bridge. The modern and stylish Lost Property Hotel in central London, is designed to offer both the avid explorer and city native an eclectic escape, offering authentic discoveries through unexpected forms and layered finishes. Through hand crafted glass chandeliers, curated art installations and warm tactile materials, the guest will journey through quirky, unexpected interiors, finding themselves lost in the moment. Providing embellished experiences with ornate accents – for those who appreciate eclectic art, culture and lifestyle.”</p>',
     cta:    {
       cta_title:  '',
@@ -51,7 +51,7 @@ export default function Page({test}) {
 
   const Billboard_2 = {
     title:  'Our Story',
-    copy: '<p>Offering a sanctuary in the heart of the historic City of London, the Curio “LOST PROPERTY” hotel has unrivalled proximity to some of the city’s most iconic landmarks, such as St. Paul’s Cathedral, the Tate Modern, and the Millennium Bridge. The modern and stylish Lost Property Hotel in central London, is designed to offer both the avid explorer and city native an eclectic escape, offering authentic discoveries through unexpected forms and layered finishes. Through hand crafted glass chandeliers, curated art installations and warm tactile materials, the guest will journey through quirky, unexpected interiors, finding themselves lost in the moment. Providing embellished experiences with ornate accents – for those who appreciate eclectic art, culture and lifestyle.”</p>',
+    copy: '<p>Offering a sanctuary in the heart of the historic City of London, the Curio “LOST PROPERTY” hotel has unrivalled proximity to some of the city’s most iconic landmarks, such as St. Paul’s Cathedral, the Tate Modern, and the Millennium Bridge.<br><br>The modern and stylish Lost Property Hotel in central London, is designed to offer both the avid explorer and city native an eclectic escape, offering authentic discoveries through unexpected forms and layered finishes.<br><br>Through hand crafted glass chandeliers, curated art installations and warm tactile materials, the guest will journey through quirky, unexpected interiors, finding themselves lost in the moment. Providing embellished experiences with ornate accents – for those who appreciate eclectic art, culture and lifestyle.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
@@ -77,26 +77,40 @@ export default function Page({test}) {
 
   const Carouselitems = [
     {
-      name: 'Keys,<br/>By Wrapped Studios',
+      name: 'Wrapped Up, <br/>By Wrapped Studios',
       img: {
-        url: '/image/del/story/car1.jpg',
-        alt: 'Keys, By Wrapped Studios'
+        url: '/image/del/story/carousel-1.jpg',
+        alt: 'Wrapped Up, By Wrapped Studios'
       }
     },
     {
-      name: 'Keys,<br/>By Wrapped Studios',
+      name: 'Portal, <br/>By Wrapped Studios',
       img: {
-        url: '/image/del/story/car2.jpg',
-        alt: 'Keys, By Wrapped Studios'
+        url: '/image/del/story/carousel-2.jpg',
+        alt: 'Portal, By Wrapped Studios'
       }
     },
     {
-      name: 'Keys,<br/>By Wrapped Studios',
+      name: 'Manhattan\'s Myth, <br/>By Wrapped Studios',
       img: {
-        url: '/image/del/story/car3.jpg',
-        alt: 'Keys, By Wrapped Studios'
+        url: '/image/del/story/carousel-3.jpg',
+        alt: 'Manhattan\'s Myth, By Wrapped Studios'
       }
-    }
+    },
+    {
+        name: 'Religious Retreats, <br/>By Wrapped Studios',
+        img: {
+          url: '/image/del/story/carousel-4.jpg',
+          alt: 'Religious Retreats, By Wrapped Studios'
+        }
+      },
+      {
+          name: 'Eyes Wide Shut, <br/>By Wrapped Studios',
+          img: {
+            url: '/image/del/story/carousel-5.jpg',
+            alt: 'Eyes Wide Shut, By Wrapped Studios'
+          }
+        },
   ];
   const MarqueeWords = '<em>peek.</em> &nbsp;stare. &nbsp;<em>look.</em> &nbsp;glance. &nbsp;<em>ponder.</em> &nbsp;amuse. &nbsp;<em>contemplate.</em> &nbsp;examine. &nbsp;<em>reflect.</em> &nbsp;speculate. &nbsp;';
 
@@ -155,7 +169,7 @@ export default function Page({test}) {
         <Ctas ctas={ctas}/>
 
         <SubscribeForm/>
-        
+
       </PageFade>
     </>
   )
