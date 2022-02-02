@@ -44,7 +44,7 @@ const carouselItems1 = [
 
 const carouselItems2 = [
     {
-        name: ",Afternoon Tea at Found, <br/>Lost Property, St. Paul\'s",
+        name: "Afternoon Tea at Found, <br/>Lost Property, St. Paul\'s",
         img: {
             url: "/image/del/food-drink/img1.jpg",
             alt: "Afternoon Tea at Found, Lost Property, St. Paul\'s"
@@ -67,14 +67,14 @@ const carouselItems2 = [
     {
         name: "Found - Bar and Restaurant, <br/>Lost Property, St. Paul\'s",
         img: {
-            url: "/image/del/food-drink/img2.jpg",
+            url: "/image/del/food-drink/img4.jpg",
             alt: "Found - Bar and Restuarant, Lost Property, St. Paul\'s"
         }
     },
     {
         name: "Found - Bar and Restaurant, <br/>Lost Property, St. Paul\'s",
         img: {
-            url: "/image/del/food-drink/img2.jpg",
+            url: "/image/del/food-drink/img5.jpg",
             alt: "Found - Bar and Restuarant, Lost Property, St. Paul\'s"
         }
     },
@@ -105,14 +105,14 @@ const carouselItems3 = [
     {
         name: "Cox's Cuban Canary, <br/>By Wrapped Media",
         img: {
-            url: "/image/del/food-drink/car-3-1.jpg",
+            url: "/image/del/food-drink/car-3-4.jpg",
             alt: "Cox's Cuban Canary, By Wrapped Media"
         }
     },
     {
         name: "Cocktails at Found, <br/>Lost Property, St. Paul\'s",
         img: {
-            url: "/image/del/food-drink/car-3-2.jpg",
+            url: "/image/del/food-drink/car-3-5.jpg",
             alt: "Cocktails at Found, Lost Property, St. Paul\'s"
         }
       },
