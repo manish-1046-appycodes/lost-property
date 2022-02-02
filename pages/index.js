@@ -26,7 +26,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'ESCAPISM',
-    copy:   '<p>Opening in Spring 2022 and situated in the heart of London, the Lost Property Hotel near St. Paul\'s Cathedral invites you to lose yourself in the moment. Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner.<br><br>With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, the Lost Property Hotel in St. Pauls is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience. Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
+    copy:   '<p>Opening in Spring 2022 and situated in the heart of London, the Lost Property Hotel near St. Paul\'s Cathedral invites you to lose yourself in the moment. Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner.<br><br>With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, the Lost Property Hotel in St. Pauls is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience.<br><br>Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
     cta:    {
       cta_title:  'Our Story',
       cta_url:    '/story'
@@ -45,7 +45,7 @@ export default function Page({test}) {
 
   const Billboard_2 = {
     title:  'OUR ROOMS',
-    copy: '<p>At our new hotel in St. Pauls each guest room is influenced by eclectic artwork and contemporary design touches inspired by London\'s rich and charming history. Guests will be encouraged to enjoy luxurious escapism and to discover something new and exciting beyond the boundaries of daily life. Take a moment to pause and allow yourself to be immersed in the stylish, luxurious and curious surroundings, all of which that are accompanied by excellent service and considered design.</p>',
+    copy: '<p>At our new hotel in St. Pauls each guest room is influenced by eclectic artwork and contemporary design touches inspired by London\'s rich and charming history.<br><br>Guests will be encouraged to enjoy luxurious escapism and to discover something new and exciting beyond the boundaries of daily life.<br><br>Take a moment to pause and allow yourself to be immersed in the stylish, luxurious and curious surroundings, all of which that are accompanied by excellent service and considered design.</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '/rooms'
@@ -75,7 +75,7 @@ export default function Page({test}) {
       url: '/image/del/found-bar-restaurant.svg',
       alt: 'Found Bar & Restaurant'
     },
-    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists. Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br>The Lost Property Hotel offers the<br>finest dining and drinking in the Found Resturant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
+    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists. Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br><br>The Lost Property Hotel offers the<br>finest dining and drinking in the Found Resturant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
     cta:    {
       cta_title:  'Find out more',
       cta_url:    '/food-drink'
@@ -110,7 +110,7 @@ export default function Page({test}) {
       url: '/image/del/tattle-coffee-house-inner.jpg',
       alt: 'Tattle Coffee House'
     },
-    copy: '<p>Where tattled tales of the town are told and spoken amongst the best freshly ground coffee in Lost Property\'s, Coffee House, Tattle. Sink into our seating and take a weight off with an aromatic coffee, or delicious fine tea, take some time to enjoy our art work and absorb the surroundings.</p>',
+    copy: '<p>Where tattled tales of the town are told and spoken amongst the best freshly ground coffee in Lost Property\'s, Coffee House, Tattle.<br><br>Sink into our seating and take a weight off with an aromatic coffee, or delicious fine tea, take some time to enjoy our art work and absorb the surroundings.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
@@ -210,7 +210,7 @@ export default function Page({test}) {
     {
       bgClass: "bg-cream-1",
       textColor: "text-black",
-      copy: "Looking to host a team away day in central London or the St. Pauls area? Need somewhere for a workshop, client meeting or gathering? We've got lots of spaces for you across our hotel to suit your requirements and the perfect backdrop for a productive and successful meeting.",
+      copy: "Looking to host a team away day in central London or the St. Pauls area? Need somewhere for a workshop, client meeting or gathering?<br><br>We've got lots of spaces for you across our hotel to suit your requirements and the perfect backdrop for a productive and successful meeting.",
       title: "Need Space",
       img: "/image/del/cta/cta1.jpg",
       btnTitle: "Enquire",
@@ -219,7 +219,7 @@ export default function Page({test}) {
     {
       bgClass: "bg-blue-1",
       textColor: "text-white",
-      copy: "Celebrate occasions big and small, with our private spaces. Whatever the occasion we have the ideal function rooms for your event. You just bring your glam-rags, and we'll sort the rest.",
+      copy: "Celebrate occasions big and small, with our private spaces. Whatever the occasion we have the ideal function rooms for your event.<br><br>You just bring your glam-rags, and we'll sort the rest.",
       title: "Let’s Partaay",
       img: "/image/del/cta/cta2.jpg",
       btnTitle: "Enquire" ,
