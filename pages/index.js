@@ -125,7 +125,7 @@ export default function Page({test}) {
     bg_type: 'caption_img', // caption_full / img_full / caption_img
     bg_caption: 'Sip it',
     img: {
-      url: '/image/del/tattle-coffee-house.jpg',
+      url: '/image/del/coffee-image.jpg',
       img_pos: 'left'
     },
     margin_bottom: true,
@@ -239,7 +239,7 @@ export default function Page({test}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
+
 
 
       <div className='hero min-h-screen w-full relative flex'>
