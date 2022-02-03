@@ -29,11 +29,10 @@ const Page = () => {
         }).then((res) => {
             console.log('Response received')
             if (res.status === 200) {
-                console.log('Response succeeded!')
                 setSubmitted(true)
-                setEnquiry('')
                 setEmail('')
-                setBody('')
+                setMessage('')
+                setEnquiry('')
             }
         });
     }
@@ -48,28 +47,29 @@ const Page = () => {
                         </div>
                         <div className="md:w-1/2">
                         
-                        <form className="form">
-                            <div className="form-group">
-                                <label className="hidden" htmlFor='enquiry'>Enquiry Type</label>
-                                <select type='text' name='enquiry' 
-                                onChange={(e)=>{setEnquiry(e.target.value)}}>
-                                    <option>General Enquiry</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
-                            <div className="form-group">
-                                <label className="hidden" htmlFor='email'>Email</label>
-                                <input placeholder="Enter your email" type='email' name='email'
-                                onChange={(e)=>{setEmail(e.target.value)}} />
-                            </div>
-                            <div className="form-group">
-                                <label className="hidden" htmlFor='message'>Message</label>
-                                <textarea placeholder="Message" type='text' name='message'
-                                onChange={(e)=>{setMessage(e.target.value)}}></textarea>
-                            </div>
-                            <button className="button-tertiary" type='submit' onClick={(e)=>{handleSubmit(e)}}>Submit</button>
-                        </form >
+                            <p className={`transition-all delay-500 absolute my-10 uppercase ${submitted ? 'opacity-100 visible' : 'opacity-0 invisible'} `}>Your message has been sent.</p>
+                            <form className={`transition-all ${submitted ? 'opacity-0 invisible' : ''} form`}>
+                                <div className="form-group">
+                                    <label className="hidden" htmlFor='enquiry'>Enquiry Type</label>
+                                    <select type='text' name='enquiry' 
+                                    onChange={(e)=>{setEnquiry(e.target.value)}}>
+                                        <option>General Enquiry</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label className="hidden" htmlFor='email'>Email</label>
+                                    <input placeholder="Enter your email" type='email' name='email'
+                                    onChange={(e)=>{setEmail(e.target.value)}} />
+                                </div>
+                                <div className="form-group">
+                                    <label className="hidden" htmlFor='message'>Message</label>
+                                    <textarea placeholder="Message" type='text' name='message'
+                                    onChange={(e)=>{setMessage(e.target.value)}}></textarea>
+                                </div>
+                                <button className="button-tertiary" type='submit' onClick={(e)=>{handleSubmit(e)}}>Submit</button>
+                            </form >
 
                         </div>
                     </div>

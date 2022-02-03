@@ -9,13 +9,14 @@ export default function (req, res) {
   
   const transporter = nodemailer.createTransport({
     port: 587,
-    host: "smtp.postmarkapp.com",
+    host: "mail.bigpepperdesign.com",
     auth: {
-      user: process.env.username,
-      pass: process.env.password,
+      user: "darren@bigpepperdesign.com",
+      pass: "sw4Y.yfBz1",
     },
     secure: false,
   })
+  
   const mailData = {
     from: 'hello@bigpepperdesign.com',
     to: 'dazpowell@gmail.com',
@@ -30,6 +31,6 @@ export default function (req, res) {
     else
       console.log(info)
   })
-  res.status(200)
+  res.status(200).json({message: 'Done'})
 
 }
