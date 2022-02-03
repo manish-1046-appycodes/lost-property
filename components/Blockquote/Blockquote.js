@@ -5,11 +5,11 @@ const Blockquote = () => {
     <blockquote className="review my-40">
         <div className="container text-center">
             <div className="max-w-[1140px] w-11/12 mx-auto">
-                <p className="mb-7 lg:mb-12 text-[36px] lg:text-[60px] leading-none lg:leading-none font-display">“Incredible experience. So much to see time and time again.”</p>
-                <p>Jemma Aiktin (verified guest)</p>
-                
+                <p className="mb-7 lg:mb-12 text-[36px] lg:text-[60px] leading-none lg:leading-none font-display">“I Can't wait to welcome our guest into the hotel in Spring 2022”</p>
+                <p>Nader Neishabouri, Hotel Manager</p>
+
                 <div className="flex mt-7 mx-auto inline-flex space-x-2 lg:space-x-3">
-                    
+
                 <div className="max-w-[20px] lg:max-w-[30px]">
                         <svg className="max-w-full h-auto" xmlns="http://www.w3.org/2000/svg" width="31.255" height="31.255" viewBox="0 0 31.255 31.255">
                         <g id="Group_393" data-name="Group 393" transform="translate(-732 -10584.5)">
