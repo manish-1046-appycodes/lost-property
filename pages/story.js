@@ -51,7 +51,7 @@ export default function Page({test}) {
 
   const Billboard_2 = {
     title:  'Our Story',
-    copy: '<p>Offering a sanctuary in the heart of the historic City of London, the Curio “LOST PROPERTY” hotel has unrivalled proximity to some of the city’s most iconic landmarks, such as St. Paul’s Cathedral, the Tate Modern, and the Millennium Bridge.<br><br>The modern and stylish Lost Property Hotel in central London, is designed to offer both the avid explorer and city native an eclectic escape, offering authentic discoveries through unexpected forms and layered finishes.<br><br>Through hand crafted glass chandeliers, curated art installations and warm tactile materials, the guest will journey through quirky, unexpected interiors, finding themselves lost in the moment. Providing embellished experiences with ornate accents – for those who appreciate eclectic art, culture and lifestyle.</p>',
+    copy: '<p>Offering a sanctuary in the heart of the historic City of London, Lost Property, Curio Collection by Hilton hotel, has unrivalled proximity to some of the city’s most iconic landmarks, such as St. Paul’s Cathedral, the Tate Modern, and the Millennium Bridge.<br><br>Designed to offer both the avid explorer and city native an eclectic escape, offering authentic discoveries through unexpected forms and layered finishes. Through hand crafted glass chandeliers, curated art installations and warm tactile materials, the guest will journey through quirky, unexpected interiors, finding themselves lost in the moment. Providing embellished experiences with ornate accents – for those who appreciate eclectic art, culture and lifestyle.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
