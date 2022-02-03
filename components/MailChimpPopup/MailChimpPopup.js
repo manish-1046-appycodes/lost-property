@@ -64,7 +64,7 @@ const MailChimpPopup = () => {
         className={`duration-500 transition-[opacity,visibility,transform] invisible fixed inset-0 z-50 overflow-auto scale-100 pointer-events-auto user-select-none ease-in-out duration-500 ${ mcOpen ? '!visible !opacity-100 scale-100' : 'nav-closed'}`}>
             
             <div className="relative z-10  py-5 w-full min-h-full flex">
-            <div className="bg-black/50 absolute inset-0 backdrop-blur-sm" onClick={mcClose}></div>
+            <div className="bg-black/50 absolute inset-0 backdrop-blur-sm cursor-pointer" onClick={mcClose}></div>
             
             <MailchimpSubscribe url={url} render={({ subscribe, status, message }) => (
                     
