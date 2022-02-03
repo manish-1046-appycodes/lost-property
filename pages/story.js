@@ -121,7 +121,7 @@ export default function Page({test}) {
       title: "Room to <br/>Impress",
       img: "/image/del/cta/cta1.jpg",
       btnTitle: "Enquire",
-      btnUrl: "/",
+      btnUrl: "/contact",
       alt: true
     },
     {
@@ -131,7 +131,7 @@ export default function Page({test}) {
       title: "Room for <br/>Occasion",
       img: "/image/del/cta/cta2.jpg",
       btnTitle: "Enquire" ,
-      btnUrl: "/",
+      btnUrl: "/contact",
       alt: true
     }
   ];
