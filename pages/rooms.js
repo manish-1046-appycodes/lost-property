@@ -20,7 +20,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'Our Rooms',
-    copy: '<p>A new, unique London hotel, a short step from the historic St Paul\'s Cathedral and the surrounding area.</p><p>Each bedroom offers guests a comfortable escapism influenced by London\'s rich history and charm through artwork, unique design touchpoints and luxurious bed linen.</p><p>Each room is designed to offer a distinctive and stylish feel and ensure each stay with us feels fresh and new.</p>',
+    copy: '<p>A new, unique London hotel, a short step from the historic St Paul\'s Cathedral and the surrounding area.<br><br>Each bedroom offers guests a comfortable escapism influenced by London\'s rich history and charm through artwork, unique design touchpoints and luxurious bed linen.<br><br>Each room is designed to offer a distinctive and stylish feel and ensure each stay with us feels fresh and new.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
