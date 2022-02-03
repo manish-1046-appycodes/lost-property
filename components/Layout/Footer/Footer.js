@@ -1,17 +1,25 @@
+import { useState, createRef } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 import RailWay1 from "../../../public/image/icon/railway-1.svg";
 import RailWay2 from "../../../public/image/icon/railway-2.svg";
 
+
+const url = "https://dominvsgroup.us9.list-manage.com/subscribe/post?u=fbd0df3072af596790bcd00e7&amp;id=c5e73a01bb";
+
 const Footer = ({border}) => {
+    const emailRef = createRef(undefined)
+
   return (
     <footer className={`overflow-hidden bg-cream-1 text-black ${ border && "border-t border-black"}`}>
         <div className="container mb-10 lg:mb-20">
             <div className="mx-auto lg:flex mt-10 mb-20 lg:my-20 lg:space-x-10">
                 <aside className="lg:flex lg:flex-wrap lg:w-1/2 mb-5 lg:-mb-14">
                     <h3 className="font-display text-[50px] leading-none mb-14 lg:mr-28">Find <em>us</em></h3>
-                    <address className="pl-20 lg:pl-0 not-italic mr-auto">3-5 Ludgate Hill, London<br/>info@thelostproperty.co.uk<br/>020 473 0057</address>
+                    <address className="pl-20 lg:pl-0 not-italic mr-auto">3-5 Ludgate Hill, London<br/><a className="hover:underline" href="mailto:info@thelostproperty.co.uk">info@thelostproperty.co.uk</a><br/><a className="hover:underline" href="tel:0204730057">020 473 0057</a></address>
                 </aside>
 
                 <aside className="pl-20 mb-10 lg:hidden">
@@ -28,12 +36,45 @@ const Footer = ({border}) => {
 
                     <div className="max-w-[415px] mt-20 lg:mt-0 lg:flex-grow">
                         <h4 className="uppercase lg:mb-2 lg:text-right">Stay in the know</h4>
-                        <form className="inline-block max-w-[615px] w-full">
-                            <div className="border-b border-black flex space-x-5 justify-between">
-                            <input className="bg-transparent py-3 flex-1 lg:text-[14px] outline-none" type="email" placeholder="Enter your email"/>
-                            <button className="uppercase text-[12px] lg:text-[16px]" type="submit">Send</button>
+                        
+                        <MailchimpSubscribe url={url} render={({ subscribe, status, message }) => (
+                        <form 
+                        className={`relative inline-block max-w-[615px] w-full `}
+                        onSubmit={() => {
+                            event.preventDefault()
+                            subscribe({
+                                EMAIL: emailRef.current.value
+                            })
+                        }}
+                        >   
+                            <div className={`${ status == 'success' ? 'hidden' : ''}`}>
+                                <div className="border-b border-black flex space-x-5 justify-between">
+                                    <input ref={emailRef}  className="bg-transparent py-3 flex-1 lg:text-[14px] outline-none" type="email" placeholder="Enter your email"/>
+                                    <button className="uppercase text-[12px] lg:text-[16px]" type="submit">Send</button>
+                                </div>
                             </div>
+
+                            { status == 'error' &&
+                            <div className="mb-2 lg:my-2 text-12px uppercase absolute top-full">
+                            { message.replace('0 -', '') }
+                            </div>
+                            }
+
+                            { status == 'sending' &&
+                            <div className="mb-2 lg:my-2 text-12px uppercase absolute top-full">
+                            Sending...
+                            </div>
+                            }
+
+                            { status == 'success' &&
+                            <div className="mb-2 lg:my-2 text-12px uppercase ">
+                            { message }
+                            </div>
+                            }
+                            
                         </form>
+                        )}/>
+                        
                     </div>
                 </aside>
             </div>

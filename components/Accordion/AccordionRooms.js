@@ -94,7 +94,7 @@ const AccordionRooms = ( {accordionData} ) => {
 
                   <div className="actions absolute bottom-0 left-0 flex space-x-3 lg:space-x-5 py-3 lg:py-9">
                     { row.book_btn && <ButtonRound url="#" title="Buy <br/>Tickets" bg="bg-blue-1" size="small"/>}
-                    <ButtonRound url="#" title="Share <br/>Link" bg="bg-blue-1" size="small" alt="isAlt"/>
+
                   </div>
 
                 </div>

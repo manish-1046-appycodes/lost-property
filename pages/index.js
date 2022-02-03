@@ -20,6 +20,7 @@ import lpLogo from '../public/image/lost-property-logo-mob.svg';
 
 
 
+
 export default function Page({test}) {
 
   useEffect(() => {gsapSettings.init()}, []);
@@ -77,8 +78,8 @@ export default function Page({test}) {
     },
     copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists.<br><br>Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br><br>We offer the finest dining and drinking in the Found Resturant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
     cta:    {
-      cta_title:  'Find out more',
-      cta_url:    '/food-drink'
+      cta_title:  '',
+      cta_url:    ''
     },
     content_bg: 'bg-blue-1',
     content_color: 'text-white',
@@ -237,6 +238,9 @@ export default function Page({test}) {
         <meta name="description" content="Lost Property" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      
+
 
       <div className='hero min-h-screen w-full relative flex'>
 
