@@ -8,11 +8,11 @@ const Page = () => {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [submitted, setSubmitted] = useState(false)
-    
-    const handleSubmit = (e) => { 
+
+    const handleSubmit = (e) => {
         e.preventDefault()
         console.log('Sending')
-        
+
         let data = {
             enquiry,
             email,
@@ -36,7 +36,7 @@ const Page = () => {
             }
         });
     }
-    
+
     return (
     <div className="bg-cream-1  min-vh100 w-full top-0 left-0 z-10 flex items-center py-20">
             <div className="container">
@@ -46,16 +46,14 @@ const Page = () => {
                             <h3 className="heading-brand-medium block mb-10 text-center">Get in <br className="hidden md:block"/><em>touch</em></h3>
                         </div>
                         <div className="md:w-1/2">
-                        
+
                             <p className={`transition-all delay-500 absolute my-10 uppercase ${submitted ? 'opacity-100 visible' : 'opacity-0 invisible'} `}>Your message has been sent.</p>
                             <form className={`transition-all ${submitted ? 'opacity-0 invisible' : ''} form`}>
                                 <div className="form-group">
                                     <label className="hidden" htmlFor='enquiry'>Enquiry Type</label>
-                                    <select type='text' name='enquiry' 
+                                    <select type='text' name='enquiry'
                                     onChange={(e)=>{setEnquiry(e.target.value)}}>
                                         <option>General Enquiry</option>
-                                        <option>Option 2</option>
-                                        <option>Option 3</option>
                                     </select>
                                 </div>
                                 <div className="form-group">
