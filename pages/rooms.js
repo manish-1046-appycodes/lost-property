@@ -67,7 +67,7 @@ export default function Page({test}) {
           "Alarm Clock",
           "Espresso Coffee Machine"
         ],
-        img: "/image/del/accordionrooms/example.jpg"
+        img: "/image/del/accordionrooms/penthouse-room-image.jpg"
       },
       book_btn: ""
     },
@@ -91,7 +91,7 @@ export default function Page({test}) {
           "Alarm Clock",
           "Espresso Coffee Machine"
         ],
-        img: "/image/del/accordionrooms/example.jpg"
+        img: "/image/del/accordionrooms/suite-room-image.jpg"
       },
       book_btn: ""
     },
@@ -116,7 +116,7 @@ export default function Page({test}) {
           "Bathrobe and Sleepers",
           "Espresso Coffee Machine"
         ],
-        img: "/image/del/accordionrooms/example.jpg"
+        img: "/image/del/accordionrooms/double-room-image.jpg"
       },
       book_btn: ""
     },
@@ -141,7 +141,7 @@ export default function Page({test}) {
           "Bathrobe and Sleepers",
           "Espresso Coffee Machine"
         ],
-        img: "/image/del/accordionrooms/example.jpg"
+        img: "/image/del/accordionrooms/twin-room-image.jpg"
       },
       book_btn: ""
     },
@@ -166,7 +166,7 @@ export default function Page({test}) {
           "Bathrobe and Sleepers",
           "Espresso Coffee Machine"
         ],
-        img: "/image/del/accordionrooms/example.jpg"
+        img: "/image/del/accordionrooms/suite-room-image.jpg"
       },
       book_btn: ""
     },
@@ -190,7 +190,7 @@ export default function Page({test}) {
           "Alarm Clock",
           "Espresso Coffee Machine"
         ],
-        img: "/image/del/accordionrooms/example.jpg"
+        img: "/image/del/accordionrooms/penthouse-room-image.jpg"
       },
       book_btn: ""
     }

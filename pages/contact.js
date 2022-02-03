@@ -47,7 +47,7 @@ const Page = () => {
                         </div>
                         <div className="md:w-1/2">
 
-                            <p className={`transition-all delay-500 absolute my-10 uppercase ${submitted ? 'opacity-100 visible' : 'opacity-0 invisible'} `}>Your message has been sent.</p>
+                            <p className={`transition-all delay-500 absolute my-10 uppercase ${submitted ? 'opacity-100 visible' : 'opacity-0 invisible'} `}>We look forward to finding your message.</p>
                             <form className={`transition-all ${submitted ? 'opacity-0 invisible' : ''} form`}>
                                 <div className="form-group">
                                     <label className="hidden" htmlFor='enquiry'>Enquiry Type</label>
