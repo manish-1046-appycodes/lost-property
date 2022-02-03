@@ -108,7 +108,7 @@ export default function Page({test}) {
       alt: 'Found Bar & Restaurant'
     },
     copy_img: {
-      url: '/image/del/tattle-coffee-house-inner.jpg',
+      url: '/image/del/coffee-image.jpg',
       alt: 'Tattle Coffee House'
     },
     copy: '<p>Where tattled tales of the town are told and spoken amongst the best freshly ground coffee in Lost Property\'s, Coffee House, Tattle.<br><br>Sink into our seating and take a weight off with an aromatic coffee, or delicious fine tea, take some time to enjoy our art work and absorb the surroundings.</p>',
@@ -125,7 +125,7 @@ export default function Page({test}) {
     bg_type: 'caption_img', // caption_full / img_full / caption_img
     bg_caption: 'Sip it',
     img: {
-      url: '/image/del/coffee-image.jpg',
+      url: '/image/del/tattle-coffee-house.jpg',
       img_pos: 'left'
     },
     margin_bottom: true,
