@@ -251,7 +251,7 @@ export default function Page({test}) {
 
             <div className="relative h-full w-full block md:block">
               <ImageFade
-              src="/image/del/home-hero.jpg"
+              src="/image/del/st-pauls-home-hero.jpg"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
