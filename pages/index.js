@@ -27,7 +27,7 @@ export default function Page({test}) {
 
   const Billboard_1 = {
     title:  'ESCAPISM',
-    copy:   '<p>Situated in the heart of London, the Lost Property Hotel near St. Paul\'s Cathedral invites you to lose yourself in the moment.<br><br>Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner.<br><br>With 145 rooms beautifully furnished with a modern twist, a restaurant,bar and coffee house, the Lost Property Hotel is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience.<br><br>Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
+    copy:   '<p>Situated in the heart of London, Lost Property Hotel by St. Paul\'s Cathedral invites you to lose yourself in the moment.<br><br>Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner.<br><br>With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, Lost Property is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience.<br><br>Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
     cta:    {
       cta_title:  'Our Story',
       cta_url:    '/story'
@@ -76,7 +76,7 @@ export default function Page({test}) {
       url: '/image/del/found-bar-restaurant.svg',
       alt: 'Found Bar & Restaurant'
     },
-    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists.<br><br>Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br><br>We offer the finest dining and drinking in the Found Resturant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
+    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists.<br><br>Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br><br>We offer the finest dining and drinking in the Found Restaurant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
     cta:    {
       cta_title:  '',
       cta_url:    ''
@@ -220,7 +220,7 @@ export default function Page({test}) {
     {
       bgClass: "bg-blue-1",
       textColor: "text-white",
-      copy: "Celebrate occasions big and small, with our private spaces. Whatever the occasion we have the ideal function rooms for your event. You just bring your glam-rags, and we'll sort the rest.",
+      copy: "Celebrate occasions big and small, with our private spaces. Whatever the occasion we have the ideal areas for your event. You just bring your glam-rags, and we'll sort the rest.",
       title: "Let’s Partaay",
       img: "/image/del/cta/cta2.jpg",
       btnTitle: "Enquire" ,

@@ -55,7 +55,7 @@ export default function Page({test}) {
       },
       content: {
         title: "Guest Rooms",
-        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience in our unique London Hotel. The relaxed, modern and sophisticated feel of our guest room enhanced by added extras, including an elegant marble ensuite.</p>",
+        copy: "<p>Expertly designed, both the blue and red guestrooms offer an intimate yet comfortable experience for guests eager to explore the area. The relaxed, modern and sophisticated feel of our Guest Rooms are enhanced by added extras - including an elegant marble ensuite.</p>",
         ameneties: [
           "50 inch HD TV",
           "Mini Bar",
@@ -79,7 +79,7 @@ export default function Page({test}) {
       },
       content: {
         title: "Superior Rooms",
-        copy: "<p>Located on the higher floors of Lost Property and offering views overlooking St Pauls through our large floor to ceiling windows. The Superior Rooms, offer guests a bright and balanced guestroom.</p>",
+        copy: "<p>The Lost Property Superior Rooms are bright and balanced, carefully designed to include exuberant artwork influenced by London's forgotten past. Added luxuries such as the Nespresso Machine, bathrobes and slippers ensure guests feel relaxed throughout their stay.</p>",
         ameneties: [
           "50” HD TV",
           "In-room safe",
@@ -153,7 +153,7 @@ export default function Page({test}) {
       },
       content: {
         title: "St Paul's Junior Suite",
-        copy: "<p>In our luxurious St Paul's Junior Suite Within guests can enjoy the extra comfort of a large room with a separate living area including a dining table and 2 bathrooms. Take in the incredible views of the City and overlooking St Paul's cathedral. </p>",
+        copy: "<p>In our luxurious St Paul's Junior Suite where guests can enjoy the extra comfort of a large room with a open lounge area to enjoy. Take in the incredible views of the City and overlooking St Paul's cathedral.</p>",
         ameneties: [
           "65 inch HD TV",
           "Mini Bar",
@@ -178,7 +178,7 @@ export default function Page({test}) {
       },
       content: {
         title: "Family Rooms",
-        copy: "<p>It's fun for all the family in our connected rooms. Guests and little ones can enjoy the space of a superior twin room connected to a Standard King room. Upon arrival, we'll provide kids with a playkit and local map to encourge creativity and adventure during their stay! </p>",
+        copy: "<p>It's fun for all the family in our connected rooms. Guests and little ones can enjoy the space of a superior twin room connected to a Standard King room. Upon arrival, we'll provide kids with a playkit and local map to encourge creativity and adventure during their stay!</p>",
         ameneties: [
           "50 inch HD TV",
           "Mini Bar",
