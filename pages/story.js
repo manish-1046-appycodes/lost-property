@@ -140,8 +140,8 @@ export default function Page({test}) {
     <>
       <PageFade>
         <Head>
-            <title>Lost Property</title>
-            <meta name="description" content="Lost Property" />
+            <title>A Modern and Stylish Hotel in London, Unlike Any Other</title>
+            <meta name="description" content="The Lost Property is a Curio Collection by Hilton Hotel and is expertly designed for losing yourself, just for a moment. Explore our story here" />
             <link rel="icon" href="/favicon.ico" />
             <script>
             </script>
