@@ -19,7 +19,7 @@ const Footer = ({border}) => {
             <div className="mx-auto lg:flex mt-10 mb-20 lg:my-20 lg:space-x-10">
                 <aside className="lg:flex lg:flex-wrap lg:w-1/2 mb-5 lg:-mb-14">
                     <h3 className="font-display text-[50px] leading-none mb-14 lg:mr-28">Find <em>us</em></h3>
-                    <address className="pl-20 lg:pl-0 not-italic mr-auto">3-5 Ludgate Hill, London<br/><a className="hover:underline" href="mailto:info@thelostproperty.co.uk">info@thelostproperty.co.uk</a><br/><a className="hover:underline" href="tel:0204730057">020 473 0057</a></address>
+                    <address className="pl-20 lg:pl-0 not-italic mr-auto">3-5 Ludgate Hill, London<br/><a className="hover:underline" href="mailto:info@thelostproperty.com">info@thelostproperty.com</a><br/><a className="hover:underline" href="tel:0204730057">020 473 0057</a></address>
                 </aside>
 
                 <aside className="pl-20 mb-10 lg:hidden">
@@ -36,9 +36,9 @@ const Footer = ({border}) => {
 
                     <div className="max-w-[415px] mt-20 lg:mt-0 lg:flex-grow">
                         <h4 className="uppercase lg:mb-2 lg:text-right">Stay in the know</h4>
-                        
+
                         <MailchimpSubscribe url={url} render={({ subscribe, status, message }) => (
-                        <form 
+                        <form
                         className={`relative inline-block max-w-[615px] w-full `}
                         onSubmit={() => {
                             event.preventDefault()
@@ -46,7 +46,7 @@ const Footer = ({border}) => {
                                 EMAIL: emailRef.current.value
                             })
                         }}
-                        >   
+                        >
                             <div className={`${ status == 'success' ? 'hidden' : ''}`}>
                                 <div className="border-b border-black flex space-x-5 justify-between">
                                     <input ref={emailRef}  className="bg-transparent py-3 flex-1 lg:text-[14px] outline-none" type="email" placeholder="Enter your email"/>
@@ -71,10 +71,10 @@ const Footer = ({border}) => {
                             { message }
                             </div>
                             }
-                            
+
                         </form>
                         )}/>
-                        
+
                     </div>
                 </aside>
             </div>
