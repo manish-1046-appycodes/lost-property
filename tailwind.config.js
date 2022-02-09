@@ -30,8 +30,10 @@ module.exports = {
       fontSize: {
         '10px':   '0.625rem',
         '12px':   '0.75rem',
+        '14px':   '0.875rem',
         '16px':   '1rem',
         '18px':   '1.125rem',
+        '20px':   '1.25rem',
         '21px':   '1.3rem',
         '32px':   '2rem',
         '50px':   '3.125rem',

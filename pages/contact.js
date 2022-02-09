@@ -11,7 +11,6 @@ const Page = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('Sending')
 
         let data = {
             enquiry,

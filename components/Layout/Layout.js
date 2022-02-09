@@ -7,7 +7,6 @@ import { useState, useEffect } from "react"
 
 import Footer from "./Footer/Footer"
 import Header from "./Header/Header"
-import MailChimpPopup from '../MailChimpPopup/MailChimpPopup'
 
 
 const Layout = ({children, border, colourTheme, headerBgColor}) => {
@@ -69,7 +68,7 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
             setNoticeFunc={setNotice}
             isScrolledState={isScrolled}
             headerThemeBgState={headerThemeBg}/>
-            <MailChimpPopup/>
+
             <main className={`${ notice ? 'pt-[0px]' : 'pt-[40px]'}`}>{children}</main>
 
             <Footer border={border}/>
