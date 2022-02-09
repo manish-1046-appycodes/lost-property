@@ -70,7 +70,6 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                   <li><a href="https://www.facebook.com/lostpropertystpauls/" target="_blank" rel="noreferrer">Facebook</a></li>
                 </ul>
 
-
             </div>
         </header>
 
