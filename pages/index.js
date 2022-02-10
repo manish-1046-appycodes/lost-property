@@ -285,6 +285,7 @@ export default function Page({test}) {
 
       <Carousel imgs={carouselItems1}/>
 
+      <BookingSection/>
 
       <Billboard
       settings={Billboard_2}

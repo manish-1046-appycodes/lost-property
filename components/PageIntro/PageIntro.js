@@ -7,7 +7,7 @@ const PageIntro = () => {
 
             <div className="container">
 
-                <div className="w-11/12 mx-auto max-w-[598px]">
+                <div className="w-11/12 mx-auto max-w-[598px] mt-[25px] lg:mt-[70px]">
                     <div className="pt-[100%] relative z-10">
                         <ImageFade
                             src="/image/del/story/tate-modern-new.jpg"

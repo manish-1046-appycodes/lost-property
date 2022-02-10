@@ -74,6 +74,15 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                   <li><a href="https://www.instagram.com/lostpropertystpauls/" target="_blank" rel="noreferrer">Instagram</a></li>
                   <li><a href="https://www.facebook.com/lostpropertystpauls/" target="_blank" rel="noreferrer">Facebook</a></li>
                 </ul>
+                
+                <div className="hidden lg:block lg:my-auto ml-6">
+                    <ButtonRound 
+                    url="/book" 
+                    title="Book <br>Now"
+                    bg={`${ (!isScrolledState && headerThemeBgState == 'light')  ? 'bg-white' : 'bg-blue-1'} ${ isScrolledState && 'bg-blue-1'} ${ navOpenState && '!bg-white'} `}
+                    color={`${ (!isScrolledState && headerThemeBgState == 'light')  ? 'text-black' : 'text-white'} ${ isScrolledState && 'text-white'} ${ navOpenState && '!text-black'}`}
+                    />
+                </div>
 
             </div>
         </header>
