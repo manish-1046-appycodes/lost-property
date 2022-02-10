@@ -191,7 +191,7 @@ const BookingSection = () => {
 
                                         <div onClick={toggleDatePickerPopup} className="absolute bg-blue-1/50 inset-0"></div>
                                         
-                                        <div className={`relative w-full flex flex-col lg:flex-row-reverse  ease-in-out transition-transform ${ datePickerPopup ? 'translate-y-0 delay-250' : 'translate-y-full delay-0'} `}>
+                                        <div className={`max-h-full overflow-auto relative w-full flex flex-col lg:flex-row-reverse  ease-in-out transition-transform ${ datePickerPopup ? 'translate-y-0 delay-250' : 'translate-y-full delay-0'} `}>
                                             
                                             <button onClick={toggleDatePickerPopup} aria-hidden className="flex space-x-5 bg-blue-1 text-white p-5 text-center justify-center items-center uppercase"><span>close</span><CrossSvg/> </button>
 
@@ -219,7 +219,7 @@ const BookingSection = () => {
                                         <div className="shrink-0 w-[25px]">
                                             <GuestsSvg className=""/>
                                         </div>
-                                        <div className="flex-1 flex justify-between max-w-lg space-x-10">
+                                        <div className="flex-1 flex justify-between max-w-lg space-x-3  lg:space-x-10">
                                             <div>
                                                 <p className="mb-3">Adults</p>
                                                 <div className="flex num-wrap">

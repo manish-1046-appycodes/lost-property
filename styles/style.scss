@@ -201,7 +201,7 @@
     .form {
 
         .form-group {
-            @apply mb-10 lg:mb-12;
+            @apply mb-5 lg:mb-12;
 
             &--border {
                 @apply border-b border-black pb-3
@@ -312,14 +312,23 @@
 
 /* datepicker */
 .rdrMonth {
-    flex: 1;
+    @apply flex-1;
+    width: auto !important;
 }
 .rdrCalendarWrapper {
     width: 100%;
 }
 
+.rdrMonths {
+    @apply flex-col md:flex-row;
+}
+
 .rdrDateDisplayWrapper {
     display: none;
+}
+
+.rdrCalendarWrapper.rdrDateRangeWrapper {
+    @apply text-[10px] md:text-[12px];
 }
 /* VH Hack */
 :root {
