@@ -42,10 +42,12 @@ export default function ExploreMap({geojson, category, mapCategories, filterOpen
         // flyto
         if ( map.current ) {
 
+            if ( latLng ) {
             map.current.flyTo({
                 center: latLng.split(','),
                 essential: true // this animation is considered essential with respect to prefers-reduced-motion
             });
+            }
         }
 
         if (map.current) return; // initialize map only once
@@ -170,7 +172,7 @@ export default function ExploreMap({geojson, category, mapCategories, filterOpen
     return (
         <>
            
-        <div className="spacer h-[120px] lg:h-[150px]"></div>
+        <div className="spacer h-[0px] lg:h-[150px]"></div>
 
         <div className="min-h-mob_min_height lg:min-h-lg_min_height flex flex-col">
             

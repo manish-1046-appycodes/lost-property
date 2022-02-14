@@ -266,12 +266,15 @@ export default function Page({test}) {
             <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         </Head>
         
-        <div className={` ${ showMap ? '!visible !opacity-100' : ''} opacity-0 invisible map-wrap top-0 z-10 transition-[visibility,opacity] duration-500 fixed`}>
+        <div className="flex flex-col lg:block">
+
+        <div className={` ${ showMap ? '!visible !opacity-100' : ''} order-2 opacity-0 invisible map-wrap top-0 z-10 transition-[visibility,opacity] duration-500 fixed`}>
           <ExploreMap mapCategories={mapCategories} category={mapCategorySelected} geojson={geojson} filterOpen={filterOpen} latLng={latLng}/>
         </div>
 
-        <section className={` ${ !showMap ? '!visible !opacity-100' : 'opacity-0 invisible'} container relative min-h-screen map-offset_mob lg:map-offset_lg transition-[visibility,opacity] duration-500`}>
+        <section className={` ${ !showMap ? '!visible !opacity-100' : 'opacity-0 invisible'} order-3 container relative min-h-screen map-offset_mob lg:map-offset_lg transition-[visibility,opacity] duration-500`}>
 
+          <div className="h-[120px] lg:h-[0px]"></div>
           <div className="absolute w-full h-full top-0 left-0 container">
             <div className="sticky top-0 min-h-screen flex items-center justify-center flex-col">
               <h1 className="heading-brand-medium text-center">Get <em>lost</em> in <br/>the <em>City</em></h1>
@@ -364,7 +367,7 @@ export default function Page({test}) {
 
         </section>
           
-        <div className={`filter-bar bottom-0 h-[56px] lg:h-[73px] relative z-10 order-1 lg:order-2 ${ (filterOpen ? 'filterOpen' : '')}`}>
+        <div className={`z-50 top-0 lg:top-auto filter-bar bottom-0 h-[56px] lg:h-[73px] relative z-10 order-1 lg:order-2 ${ (filterOpen ? 'filterOpen' : '')}`}>
                     
             <div  onClick={toggleFilter} className={`cursor-pointer w-full bottom-0 left-0  opacity-50 backdrop-blur-xl min-h-mob_min_height lg:min-h-lg_min_height bg-cream-1 absolute ${ (filterOpen ? 'visible' : 'invisible')}`}></div>
 
@@ -435,6 +438,8 @@ export default function Page({test}) {
             position: sticky;
           }
         `}</style>
+
+        </div>
 
         
       </PageFade>

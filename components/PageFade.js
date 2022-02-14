@@ -22,7 +22,7 @@ const myAnimation = {
 const PageFade = ({children}) => {
     return (
         <motion.div
-        className="relative"
+        className="relative min-h-screen"
         initial="initial"
         animate="animate"
         exit="exit"
