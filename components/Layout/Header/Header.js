@@ -52,6 +52,12 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                     </li>
                     
                     <li>
+                        <Link href="/gallery">
+                        <a>Gallery</a>
+                        </Link>
+                    </li>
+
+                    <li>
                         <Link href="/contact">
                         <a>Contact</a>
                         </Link>
