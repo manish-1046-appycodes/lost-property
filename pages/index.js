@@ -7,18 +7,9 @@ import Layout from '../components/Layout/Layout'
 import BookingSection from '../components/BookingSection/BookingSection'
 import Billboard from '../components/Billboard/Billboard'
 import Carousel from '../components/Carousel/Carousel'
-import AccordionEvents from '../components/Accordion/AccordionEvents'
-import Marquee from '../components/Marquee/Marquee'
-import ExploreCarousel from '../components/ExploreCarousel/ExploreCarousel'
-import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
 import Ctas from '../components/Ctas/Ctas'
 import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
-
-/* SVG */
-import lpLogo from '../public/image/lost-property-logo-mob.svg';
-
-
 
 
 export default function Page({test}) {
@@ -298,11 +289,6 @@ export default function Page({test}) {
       <Billboard
       settings={Billboard_4}
       />
-
-
-
-
-      <SubscribeForm/>
 
       <Ctas ctas={ctas}/>
 

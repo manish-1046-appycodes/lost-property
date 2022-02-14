@@ -4,15 +4,9 @@ import Head from 'next/head'
 
 import Layout from '../../components/Layout/Layout'
 
-import AccordionEvents from '../../components/Accordion/AccordionEvents'
-import Billboard from '../../components/Billboard/Billboard'
 
-import SubscribeForm from '../../components/SubscribeForm/SubscribeForm'
-import Star from '../../public/image/icon/star.svg'
-import Blockquote from '../../components/Blockquote/Blockquote'
-import Marquee from '../../components/Marquee/Marquee'
-import Carousel from '../../components/Carousel/Carousel'
-import BookingSection from '../../components/BookingSection/BookingSection'
+
+
 import PageFade from '../../components/PageFade'
 import ImageFade from '../../components/ImageFade/ImageFade'
 import ButtonRound from '../../components/Links/ButtonRound'

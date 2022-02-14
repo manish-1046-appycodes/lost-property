@@ -1,12 +1,13 @@
-
-
 import Script from 'next/script'
 
 import { useState, useEffect } from "react"
+import NavBarMob from '../NavBarMob/NavBarMob'
 
 
 import Footer from "./Footer/Footer"
 import Header from "./Header/Header"
+
+
 
 
 const Layout = ({children, border, colourTheme, headerBgColor}) => {
@@ -69,7 +70,12 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
             isScrolledState={isScrolled}
             headerThemeBgState={headerThemeBg}/>
 
-            <main className={`${ notice ? 'pt-[0px]' : 'pt-[40px]'}`}>{children}</main>
+            <main className={`${ notice ? 'pt-[0px]' : 'pt-[40px]'}`}>
+                {children}
+                <NavBarMob 
+                toggleNavFunc={toggleNav}/>
+            </main>
+            
 
             <Footer border={border}/>
 

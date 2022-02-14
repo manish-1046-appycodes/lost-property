@@ -6,13 +6,9 @@ import Layout from '../components/Layout/Layout'
 
 import Billboard from '../components/Billboard/Billboard'
 import Carousel from '../components/Carousel/Carousel'
-import AccordionMenu from '../components/Accordion/AccordionMenu'
 import Marquee from '../components/Marquee/Marquee'
 import FoodDrinkCarousel from '../components/FoodDrinkCarousel/FoodDrinkCarousel'
-import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
 import PageFade from '../components/PageFade'
-import AccordionMenu2 from '../components/Accordion/AccordionMenu2'
-import BookTableForm from '../components/BookTableForm/BookTableForm'
 
 
 const carouselItems1 = [
@@ -182,8 +178,6 @@ export default function Page({test}) {
 
         <Marquee words={MarqueeWords2}/>
         <Carousel imgs={carouselItems3} colourTheme="blue"/>
-
-        <SubscribeForm/>
 
         <div className="bg-cream-1 pt-[80px] lg:pt-[120px]">
             <Billboard

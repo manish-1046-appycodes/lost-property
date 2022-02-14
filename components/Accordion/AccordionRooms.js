@@ -27,10 +27,10 @@ const AccordionRooms = ( {accordionData} ) => {
 
             <div className="container absolute">
               <div className="max-w-1430px mx-auto grid grid-5 gap-4 lg:gap-9  py-3 lg:py-4">
-                <div className="lg:pt-4">{ row?.table_row?.name }</div>
-                <div className="lg:pt-4 col-span-2 lg:col-span-1">{ row?.table_row?.bed }</div>
-                <div className="lg:pt-4 hidden lg:block">{ row?.table_row?.sleeps }</div>
-                <div className="accordion-btn-initial justify-self-end duration-500 ease-in-out">
+                <div className="lg:pt-4 col-span-3 md:col-span-1">{ row?.table_row?.name }</div>
+                <div className="lg:pt-4 ">{ row?.table_row?.bed }</div>
+                <div className="lg:pt-4 hidden md:block">{ row?.table_row?.sleeps }</div>
+                <div className="accordion-btn-initial justify-self-end duration-500 ease-in-out hidden md:block">
                 { row.book_btn && <ButtonRound url="#" title="Book <br/>Room" bg="bg-blue-1" size="small"/>}
                 </div>
                 <div className="lg:pt-2">

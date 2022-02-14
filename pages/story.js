@@ -7,7 +7,6 @@ import Layout from '../components/Layout/Layout'
 import PageIntro from '../components/PageIntro/PageIntro'
 import Billboard from '../components/Billboard/Billboard'
 
-import SubscribeForm from '../components/SubscribeForm/SubscribeForm'
 import Blockquote from '../components/Blockquote/Blockquote'
 import Marquee from '../components/Marquee/Marquee'
 import Carousel from '../components/Carousel/Carousel'
@@ -166,8 +165,6 @@ export default function Page({test}) {
         />
 
         <Ctas ctas={ctas}/>
-
-        <SubscribeForm/>
 
       </PageFade>
     </>
