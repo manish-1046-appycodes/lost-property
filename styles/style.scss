@@ -204,7 +204,7 @@
             @apply mb-5 lg:mb-12;
 
             &--border {
-                @apply border-b border-black pb-3
+                @apply border-b border-current pb-3
             }
         }
 
@@ -217,7 +217,7 @@
         }
 
         input[type="text"], input[type="email"], select, textarea{
-            @apply block w-full placeholder:text-black/50 border-0 border-b border-black bg-transparent pb-2 lg:pb-4 outline-0;
+            @apply block w-full placeholder:text-current placeholder:opacity-50 border-0 border-b border-current bg-transparent pb-2 lg:pb-4 outline-0;
 
         }
 
@@ -285,6 +285,13 @@
         }
         input:checked ~ label:after {
             @apply bg-white;
+        }
+    }
+
+
+    .footer {
+        ul li a {
+            @apply hover:underline;
         }
     }
 }

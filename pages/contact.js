@@ -80,7 +80,7 @@ export default Page;
 
 Page.getLayout = function getLayout(page) {
 return (
-    <Layout border="true">{page}</Layout>
+    <Layout border="true"  colourTheme="blue" headerBgColor="light">{page}</Layout>
 )
 }
 

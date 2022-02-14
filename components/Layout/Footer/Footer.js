@@ -14,7 +14,7 @@ const Footer = ({border}) => {
     const emailRef = createRef(undefined)
 
   return (
-    <footer className={`overflow-hidden bg-cream-1 text-black ${ border && "border-t border-black"}`}>
+    <footer className={`footer overflow-hidden bg-cream-1 text-black ${ border && "border-t border-black"}`}>
         <div className="container mb-10 lg:mb-20">
             <div className="mx-auto lg:flex mt-10 mb-20 lg:my-20 lg:space-x-10">
                 <aside className="lg:flex lg:flex-wrap lg:w-1/2 mb-5 lg:-mb-14">
@@ -34,48 +34,7 @@ const Footer = ({border}) => {
                         <li><a href="https://www.facebook.com/lostpropertystpauls/" target="_blank" rel="noreferrer">Facebook</a></li>
                     </ul>
 
-                    <div className="max-w-[415px] mt-20 lg:mt-0 lg:flex-grow">
-                        <h4 className="uppercase lg:mb-2 lg:text-right">Stay in the know</h4>
-
-                        <MailchimpSubscribe url={url} render={({ subscribe, status, message }) => (
-                        <form
-                        className={`relative inline-block max-w-[615px] w-full `}
-                        onSubmit={() => {
-                            event.preventDefault()
-                            subscribe({
-                                EMAIL: emailRef.current.value
-                            })
-                        }}
-                        >
-                            <div className={`${ status == 'success' ? 'hidden' : ''}`}>
-                                <div className="border-b border-black flex space-x-5 justify-between">
-                                    <input ref={emailRef}  className="bg-transparent py-3 flex-1 lg:text-[14px] outline-none" type="email" placeholder="Enter your email"/>
-                                    <button className="uppercase text-[12px] lg:text-[16px]" type="submit">Send</button>
-                                </div>
-                            </div>
-
-                            { status == 'error' &&
-                            <div className="mb-2 lg:my-2 text-12px uppercase absolute top-full">
-                            { message.replace('0 -', '') }
-                            </div>
-                            }
-
-                            { status == 'sending' &&
-                            <div className="mb-2 lg:my-2 text-12px uppercase absolute top-full">
-                            Sending...
-                            </div>
-                            }
-
-                            { status == 'success' &&
-                            <div className="mb-2 lg:my-2 text-12px uppercase ">
-                            { message }
-                            </div>
-                            }
-
-                        </form>
-                        )}/>
-
-                    </div>
+                    
                 </aside>
             </div>
 
