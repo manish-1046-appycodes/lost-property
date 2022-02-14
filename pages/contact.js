@@ -37,7 +37,7 @@ const Page = () => {
     }
 
     return (
-    <div className="bg-cream-1  min-vh100 w-full top-0 left-0 z-10 flex items-center py-20">
+    <div className="min-vh100 w-full top-0 left-0 z-10 flex items-center py-20">
             <div className="container">
                 <div className="max-w-1430px mx-auto">
                     <div className="md:flex">
