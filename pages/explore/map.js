@@ -4,10 +4,8 @@ import Head from 'next/head'
 
 import Layout from '../../components/Layout/Layout'
 
-import ButtonRound from '../../components/Links/ButtonRound'
 import PageFade from '../../components/PageFade'
-import ImageFade from '../../components/ImageFade/ImageFade'
-import ParallaxItem from '../../components/UI/ParallaxItem'
+
 
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 mapboxgl.accessToken = 'pk.eyJ1IjoidHljYWRtaW4iLCJhIjoiY2t5ZWk3Y3VwMDhwNDJ3czI3OTN0MXR3OCJ9.338NIRkFMLb-YMuSvptahg';
@@ -82,7 +80,7 @@ const geojson = {
         }
       }
     ]
-  };
+};
 
 export default function Page({test}) {
 

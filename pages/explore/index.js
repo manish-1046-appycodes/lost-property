@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 import Head from 'next/head'
 
@@ -8,8 +8,82 @@ import ButtonRound from '../../components/Links/ButtonRound'
 import PageFade from '../../components/PageFade'
 import ImageFade from '../../components/ImageFade/ImageFade'
 import ParallaxItem from '../../components/UI/ParallaxItem'
+import ExploreMap from '../../components/ExploreMap/ExploreMap'
 
 // Locations
+
+const geojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-0.0983506,51.5138453]
+      },
+      properties: {
+        title: 'St. Paul\'s Cathedral',
+        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
+        category: 'Arts',
+        img: '/image/del/explore/img1.jpg'
+
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-0.0826999,51.5097453]
+      },
+      properties: {
+        title: 'St Dunstan in the East Church Garden',
+        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
+        category: 'Arts',
+        img: '/image/del/explore/img2.jpg'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-0.1174699,51.5170382]
+      },
+      properties: {
+        title: 'Sir John Soane\'s Museum',
+        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
+        category: 'Culture',
+        img: '/image/del/explore/img3.jpg'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-0.1154775,51.5018693]
+      },
+      properties: {
+        title: 'The Vaults London',
+        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
+        category: 'Eating',
+        img: '/image/del/explore/img4.jpg'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-0.113926,51.524751]
+      },
+      properties: {
+        title: 'The Postal Museum',
+        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
+        category: 'Drinking',
+        img: '/image/del/explore/img5.jpg'
+      }
+    }
+  ]
+};
+
 const locations = [
   {
     img: {
@@ -87,10 +161,99 @@ const locations = [
 
 export default function Page({test}) {
 
+  const [showMap, setShowMap] = useState(false);
+  const [latLng, setLatLng] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [mapCategories, setMapCategories] = useState([]);
+  const [mapCategorySelected, setMapCategorySelected] = useState('poi-All');
+  const [geojsonFiltered, setGeojsonFiltered] = useState(geojson);
+  const filterWrap = useRef(null);
+
+  const toggleFilter = () => {
+      setFilterOpen( filterOpen => !filterOpen);
+
+      const filterWrapHeight = filterWrap.current.firstChild.offsetHeight;
+
+      if ( !filterOpen ) {
+          
+          filterWrap.current.style.height = filterWrapHeight +'px';
+          setTimeout( function() {
+              filterWrap.current.style.height = 'auto';
+          }, 500)
+      } else {
+          filterWrap.current.style.height = filterWrapHeight +'px';
+          setTimeout( function() {
+              filterWrap.current.style.height = '0px'
+          }, 10);
+      }
+  }
 
   useEffect(() => {
-    gsapSettings.init()
-  }, []);
+    gsapSettings.init();
+    console.log(mapCategorySelected)
+    if ( mapCategorySelected == 'poi-All' ) {
+      setGeojsonFiltered(geojson);
+    } else {
+      let filter = mapCategorySelected.replace('poi-', '');
+
+      setGeojsonFiltered({
+        type: 'FeatureCollection',
+        features: geojson.features.filter( property => property.properties.category === filter)
+      });
+    }
+
+
+
+  }, [mapCategorySelected]);
+
+  // map categories
+  geojson.features.forEach( (feature) => {
+    if ( !mapCategories.includes(feature.properties.category) ) {
+        mapCategories.push( feature.properties.category)
+    }
+  })
+
+  mapCategories.sort(function (a, b) {
+      return a.localeCompare(b); //using String.prototype.localCompare()
+  });
+
+
+  const setCategory = (e) => {
+    const layerID = e.target.getAttribute('data-layer')
+
+    setMapCategorySelected(layerID);
+    
+    toggleFilter();
+
+    window.scrollTo(0, 0);
+
+    if ( document.querySelector('.mapboxgl-popup') ) {
+      document.querySelector('.mapboxgl-popup').style.display = 'none';
+    }
+    
+    e.preventDefault();
+  }
+
+
+  const toggleMap = (e) => {
+    e.stopPropagation();
+    setShowMap( showMap => !showMap);
+    
+  }
+
+  const mapSelect = (e) => {
+
+    let latlng = e.target.getAttribute('data-latlng');
+    if ( latlng ) {
+      
+      setLatLng(latlng);
+
+      setShowMap(true)
+      document.querySelector('.marker[data-latlng="'+latlng+'"]').click();
+    }
+
+  }
+
   
   return (
     <>
@@ -100,11 +263,14 @@ export default function Page({test}) {
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
             <link rel="icon" href="/favicon.ico" />
-            <script>
-            </script>
+            <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         </Head>
         
-        <section className="container relative">
+        <div className={` ${ showMap ? '!visible !opacity-100' : ''} opacity-0 invisible map-wrap top-0 z-10 transition-[visibility,opacity] duration-500 fixed`}>
+          <ExploreMap mapCategories={mapCategories} category={mapCategorySelected} geojson={geojson} filterOpen={filterOpen} latLng={latLng}/>
+        </div>
+
+        <section className={` ${ !showMap ? '!visible !opacity-100' : 'opacity-0 invisible'} container relative min-h-screen map-offset_mob lg:map-offset_lg transition-[visibility,opacity] duration-500`}>
 
           <div className="absolute w-full h-full top-0 left-0 container">
             <div className="sticky top-0 min-h-screen flex items-center justify-center flex-col">
@@ -115,8 +281,8 @@ export default function Page({test}) {
           
           <div className="lg:grid grid-cols-2 items-start overflow-hidden pb-20">
             
-            { locations &&
-              locations.map( (location, i) => {
+            { geojsonFiltered &&
+              geojsonFiltered?.features.map( (location, i) => {
 
                 let count = i;
 
@@ -126,7 +292,7 @@ export default function Page({test}) {
 
                 let caption;
 
-                ( location?.img?.caption ? caption = location.img.caption : null )
+                ( location?.properties?.title ? caption = location.properties.title : null )
 
                 let classOuter = "";
                 let classInner = "";
@@ -162,20 +328,24 @@ export default function Page({test}) {
                 }
 
                 return (<div key={i} className={`explore-item mt-32 lg:mt-0 w-9/12 lg:w-6/12 transform ${classOuter}`}>
+
                     <ParallaxItem className="">
                       <div className={`relative  ${classInner}`}>
 
                           <div className="relative pt-[100%] cursor-wrap">
-                            { location?.img?.url &&
+                            { location?.properties?.img &&
                             <ImageFade
-                                src={location.img.url}
+                                src={location.properties.img}
                                 layout="fill"
-                                alt={caption}/>
+                                alt={caption}
+                                className="select-none"/>
                             }
                             
                             <div className="absolute cursor">
                               <ButtonRound url="#" title="View <br>on map" bg="bg-white" color="text-black"/>
                             </div>
+
+                            <div className="absolute inset-0" data-latlng={location.geometry.coordinates} onClick={mapSelect}/>  
 
                           </div>
 
@@ -193,6 +363,78 @@ export default function Page({test}) {
             
 
         </section>
+          
+        <div className={`filter-bar bottom-0 h-[56px] lg:h-[73px] relative z-10 order-1 lg:order-2 ${ (filterOpen ? 'filterOpen' : '')}`}>
+                    
+            <div  onClick={toggleFilter} className={`cursor-pointer w-full bottom-0 left-0  opacity-50 backdrop-blur-xl min-h-mob_min_height lg:min-h-lg_min_height bg-cream-1 absolute ${ (filterOpen ? 'visible' : 'invisible')}`}></div>
+
+            <div className="absolute top-0 lg:top-auto lg:bottom-0 left-0 border-t border-b border-black bg-cream-1 w-full">
+
+                <div className="h-[56px] lg:h-[73px] flex justify-center items-center  cursor-pointer" onClick={toggleFilter}>
+
+                    
+                    <div onClick={toggleMap} className="absolute h-full w-[62px] bg-black flex left-0 bottom-0 h-[56px] lg:h-[73px]">
+                        
+                        <div className={`m-auto ${ (showMap ? 'hidden' : 'block')}`}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25.83" height="38.237" viewBox="0 0 25.83 38.237">
+                            <path id="Path_132" data-name="Path 132" d="M1268.925,104.02a12.415,12.415,0,0,0-12.415,12.415c0,6.857,12.415,24.455,12.415,24.455s12.415-17.6,12.415-24.455A12.415,12.415,0,0,0,1268.925,104.02Zm0,16.486a3.465,3.465,0,1,1,3.465-3.465A3.465,3.465,0,0,1,1268.925,120.506Z" transform="translate(-1256.01 -103.52)" fill="none" stroke="#faf7f3" strokeMiterlimit="10" strokeWidth="1"/>
+                          </svg>
+                        </div>
+                        <div className={`m-auto ${ (!showMap ? 'hidden' : 'block') }`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                            <g id="Group_540" data-name="Group 540" transform="translate(-17 -1026)">
+                                <g id="Rectangle_236" data-name="Rectangle 236" transform="translate(17 1026)" fill="none" stroke="#faf7f3" strokeWidth="1">
+                                <rect width="11" height="11" stroke="none"/>
+                                <rect x="0.5" y="0.5" width="10" height="10" fill="none"/>
+                                </g>
+                                <g id="Rectangle_239" data-name="Rectangle 239" transform="translate(17 1042)" fill="none" stroke="#faf7f3" strokeWidth="1">
+                                <rect width="11" height="11" stroke="none"/>
+                                <rect x="0.5" y="0.5" width="10" height="10" fill="none"/>
+                                </g>
+                                <g id="Rectangle_237" data-name="Rectangle 237" transform="translate(33 1026)" fill="none" stroke="#faf7f3" strokeWidth="1">
+                                <rect width="11" height="11" stroke="none"/>
+                                <rect x="0.5" y="0.5" width="10" height="10" fill="none"/>
+                                </g>
+                                <g id="Rectangle_238" data-name="Rectangle 238" transform="translate(33 1042)" fill="none" stroke="#faf7f3" strokeWidth="1">
+                                <rect width="11" height="11" stroke="none"/>
+                                <rect x="0.5" y="0.5" width="10" height="10" fill="none"/>
+                                </g>
+                            </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center space-x-6">
+                        <button data-accordiontoggle className="z-10 transform duration-500 text-grey-1 relative w-[26px] h-[26px]" aria-hidden="true">
+                            <span className="w-full h-[1px] bg-current absolute top-1/2 left-0"></span>
+                            <span className="w-[1px] h-full bg-current absolute top-0 left-1/2"></span>
+                        </button>
+                        <span className="text-[16px] uppercase">Filter</span>
+                    </div>
+
+                </div>
+            
+                <div ref={filterWrap} className="filter-wrap h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <ul className="flex  flex-col  text-[30px] lg:text-[50px] uppercase text-center">
+                        <li className="group border-t border-grey-1 flex justify-center py-2"><a onClick={setCategory} data-layer={`poi-All`} href="#" className="group-hover:font-display inline-block">all</a></li>
+
+                        { mapCategories.map( (mapCategory, i) => 
+                            <li key={i} className="group border-t border-grey-1 flex justify-center py-2"><a onClick={setCategory} data-layer={`poi-${mapCategory}`} href="#" className="group-hover:font-display inline-block">{mapCategory}</a></li>
+                          )}
+
+                        
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <style jsx>{`
+          .filter-bar, .map-wrap {
+            position: sticky;
+          }
+        `}</style>
 
         
       </PageFade>
@@ -202,7 +444,7 @@ export default function Page({test}) {
 
 Page.getLayout = function getLayout(page) {
   return (
-    <Layout border="true">{page}</Layout>
+    <Layout>{page}</Layout>
   )
 }
 

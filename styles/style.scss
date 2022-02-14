@@ -196,6 +196,14 @@
         min-height: calc( (var(--vh, 1vh) * 100) - 150px);
     }
 
+    .map-offset_mob {
+        margin-top: calc(-100vh - 120px);
+    }
+
+    .map-offset_lg {
+        margin-top: calc(-100vh);
+    }
+
 
     /* forms */
     .form {
