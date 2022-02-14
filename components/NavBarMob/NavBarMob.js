@@ -2,7 +2,7 @@ import NavHomeSvg from "../../public/image/icon/nav-home.svg"
 import NavDineSvg from "../../public/image/icon/nav-dine.svg"
 import NavStaySvg from "../../public/image/icon/nav-stay.svg"
 import NavGallerySvg from "../../public/image/icon/nav-gallery.svg"
-import NavMoreSvg from "../../public/image/icon/nav-More.svg"
+import NavMoreSvg from "../../public/image/icon/nav-more.svg"
 import Link from "next/link"
 import { useRouter } from 'next/router'
 
