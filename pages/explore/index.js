@@ -115,7 +115,8 @@ export default function Page({test}) {
 
   useEffect(() => {
     gsapSettings.init();
-    console.log(mapCategorySelected)
+    Cursors.init();
+
     if ( mapCategorySelected == 'poi-All' ) {
       setGeojsonFiltered(geojson);
     } else {
@@ -129,7 +130,7 @@ export default function Page({test}) {
 
 
 
-  }, [mapCategorySelected]);
+  }, [mapCategorySelected,showMap]);
 
   // map categories
   geojson.features.forEach( (feature) => {
@@ -155,7 +156,7 @@ export default function Page({test}) {
     if ( document.querySelector('.mapboxgl-popup') ) {
       document.querySelector('.mapboxgl-popup').style.display = 'none';
     }
-    
+    Cursors.init();
     e.preventDefault();
   }
 
@@ -197,7 +198,7 @@ export default function Page({test}) {
           <ExploreMap mapCategories={mapCategories} category={mapCategorySelected} geojson={geojson} filterOpen={filterOpen} latLng={latLng}/>
         </div>
 
-        <section className={` ${ !showMap ? '!visible !opacity-100' : 'opacity-0 invisible'} order-3 container relative min-h-screen map-offset_mob lg:map-offset_lg transition-[visibility,opacity] duration-500`}>
+        <section className={` ${ !showMap ? '!visible !opacity-100' : 'opacity-0 invisible'} order-3 container relative min-h-screen map-offset_mob lg:map-offset_lg transition-[visibility,opacity] duration-500 flex justify-center flex-col`}>
 
           <div className="h-[120px] lg:h-[0px]"></div>
           <div className="absolute w-full h-full top-0 left-0 container">
