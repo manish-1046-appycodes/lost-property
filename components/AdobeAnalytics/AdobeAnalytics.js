@@ -51,7 +51,6 @@ const AdobeAnalytics = ({initial}) => {
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
                 __html: `
-                console.log('hit1')
                 var digitalData = {
                 
                     page: {
@@ -81,7 +80,6 @@ const AdobeAnalytics = ({initial}) => {
 
                 };
 
-                console.log(digitalData)
 
                 `,
             }}

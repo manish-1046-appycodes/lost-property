@@ -9,6 +9,7 @@ import Carousel from '../components/Carousel/Carousel'
 import Marquee from '../components/Marquee/Marquee'
 import FoodDrinkCarousel from '../components/FoodDrinkCarousel/FoodDrinkCarousel'
 import PageFade from '../components/PageFade'
+import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 
 const carouselItems1 = [
@@ -163,6 +164,7 @@ export default function Page({test}) {
             <title>Lost Property - Food &amp; Drink</title>
             <meta name="description" content="Lost Property - Food &amp; Drink" />
         </Head>
+        <AdobeAnalyticsUpdate/>
 
         <FoodDrinkCarousel carouselItems={carouselItems1}/>
 

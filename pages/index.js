@@ -11,7 +11,6 @@ import Carousel from '../components/Carousel/Carousel'
 import Ctas from '../components/Ctas/Ctas'
 import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
-import AdobeAnalytics from '../components/AdobeAnalytics/AdobeAnalytics'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 

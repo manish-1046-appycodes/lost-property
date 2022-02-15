@@ -10,6 +10,7 @@ import Billboard from '../components/Billboard/Billboard'
 import Marquee from '../components/Marquee/Marquee'
 
 import PageFade from '../components/PageFade'
+import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 
 
@@ -204,6 +205,7 @@ export default function Page({test}) {
             <title>Luxury Escapism in Our Unique London Hotel Rooms</title>
             <meta name="description" content="Our rooms offer comfortable escapism influenced by London's rich history and charm through unique design. Explore what our rooms offer here" />
         </Head>
+        <AdobeAnalyticsUpdate/>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
 

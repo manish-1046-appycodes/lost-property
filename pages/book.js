@@ -2,6 +2,8 @@ import BookingSection from "../components/BookingSection/BookingSection";
 import Layout from "../components/Layout/Layout";
 import Head from 'next/head'
 import PageFade from "../components/PageFade";
+import AdobeAnalytics from "../components/AdobeAnalytics/AdobeAnalytics";
+import AdobeAnalyticsUpdate from "../components/AdobeAnalytics/AdobeAnalyticsUpdate";
 
 const Page = () => {
     
@@ -13,9 +15,10 @@ const Page = () => {
                 <meta name="description" content="Lost Property Booking" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <AdobeAnalyticsUpdate/>
 
             <BookingSection/>
-            
+
         </PageFade>
     
     );

@@ -7,6 +7,7 @@ import Marquee from '../components/Marquee/Marquee'
 
 import PageFade from '../components/PageFade'
 import ButtonRound from '../components/Links/ButtonRound'
+import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 const MarqueeWords = '<em>Nooo.</em> &nbsp;Oops. &nbsp;<em>Eek.</em> &nbsp;Uh oh. &nbsp;<em>sorry.</em> &nbsp;Whoopsy daisy. &nbsp;';
 
@@ -23,6 +24,7 @@ export default function Page({test}) {
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
         </Head>
+        <AdobeAnalyticsUpdate/>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
 

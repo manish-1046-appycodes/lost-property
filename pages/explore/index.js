@@ -9,6 +9,7 @@ import PageFade from '../../components/PageFade'
 import ImageFade from '../../components/ImageFade/ImageFade'
 import ParallaxItem from '../../components/UI/ParallaxItem'
 import ExploreMap from '../../components/ExploreMap/ExploreMap'
+import AdobeAnalyticsUpdate from '../../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 // Locations
 
@@ -190,7 +191,8 @@ export default function Page({test}) {
             <meta name="description" content="Lost Property" />
             <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         </Head>
-        
+        <AdobeAnalyticsUpdate/>
+
         <div className="flex flex-col lg:block">
 
         <div className={` ${ showMap ? '!visible !opacity-100' : ''} order-2 opacity-0 invisible map-wrap top-0 z-10 transition-[visibility,opacity] duration-500 fixed`}>

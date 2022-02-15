@@ -7,6 +7,7 @@ import Layout from '../components/Layout/Layout'
 import Carousel from '../components/Carousel/Carousel'
 import Marquee from '../components/Marquee/Marquee'
 import PageFade from '../components/PageFade'
+import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 
 
@@ -66,7 +67,8 @@ export default function Page({test}) {
               <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
               <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
           </Head>
-          
+          <AdobeAnalyticsUpdate/>
+
           <div className="min-h-screen flex flex-col justify-center lg:justify-end">
               <div className="spacer h-[120px] lg:h-[150px]"></div>
               

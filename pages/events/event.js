@@ -10,6 +10,7 @@ import Layout from '../../components/Layout/Layout'
 import PageFade from '../../components/PageFade'
 import ImageFade from '../../components/ImageFade/ImageFade'
 import ButtonRound from '../../components/Links/ButtonRound'
+import AdobeAnalyticsUpdate from '../../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 
 
@@ -25,6 +26,7 @@ export default function Page({test}) {
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
         </Head>
+        <AdobeAnalyticsUpdate/>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
 

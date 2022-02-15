@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from 'next/head'
 import Layout from "../components/Layout/Layout";
 import PageFade from "../components/PageFade";
+import AdobeAnalyticsUpdate from "../components/AdobeAnalytics/AdobeAnalyticsUpdate";
 
 const Page = () => {
 
@@ -43,6 +44,7 @@ const Page = () => {
                 <title>Lost Property</title>
                 <meta name="description" content="Lost Property" />
             </Head>
+            <AdobeAnalyticsUpdate/>
 
             <div className="min-vh100 w-full top-0 left-0 z-10 flex items-center py-20">
                     <div className="container">

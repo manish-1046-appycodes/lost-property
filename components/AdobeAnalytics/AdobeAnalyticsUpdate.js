@@ -10,7 +10,7 @@ let pageCategory = '';
 
 const AdobeAnalyticsUpdate = ({initial}) => {
 
-    const router = useRouter();
+    const Router = useRouter();
 
 
     
@@ -22,11 +22,11 @@ const AdobeAnalyticsUpdate = ({initial}) => {
     });
         pageName = '';
         pageCategory = '';
-        if ( router.route == '/') {
+        if ( Router.route == '/') {
             pageName = ':homepage'
             pageCategory = 'homepage'
         } else {
-            const paths = router.route.split('/');
+            const paths = Router.route.split('/');
             
             let count = 0;
             paths.map( (path) => {
@@ -50,11 +50,11 @@ const AdobeAnalyticsUpdate = ({initial}) => {
         <Script strategy="afterInteractive">{`
 
             if (typeof s != "undefined") {
-                s.clearVars();
-                s.primaryCategory = "${pageCategory}";
+                //s.clearVars();
+                s.channel = "${pageCategory}";
                 s.pageName = "lost-property${pageName}";
-                s.destinationURL = "${BASE_URL+router.route}";
-                s.pageTitle = document.title;
+                s.pageURL = "${BASE_URL+Router.route}";
+                s.prop14 = document.title;
                 s.t();
             }
             
