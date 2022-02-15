@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 
-import Image from "next/image";
 import Script from 'next/script'
 
 import ButtonRound from '../Links/ButtonRound'

@@ -5,7 +5,6 @@ import ButtonSecondary from '../Links/ButtonSecondary'
 import ImageFade from '../ImageFade/ImageFade';
 import ChevDown from '../../public/image/icon/chev-down.svg'
 
-import Image from 'next/image'
 
 
 const { motion } = require("framer-motion");
@@ -119,7 +118,7 @@ const Billboard = ( {settings} ) => {
                             
                             { settings?.logo?.url ?
                             (<h2 className="heading-sub uppercase text-center pt-2 w-6/12 max-w-full mx-auto">
-                                <Image
+                                <ImageFade
                                     src={settings.logo.url}
                                     width={270}
                                     height={117}
@@ -134,7 +133,7 @@ const Billboard = ( {settings} ) => {
                             (<>
                                 <div className="grow flex items-center justify-center py-0 !my-5 !mb-1 lg:!my-20 lg:!mb-16">
                                     <div className="relative w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]">
-                                        <Image
+                                        <ImageFade
                                         src={settings.copy_img.url}
                                         layout="fill"
                                         objectFit="cover"

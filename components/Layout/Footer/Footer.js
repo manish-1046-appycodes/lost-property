@@ -1,11 +1,11 @@
 import { useState, createRef } from "react";
 
 import Link from "next/link";
-import Image from "next/image";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 import RailWay1 from "../../../public/image/icon/railway-1.svg";
 import RailWay2 from "../../../public/image/icon/railway-2.svg";
+import ImageFade from "../../ImageFade/ImageFade";
 
 
 const url = "https://dominvsgroup.us9.list-manage.com/subscribe/post?u=fbd0df3072af596790bcd00e7&amp;id=c5e73a01bb";
@@ -58,7 +58,7 @@ const Footer = ({border}) => {
 
                     <Link href="/">
                         <a className="block w-[143px] lg:w-[185px] mb-5 lg:mb-5 inline-block text-[0px]" >
-                            <Image
+                            <ImageFade
                             src="/image/curio.png"
                             alt="Curio"
                             width="185"

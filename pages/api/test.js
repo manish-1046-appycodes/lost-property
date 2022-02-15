@@ -1,5 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-const API_URL = 'http://localhost/wp22/wp/salter-rake/wp/graphql';
+const API_URL = process.env.API_URL+'/graphql';
+
 
 async function fetchAPI(query, {variables} = {}) {
     const headers = {'Content-Type': 'application/json'};
@@ -12,7 +13,6 @@ async function fetchAPI(query, {variables} = {}) {
   
     const json = await res.json();
     if (json.errors) {
-      console.log(json.errors);
       throw new Error('Failed to fetch API');
     }
   

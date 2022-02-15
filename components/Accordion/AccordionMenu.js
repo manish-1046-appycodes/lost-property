@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 
-import Image from "next/image";
 import Script from 'next/script'
 
 import ButtonRound from '../Links/ButtonRound'
+import ImageFade from "../ImageFade/ImageFade";
 
 
 const AccordionMenu = () => {
@@ -74,7 +74,7 @@ const AccordionMenu = () => {
           
           <div className=" w-1/2 lg:w-full lg:pt-9 ml-auto lg:ml-0 lg:max-w-[476px] justify-self-end self-end">
             <div className="pt-[100%] relative">
-              <Image
+              <ImageFade
                 src="/image/del/food-drink/menu.jpg"
                 objectFit="cover"
                 objectPosition="center"

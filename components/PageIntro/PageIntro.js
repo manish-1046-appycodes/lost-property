@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ImageFade from "../ImageFade/ImageFade";
 
 const PageIntro = () => {
