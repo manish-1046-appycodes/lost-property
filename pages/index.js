@@ -220,8 +220,8 @@ export default function Page({test}) {
     }
   ];
 
-
-
+  const siteURL = process.env.siteURL;
+  console.log(siteURL)
   return (
     <>
       <PageFade>
@@ -236,6 +236,7 @@ export default function Page({test}) {
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
+              alert(${siteURL})
               const digitalData = {
               
                 page: {
@@ -251,7 +252,7 @@ export default function Page({test}) {
                     subSubSection: ""
                   },
                   pageInfo: {
-                    destinationURL: "localhost:3000",
+                    destinationURL: "${siteURL}",
                     language: "en_US",
                     pageName: "lost-property:homepage",
                     pageTitle: document.title
