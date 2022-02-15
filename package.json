@@ -6,6 +6,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
+    "start-prod": "next start -p 3001",
     "lint": "next lint"
   },
   "dependencies": {
