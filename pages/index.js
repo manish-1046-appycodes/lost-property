@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 
 import Head from 'next/head'
+import Script from 'next/script'
 
 import Layout from '../components/Layout/Layout'
 
@@ -224,73 +225,108 @@ export default function Page({test}) {
   return (
     <>
       <PageFade>
-      <Head>
-        <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
-        <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+
+        <Head>
+          <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
+          <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
+          
+        </Head>
+        <Script
+            id="show-banner"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+              const digitalData = {
+              
+                page: {
+                  attributes: {
+                    siteExperience: 'R'
+                  },
+                  category: {
+                    brand: "QQ",
+                    primaryCategory: "homepage",
+                    siteName: "lost-property",
+                    siteType: "L",
+                    subSection: "",
+                    subSubSection: ""
+                  },
+                  pageInfo: {
+                    destinationURL: "localhost:3000",
+                    language: "en_US",
+                    pageName: "lost-property:homepage",
+                    pageTitle: document.title
+                  }
+                },
+                product: [{
+                  productInfo: {
+                    productID: "LONCCQQ"
+                  }
+                }]
+  
+              };
+              `,
+            }}
+        />
+        <Script id="AdobeTM" strategy="afterInteractive" src="//assets.adobedtm.com/launch-EN02272261e0b845508227acf3ca0c37de.min.js"/>
+
+        <div className='hero min-h-screen w-full relative flex'>
+
+          <div className="absolute h-full w-full overflow-hidden js-parallax">
+
+            <div className="relative h-full w-full">
 
 
+              <div className="relative h-full w-full block md:block">
+                <ImageFade
+                src="/image/del/st-pauls-home-hero.jpg"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                priority
+                alt="Lost Property - St Paul's, London"/>
+              </div>
 
-
-      <div className='hero min-h-screen w-full relative flex'>
-
-        <div className="absolute h-full w-full overflow-hidden js-parallax">
-
-          <div className="relative h-full w-full">
-
-
-            <div className="relative h-full w-full block md:block">
-              <ImageFade
-              src="/image/del/st-pauls-home-hero.jpg"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              priority
-              alt="Lost Property - St Paul's, London"/>
             </div>
+
+            <div className="bg-black absolute inset-0 opacity-50"></div>
 
           </div>
 
-          <div className="bg-black absolute inset-0 opacity-50"></div>
+          <div className="container text-white m-auto relative lg:text-center">
+            <p className="heading-brand-small hidden lg:block">Found yourself in our <br/><em>neighbourhood?</em></p>
+            <h1 className="lg:hidden">
+              <ImageFade
+              src="/image/lost-property-logo-mob.svg"
+              width="277"
+              height="119"
+              alt="Lost Property - St Paul's London"
+              />
+            </h1>
+          </div>
 
         </div>
 
-        <div className="container text-white m-auto relative lg:text-center">
-          <p className="heading-brand-small hidden lg:block">Found yourself in our <br/><em>neighbourhood?</em></p>
-          <h1 className="lg:hidden">
-            <ImageFade
-            src="/image/lost-property-logo-mob.svg"
-            width="277"
-            height="119"
-            alt="Lost Property - St Paul's London"
-            />
-          </h1>
-        </div>
+        <Billboard
+        settings={Billboard_1}
+        />
 
-      </div>
+        <Carousel imgs={carouselItems1}/>
 
-      <Billboard
-      settings={Billboard_1}
-      />
+        <BookingSection/>
 
-      <Carousel imgs={carouselItems1}/>
+        <Billboard
+        settings={Billboard_2}
+        />
 
-      <BookingSection/>
+        <Billboard
+        settings={Billboard_3}
+        />
 
-      <Billboard
-      settings={Billboard_2}
-      />
+        <Billboard
+        settings={Billboard_4}
+        />
 
-      <Billboard
-      settings={Billboard_3}
-      />
-
-      <Billboard
-      settings={Billboard_4}
-      />
-
-      <Ctas ctas={ctas}/>
+        <Ctas ctas={ctas}/>
 
       </PageFade>
 

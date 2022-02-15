@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Script from 'next/script'
 
 import { useState, useEffect } from "react"
@@ -62,6 +63,11 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
     return (
         <div className={`leading-13 text-sm lg:leading-13 lg:text-21px  ${ themeBg == 'blue' ? "bg-blue-1 text-white" : "bg-cream-1"}`}>
             
+            <Head>
+                <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
+                <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
+            </Head>
+
             <Header 
             notice={notice} 
             toggleNavFunc={toggleNav}
@@ -69,6 +75,7 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
             setNoticeFunc={setNotice}
             isScrolledState={isScrolled}
             headerThemeBgState={headerThemeBg}/>
+            
 
             <main className={`${ notice ? 'pt-[0px]' : 'pt-[40px]'}`}>
                 {children}
@@ -88,6 +95,11 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
             <Script id="GSAPSETTINGS" strategy="beforeInteractive" src="/js/gsap-settings.js"/>
             <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
             <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
+            
+            
+
+            
+            
         </div>
     )
 }

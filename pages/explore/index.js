@@ -188,7 +188,6 @@ export default function Page({test}) {
         <Head>
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
-            <link rel="icon" href="/favicon.ico" />
             <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         </Head>
         

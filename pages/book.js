@@ -1,13 +1,19 @@
 import BookingSection from "../components/BookingSection/BookingSection";
 import Layout from "../components/Layout/Layout";
+import Head from 'next/head'
+import PageFade from "../components/PageFade";
 
 const Page = () => {
-
-    
     
     return (
-        
-        <BookingSection/>
+        <PageFade>
+            <Head>
+                <title>Lost Property - Book</title>
+                <meta name="description" content="Lost Property Booking" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <BookingSection/>
+        </PageFade>
     
     );
 };
