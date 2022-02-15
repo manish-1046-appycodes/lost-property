@@ -11,10 +11,12 @@ import Carousel from '../components/Carousel/Carousel'
 import Ctas from '../components/Ctas/Ctas'
 import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
+import AdobeAnalytics from '../components/AdobeAnalytics/AdobeAnalytics'
+import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 
 export default function Page({test}) {
-
+  
   useEffect(() => {gsapSettings.init()}, []);
 
   const Billboard_1 = {
@@ -220,8 +222,8 @@ export default function Page({test}) {
     }
   ];
 
-  const siteURL = process.env.siteURL;
-  console.log(siteURL)
+  
+
   return (
     <>
       <PageFade>
@@ -229,46 +231,9 @@ export default function Page({test}) {
         <Head>
           <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
           <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
-          
         </Head>
-        <Script
-            id="show-banner"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-              alert(${siteURL})
-              const digitalData = {
-              
-                page: {
-                  attributes: {
-                    siteExperience: 'R'
-                  },
-                  category: {
-                    brand: "QQ",
-                    primaryCategory: "homepage",
-                    siteName: "lost-property",
-                    siteType: "L",
-                    subSection: "",
-                    subSubSection: ""
-                  },
-                  pageInfo: {
-                    destinationURL: "${siteURL}",
-                    language: "en_US",
-                    pageName: "lost-property:homepage",
-                    pageTitle: document.title
-                  }
-                },
-                product: [{
-                  productInfo: {
-                    productID: "LONCCQQ"
-                  }
-                }]
-  
-              };
-              `,
-            }}
-        />
-        <Script id="AdobeTM" strategy="afterInteractive" src="//assets.adobedtm.com/launch-EN02272261e0b845508227acf3ca0c37de.min.js"/>
+        <AdobeAnalyticsUpdate/>
+        
 
         <div className='hero min-h-screen w-full relative flex'>
 

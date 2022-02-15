@@ -160,9 +160,8 @@ export default function Page({test}) {
     <>
     <PageFade>
         <Head>
-            <title>Lost Property</title>
-            <meta name="description" content="Lost Property" />
-            <link rel="icon" href="/favicon.ico" />
+            <title>Lost Property - Food &amp; Drink</title>
+            <meta name="description" content="Lost Property - Food &amp; Drink" />
         </Head>
 
         <FoodDrinkCarousel carouselItems={carouselItems1}/>

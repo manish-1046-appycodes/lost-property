@@ -62,20 +62,19 @@ export default function Page({test}) {
   return (
     <>
         <PageFade>
-        <Head>
-            <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
-            <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
-        
-        <div class="min-h-screen flex flex-col justify-center lg:justify-end">
-            <div className="spacer h-[120px] lg:h-[150px]"></div>
-            
-            <Marquee words={MarqueeWords}/>
-            <Carousel imgs={carouselItems1}/>
+          <Head>
+              <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
+              <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
+          </Head>
+          
+          <div className="min-h-screen flex flex-col justify-center lg:justify-end">
+              <div className="spacer h-[120px] lg:h-[150px]"></div>
+              
+              <Marquee words={MarqueeWords}/>
+              <Carousel imgs={carouselItems1}/>
 
-            <div className="spacer h-[120px] lg:h-[35px]"></div>
-        </div>
+              <div className="spacer h-[120px] lg:h-[35px]"></div>
+          </div>
 
         </PageFade>
 

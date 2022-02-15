@@ -42,7 +42,6 @@ const Page = () => {
             <Head>
                 <title>Lost Property</title>
                 <meta name="description" content="Lost Property" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className="min-vh100 w-full top-0 left-0 z-10 flex items-center py-20">

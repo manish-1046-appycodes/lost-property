@@ -22,7 +22,6 @@ export default function Page({test}) {
         <Head>
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
-            <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>

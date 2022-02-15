@@ -7,12 +7,15 @@ const Page = () => {
     
     return (
         <PageFade>
+
             <Head>
                 <title>Lost Property - Book</title>
                 <meta name="description" content="Lost Property Booking" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
             <BookingSection/>
+            
         </PageFade>
     
     );

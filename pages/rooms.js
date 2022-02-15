@@ -203,9 +203,6 @@ export default function Page({test}) {
         <Head>
             <title>Luxury Escapism in Our Unique London Hotel Rooms</title>
             <meta name="description" content="Our rooms offer comfortable escapism influenced by London's rich history and charm through unique design. Explore what our rooms offer here" />
-            <link rel="icon" href="/favicon.ico" />
-            <script>
-            </script>
         </Head>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
