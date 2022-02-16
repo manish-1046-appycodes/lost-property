@@ -4,6 +4,10 @@ module.exports = {
   experimental: {
     scrollRestoration: false
   },
+
+  images: {
+    domains: ['localhost', 'lostpropertyhotel.com', 'curio.greenwich-design-projects.co.uk'],
+  },
   
   
   webpack(config) {

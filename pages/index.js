@@ -12,123 +12,15 @@ import Ctas from '../components/Ctas/Ctas'
 import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
-import { getPageSeo } from '../lib/gql-query'
+import { getPageSeo, getPagePageModules } from '../lib/gql-query'
 import Meta from '../components/Meta/Meta'
+import Hero from '../components/Hero/Hero'
+import PageModules from '../components/ACF/PageModules'
 
-export default function Page({test, SEO}) {
+export default function Page({test, SEO, pageModules}) {
   
+
   useEffect(() => {gsapSettings.init()}, []);
-
-  const Billboard_1 = {
-    title:  'ESCAPISM',
-    copy:   '<p>Situated in the heart of London, Lost Property Hotel by St. Paul\'s Cathedral invites you to lose yourself in the moment.<br><br>Indulge in the lost arts and activities of eccentric living with a plethora of curiosities around every corner.<br><br>With 145 rooms beautifully furnished with a modern twist, a restaurant, bar and coffee house, Lost Property is the ideal escapism inside and out offering travel seekers a one-of-a-kind experience.<br><br>Step away from the hussle of the Capital and escape with us to find a new and enticing place to get lost.</p>',
-    cta:    {
-      cta_title:  'Our Story',
-      cta_url:    '/story'
-    },
-    content_bg: 'bg-blue-1',
-    content_color: 'text-white',
-    content_alignment: 'center',
-    bg_type: 'caption_full', // caption_full / img_full
-    bg_caption: 'Lose <br/><em>yourself</em> <br/>in the <br/><em>moment</em>',
-    img: {
-      url: '/image/del/our-rooms.jpg'
-    },
-    margin_top: false,
-    margin_bottom: false
-  }
-
-  const Billboard_2 = {
-    title:  'OUR ROOMS',
-    copy: '<p>At our new hotel in St. Pauls each guest room is influenced by eclectic artwork and contemporary design touches inspired by London\'s rich and charming history.<br><br>Guests will be encouraged to enjoy luxurious escapism and to discover something new and exciting beyond the boundaries of daily life.<br><br>Take a moment to pause and allow yourself to be immersed in the stylish, luxurious and curious surroundings, all of which that are accompanied by excellent service and considered design.</p>',
-    cta:    {
-      cta_title:  'Find out more',
-      cta_url:    '/rooms'
-    },
-    content_bg: 'bg-white',
-    content_color: 'text-black',
-    content_alignment: 'right',
-    content_alignment_mob: 'right',
-    content_alignment_vertical_mob: 'bottom',
-    bg_type: 'img_full', // caption_full / img_full
-    bg_caption: '',
-    img: {
-      url: '/image/del/our-rooms.jpg'
-    },
-    margin_top: true,
-    margin_bottom: true,
-    round_button: {
-      url: '',
-      bg_class: '',
-      title: ''
-    }
-  }
-
-  const Billboard_3 = {
-    title:  '',
-    logo: {
-      url: '/image/del/found-bar-restaurant.svg',
-      alt: 'Found Bar & Restaurant'
-    },
-    copy: '<p>Freshly foraged food found in local london markets and exotic libations concocted by inquisitive mixologists.<br><br>Where inhibitions may be lost but great stories are found among the fine seat leathers and marble topped bar.<br><br>We offer the finest dining and drinking in the Found Restaurant + Bar if you are living, working, or visiting the area near to St. Paul\'s Cathedral.</p>',
-    cta:    {
-      cta_title:  '',
-      cta_url:    ''
-    },
-    content_bg: 'bg-blue-1',
-    content_color: 'text-white',
-    content_alignment: 'center',
-    content_alignment_vertical: 'top',
-    content_alignment_mob: 'left',
-    content_alignment_vertical_mob: 'top',
-    bg_type: 'caption_img', // caption_full / img_full / caption_img
-    bg_caption: 'Taste <br/>& tipple',
-    img: {
-      url: '/image/del/found-bar-restaurant.jpg',
-      img_pos: 'right'
-    },
-    margin_bottom: true,
-    round_button: {
-      url: '',
-      bg_class: '',
-      title: ''
-    }
-  }
-
-  const Billboard_4 = {
-    title:  'OUR ROOMS',
-    logo: {
-      url: '/image/del/tattle-coffee-house.svg',
-      alt: 'Found Bar & Restaurant'
-    },
-    copy_img: {
-      url: '/image/del/coffee-image.jpg',
-      alt: 'Tattle Coffee House'
-    },
-    copy: '<p>Where tattled tales of the town are told and spoken amongst the best freshly ground coffee in Lost Property\'s, Coffee House, Tattle.<br><br>Sink into our seating and take a weight off with an aromatic coffee, or delicious fine tea, take some time to enjoy our art work and absorb the surroundings.</p>',
-    cta:    {
-      cta_title:  '',
-      cta_url:    ''
-    },
-    content_bg: 'bg-beige-1',
-    content_color: 'text-black',
-    content_alignment: 'center',
-    content_alignment_vertical: 'bottom',
-    content_alignment_mob: 'right',
-    content_alignment_vertical_mob: 'top',
-    bg_type: 'caption_img', // caption_full / img_full / caption_img
-    bg_caption: 'Sip it',
-    img: {
-      url: '/image/del/tattle-coffee-house.jpg',
-      img_pos: 'left'
-    },
-    margin_bottom: true,
-    round_button: {
-      url: '',
-      bg_class: '',
-      title: ''
-    }
-  }
 
   const MarqueeWords = '<em>craft.</em> &nbsp;entertainment. &nbsp;<em>art.</em> &nbsp;events. &nbsp;<em>music.</em> &nbsp;craft. &nbsp;<em>entertainment.</em> &nbsp;art. &nbsp;<em>events.</em> &nbsp;music. &nbsp;';
 
@@ -231,65 +123,7 @@ export default function Page({test, SEO}) {
         <Meta SEO={SEO}/>
         <AdobeAnalyticsUpdate/>
         
-
-        <div className='hero min-h-screen w-full relative flex'>
-
-          <div className="absolute h-full w-full overflow-hidden js-parallax">
-
-            <div className="relative h-full w-full">
-
-
-              <div className="relative h-full w-full block md:block">
-                <ImageFade
-                src="/image/del/st-pauls-home-hero.jpg"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-                priority
-                alt="Lost Property - St Paul's, London"/>
-              </div>
-
-            </div>
-
-            <div className="bg-black absolute inset-0 opacity-50"></div>
-
-          </div>
-
-          <div className="container text-white m-auto relative lg:text-center">
-            <p className="heading-brand-small hidden lg:block">Found yourself in our <br/><em>neighbourhood?</em></p>
-            <h1 className="lg:hidden">
-              <ImageFade
-              src="/image/lost-property-logo-mob.svg"
-              width="277"
-              height="119"
-              alt="Lost Property - St Paul's London"
-              />
-            </h1>
-          </div>
-
-        </div>
-
-        <Billboard
-        settings={Billboard_1}
-        />
-
-        <Carousel imgs={carouselItems1}/>
-
-        <BookingSection/>
-
-        <Billboard
-        settings={Billboard_2}
-        />
-
-        <Billboard
-        settings={Billboard_3}
-        />
-
-        <Billboard
-        settings={Billboard_4}
-        />
-
-        <Ctas ctas={ctas}/>
+        <PageModules pageModules={pageModules}/>
 
       </PageFade>
 
@@ -306,11 +140,14 @@ Page.getLayout = function getLayout(page) {
 export async function getStaticProps({ params }) {
 
   const seo = await getPageSeo('/', 'URI');
+  const pageModules = await getPagePageModules('/', 'URI');
   
+
   return {
     props: {
       test: "",
-      SEO: seo?.page?.seo || ''
+      SEO: seo?.page?.seo || '',
+      pageModules: pageModules?.page?.pageModules?.pageModules || ''
     },
     revalidate: 1,
   };
