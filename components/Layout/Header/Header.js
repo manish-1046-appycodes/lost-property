@@ -40,11 +40,7 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                         <a>Rooms</a>
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/explore">
-                        <a>Explore</a>
-                        </Link>
-                    </li>
+                    
                     <li>
                         <Link href="/book">
                         <a>Book</a>
