@@ -10,6 +10,8 @@ import ImageFade from '../../components/ImageFade/ImageFade'
 import ParallaxItem from '../../components/UI/ParallaxItem'
 import ExploreMap from '../../components/ExploreMap/ExploreMap'
 import AdobeAnalyticsUpdate from '../../components/AdobeAnalytics/AdobeAnalyticsUpdate'
+import Meta from '../../components/Meta/Meta'
+import { getPageSeo } from '../../lib/gql-query'
 
 // Locations
 
@@ -85,7 +87,7 @@ const geojson = {
   ]
 };
 
-export default function Page({test}) {
+export default function Page({test, SEO}) {
 
   const [showMap, setShowMap] = useState(false);
   const [latLng, setLatLng] = useState(false);
@@ -186,9 +188,8 @@ export default function Page({test}) {
     <>
       <PageFade>
           
+        <Meta SEO={SEO}/>
         <Head>
-            <title>Lost Property</title>
-            <meta name="description" content="Lost Property" />
             <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         </Head>
         <AdobeAnalyticsUpdate/>
@@ -381,9 +382,13 @@ Page.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps({ params }) {
+
+  const seo = await getPageSeo('explore', 'URI');
+  
   return {
     props: {
-      test: ""
+      test: "",
+      SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };

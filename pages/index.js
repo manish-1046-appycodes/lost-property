@@ -12,9 +12,10 @@ import Ctas from '../components/Ctas/Ctas'
 import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
+import { getPageSeo } from '../lib/gql-query'
+import Meta from '../components/Meta/Meta'
 
-
-export default function Page({test}) {
+export default function Page({test, SEO}) {
   
   useEffect(() => {gsapSettings.init()}, []);
 
@@ -227,10 +228,7 @@ export default function Page({test}) {
     <>
       <PageFade>
 
-        <Head>
-          <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
-          <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
-        </Head>
+        <Meta SEO={SEO}/>
         <AdobeAnalyticsUpdate/>
         
 
@@ -306,9 +304,13 @@ Page.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps({ params }) {
+
+  const seo = await getPageSeo('/', 'URI');
+  
   return {
     props: {
-      test: ""
+      test: "",
+      SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };

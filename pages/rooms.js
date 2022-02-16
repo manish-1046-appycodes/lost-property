@@ -11,10 +11,11 @@ import Marquee from '../components/Marquee/Marquee'
 
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
+import Meta from '../components/Meta/Meta'
+import { getPageSeo } from '../lib/gql-query'
 
 
-
-export default function Page({test}) {
+export default function Page({test, SEO}) {
 
 
   useEffect(() => {gsapSettings.init()}, []);
@@ -201,10 +202,8 @@ export default function Page({test}) {
   return (
     <>
       <PageFade>
-        <Head>
-            <title>Luxury Escapism in Our Unique London Hotel Rooms</title>
-            <meta name="description" content="Our rooms offer comfortable escapism influenced by London's rich history and charm through unique design. Explore what our rooms offer here" />
-        </Head>
+
+        <Meta SEO={SEO}/>
         <AdobeAnalyticsUpdate/>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
@@ -231,9 +230,13 @@ Page.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps({ params }) {
+
+  const seo = await getPageSeo('rooms', 'URI');
+  
   return {
     props: {
-      test: ""
+      test: "",
+      SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };

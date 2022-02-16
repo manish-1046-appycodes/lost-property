@@ -9,10 +9,11 @@ import AccordionEvents from '../../components/Accordion/AccordionEvents'
 import Marquee from '../../components/Marquee/Marquee'
 import PageFade from '../../components/PageFade'
 import AdobeAnalyticsUpdate from '../../components/AdobeAnalytics/AdobeAnalyticsUpdate'
+import Meta from '../../components/Meta/Meta'
+import { getPageSeo } from '../../lib/gql-query'
 
 
-
-export default function Page({test}) {
+export default function Page({test, SEO}) {
 
 
   useEffect(() => {gsapSettings.init()}, []);
@@ -47,10 +48,8 @@ export default function Page({test}) {
   return (
     <>
     <PageFade>
-        <Head>
-            <title>Lost Property</title>
-            <meta name="description" content="Lost Property" />
-        </Head>
+        
+        <Meta SEO={SEO}/>
         <AdobeAnalyticsUpdate/>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
@@ -73,9 +72,13 @@ Page.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps({ params }) {
+
+  const seo = await getPageSeo('events', 'URI');
+  
   return {
     props: {
-      test: ""
+      test: "",
+      SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };

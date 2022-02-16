@@ -8,12 +8,13 @@ import Carousel from '../components/Carousel/Carousel'
 import Marquee from '../components/Marquee/Marquee'
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
+import Meta from '../components/Meta/Meta'
+import { getPageSeo } from '../lib/gql-query'
 
 
 
 
-
-export default function Page({test}) {
+export default function Page({test, SEO}) {
 
   useEffect(() => {gsapSettings.init()}, []);
 
@@ -63,10 +64,8 @@ export default function Page({test}) {
   return (
     <>
         <PageFade>
-          <Head>
-              <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
-              <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
-          </Head>
+          
+          <Meta SEO={SEO}/>
           <AdobeAnalyticsUpdate/>
 
           <div className="min-h-screen flex flex-col justify-center lg:justify-end">
@@ -91,9 +90,13 @@ Page.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps({ params }) {
+
+  const seo = await getPageSeo('gallery', 'URI');
+  
   return {
     props: {
-      test: ""
+      test: "",
+      SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };
