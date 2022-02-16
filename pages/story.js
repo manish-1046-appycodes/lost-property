@@ -12,8 +12,6 @@ import Marquee from '../components/Marquee/Marquee'
 import Carousel from '../components/Carousel/Carousel'
 import PageFade from '../components/PageFade'
 import Ctas from '../components/Ctas/Ctas'
-import AdobeAnalytics from '../components/AdobeAnalytics/AdobeAnalytics'
-import Script from 'next/script'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
 

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import Script from 'next/script'
 
 import { useState, useEffect } from "react"
@@ -13,6 +14,11 @@ import Header from "./Header/Header"
 
 
 const Layout = ({children, border, colourTheme, headerBgColor}) => {
+
+    const Router = useRouter();
+
+    
+
     const [notice, setNotice] = useState(true);
     const [headerThemeBg, setHeaderThemeBg] = useState('dark');
     const [themeBg, setThemeBg] = useState('white');
@@ -38,10 +44,19 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
         
         window.addEventListener('scroll', checkScroll);
 
+        const handleRouteChange = () => {
+
+            // hide nav overlay on route change
+            setNavOpen(false);
+        }
+
+        Router.events.on('routeChangeComplete', handleRouteChange);
+
         return () => {
             setThemeBg('white');
             window.removeEventListener('scroll', checkScroll);
             
+            Router.events.off('routeChangeComplete', handleRouteChange);
         }
         
     });
