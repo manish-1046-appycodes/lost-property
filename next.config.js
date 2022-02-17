@@ -6,7 +6,7 @@ module.exports = {
   },
 
   images: {
-    domains: ['localhost', 'lostpropertyhotel.com', 'curio.greenwich-design-projects.co.uk'],
+    domains: ['localhost', 'lostpropertyhotel.com', 'curio.greenwich-design-projects.co.uk', 'content.lostpropertyhotel.com'],
   },
 
   trailingSlash: true,
