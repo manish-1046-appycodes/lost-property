@@ -16,10 +16,10 @@ const Meta = ({SEO}) => {
             <meta property="og:description" content={SEO?.metaDesc} />
 
             <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL+Router.asPath} />
-            <meta property="og:site_name" content={SEO.opengraphSiteName} />
+            <meta property="og:site_name" content={SEO?.opengraphSiteName} />
             { SEO?.opengraphImage?.sourceUrl && 
             <meta property="og:image" content={SEO?.opengraphImage?.sourceUrl} />}
-            <meta property="article:modified_time" content={SEO.opengraphModifiedTime} />
+            <meta property="article:modified_time" content={SEO?.opengraphModifiedTime} />
         </Head>
     )
 }

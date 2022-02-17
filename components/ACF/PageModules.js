@@ -14,7 +14,8 @@ const PageModules = ({pageModules}) => {
   return (
     <>
     
-    {pageModules.map( (pageModule, i) => {
+    { pageModules &&
+    pageModules.map( (pageModule, i) => {
         
         
         switch(pageModule.fieldGroupName) {
