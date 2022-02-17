@@ -10,7 +10,8 @@ import Marquee from '../components/Marquee/Marquee'
 import FoodDrinkCarousel from '../components/FoodDrinkCarousel/FoodDrinkCarousel'
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
-
+import Meta from '../components/Meta/Meta'
+import { getPageSeo } from '../lib/gql-query'
 
 const carouselItems1 = [
     {
@@ -153,17 +154,15 @@ const Billboard_1 = {
     }
   }
 
-export default function Page({test}) {
+export default function Page({test, SEO}) {
 
     useEffect(() => {gsapSettings.init()}, []);
 
     return (
     <>
     <PageFade>
-        <Head>
-            <title>Lost Property - Food &amp; Drink</title>
-            <meta name="description" content="Lost Property - Food &amp; Drink" />
-        </Head>
+        
+        <Meta SEO={SEO}/>
         <AdobeAnalyticsUpdate/>
 
         <FoodDrinkCarousel carouselItems={carouselItems1}/>
@@ -201,9 +200,13 @@ Page.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps({ params }) {
+
+  const seo = await getPageSeo('food-drink', 'URI');
+  
   return {
     props: {
-      test: ""
+      test: "",
+      SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };

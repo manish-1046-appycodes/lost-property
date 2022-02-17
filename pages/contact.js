@@ -3,8 +3,10 @@ import Head from 'next/head'
 import Layout from "../components/Layout/Layout";
 import PageFade from "../components/PageFade";
 import AdobeAnalyticsUpdate from "../components/AdobeAnalytics/AdobeAnalyticsUpdate";
+import Meta from "../components/Meta/Meta";
+import { getPageSeo } from "../lib/gql-query";
 
-const Page = () => {
+const Page = ({test, SEO}) => {
 
     const [enquiry, setEnquiry] = useState('')
     const [email, setEmail] = useState('')
@@ -40,10 +42,8 @@ const Page = () => {
 
     return (
         <PageFade>
-            <Head>
-                <title>Lost Property</title>
-                <meta name="description" content="Lost Property" />
-            </Head>
+            
+            <Meta SEO={SEO}/>
             <AdobeAnalyticsUpdate/>
 
             <div className="min-vh100 w-full top-0 left-0 z-10 flex items-center py-20">
@@ -95,10 +95,14 @@ return (
 }
 
 export async function getStaticProps({ params }) {
-return {
-    props: {
-    test: ""
-    },
-    revalidate: 1,
-};
-}
+
+    const seo = await getPageSeo('contact', 'URI');
+    
+    return {
+      props: {
+        test: "",
+        SEO: seo?.page?.seo || ''
+      },
+      revalidate: 1,
+    };
+  }

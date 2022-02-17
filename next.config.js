@@ -4,6 +4,12 @@ module.exports = {
   experimental: {
     scrollRestoration: false
   },
+
+  images: {
+    domains: ['localhost', 'lostpropertyhotel.com', 'curio.greenwich-design-projects.co.uk', 'content.lostpropertyhotel.com'],
+  },
+
+  trailingSlash: true,
   
   
   webpack(config) {

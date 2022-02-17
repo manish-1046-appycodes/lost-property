@@ -14,8 +14,11 @@ import PageFade from '../components/PageFade'
 import Ctas from '../components/Ctas/Ctas'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 
+import { getPageSeo } from '../lib/gql-query'
+import Meta from '../components/Meta/Meta'
 
-export default function Page({test}) {
+
+export default function Page({test, SEO}) {
 
 
   useEffect(() => {
@@ -138,11 +141,8 @@ export default function Page({test}) {
   return (
     <>
       <PageFade>
-        <Head>
-            <title>A Modern and Stylish Hotel in London, Unlike Any Other</title>
-            <meta name="description" content="The Lost Property is a Curio Collection by Hilton Hotel and is expertly designed for losing yourself, just for a moment. Explore our story here" />
-            
-        </Head>
+        
+        <Meta SEO={SEO}/>
         <AdobeAnalyticsUpdate/>
 
         <PageIntro/>
@@ -177,9 +177,13 @@ Page.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps({ params }) {
+
+  const seo = await getPageSeo('story', 'URI');
+  
   return {
     props: {
-      test: ""
+      test: "",
+      SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };

@@ -13,12 +13,10 @@ import Header from "./Header/Header"
 
 
 
-const Layout = ({children, border, colourTheme, headerBgColor}) => {
-
-    const Router = useRouter();
-
+const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems}) => {
     
-
+    const Router = useRouter();
+    
     const [notice, setNotice] = useState(true);
     const [headerThemeBg, setHeaderThemeBg] = useState('dark');
     const [themeBg, setThemeBg] = useState('white');
@@ -27,7 +25,6 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
     
     useEffect( () => {
         Cursors.init();
-        
         
         
         if ( colourTheme == 'blue' ) {
@@ -91,7 +88,8 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
             navOpenState={navOpen}
             setNoticeFunc={setNotice}
             isScrolledState={isScrolled}
-            headerThemeBgState={headerThemeBg}/>
+            headerThemeBgState={headerThemeBg}
+            headerMenuItems={headerMenuItems}/>
             
 
             <main className={`${ notice ? 'pt-[0px]' : 'pt-[40px]'}`}>

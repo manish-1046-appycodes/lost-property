@@ -4,17 +4,15 @@ import Head from 'next/head'
 import PageFade from "../components/PageFade";
 import AdobeAnalytics from "../components/AdobeAnalytics/AdobeAnalytics";
 import AdobeAnalyticsUpdate from "../components/AdobeAnalytics/AdobeAnalyticsUpdate";
+import Meta from "../components/Meta/Meta";
+import { getPageSeo } from "../lib/gql-query";
 
-const Page = () => {
+const Page = ({test, SEO}) => {
     
     return (
         <PageFade>
 
-            <Head>
-                <title>Lost Property - Book</title>
-                <meta name="description" content="Lost Property Booking" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+            <Meta SEO={SEO}/>
             <AdobeAnalyticsUpdate/>
 
             <BookingSection/>
@@ -33,10 +31,14 @@ return (
 }
 
 export async function getStaticProps({ params }) {
-return {
-    props: {
-    test: ""
-    },
-    revalidate: 1,
-};
+
+    const seo = await getPageSeo('book', 'URI');
+    
+    return {
+      props: {
+        test: "",
+        SEO: seo?.page?.seo || ''
+      },
+      revalidate: 1,
+    };
 }

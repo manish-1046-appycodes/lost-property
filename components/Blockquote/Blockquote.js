@@ -10,7 +10,7 @@ const Blockquote = () => {
 
                 <div className="flex mt-7 mx-auto inline-flex space-x-2 lg:space-x-3">
 
-                <div className="max-w-[20px] lg:max-w-[30px]">
+                    <div className="max-w-[20px] lg:max-w-[30px]">
                         <svg className="max-w-full h-auto" xmlns="http://www.w3.org/2000/svg" width="31.255" height="31.255" viewBox="0 0 31.255 31.255">
                         <g id="Group_393" data-name="Group 393" transform="translate(-732 -10584.5)">
                             <line id="Line_71" data-name="Line 71" y2="31.255" transform="translate(747.627 10584.5)" fill="none" stroke="#000" strokeWidth="1"/>

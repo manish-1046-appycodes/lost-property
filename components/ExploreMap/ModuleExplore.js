@@ -1,93 +1,50 @@
 import { useEffect, useState, useRef } from 'react'
 
+
+import ButtonRound from '../Links/ButtonRound'
+import ImageFade from '../ImageFade/ImageFade'
+import ParallaxItem from '../UI/ParallaxItem'
+import ExploreMap from './ExploreMap'
 import Head from 'next/head'
 
-import Layout from '../../components/Layout/Layout'
-
-import ButtonRound from '../../components/Links/ButtonRound'
-import PageFade from '../../components/PageFade'
-import ImageFade from '../../components/ImageFade/ImageFade'
-import ParallaxItem from '../../components/UI/ParallaxItem'
-import ExploreMap from '../../components/ExploreMap/ExploreMap'
-import AdobeAnalyticsUpdate from '../../components/AdobeAnalytics/AdobeAnalyticsUpdate'
-import Meta from '../../components/Meta/Meta'
-import { getPageSeo } from '../../lib/gql-query'
 
 // Locations
 
-const geojson = {
-  type: 'FeatureCollection',
-  features: [
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-0.0983506,51.5138453]
-      },
-      properties: {
-        title: 'St. Paul\'s Cathedral',
-        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
-        category: 'Arts',
-        img: '/image/del/explore/img1.jpg'
+let geojson;
 
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-0.0826999,51.5097453]
-      },
-      properties: {
-        title: 'St Dunstan in the East Church Garden',
-        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
-        category: 'Arts',
-        img: '/image/del/explore/img2.jpg'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-0.1174699,51.5170382]
-      },
-      properties: {
-        title: 'Sir John Soane\'s Museum',
-        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
-        category: 'Culture',
-        img: '/image/del/explore/img3.jpg'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-0.1154775,51.5018693]
-      },
-      properties: {
-        title: 'The Vaults London',
-        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
-        category: 'Eating',
-        img: '/image/del/explore/img4.jpg'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [-0.113926,51.524751]
-      },
-      properties: {
-        title: 'The Postal Museum',
-        description: 'Etiam sed lorem eleifend, consequat felis nec.Etiam sed lorem eleifend, con sequat felis nec.',
-        category: 'Drinking',
-        img: '/image/del/explore/img5.jpg'
-      }
-    }
-  ]
-};
+export default function ModuleExplore({settings}) {
 
-export default function Page({test, SEO}) {
+  if ( settings.locations.length ) {
+    
+    let features = [];
+
+    settings.locations.map( (location) => {
+      
+      let feature = {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [location?.mapCoordinates?.longitude,location?.mapCoordinates?.lattitude]
+        },
+        properties: {
+          title: location?.title,
+          description: location?.description,
+          category: location?.category,
+          img: location?.image?.sourceUrl
+  
+        }
+      }
+
+      features.push(feature);
+
+      geojson = {
+        type: 'FeatureCollection',
+        features : features
+      }
+
+    })
+
+  }
 
   const [showMap, setShowMap] = useState(false);
   const [latLng, setLatLng] = useState(false);
@@ -186,17 +143,16 @@ export default function Page({test, SEO}) {
   
   return (
     <>
-      <PageFade>
-          
-        <Meta SEO={SEO}/>
-        <Head>
-            <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
-        </Head>
-        <AdobeAnalyticsUpdate/>
+      
+      <Head>
+      <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+      </Head>
 
+      { geojson && 
+      <div className="relative">
         <div className="flex flex-col lg:block">
 
-        <div className={` ${ showMap ? '!visible !opacity-100' : ''} order-2 opacity-0 invisible map-wrap top-0 z-10 transition-[visibility,opacity] duration-500 fixed`}>
+        <div className={` ${ showMap ? '!visible !opacity-100' : ''} order-2 opacity-0 invisible map-wrap top-0 z-[9] transition-[visibility,opacity] duration-500 fixed`}>
           <ExploreMap mapCategories={mapCategories} category={mapCategorySelected} geojson={geojson} filterOpen={filterOpen} latLng={latLng}/>
         </div>
 
@@ -295,7 +251,7 @@ export default function Page({test, SEO}) {
 
         </section>
           
-        <div className={`z-50 top-0 lg:top-auto filter-bar bottom-0 h-[56px] lg:h-[73px] relative z-10 order-1 lg:order-2 ${ (filterOpen ? 'filterOpen' : '')}`}>
+        <div className={`z-50 top-0 lg:top-auto filter-bar bottom-0 h-[56px] lg:h-[73px] relative z-[9] order-1 lg:order-2 ${ (filterOpen ? 'filterOpen' : '')}`}>
                     
             <div  onClick={toggleFilter} className={`cursor-pointer w-full bottom-0 left-0  opacity-50 backdrop-blur-xl min-h-mob_min_height lg:min-h-lg_min_height bg-cream-1 absolute ${ (filterOpen ? 'visible' : 'invisible')}`}></div>
 
@@ -336,7 +292,7 @@ export default function Page({test, SEO}) {
                     </div>
 
                     <div className="flex items-center space-x-6">
-                        <button data-accordiontoggle className="z-10 transform duration-500 text-grey-1 relative w-[26px] h-[26px]" aria-hidden="true">
+                        <button data-accordiontoggle className="z-[9] transform duration-500 text-grey-1 relative w-[26px] h-[26px]" aria-hidden="true">
                             <span className="w-full h-[1px] bg-current absolute top-1/2 left-0"></span>
                             <span className="w-[1px] h-full bg-current absolute top-0 left-1/2"></span>
                         </button>
@@ -368,28 +324,9 @@ export default function Page({test, SEO}) {
         `}</style>
 
         </div>
-
+      
+      </div>}
         
-      </PageFade>
     </>
   )
-}
-
-Page.getLayout = function getLayout(page) {
-  return (
-    <Layout>{page}</Layout>
-  )
-}
-
-export async function getStaticProps({ params }) {
-
-  const seo = await getPageSeo('explore', 'URI');
-  
-  return {
-    props: {
-      test: "",
-      SEO: seo?.page?.seo || ''
-    },
-    revalidate: 1,
-  };
 }
