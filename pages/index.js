@@ -1,20 +1,12 @@
 import { useEffect } from 'react'
 
-import Head from 'next/head'
-import Script from 'next/script'
-
 import Layout from '../components/Layout/Layout'
 
-import BookingSection from '../components/BookingSection/BookingSection'
-import Billboard from '../components/Billboard/Billboard'
-import Carousel from '../components/Carousel/Carousel'
-import Ctas from '../components/Ctas/Ctas'
-import ImageFade from '../components/ImageFade/ImageFade'
+
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
-import { getPageSeo, getPagePageModules } from '../lib/gql-query'
+import { getPageSeo, getPagePageModules, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
 import Meta from '../components/Meta/Meta'
-import Hero from '../components/Hero/Hero'
 import PageModules from '../components/ACF/PageModules'
 
 export default function Page({test, SEO, pageModules}) {
@@ -41,23 +33,39 @@ export default function Page({test, SEO, pageModules}) {
 
 Page.getLayout = function getLayout(page) {
 
+  // Layout specific params
+  
   return (
-    <Layout headerBgColor="light" border="true">{page}</Layout>
+      <Layout
+      colourTheme={page?.props?.pageSettings?.bodyBackgroundColour}
+      headerBgColor={page?.props?.pageSettings?.headerTheme} 
+      border={page?.props?.pageSettings?.footerBorder}
+      headerMenuItems={page?.props?.headerMenuItems}>
+          {page}
+      </Layout>
   )
 }
 
+
 export async function getStaticProps({ params }) {
 
-  const seo = await getPageSeo('/', 'URI');
-  const pageModules = await getPagePageModules('/', 'URI');
-  
+
+  // Get SEO stuff
+  const seo = await getPageSeo("/", 'URI');
+  // Get Page Modules
+  const pageModules = await getPagePageModules("/", 'URI');
+  // Get Page Modules
+  const pageSettings = await getPageSettings("/", 'URI');
+  // Get Header Menu Items
+  const headerMenuItems = await getHeaderMenuItems();
 
   return {
-    props: {
-      test: "",
-      SEO: seo?.page?.seo || '',
-      pageModules: pageModules?.page?.pageModules?.pageModules || ''
-    },
-    revalidate: 1,
+      props: {
+          SEO: seo?.page?.seo || '',
+          pageSettings: pageSettings?.page?.pageSettings?.pageSettings || '',
+          pageModules: pageModules?.page?.pageModules?.pageModules || '',
+          headerMenuItems: headerMenuItems?.menuItems?.edges || ''
+      },
+      revalidate: 1,
   };
 }

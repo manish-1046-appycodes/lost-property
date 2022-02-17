@@ -12,7 +12,7 @@ import Ctas from '../components/Ctas/Ctas'
 import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
-import { getPageSeo, getPagePageModules, getPageSlugs, getPageSettings } from '../lib/gql-query'
+import { getPageSeo, getPagePageModules, getPageSlugs, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
 import Meta from '../components/Meta/Meta'
 import Hero from '../components/Hero/Hero'
 import PageModules from '../components/ACF/PageModules'
@@ -47,7 +47,10 @@ Page.getLayout = function getLayout(page) {
         <Layout
         colourTheme={page?.props?.pageSettings?.bodyBackgroundColour}
         headerBgColor={page?.props?.pageSettings?.headerTheme} 
-        border={page?.props?.pageSettings?.footerBorder}>{page}</Layout>
+        border={page?.props?.pageSettings?.footerBorder}
+        headerMenuItems={page?.props?.headerMenuItems}>
+            {page}
+        </Layout>
     )
 }
 
@@ -90,12 +93,15 @@ export async function getStaticProps({ params }) {
     const pageModules = await getPagePageModules(slug, 'URI');
     // Get Page Modules
     const pageSettings = await getPageSettings(slug, 'URI');
-    
+    // Get Header Menu Items
+    const headerMenuItems = await getHeaderMenuItems();
+
     return {
         props: {
             SEO: seo?.page?.seo || '',
             pageSettings: pageSettings?.page?.pageSettings?.pageSettings || '',
-            pageModules: pageModules?.page?.pageModules?.pageModules || ''
+            pageModules: pageModules?.page?.pageModules?.pageModules || '',
+            headerMenuItems: headerMenuItems?.menuItems?.edges || ''
         },
         revalidate: 1,
     };

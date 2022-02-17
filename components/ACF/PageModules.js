@@ -8,6 +8,7 @@ import ModuleBlockquote from "../Blockquote/ModuleBlockquote";
 import ModuleMarquee from "../Marquee/ModuleMarquee";
 import ModuleAccordionRooms from "../Accordion/ModuleAccordionRooms";
 import ModuleExplore from "../ExploreMap/ModuleExplore";
+import ModuleContact from "../Contact/ModuleContact";
 
 const PageModules = ({pageModules}) => {
   return (
@@ -63,6 +64,10 @@ const PageModules = ({pageModules}) => {
             case 'Page_Pagemodules_PageModules_ExploreGallerymap':
 
                 return <ModuleExplore key={i} settings={pageModule} />
+
+            case 'Page_Pagemodules_PageModules_Contact':
+
+                return <ModuleContact key={i} />
         }   
         
 

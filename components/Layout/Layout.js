@@ -12,8 +12,7 @@ import Header from "./Header/Header"
 
 
 
-const Layout = ({children, border, colourTheme, headerBgColor}) => {
-    
+const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems}) => {
     
     const [notice, setNotice] = useState(true);
     const [headerThemeBg, setHeaderThemeBg] = useState('dark');
@@ -77,7 +76,8 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
             navOpenState={navOpen}
             setNoticeFunc={setNotice}
             isScrolledState={isScrolled}
-            headerThemeBgState={headerThemeBg}/>
+            headerThemeBgState={headerThemeBg}
+            headerMenuItems={headerMenuItems}/>
             
 
             <main className={`${ notice ? 'pt-[0px]' : 'pt-[40px]'}`}>

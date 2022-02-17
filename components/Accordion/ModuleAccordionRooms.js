@@ -8,7 +8,6 @@ import ImageFade from "../ImageFade/ImageFade";
 
 const ModuleAccordionRooms = ( {settings} ) => {
 
-    console.log(settings)
     const ref = useRef(null)
 
     useEffect(() => {
@@ -18,7 +17,6 @@ const ModuleAccordionRooms = ( {settings} ) => {
 
     const Ameneties = ({row}) => {
         const rows = row?.contentDropdown?.column1?.amenities.split('<br />');
-        console.log(rows)
         return (<ul>
         {row?.contentDropdown?.column1?.amenities.map( (amenetie, key) => (
             <li key={key}>{amenetie}</li>

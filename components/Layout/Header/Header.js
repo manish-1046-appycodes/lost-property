@@ -5,7 +5,11 @@ import ButtonRound from "../../Links/ButtonRound"
 import Cross from "../../../public/image/icon/cross.svg"
 import Logo from "../../../public/image/lost-property-logo.svg"
 
-const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledState, headerThemeBgState}) => {
+const API_URL = process.env.API_URL;
+
+const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledState, headerThemeBgState, headerMenuItems}) => {
+    
+    
 
   return (
     <div className={`absolute top-0 left-0 w-full z-40 `}>
@@ -25,6 +29,18 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
 
             <nav style={{opacity: 0}} className={`main-nav z-10 scale-95 pointer-events-auto user-select-none ${ navOpenState ? 'nav-open visible !opacity-100 !scale-100' : 'nav-closed'} ${ notice ? 'top-[0px]' : 'top-[40px]'}`}>
                 <ul onClick={toggleNavFunc}>
+
+                    {   headerMenuItems ? ( 
+                            headerMenuItems.map( ({node, i}) => 
+                
+                                <li key={i}>
+                                    <Link href={node.connectedNode.node.uri}>
+                                        <a>{node.label}</a>
+                                    </Link>
+                                </li>
+                            )
+                    ) : (
+                    <>
                     <li>
                         <Link href="/">
                             <a>Home</a>
@@ -62,6 +78,9 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                         <a>Contact</a>
                         </Link>
                     </li>
+                    </>
+                    )
+                    }
 
 
                 </ul>

@@ -1,8 +1,8 @@
 import ImageFade from "../ImageFade/ImageFade";
 
 const ModulePageIntro = ({settings}) => {
-    console.log(settings)
-  return (
+
+    return (
         <header className="page-intro min-h-screen flex items-center py-20 lg:py-28 overflow-hidden">
 
             <div className="container">
