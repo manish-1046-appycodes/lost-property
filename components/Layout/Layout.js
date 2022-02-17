@@ -13,6 +13,8 @@ import Header from "./Header/Header"
 
 
 const Layout = ({children, border, colourTheme, headerBgColor}) => {
+    
+    
     const [notice, setNotice] = useState(true);
     const [headerThemeBg, setHeaderThemeBg] = useState('dark');
     const [themeBg, setThemeBg] = useState('white');
@@ -21,7 +23,6 @@ const Layout = ({children, border, colourTheme, headerBgColor}) => {
     
     useEffect( () => {
         Cursors.init();
-        
         
         
         if ( colourTheme == 'blue' ) {

@@ -16,7 +16,7 @@ const Ctas = ({settings}) => {
             img={cta?.image?.sourceUrl}
             btnTitle={cta?.ctaLink?.title} 
             btnUrl={cta?.ctaLink?.url}
-            alt={settings?.altLayout} />
+            alt={settings?.settings?.altLayout} />
           )
           
         }

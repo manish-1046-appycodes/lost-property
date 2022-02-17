@@ -8,6 +8,8 @@ module.exports = {
   images: {
     domains: ['localhost', 'lostpropertyhotel.com', 'curio.greenwich-design-projects.co.uk'],
   },
+
+  trailingSlash: true,
   
   
   webpack(config) {

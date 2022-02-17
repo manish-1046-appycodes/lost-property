@@ -3,6 +3,11 @@ import ModuleBillboard from "../Billboard/ModuleBillboard";
 import ModuleCarousel from "../Carousel/ModuleCarousel";
 import BookingSection from "../BookingSection/BookingSection";
 import ModuleCtas from "../Ctas/ModuleCtas"
+import ModulePageIntro from "../PageIntro/ModulePageIntro";
+import ModuleBlockquote from "../Blockquote/ModuleBlockquote";
+import ModuleMarquee from "../Marquee/ModuleMarquee";
+import ModuleAccordionRooms from "../Accordion/ModuleAccordionRooms";
+import ModuleExplore from "../ExploreMap/ModuleExplore";
 
 const PageModules = ({pageModules}) => {
   return (
@@ -32,10 +37,33 @@ const PageModules = ({pageModules}) => {
 
             case 'Page_Pagemodules_PageModules_Ctas':
 
-                return <ModuleCtas key={i}  settings={pageModule}/>
+                return <ModuleCtas key={i} settings={pageModule}/>
+                
+            case 'Page_Pagemodules_PageModules_PageIntro':
+
+                return <ModulePageIntro key={i} settings={pageModule}/>
+
+            case 'Page_Pagemodules_PageModules_Blockquote':
+
+                return <ModuleBlockquote key={i} settings={pageModule}/>
+
+            case 'Page_Pagemodules_PageModules_Marquee':
+                
+                return <ModuleMarquee key={i} words={pageModule?.marqueeWords}/>
+            
+            case 'Page_Pagemodules_PageModules_UtilSpacer':
+
+                return <div key={i} className="spacer h-[120px] lg:h-[150px]"></div>
+
+            case 'Page_Pagemodules_PageModules_AccordionRooms':
+
+                return <ModuleAccordionRooms key={i} settings={pageModule}/>
 
             
-        }
+            case 'Page_Pagemodules_PageModules_ExploreGallerymap':
+
+                return <ModuleExplore key={i} settings={pageModule} />
+        }   
         
 
     })}
