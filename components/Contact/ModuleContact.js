@@ -35,7 +35,8 @@ const ModuleContact = ({settings}) => {
     }
 
     return (
-        <div className="min-vh100 w-full top-0 left-0 z-10 flex items-center py-20">
+        <>
+        <div className="min-vh100 w-full top-0 left-0 z-10 flex items-center py-20 lg:py-40">
                 <div className="container">
                     <div className="max-w-1430px mx-auto">
                         <div className="md:flex">
@@ -71,6 +72,7 @@ const ModuleContact = ({settings}) => {
                     </div>
                 </div>
         </div>
+        </>
     );
 };
 

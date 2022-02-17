@@ -12,30 +12,36 @@ import Ctas from '../components/Ctas/Ctas'
 import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
-import { getPageSeo, getPagePageModules, getPageSlugs, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
+import { getPage, getPageSeo, getPagePageModules, getPageSlugs, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
 import Meta from '../components/Meta/Meta'
 import Hero from '../components/Hero/Hero'
 import PageModules from '../components/ACF/PageModules'
+import { NotFound404 } from '../components/NotFound404/NotFound404'
 
-export default function Page({SEO, pageModules}) {
+export default function Page({page, SEO, pageModules}) {
   
+    useEffect(() => {gsapSettings.init()}, []);
 
-  useEffect(() => {gsapSettings.init()}, []);
+    if ( !page.page ) {
+        return (
+            <NotFound404 statusCode={404}/>
+        )
+    }
 
+    return (
+        <>
+        <PageFade>
+            
 
-  return (
-    <>
-      <PageFade>
+            <Meta SEO={SEO}/>
+            <AdobeAnalyticsUpdate/>
+            
+            <PageModules pageModules={pageModules}/>
 
-        <Meta SEO={SEO}/>
-        <AdobeAnalyticsUpdate/>
-        
-        <PageModules pageModules={pageModules}/>
+        </PageFade>
 
-      </PageFade>
-
-    </>
-  )
+        </>
+    )
 }
 
 
@@ -87,6 +93,9 @@ export async function getStaticProps({ params }) {
     // add slashes back in to create slug
     const slug = params.slug.join('/');
 
+    // Get general Page fields
+    const page = await getPage(slug, 'URI');
+
     // Get SEO stuff
     const seo = await getPageSeo(slug, 'URI');
     // Get Page Modules
@@ -98,6 +107,7 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
+            page: page,
             SEO: seo?.page?.seo || '',
             pageSettings: pageSettings?.page?.pageSettings?.pageSettings || '',
             pageModules: pageModules?.page?.pageModules?.pageModules || '',

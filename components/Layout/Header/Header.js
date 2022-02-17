@@ -33,7 +33,7 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                     {   headerMenuItems ? ( 
                             headerMenuItems.map( ({node, i}) => 
                 
-                                <li key={i}>
+                                <li key={node.connectedNode.node.uri}>
                                     <Link href={node.connectedNode.node.uri}>
                                         <a>{node.label}</a>
                                     </Link>
