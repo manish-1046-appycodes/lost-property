@@ -88,6 +88,7 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
             navOpenState={navOpen}
             setNoticeFunc={setNotice}
             isScrolledState={isScrolled}
+            headerThemeBgInitial={headerBgColor}
             headerThemeBgState={headerThemeBg}
             headerMenuItems={headerMenuItems}/>
             

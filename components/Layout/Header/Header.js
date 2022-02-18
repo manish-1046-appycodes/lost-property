@@ -7,10 +7,8 @@ import Logo from "../../../public/image/lost-property-logo.svg"
 
 const API_URL = process.env.API_URL;
 
-const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledState, headerThemeBgState, headerMenuItems}) => {
+const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledState,headerThemeBgInitial, headerThemeBgState, headerMenuItems}) => {
     
-    
-
   return (
     <div className={`absolute top-0 left-0 w-full z-40 `}>
 
@@ -25,7 +23,7 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
             </div>
         </div>
 
-        <header className={`h-[70px] lg:h-[150px] flex fixed w-full transition-[top,background-color] pointer-events-none duration-500  ${ notice ? 'top-[0px]' : 'top-[40px]'} text-black ${ (!isScrolledState && headerThemeBgState == 'light')  && 'bg-transparent !text-white'} ${ isScrolledState && 'bg-cream-1/80'} `}>
+        <header className={`h-[70px] lg:h-[150px] flex fixed w-full transition-[top,background-color] pointer-events-none duration-500 ${ headerThemeBgInitial == 'light' ? 'text-white' : 'text-black'}  ${ notice ? 'top-[0px]' : 'top-[40px]'} ${ (!isScrolledState && headerThemeBgState == 'light')  && 'bg-transparent !text-white'} ${ isScrolledState && 'bg-cream-1/80 !text-black'} `}>
 
             <nav style={{opacity: 0}} className={`main-nav z-10 scale-95 pointer-events-auto user-select-none ${ navOpenState ? 'nav-open visible !opacity-100 !scale-100' : 'nav-closed'} ${ notice ? 'top-[0px]' : 'top-[40px]'}`}>
                 <ul onClick={toggleNavFunc}>
@@ -105,8 +103,8 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
                     <ButtonRound 
                     url="/book" 
                     title="Book <br>Now"
-                    bg={`${ (!isScrolledState && headerThemeBgState == 'light')  ? 'bg-white' : 'bg-blue-1'} ${ isScrolledState && 'bg-blue-1'} ${ navOpenState && '!bg-white'} `}
-                    color={`${ (!isScrolledState && headerThemeBgState == 'light')  ? 'text-black' : 'text-white'} ${ isScrolledState && 'text-white'} ${ navOpenState && '!text-black'}`}
+                    bg={` ${ headerThemeBgInitial == 'light' ? '!bg-white' : 'bg-blue-1'} ${ (!isScrolledState && headerThemeBgState == 'light')  ? 'bg-white' : 'bg-blue-1'} ${ isScrolledState && !navOpenState ? '!bg-blue-1' : ''} ${ navOpenState && '!bg-white'} `}
+                    color={` ${ headerThemeBgInitial == 'light' ? 'text-black' : 'text-white'} ${ (!isScrolledState && headerThemeBgState == 'light')  ? 'text-black' : 'text-white'} ${ isScrolledState && !navOpenState ? '!text-white' : ''} ${ navOpenState && '!text-black'}`}
                     />
                 </div>
 
