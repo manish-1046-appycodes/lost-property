@@ -47,7 +47,7 @@ const AdobeAnalyticsUpdate = ({initial}) => {
     return (
         <>
         
-        <Script strategy="afterInteractive">{`
+        <Script strategy="lazyOnload">{`
 
             if (typeof s != "undefined") {
                 //s.clearVars();

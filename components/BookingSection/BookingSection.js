@@ -187,7 +187,8 @@ const BookingSection = () => {
                                     </div>
 
                                     <div 
-                                    className={` ${ datePickerPopup ? 'visible opacity-100 ' : 'opacity-0 invisible delay-250'} ease-in-out transition-[visibility,opacity] duration-250 fixed top-0 left-0 pt-[70px] lg:pt-[150px] h-full w-full flex items-end z-50`}>
+                                    style={{visibility: "hidden"}}
+                                    className={` ${ datePickerPopup ? '!visible !opacity-100 ' : 'opacity-0 invisible delay-250'} ease-in-out transition-[visibility,opacity] duration-250 fixed top-0 left-0 pt-[70px] lg:pt-[150px] h-full w-full flex items-end z-50`}>
 
                                         <div onClick={toggleDatePickerPopup} className="absolute bg-blue-1/50 inset-0"></div>
                                         

@@ -36,6 +36,7 @@ const Hero = ({heroTitle, heroImage}) => {
             width="277"
             height="119"
             alt="Lost Property - St Paul's London"
+            priority
             />
         </h1>
         </div>

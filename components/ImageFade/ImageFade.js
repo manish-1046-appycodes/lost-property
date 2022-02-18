@@ -23,7 +23,7 @@ const ImageFade = (props) => {
     
     return (
         <motion.div
-            initial="closed"
+            initial={props?.priority ? "open" : "closed"}
             animate={isOpen ? "open" : "closed"}
             variants={variants}
 

@@ -1,14 +1,16 @@
-import ModuleHero from "../Hero/ModuleHero"
-import ModuleBillboard from "../Billboard/ModuleBillboard";
-import ModuleCarousel from "../Carousel/ModuleCarousel";
-import BookingSection from "../BookingSection/BookingSection";
-import ModuleCtas from "../Ctas/ModuleCtas"
-import ModulePageIntro from "../PageIntro/ModulePageIntro";
-import ModuleBlockquote from "../Blockquote/ModuleBlockquote";
-import ModuleMarquee from "../Marquee/ModuleMarquee";
-import ModuleAccordionRooms from "../Accordion/ModuleAccordionRooms";
-import ModuleExplore from "../ExploreMap/ModuleExplore";
-import ModuleContact from "../Contact/ModuleContact";
+import dynamic from "next/dynamic";
+
+const ModuleHero = dynamic(() => import("../Hero/ModuleHero"));
+const ModuleBillboard = dynamic(() => import("../Billboard/ModuleBillboard"));
+const ModuleCarousel = dynamic(() => import("../Carousel/ModuleCarousel"));
+const BookingSection = dynamic(() => import("../BookingSection/BookingSection"));
+const ModuleCtas = dynamic(() => import("../Ctas/ModuleCtas"));
+const ModulePageIntro = dynamic(() => import("../PageIntro/ModulePageIntro"));
+const ModuleBlockquote = dynamic(() => import("../Blockquote/ModuleBlockquote"));
+const ModuleMarquee = dynamic(() => import("../Marquee/ModuleMarquee"));
+const ModuleAccordionRooms = dynamic(() => import("../Accordion/ModuleAccordionRooms"));
+const ModuleExplore = dynamic(() => import("../ExploreMap/ModuleExplore"));
+const ModuleContact = dynamic(() => import("../Contact/ModuleContact"));
 
 const PageModules = ({pageModules}) => {
   return (

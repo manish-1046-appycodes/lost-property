@@ -1,20 +1,13 @@
 import { useEffect } from 'react'
 
 import Head from 'next/head'
-import Script from 'next/script'
 
 import Layout from '../components/Layout/Layout'
 
-import BookingSection from '../components/BookingSection/BookingSection'
-import Billboard from '../components/Billboard/Billboard'
-import Carousel from '../components/Carousel/Carousel'
-import Ctas from '../components/Ctas/Ctas'
-import ImageFade from '../components/ImageFade/ImageFade'
 import PageFade from '../components/PageFade'
 import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 import { getPage, getPageSeo, getPagePageModules, getPageSlugs, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
 import Meta from '../components/Meta/Meta'
-import Hero from '../components/Hero/Hero'
 import PageModules from '../components/ACF/PageModules'
 import { NotFound404 } from '../components/NotFound404/NotFound404'
 
