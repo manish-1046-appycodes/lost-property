@@ -165,7 +165,7 @@ const BookingSection = () => {
     
     
     return (
-    <div className="bg-cream-1  min-vh100 w-full top-0 left-0 z-10 flex items-center py-20">
+    <div className="bg-cream-1  min-vh100 w-full top-0 left-0 z-10 flex items-center py-20 lg:py-40">
             <div className="container">
                 <div className="max-w-1430px mx-auto">
                     <div className="md:flex">
@@ -225,7 +225,8 @@ const BookingSection = () => {
                                                 <p className="mb-3">Adults</p>
                                                 <div className="flex num-wrap">
                                                     <div onClick={minusNumAdults} className="num-control num-minus">-</div>
-                                                    <input className="num" readOnly value={adults}/>
+                                                    <label className="hidden" htmlFor="adults_qty">Adults</label>
+                                                    <input id="adults_qty" name="adults_qty" className="num" readOnly value={adults}/>
                                                     <div onClick={plusNumAdults} className="num-control num-plus">+</div>
                                                 </div>
                                             </div>
@@ -234,7 +235,8 @@ const BookingSection = () => {
                                                 <p className="mb-3" htmlFor='enquiry'>Children</p>
                                                 <div className="flex num-wrap">
                                                     <div onClick={minusNumchildren} className="num-control num-minus">-</div>
-                                                    <input className="num" readOnly value={children}/>
+                                                    <label className="hidden" htmlFor="children_qty">Children</label>
+                                                    <input id="children_qty" name="children_qty" className="num" readOnly value={children}/>
                                                     <div onClick={plusNumChildren} className="num-control num-plus">+</div>
                                                 </div>
                                             </div>
@@ -243,7 +245,8 @@ const BookingSection = () => {
                                                 <p className="mb-3" htmlFor='enquiry'>Room</p>
                                                 <div className="flex num-wrap">
                                                     <div onClick={minusNumRoom} className="num-control num-minus">-</div>
-                                                    <input className="num" readOnly value={room}/>
+                                                    <label className="hidden" htmlFor="rooms_qty">Rooms</label>
+                                                    <input id="rooms_qty" name="rooms_qty" className="num" readOnly value={room}/>
                                                     <div onClick={plusNumroom} className="num-control num-plus">+</div>
                                                 </div>
                                             </div>
