@@ -13,6 +13,7 @@ const url = "https://dominvsgroup.us9.list-manage.com/subscribe/post?u=fbd0df307
 const Footer = ({border}) => {
     const emailRef = createRef(undefined)
 
+    const year = new Date().getFullYear();
   return (
     <footer className={`footer overflow-hidden bg-cream-1 text-black ${ border && "border-t border-black"}`}>
         <div className="container mb-10 lg:mb-20">
@@ -41,7 +42,7 @@ const Footer = ({border}) => {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:mt-28">
 
                 <nav className="text-10px lg:text-16px self-end order-2 sm:order-1">
-                    <ul className="space-y-1 lg:space-y-2 opacity-[0.6]">
+                    <ul className="space-y-3 lg:space-y-2 opacity-[0.6]">
                         <li>
                             <a href="https://hiltonhonors3.hilton.com/en/policy/global-privacy-statement/index.html" target="_blank" rel="noreferrer">Global Privacy Policy</a>
                         </li>
@@ -69,12 +70,12 @@ const Footer = ({border}) => {
 
 
                     <div className="opacity-[0.6] text-[10px] leading-[1.8] lg:text-16px block">
-                        <p className="lg:order-2">Hilton Copyright ©2020 Hilton</p>
+                        <p className="lg:order-2">Hilton Copyright {year} Hilton</p>
                     </div>
                 </div>
 
                 <nav className="text-10px lg:text-16px text-right self-end order-3">
-                    <ul className="space-y-1 lg:space-y-2 opacity-[0.6]">
+                    <ul className="space-y-3 lg:space-y-2 opacity-[0.6]">
                         <li>
                             <a href="https://www.hilton.com/en/hilton-honors/personal-data-requests/" target="_blank" rel="noreferrer">Personal Data Requests</a>
                         </li>

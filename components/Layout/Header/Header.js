@@ -84,8 +84,8 @@ const Header = ({notice, toggleNavFunc, navOpenState, setNoticeFunc, isScrolledS
 
 
                 <button aria-hidden className="outline-0 p-5 -ml-5 z-10 cursor-pointer lg:absolute lg:left-[45px] top-0 lg:mt-7" onClick={toggleNavFunc}>
-                    <div className={`relative h-[2px] bg-current w-[29px] lg:w-[48px] transition-all ease-in-out ${ navOpenState ? 'rotate-45 top-[6px] lg:top-[9px] !bg-white' : 'nav-closed'} `}></div>
-                    <div className={`relative h-[2px] bg-current w-[29px] lg:w-[48px] transition-all ease-in-out mt-2 lg:mt-4 ${ navOpenState ? '-rotate-45 top-[-4px] lg:top-[-9px] !bg-white' : 'nav-closed'}`}></div>
+                    <div aria-hidden className={`relative h-[2px] bg-current w-[29px] lg:w-[48px] transition-all ease-in-out ${ navOpenState ? 'rotate-45 top-[6px] lg:top-[9px] !bg-white' : 'nav-closed'} `}></div>
+                    <div aria-hidden className={`relative h-[2px] bg-current w-[29px] lg:w-[48px] transition-all ease-in-out mt-2 lg:mt-4 ${ navOpenState ? '-rotate-45 top-[-4px] lg:top-[-9px] !bg-white' : 'nav-closed'}`}></div>
                 </button>
 
                 <Link href="/">

@@ -222,30 +222,27 @@ const BookingSection = () => {
                                         </div>
                                         <div className="flex-1 flex justify-between max-w-lg space-x-3  lg:space-x-10">
                                             <div>
-                                                <p className="mb-3">Adults</p>
+                                                <label htmlFor="adults_qty" className="!mb-3 block">Adults</label>
                                                 <div className="flex num-wrap">
                                                     <div onClick={minusNumAdults} className="num-control num-minus">-</div>
-                                                    <label className="hidden" htmlFor="adults_qty">Adults</label>
                                                     <input id="adults_qty" name="adults_qty" className="num" readOnly value={adults}/>
                                                     <div onClick={plusNumAdults} className="num-control num-plus">+</div>
                                                 </div>
                                             </div>
 
                                             <div>
-                                                <p className="mb-3" htmlFor='enquiry'>Children</p>
+                                                <label htmlFor="children_qty" className="!mb-3 block">Children</label>
                                                 <div className="flex num-wrap">
                                                     <div onClick={minusNumchildren} className="num-control num-minus">-</div>
-                                                    <label className="hidden" htmlFor="children_qty">Children</label>
                                                     <input id="children_qty" name="children_qty" className="num" readOnly value={children}/>
                                                     <div onClick={plusNumChildren} className="num-control num-plus">+</div>
                                                 </div>
                                             </div>
 
                                             <div>
-                                                <p className="mb-3" htmlFor='enquiry'>Room</p>
+                                                <label htmlFor="rooms_qty" className="!mb-3 block">Room</label>
                                                 <div className="flex num-wrap">
                                                     <div onClick={minusNumRoom} className="num-control num-minus">-</div>
-                                                    <label className="hidden" htmlFor="rooms_qty">Rooms</label>
                                                     <input id="rooms_qty" name="rooms_qty" className="num" readOnly value={room}/>
                                                     <div onClick={plusNumroom} className="num-control num-plus">+</div>
                                                 </div>

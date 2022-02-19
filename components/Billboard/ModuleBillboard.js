@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef, useLayoutEffect } from 'react';
 
 import ButtonRound from '../Links/ButtonRound'
 import ButtonSecondary from '../Links/ButtonSecondary'
@@ -15,6 +15,69 @@ const variants = {
 }
 
 const ModuleBillboard = ( {settings} ) => {
+
+    const ref1 = useRef();
+    const ref2 = useRef();
+    const ref2_child = useRef();
+
+    useEffect( () => {
+        
+
+        if ( ref1.current ) {
+            let tl1 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ref1.current,
+                    scrub: true,
+                    start: "top bottom",
+                    end: "bottom top"
+                }
+            });
+
+            gsap.set(ref1.current, {yPercent:50});
+
+            tl1.to(ref1.current, {
+                yPercent: -25
+            });
+        }
+
+        if ( ref2.current ) {
+            let tl2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ref2.current,
+                    scrub: true,
+                    start: "top top",
+                    end: "bottom top"
+                }
+
+            });
+
+            
+
+            gsap.set(ref2_child.current, {yPercent:0});
+
+            tl2.to(ref2_child.current, {
+                yPercent: 10
+            });
+
+        }
+
+        window.dispatchEvent(new Event('resize'));
+
+        return () => {
+
+            if ( ref1.current ) {
+                tl1.kill();
+                tl1 = null;
+            }
+
+            if ( ref2.current ) {
+                tl2.kill();
+                tl2 = null;
+            }
+        }
+
+    }, [])
+    
     
     const [isOpen, setIsOpen] = useState(false);
 
@@ -182,22 +245,23 @@ const ModuleBillboard = ( {settings} ) => {
                     </div>
 
                     {
-                    settings.billboardType === 'caption_full' && (<div className="js-parallaxText heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-8vh]" dangerouslySetInnerHTML={ {__html: settings.backgroundCaption} }></div>)            
+                    settings.billboardType === 'caption_full' && (<div ref={ref1} className=" heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-8vh]" dangerouslySetInnerHTML={ {__html: settings.backgroundCaption} }></div>)            
                     }
 
                 </div>
             </div>
 
             { settings.billboardType === 'img_full' &&
-            (<div className={` js-parallax overflow-hidden absolute w-full top-0  left-0 ${imageMobPad}`}>
+            (<div ref={ref2} className={` overflow-hidden absolute w-full top-0  left-0 ${imageMobPad}`}>
                 <div
+                ref={ref2_child}
                 className="relative h-full w-full ">
                     <ImageFade
                     src={settings.image.sourceUrl}
                     layout="fill"
                     objectFit="cover"
                     objectPosition="center"
-                    alt=""/>
+                    alt={settings.image.altText}/>
                 </div>
             </div>)}
             
@@ -211,15 +275,16 @@ const ModuleBillboard = ( {settings} ) => {
                 </div>
             </div>) }
             
-            <div className={`js-parallax overflow-hidden absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}>
+            <div ref={ref2} className={`overflow-hidden absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}>
                 <div
+                ref={ref2_child}
                 className="relative h-full w-full">
                     <ImageFade
                     src={settings.image.sourceUrl}
                     layout="fill"
                     objectFit="cover"
                     objectPosition="center"
-                    alt=""
+                    alt={settings.image.altText}
                     />
                 </div>
             </div></>) }

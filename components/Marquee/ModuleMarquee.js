@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 
-import Script from "next/script";
 
 const ModuleMarquee = ({words}) => {
 

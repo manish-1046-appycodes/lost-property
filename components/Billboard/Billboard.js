@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 import ButtonRound from '../Links/ButtonRound'
 import ButtonSecondary from '../Links/ButtonSecondary'
@@ -15,6 +15,68 @@ const variants = {
 }
 
 const Billboard = ( {settings} ) => {
+
+    const ref1 = useRef();
+    const ref2 = useRef();
+    const ref2_child = useRef();
+
+    useEffect( () => {
+        
+
+        if ( ref1.current ) {
+            let tl1 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ref1.current,
+                    scrub: true,
+                    start: "top bottom",
+                    end: "bottom top"
+                }
+            });
+
+            gsap.set(ref1.current, {yPercent:50});
+
+            tl1.to(ref1.current, {
+                yPercent: -25
+            });
+        }
+
+        if ( ref2.current ) {
+            let tl2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ref2.current,
+                    scrub: true,
+                    start: "top top",
+                    end: "bottom top"
+                }
+
+            });
+
+            
+
+            gsap.set(ref2_child.current, {yPercent:0});
+
+            tl2.to(ref2_child.current, {
+                yPercent: 10
+            });
+
+        }
+
+        window.dispatchEvent(new Event('resize'));
+
+        return () => {
+
+            if ( ref1.current ) {
+                tl1.kill();
+                tl1 = null;
+            }
+
+            if ( ref2.current ) {
+                tl2.kill();
+                tl2 = null;
+            }
+        }
+
+    }, [])
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -182,15 +244,16 @@ const Billboard = ( {settings} ) => {
                     </div>
 
                     {
-                    settings.bg_type === 'caption_full' && (<p className="js-parallaxText heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-8vh]" dangerouslySetInnerHTML={ {__html: settings.bg_caption} }></p>)            
+                    settings.bg_type === 'caption_full' && (<p ref={ref1} className="heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-8vh]" dangerouslySetInnerHTML={ {__html: settings.bg_caption} }></p>)            
                     }
 
                 </div>
             </div>
 
             { settings.bg_type === 'img_full' &&
-            (<div className={` js-parallax overflow-hidden absolute w-full top-0  left-0 ${imageMobPad}`}>
+            (<div ref={ref2} className={`overflow-hidden absolute w-full top-0  left-0 ${imageMobPad}`}>
                 <div
+                 ref={ref2_child}
                 className="relative h-full w-full ">
                     <ImageFade
                     src={settings.img.url}
@@ -211,8 +274,9 @@ const Billboard = ( {settings} ) => {
                 </div>
             </div>) }
             
-            <div className={`js-parallax overflow-hidden absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}>
+            <div ref={ref2} className={`overflow-hidden absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}>
                 <div
+                 ref={ref2_child}
                 className="relative h-full w-full">
                     <ImageFade
                     src={settings.img.url}

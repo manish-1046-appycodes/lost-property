@@ -1,71 +1,5 @@
 const gsapSettings = {
 
-    parallaxLoad: () => {
-
-        const parallaxItems = document.querySelectorAll('.js-parallax');
-        
-        parallaxItems.forEach(function(parallaxItem) {
-            const img = parallaxItem.childNodes[0];
-
-
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: parallaxItem,
-                    scrub: true,
-                    start: "top top",
-                    end: "bottom top"
-                }
-
-            })
-            .to(img, {
-                yPercent: 10
-            });
-            
-        });
-
-        const parallaxTextItems = document.querySelectorAll('.js-parallaxText');
-        
-        parallaxTextItems.forEach(function(parallaxItem) {
-            const img = parallaxItem.childNodes[0];
-
-            gsap.set(parallaxItem, {yPercent:50});
-
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: parallaxItem,
-                    scrub: true,
-                    start: "top bottom",
-                    end: "bottom top"
-                }
-
-            })
-            .to(parallaxItem, {
-                yPercent: -25
-            });
-            
-        });
-
-        const parallaxTextItemsDown = document.querySelectorAll('.js-parallaxTextDown');
-        
-        parallaxTextItemsDown.forEach(function(parallaxItem) {
-
-
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: parallaxItem,
-                    scrub: true,
-                    start: "top center",
-                    end: "bottom top"
-                }
-
-            })
-            .to(parallaxItem, {
-                y: '30vh'
-            });
-            
-        });
-        
-    },
 
     carousels: () => {
         Draggable.create('.carousel', {
@@ -192,7 +126,6 @@ const gsapSettings = {
     },
 
     init: () => {
-        gsapSettings.parallaxLoad();
         gsapSettings.carousels();
         gsapSettings.carouselLoop();
     }
