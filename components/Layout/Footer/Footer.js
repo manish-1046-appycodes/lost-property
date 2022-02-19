@@ -70,7 +70,7 @@ const Footer = ({border}) => {
 
 
                     <div className="opacity-[0.6] text-[10px] leading-[1.8] lg:text-16px block">
-                        <p className="lg:order-2">Hilton Copyright {year} Hilton</p>
+                        <p className="lg:order-2">Hilton Copyright ©{year} Hilton</p>
                     </div>
                 </div>
 
