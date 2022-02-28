@@ -79,6 +79,7 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
             <Head>
                 <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
                 <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
+                
             </Head>
             <AdobeAnalytics/>
 
@@ -111,7 +112,20 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
             <Script id="GSAPSETTINGS" strategy="beforeInteractive" src="/js/gsap-settings.js"/>
             <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
             <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
-            
+
+            <Script id="GTM" strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-SVQ32HS26Y"/>
+            <Script
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-SVQ32HS26Y');
+            `,
+            }}
+            />
             
 
             
