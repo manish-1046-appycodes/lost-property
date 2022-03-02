@@ -113,7 +113,32 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
             <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
             <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
 
-            
+            <Script id="UA" strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=UA-159318290-26"/>
+            <Script
+            strategy="lazyOnload"
+            dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-159318290-26');
+            `,
+            }}
+            />
+            <Script id="GTM" strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-SVQ32HS26Y"/>
+            <Script
+            strategy="lazyOnload"
+            dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-SVQ32HS26Y');
+            `,
+            }}
+            />
             
 
             
