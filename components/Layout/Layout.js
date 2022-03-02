@@ -74,6 +74,11 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
     
 
     return (
+        <>
+
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGNGG35"
+        height="0" width="0" style={{display:'none',visibility: 'hidden'}}></iframe></noscript>
+
         <div className={`leading-13 text-sm lg:leading-13 lg:text-21px  ${ themeBg == 'blue' ? "bg-blue-1 text-white" : "bg-cream-1"}`}>
             
             <Head>
@@ -136,6 +141,12 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
                 gtag('js', new Date());
 
                 gtag('config', 'G-SVQ32HS26Y');
+
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WGNGG35');
             `,
             }}
             />
@@ -144,6 +155,7 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
             
             
         </div>
+        </>
     )
 }
 
