@@ -113,9 +113,9 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
             <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
             <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
 
-            <Script id="GTM" strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-SVQ32HS26Y"/>
+            <Script id="GTM" strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-SVQ32HS26Y"/>
             <Script
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
                 __html: `
                 window.dataLayer = window.dataLayer || [];
