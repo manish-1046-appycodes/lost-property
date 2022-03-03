@@ -136,7 +136,9 @@ const Layout = ({page, SEO, children, border, colourTheme, headerBgColor, header
         {
             process.env.NODE_ENV === 'production' &&
             <>
-            
+            <GoogleAnalytics />
+            <AdobeAnalytics/>
+            <AdobeAnalyticsUpdate/>
             </>
         }
         
