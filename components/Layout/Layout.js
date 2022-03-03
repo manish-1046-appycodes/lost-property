@@ -124,7 +124,11 @@ const Layout = ({page, SEO, children, border, colourTheme, headerBgColor, header
         <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
         <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
 
+
+        { SEO && 
         <Meta SEO={SEO}/>
+        }
+        
         { (page && SEO) && 
         <Schema post={page.page} seo={SEO}/>
         }

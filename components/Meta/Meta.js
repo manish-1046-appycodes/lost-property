@@ -9,7 +9,7 @@ const Meta = ({SEO}) => {
         <Head>
             <title>{SEO?.title}</title>
             <meta name="description" content={SEO?.metaDesc} />
-            <meta name="keywords" content={SEO?.metaKeywords} />
+            <meta name="keywords" content={SEO?.metaKeywords+SEO?.focuskw} />
             <link rel="canonical" href={process.env.NEXT_PUBLIC_BASE_URL+Router.asPath} />
 
             <meta property="og:title" content={SEO?.title} />

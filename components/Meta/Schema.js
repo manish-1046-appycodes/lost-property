@@ -9,8 +9,8 @@ function strip(html) {
 }
 
 const Schema = ({ post, seo }) => {
-    console.log(post)
-    console.log(seo)
+
+
     const {
         title,
         blurb,

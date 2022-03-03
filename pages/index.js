@@ -62,7 +62,7 @@ export async function getStaticProps({ params }) {
 
   return {
       props: {
-          page: page?.page,
+          page: page || '',
           SEO: seo?.page?.seo || '',
           pageSettings: pageSettings?.page?.pageSettings?.pageSettings || '',
           pageModules: pageModules?.page?.pageModules?.pageModules || '',
