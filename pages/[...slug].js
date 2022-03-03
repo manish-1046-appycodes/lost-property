@@ -102,6 +102,6 @@ export async function getStaticProps({ params }) {
             pageModules: pageModules?.page?.pageModules?.pageModules || '',
             headerMenuItems: headerMenuItems?.menuItems?.edges || ''
         },
-        revalidate: 1,
+        revalidate: 60,
     };
 }
