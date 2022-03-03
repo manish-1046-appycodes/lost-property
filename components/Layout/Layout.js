@@ -4,6 +4,8 @@ import Script from 'next/script'
 
 import { useState, useEffect } from "react"
 import AdobeAnalytics from '../AdobeAnalytics/AdobeAnalytics'
+import AdobeAnalyticsUpdate from '../AdobeAnalytics/AdobeAnalyticsUpdate'
+import GoogleAnalytics from '../GoogleAnalytics'
 import NavBarMob from '../NavBarMob/NavBarMob'
 
 
@@ -86,7 +88,7 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
                 <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
                 
             </Head>
-            <AdobeAnalytics/>
+            
 
             <Header 
             notice={notice} 
@@ -106,55 +108,28 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
             </main>
             
 
-            <Footer border={border}/>
-
-            
-            <Script id="SITE" strategy="beforeInteractive" src="/js/site-settings.js"/>
-            <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
-            <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
-            <Script id="DRAGGABLE" strategy="beforeInteractive" src="/js/Draggable.min.js"/>
-            <Script id="INERTIA" strategy="beforeInteractive" src="/js/InertiaPlugin.min.js"/>
-            <Script id="GSAPSETTINGS" strategy="beforeInteractive" src="/js/gsap-settings.js"/>
-            <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
-            <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
-
-            <Script id="UA" strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=UA-159318290-26"/>
-            <Script
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-                __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'UA-159318290-26');
-            `,
-            }}
-            />
-            <Script id="GTM" strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-SVQ32HS26Y"/>
-            <Script
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-                __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'G-SVQ32HS26Y');
-
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-WGNGG35');
-            `,
-            }}
-            />
-            
-
-            
+            <Footer border={border}/>                        
             
         </div>
+
+        <Script id="SITE" strategy="beforeInteractive" src="/js/site-settings.js"/>
+        <Script id="GSAP" strategy="beforeInteractive" src="/js/gsap.min.js"/>
+        <Script id="SCROLLTRIGGER" strategy="beforeInteractive" src="/js/ScrollTrigger.min.js"/>
+        <Script id="DRAGGABLE" strategy="beforeInteractive" src="/js/Draggable.min.js"/>
+        <Script id="INERTIA" strategy="beforeInteractive" src="/js/InertiaPlugin.min.js"/>
+        <Script id="GSAPSETTINGS" strategy="beforeInteractive" src="/js/gsap-settings.js"/>
+        <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
+        <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
+
+        {
+            process.env.NODE_ENV === 'production' &&
+            <>
+            <GoogleAnalytics />
+            <AdobeAnalytics/>
+            <AdobeAnalyticsUpdate/>
+            </>
+        }
+        
         </>
     )
 }

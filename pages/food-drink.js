@@ -9,7 +9,6 @@ import Carousel from '../components/Carousel/Carousel'
 import Marquee from '../components/Marquee/Marquee'
 import FoodDrinkCarousel from '../components/FoodDrinkCarousel/FoodDrinkCarousel'
 import PageFade from '../components/PageFade'
-import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 import Meta from '../components/Meta/Meta'
 import { getPageSeo } from '../lib/gql-query'
 
@@ -163,7 +162,6 @@ export default function Page({test, SEO}) {
     <PageFade>
         
         <Meta SEO={SEO}/>
-        <AdobeAnalyticsUpdate/>
 
         <FoodDrinkCarousel carouselItems={carouselItems1}/>
 

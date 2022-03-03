@@ -5,7 +5,6 @@ import Head from 'next/head'
 import Layout from '../components/Layout/Layout'
 
 import PageFade from '../components/PageFade'
-import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 import { NotFound404 } from '../components/NotFound404/NotFound404'
 
 
@@ -22,7 +21,6 @@ export default function Page({test}) {
             <title>Lost Property</title>
             <meta name="description" content="Lost Property" />
         </Head>
-        <AdobeAnalyticsUpdate/>
 
         <NotFound404/>
 

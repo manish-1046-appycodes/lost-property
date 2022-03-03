@@ -5,7 +5,6 @@ import Head from 'next/head'
 import Layout from '../components/Layout/Layout'
 
 import PageFade from '../components/PageFade'
-import AdobeAnalyticsUpdate from '../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 import { getPage, getPageSeo, getPagePageModules, getPageSlugs, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
 import Meta from '../components/Meta/Meta'
 import PageModules from '../components/ACF/PageModules'
@@ -27,7 +26,7 @@ export default function Page({page, SEO, pageModules}) {
             
 
             <Meta SEO={SEO}/>
-            <AdobeAnalyticsUpdate/>
+            
             
             <PageModules pageModules={pageModules}/>
 

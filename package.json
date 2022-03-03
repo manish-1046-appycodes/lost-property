@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap-custom.js",
     "export": "next export",
     "buildExport": "next build && next export",
     "start": "next start",
@@ -33,6 +34,7 @@
     "autoprefixer": "^10.4.2",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
+    "next-sitemap": "^2.5.4",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.13"
   }

@@ -8,7 +8,6 @@ import AccordionEvents from '../../components/Accordion/AccordionEvents'
 
 import Marquee from '../../components/Marquee/Marquee'
 import PageFade from '../../components/PageFade'
-import AdobeAnalyticsUpdate from '../../components/AdobeAnalytics/AdobeAnalyticsUpdate'
 import Meta from '../../components/Meta/Meta'
 import { getPageSeo } from '../../lib/gql-query'
 
@@ -50,7 +49,6 @@ export default function Page({test, SEO}) {
     <PageFade>
         
         <Meta SEO={SEO}/>
-        <AdobeAnalyticsUpdate/>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
 

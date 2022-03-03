@@ -85,7 +85,7 @@ const AdobeAnalytics = ({initial}) => {
             }}
             />
         <Script 
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         src="//assets.adobedtm.com/launch-EN02272261e0b845508227acf3ca0c37de.min.js"/>
         </>
     )
