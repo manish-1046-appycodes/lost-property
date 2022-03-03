@@ -48,7 +48,7 @@ const AdobeAnalytics = ({initial}) => {
         
         <Script
             id="show-banner"
-            strategy="lazyOnload"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
                 __html: `
                 var digitalData = {
