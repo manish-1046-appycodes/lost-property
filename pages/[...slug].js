@@ -6,7 +6,6 @@ import Layout from '../components/Layout/Layout'
 
 import PageFade from '../components/PageFade'
 import { getPage, getPageSeo, getPagePageModules, getPageSlugs, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
-import Meta from '../components/Meta/Meta'
 import PageModules from '../components/ACF/PageModules'
 import { NotFound404 } from '../components/NotFound404/NotFound404'
 
@@ -24,10 +23,6 @@ export default function Page({page, SEO, pageModules}) {
         <>
         <PageFade>
             
-
-            <Meta SEO={SEO}/>
-            
-            
             <PageModules pageModules={pageModules}/>
 
         </PageFade>
@@ -43,6 +38,8 @@ Page.getLayout = function getLayout(page) {
     
     return (
         <Layout
+        page={page?.props?.page}
+        SEO={page?.props?.SEO}
         colourTheme={page?.props?.pageSettings?.bodyBackgroundColour}
         headerBgColor={page?.props?.pageSettings?.headerTheme} 
         border={page?.props?.pageSettings?.footerBorder}

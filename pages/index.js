@@ -4,11 +4,10 @@ import Layout from '../components/Layout/Layout'
 
 
 import PageFade from '../components/PageFade'
-import { getPageSeo, getPagePageModules, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
-import Meta from '../components/Meta/Meta'
+import { getPage, getPageSeo, getPagePageModules, getPageSettings, getHeaderMenuItems } from '../lib/gql-query'
 import PageModules from '../components/ACF/PageModules'
 
-export default function Page({test, SEO, pageModules}) {
+export default function Page({page, SEO, pageModules}) {
   
 
   useEffect(() => {gsapSettings.init()}, []);
@@ -18,8 +17,8 @@ export default function Page({test, SEO, pageModules}) {
     <>
       <PageFade>
 
-        <Meta SEO={SEO}/>
         
+
         <PageModules pageModules={pageModules}/>
 
       </PageFade>
@@ -35,6 +34,8 @@ Page.getLayout = function getLayout(page) {
   
   return (
       <Layout
+      page={page?.props?.page}
+      SEO={page?.props?.SEO}
       colourTheme={page?.props?.pageSettings?.bodyBackgroundColour}
       headerBgColor={page?.props?.pageSettings?.headerTheme} 
       border={page?.props?.pageSettings?.footerBorder}
@@ -47,6 +48,8 @@ Page.getLayout = function getLayout(page) {
 
 export async function getStaticProps({ params }) {
 
+  // Get general Page fields
+  const page = await getPage("/", 'URI');
 
   // Get SEO stuff
   const seo = await getPageSeo("/", 'URI');
@@ -59,6 +62,7 @@ export async function getStaticProps({ params }) {
 
   return {
       props: {
+          page: page?.page,
           SEO: seo?.page?.seo || '',
           pageSettings: pageSettings?.page?.pageSettings?.pageSettings || '',
           pageModules: pageModules?.page?.pageModules?.pageModules || '',

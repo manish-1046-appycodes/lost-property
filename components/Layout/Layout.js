@@ -6,6 +6,8 @@ import { useState, useEffect } from "react"
 import AdobeAnalytics from '../AdobeAnalytics/AdobeAnalytics'
 import AdobeAnalyticsUpdate from '../AdobeAnalytics/AdobeAnalyticsUpdate'
 import GoogleAnalytics from '../GoogleAnalytics'
+import Schema from '../Meta/Schema'
+import Meta from '../Meta/Meta'
 import NavBarMob from '../NavBarMob/NavBarMob'
 
 
@@ -15,7 +17,7 @@ import Header from "./Header/Header"
 
 
 
-const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems}) => {
+const Layout = ({page, SEO, children, border, colourTheme, headerBgColor, headerMenuItems}) => {
     
     const Router = useRouter();
     
@@ -86,7 +88,8 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
             <Head>
                 <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
                 <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
-                <meta name="robots" content="max-image-preview:standard"></meta>
+                <meta name="robots" content="max-image-preview:large"></meta>
+                
             </Head>
             
 
@@ -121,6 +124,11 @@ const Layout = ({children, border, colourTheme, headerBgColor, headerMenuItems})
         <Script id="Accordion" strategy="beforeInteractive" src="/js/accordion.js"/>
         <Script id="Cursors" strategy="beforeInteractive" src="/js/cursors.js"/>
 
+        <Meta SEO={SEO}/>
+        { (page && SEO) && 
+        <Schema post={page.page} seo={SEO}/>
+        }
+        
         {
             process.env.NODE_ENV === 'production' &&
             <>
