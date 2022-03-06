@@ -30,17 +30,19 @@ const Schema = ({ post, seo }) => {
 
   
 
-  const org = `{ "@id": "${site}#organization", "type": "Organization", "name":"${siteTitle}", "logo": {
-    "@type": "ImageObject",
-    "name": "${siteTitle} Logo",
-    "width": "347",
-    "height": "30",
-    "url": "${site}/image/lost-property-logo.svg"
-    } }`;
+  const org = `{ "@id": "${site}#organization", "type": "Organization", "name":"${siteTitle}", 
+        "logo": {
+        "@type": "ImageObject",
+        "name": "${siteTitle} Logo",
+        "width": "347",
+        "height": "30",
+        "url": "${site}/image/lost-property-logo.svg"
+        }
+      }`;
 
   return (
     <Head>
-      <script type="application/ld+json">{`
+      <script type="application/ld+json" dangerouslySetInnerHTML={ { __html: `
     {
       "@context":"https://schema.org/",
       "@type":"Article",
@@ -59,7 +61,7 @@ const Schema = ({ post, seo }) => {
       "url": "${site}${uri}"
 
     }
-    `}</script> 
+    ` }}/>
     </Head> );
 };
 export default Schema;

@@ -19,7 +19,7 @@ const AdobeAnalytics = ({initial}) => {
         pageName = ':homepage'
         pageCategory = 'homepage'
     } else {
-        const paths = router.route.split('/');
+        const paths = router.asPath.split('/');
         
         let count = 0;
         paths.map( (path) => {

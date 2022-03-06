@@ -12,10 +12,12 @@ const AdobeAnalyticsUpdate = ({initial}) => {
 
     const Router = useRouter();
 
-
     useEffect( () => {
-
-        const handleRouteChange = (url) => {
+        
+        setTimeout(() => {
+            if (!window) {
+                return
+            }
 
             pageName = '';
             pageCategory = '';
@@ -24,7 +26,7 @@ const AdobeAnalyticsUpdate = ({initial}) => {
                 pageCategory = 'homepage'
             } else {
                 const paths = Router.asPath.split('/');
-                
+
                 let count = 0;
                 paths.map( (path) => {
                     path.replace(' ', '');
@@ -41,20 +43,16 @@ const AdobeAnalyticsUpdate = ({initial}) => {
             if (typeof s != "undefined") {
                 //s.clearVars();
                 s.channel = pageCategory;
-                //s.pageName = `lost-property${pageName}`;
+                s.pageName = `lost-property${pageName}`;
                 s.pageURL = `${BASE_URL+Router.asPath}`;
                 s.prop14 = document.title;
                 s.t();
                 
             }
+        }, 0);
 
-        }
 
-        Router.events.on('routeChangeComplete', handleRouteChange)
-        return () => {
-        Router.events.off('routeChangeComplete', handleRouteChange)
-        }
-    }, [Router.events]);
+    }, [Router.asPath]);
         
     
 
@@ -64,18 +62,6 @@ const AdobeAnalyticsUpdate = ({initial}) => {
     return (
         <>
         
-        <Script strategy="lazyOnload">{`
-            /*
-            if (typeof s != "undefined") {
-                //s.clearVars();
-                s.channel = "${pageCategory}";
-                s.pageName = "lost-property${pageName}";
-                s.pageURL = "${BASE_URL+Router.route}";
-                s.prop14 = document.title;
-                s.t();
-            }
-            */
-        `}</Script>
         </>
     )
 }

@@ -10,7 +10,9 @@ import PageModules from '../components/ACF/PageModules'
 import { NotFound404 } from '../components/NotFound404/NotFound404'
 
 export default function Page({page, SEO, pageModules}) {
-  
+    
+    
+    
     useEffect(() => {gsapSettings.init()}, []);
 
     if ( !page.page ) {
