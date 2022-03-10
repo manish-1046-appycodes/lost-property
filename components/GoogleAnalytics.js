@@ -6,7 +6,9 @@ const GA_TRACKING_ID = 'G-SVQ32HS26Y'
 const UA_TRACKING_ID = 'UA-159318290-26'
 
 export default () => {
+
   const router = useRouter()
+  
   useEffect(() => {
     const handleRouteChange = url => {
       window.gtag('config', GA_TRACKING_ID, { page_path: url })

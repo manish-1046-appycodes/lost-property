@@ -89,7 +89,8 @@ const Layout = ({page, SEO, children, border, colourTheme, headerBgColor, header
                 <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
                 <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
                 <meta name="robots" content="max-image-preview:large"></meta>
-                
+                { Router.asPath == '/contact/' &&
+                <meta name="robots" content="noindex max-image-preview:large"/>}
             </Head>
             
 
