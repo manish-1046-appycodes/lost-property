@@ -20,7 +20,7 @@ const Footer = ({border}) => {
             <div className="mx-auto lg:flex mt-10 mb-20 lg:my-20 lg:space-x-10">
                 <aside className="lg:flex lg:flex-wrap lg:w-1/2 mb-5 lg:-mb-14">
                     <h3 className="font-display text-[50px] leading-none mb-14 lg:mr-28">Find <em>us</em></h3>
-                    <address className="pl-20 lg:pl-0 not-italic mr-auto">3-5 Ludgate Hill, London<br/><a className="hover:underline" href="mailto:info@thelostpropertyhotel.com">info@thelostpropertyhotel.com</a><br/><a className="hover:underline" href="tel:02045530555">0204 5530 555</a></address>
+                    <address className="pl-20 lg:pl-0 not-italic mr-auto">3-5 Ludgate Hill, London<br/><a className="hover:underline" href="mailto:info@lostpropertyhotel.com">info@lostpropertyhotel.com</a><br/><a className="hover:underline" href="tel:02045530555">0204 5530 555</a></address>
                 </aside>
 
                 <aside className="pl-20 mb-10 lg:hidden">
