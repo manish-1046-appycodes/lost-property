@@ -43,7 +43,7 @@ const CopyImageCta = ({settings}) => {
 
                      <div className={`
                      ${settings?.settings?.imagecontentAlignment == 'ilcr' ? 'md:pl-10' : 'md:pr-10'}
-                     md:w-1/2 grow-0 max-w-[483px] space-y-10`}>
+                     md:w-1/2 grow-0 max-w-[483px] space-y-10 relative z-10`}>
                          <div className="wysiwyg flex-initial" dangerouslySetInnerHTML={{ __html: settings?.content?.copy}}/>
                         
                         {settings?.content?.ctaButtons &&
@@ -63,29 +63,35 @@ const CopyImageCta = ({settings}) => {
                         }
 
                      </div>
+                    
+                    <div className="md:w-1/2 flex-1 ">
+                        <div className="max-w-[720px] mx-auto relative z-10">
+                            <ImageFade
+                            src={settings?.image?.image?.sourceUrl}
+                            layout="intrinsic"
+                            width={settings?.image?.image?.mediaDetails?.width}
+                            height={settings?.image?.image?.mediaDetails?.height}
+                            alt={settings?.image?.image?.altText}/>
+                        </div>
 
-                    <div className="max-w-[720px] md:w-1/2 flex-1 mx-auto">
-                        <ImageFade
-                        src={settings?.image?.image?.sourceUrl}
-                        layout="intrinsic"
-                        width={settings?.image?.image?.mediaDetails?.width}
-                        height={settings?.image?.image?.mediaDetails?.height}
-                        alt={settings?.image?.image?.altText}/>
+                        { settings?.title &&
+                        <motion.div
+                        ref={ref}
+                        initial="hidden"
+                        animate={controls}
+                        variants={boxVariants}
+                        className={`
+                        ${settings?.settings?.imagecontentAlignment == 'ilcr' ? 'justify-start text-left xl:-mr-[25vw]' : 'justify-end text-right xl:-ml-[25vw]'}
+                        flex`}>
+                            <h2 className="italic heading-brand-medium max-w-[1094px]  -translate-y-[25px] lg:-translate-y-[70px]">{settings.title}</h2>
+                        </motion.div>
+                        } 
+
                     </div>
+                    
 
                 </div>
-                { settings?.title &&
-                <motion.div
-                ref={ref}
-                initial="hidden"
-                animate={controls}
-                variants={boxVariants}
-                className={`
-                ${settings?.settings?.imagecontentAlignment == 'ilcr' ? 'justify-start text-left' : 'justify-end text-right'}
-                flex`}>
-                    <h2 className="italic heading-brand-medium max-w-[1094px]  -translate-y-[25px] lg:-translate-y-[70px]">{settings.title}</h2>
-                </motion.div>
-                } 
+                
             </div> 
         </div>
     </article>
