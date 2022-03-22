@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ButtonRound = ({url, bg, color, title, size, alt}) => {
+const ButtonRound = ({url, bg, color, title, size, alt, target}) => {
 
   return (
     <Link href={url}>

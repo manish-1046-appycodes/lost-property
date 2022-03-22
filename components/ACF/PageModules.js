@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+import Copy from "../Copy";
+import CopyImageCta from "../CopyImageCta";
 
 const ModuleHero = dynamic(() => import("../Hero/ModuleHero"));
 const ModuleBillboard = dynamic(() => import("../Billboard/ModuleBillboard"));
@@ -71,6 +73,13 @@ const PageModules = ({pageModules}) => {
             case 'Page_Pagemodules_PageModules_Contact':
 
                 return <ModuleContact key={i} />
+
+            case 'Page_Pagemodules_PageModules_CopyImageCta':
+
+                return <CopyImageCta key={i} settings={pageModule}/>
+
+            case 'Page_Pagemodules_PageModules_Copy':
+                return <Copy key={i} settings={pageModule}/>
         }   
         
 
