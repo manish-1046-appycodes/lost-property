@@ -83,7 +83,9 @@ const CopyImageCta = ({settings, postType}) => {
                         className={`
                         ${settings?.settings?.imagecontentAlignment == 'ilcr' ? 'justify-start text-left xl:-mr-[20vw]' : 'justify-end text-right xl:-ml-[20vw]'}
                         flex`}>
-                            <h2 className="italic heading-brand-medium max-w-[1094px]  -translate-y-[25px] lg:-translate-y-[70px]">{settings.title}</h2>
+                            <h2 
+                            dangerouslySetInnerHTML={ {__html: settings.title}}
+                            className="italic heading-brand-medium max-w-[1094px]  -translate-y-[25px] lg:-translate-y-[70px]"/>
                         </motion.div>
                         } 
 
