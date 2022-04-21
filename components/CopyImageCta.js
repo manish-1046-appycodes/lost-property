@@ -7,7 +7,7 @@ const { motion, useAnimation } = require("framer-motion");
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-const CopyImageCta = ({settings}) => {
+const CopyImageCta = ({settings, postType}) => {
 
     const controls = useAnimation();
     const { ref, inView } = useInView();
@@ -43,7 +43,7 @@ const CopyImageCta = ({settings}) => {
 
                      <div className={`
                      ${settings?.settings?.imagecontentAlignment == 'ilcr' ? 'md:pl-10' : 'md:pr-10'}
-                     md:w-1/2 grow-0 max-w-[483px] space-y-10 relative z-10`}>
+                     md:w-1/2 grow-0 ${ postType == 'post' ? 'max-w-[517px]' : 'max-w-[483px]'} space-y-10 relative z-10`}>
                          <div className="wysiwyg flex-initial" dangerouslySetInnerHTML={{ __html: settings?.content?.copy}}/>
                         
                         {settings?.content?.ctaButtons &&
@@ -81,7 +81,7 @@ const CopyImageCta = ({settings}) => {
                         animate={controls}
                         variants={boxVariants}
                         className={`
-                        ${settings?.settings?.imagecontentAlignment == 'ilcr' ? 'justify-start text-left xl:-mr-[25vw]' : 'justify-end text-right xl:-ml-[25vw]'}
+                        ${settings?.settings?.imagecontentAlignment == 'ilcr' ? 'justify-start text-left xl:-mr-[20vw]' : 'justify-end text-right xl:-ml-[20vw]'}
                         flex`}>
                             <h2 className="italic heading-brand-medium max-w-[1094px]  -translate-y-[25px] lg:-translate-y-[70px]">{settings.title}</h2>
                         </motion.div>

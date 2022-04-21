@@ -9,6 +9,8 @@ import { getPage, getPageSeo, getPagePageModules, getPageSlugs, getPageSettings,
 import PageModules from '../components/ACF/PageModules'
 import { NotFound404 } from '../components/NotFound404/NotFound404'
 
+import { isCustomPageUri } from '../lib/slugs'
+
 export default function Page({page, SEO, pageModules}) {
     
     
@@ -61,14 +63,17 @@ export async function getStaticPaths() {
     // remove "/" which is the home page
     const filteredSlugs = slugs.pages.nodes.filter(r => r.uri !== '/');
 
+    const paths = [];
     // Get the paths we want to pre-render based on posts
-    const paths = filteredSlugs.map((slug) => {
+    filteredSlugs.map((slug) => {
         
-        // create an array of slugs
-        const slug_split = slug.uri.split('/').filter(r => r !== '');
-        
-        return {
-            params: { slug: slug_split }
+        if ( slug?.uri && !isCustomPageUri(slug?.uri) ) {
+            // create an array of slugs
+            const slug_split = slug.uri.split('/').filter(r => r !== '');
+            
+            paths.push({
+                params: { slug: slug_split }
+            });
         }
         
     });

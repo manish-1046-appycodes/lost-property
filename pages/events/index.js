@@ -9,11 +9,10 @@ import AccordionEvents from '../../components/Accordion/AccordionEvents'
 import Marquee from '../../components/Marquee/Marquee'
 import PageFade from '../../components/PageFade'
 import Meta from '../../components/Meta/Meta'
-import { getPageSeo } from '../../lib/gql-query'
+import { getPageSeo, getPosts } from '../../lib/gql-query'
 
 
-export default function Page({test, SEO}) {
-
+export default function Page({posts}) {
 
   useEffect(() => {gsapSettings.init()}, []);
 
@@ -44,11 +43,28 @@ export default function Page({test, SEO}) {
 
   const MarqueeWords = '<em>play.</em> &nbsp;watch. &nbsp;<em>listen.</em> &nbsp;participate. &nbsp;<em>dance.</em> &nbsp;celebrate. &nbsp;<em>attend.</em> &nbsp;';
 
+  if ( !posts?.posts ) {
+    return (
+      <>
+      <PageFade>
+        <div className="spacer h-[120px] lg:h-[150px]"></div>
+
+        <div className="spacer h-[50px] lg:h-[150px]"></div>
+
+        <Marquee words={MarqueeWords}/>
+
+        <div className="container text-center">
+          <h1 className='text-[56px] lg:text-[76px] py-10'>No posts found</h1>
+        </div>
+      </PageFade>
+      </>
+    )
+  }
+
   return (
     <>
     <PageFade>
         
-        <Meta SEO={SEO}/>
 
         <div className="spacer h-[120px] lg:h-[150px]"></div>
 
@@ -56,7 +72,7 @@ export default function Page({test, SEO}) {
 
         <Marquee words={MarqueeWords}/>
 
-        <AccordionEvents/>
+        <AccordionEvents posts={posts}/>
 
     </PageFade>
     </>
@@ -71,12 +87,12 @@ Page.getLayout = function getLayout(page) {
 
 export async function getStaticProps({ params }) {
 
-  const seo = await getPageSeo('events', 'URI');
+  const posts = await getPosts();
   
   return {
     props: {
-      test: "",
-      SEO: seo?.page?.seo || ''
+      posts: posts || '',
+      //SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };

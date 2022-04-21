@@ -13,8 +13,12 @@ const ModuleMarquee = dynamic(() => import("../Marquee/ModuleMarquee"));
 const ModuleAccordionRooms = dynamic(() => import("../Accordion/ModuleAccordionRooms"));
 const ModuleExplore = dynamic(() => import("../ExploreMap/ModuleExplore"));
 const ModuleContact = dynamic(() => import("../Contact/ModuleContact"));
+const InfoBlocks = dynamic(() => import("../InfoBlocks"));
 
-const PageModules = ({pageModules}) => {
+const PageModules = ({pageModules, postType = 'page'}) => {
+
+  const upper = postType[0].toUpperCase() + postType.slice(1);
+
   return (
     <>
     
@@ -23,63 +27,67 @@ const PageModules = ({pageModules}) => {
         
         
         switch(pageModule.fieldGroupName) {
-            case 'Page_Pagemodules_PageModules_PageModulesHero':
+            case `${upper}_Pagemodules_PageModules_PageModulesHero`:
                 const heroImage = pageModule.heroImage;
                 const heroTitle = pageModule.heroTitle;
                 
                 return <ModuleHero key={i} heroImage={heroImage} heroTitle={heroTitle}/>
                 
-            case 'Page_Pagemodules_PageModules_PageModulesBillboard':
+            case `${upper}_Pagemodules_PageModules_PageModulesBillboard`:
                 
                 return <ModuleBillboard key={i} settings={pageModule}/>
             
-            case 'Page_Pagemodules_PageModules_GalleryCarousel':
+            case `${upper}_Pagemodules_PageModules_GalleryCarousel`:
 
                 return <ModuleCarousel key={i} settings={pageModule}/>
 
-            case 'Page_Pagemodules_PageModules_BookingSection':
+            case `${upper}_Pagemodules_PageModules_BookingSection`:
 
                 return <BookingSection key={i}/>
 
-            case 'Page_Pagemodules_PageModules_Ctas':
+            case `${upper}_Pagemodules_PageModules_Ctas`:
 
                 return <ModuleCtas key={i} settings={pageModule}/>
                 
-            case 'Page_Pagemodules_PageModules_PageIntro':
+            case `${upper}_Pagemodules_PageModules_PageIntro`:
 
                 return <ModulePageIntro key={i} settings={pageModule}/>
 
-            case 'Page_Pagemodules_PageModules_Blockquote':
+            case `${upper}_Pagemodules_PageModules_Blockquote`:
 
                 return <ModuleBlockquote key={i} settings={pageModule}/>
 
-            case 'Page_Pagemodules_PageModules_Marquee':
+            case `${upper}_Pagemodules_PageModules_Marquee`:
                 
                 return <ModuleMarquee key={i} words={pageModule?.marqueeWords}/>
             
-            case 'Page_Pagemodules_PageModules_UtilSpacer':
+            case `${upper}_Pagemodules_PageModules_UtilSpacer`:
 
                 return <div key={i} className="spacer h-[120px] lg:h-[150px]"></div>
 
-            case 'Page_Pagemodules_PageModules_AccordionRooms':
+            case `${upper}_Pagemodules_PageModules_AccordionRooms`:
 
                 return <ModuleAccordionRooms key={i} settings={pageModule}/>
 
             
-            case 'Page_Pagemodules_PageModules_ExploreGallerymap':
+            case `${upper}_Pagemodules_PageModules_ExploreGallerymap`:
 
                 return <ModuleExplore key={i} settings={pageModule} />
 
-            case 'Page_Pagemodules_PageModules_Contact':
+            case `${upper}_Pagemodules_PageModules_Contact`:
 
                 return <ModuleContact key={i} />
 
-            case 'Page_Pagemodules_PageModules_CopyImageCta':
+            case `${upper}_Pagemodules_PageModules_CopyImageCta`:
 
-                return <CopyImageCta key={i} settings={pageModule}/>
+                return <CopyImageCta key={i} settings={pageModule} postType={postType}/>
 
-            case 'Page_Pagemodules_PageModules_Copy':
+            case `${upper}_Pagemodules_PageModules_Copy`:
                 return <Copy key={i} settings={pageModule}/>
+
+            case `${upper}_Pagemodules_PageModules_InfoBlocks2Column`:
+                return <InfoBlocks key={i} settings={pageModule}/>
+            
         }   
         
 
