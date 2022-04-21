@@ -110,7 +110,7 @@ export async function getStaticProps({ params }) {
     
     // add slashes back in to create slug
     //const slug = params.slug.join('/');
-    const slug = `/events/${params.slug}`;
+    const slug = `/news/${params.slug}`;
     // Get general Page fields
     const page = await getPost(slug, 'URI');
 
