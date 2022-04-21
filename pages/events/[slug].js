@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Layout from '../../components/Layout/Layout'
 
 import PageFade from '../../components/PageFade'
-import { getPost, getPageSeo, getPostTypeModules, getPostSlugs, getPageSettings, getHeaderMenuItems } from '../../lib/gql-query'
+import { getPost, getPostSeo, getPostTypeModules, getPostSlugs, getPageSettings, getHeaderMenuItems } from '../../lib/gql-query'
 import PageModules from '../../components/ACF/PageModules'
 import { NotFound404 } from '../../components/NotFound404/NotFound404'
 
@@ -32,7 +32,7 @@ export default function Page({page, SEO, pageModules}) {
         <>
         <PageFade>
             
-            <div className="spacer h-[120px] lg:h-[150px]"></div>
+            <div className="spacer h-[120px] lg:h-[150px] border-b border-black"></div>
 
             <section className='mb-20 lg:mb-28'>
         
@@ -115,7 +115,7 @@ export async function getStaticProps({ params }) {
     const page = await getPost(slug, 'URI');
 
     // Get SEO stuff
-    const seo = await getPageSeo(slug, 'URI');
+    const seo = await getPostSeo(slug, 'URI');
     // Get Page Modules
     const pageModules = await getPostTypeModules(slug, 'URI', 'post');
 
@@ -127,7 +127,7 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             page: page,
-            SEO: seo?.page?.seo || '',
+            SEO: seo?.post?.seo || '',
             pageSettings: pageSettings?.page?.pageSettings?.pageSettings || '',
             pageModules: pageModules?.post?.pageModules?.pageModules || '',
             headerMenuItems: headerMenuItems?.menuItems?.edges || ''
