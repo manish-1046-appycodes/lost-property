@@ -9,7 +9,7 @@ import AccordionEvents from '../../components/Accordion/AccordionEvents'
 import Marquee from '../../components/Marquee/Marquee'
 import PageFade from '../../components/PageFade'
 import Meta from '../../components/Meta/Meta'
-import { getPageSeo, getPosts } from '../../lib/gql-query'
+import { getPageSeo, getPosts, getHeaderMenuItems } from '../../lib/gql-query'
 
 
 export default function Page({posts}) {
@@ -81,7 +81,10 @@ export default function Page({posts}) {
 
 Page.getLayout = function getLayout(page) {
   return (
-    <Layout>{page}</Layout>
+    <Layout
+    SEO={page?.props?.SEO}
+    headerMenuItems={page?.props?.headerMenuItems}
+    >{page}</Layout>
   )
 }
 
@@ -89,10 +92,17 @@ export async function getStaticProps({ params }) {
 
   const posts = await getPosts();
   
+  // Get Header Menu Items
+  const headerMenuItems = await getHeaderMenuItems();
+
+  // Get SEO stuff
+  const seo = await getPageSeo('/news/', 'URI');
+
   return {
     props: {
       posts: posts || '',
-      //SEO: seo?.page?.seo || ''
+      headerMenuItems: headerMenuItems?.menuItems?.edges || '',
+      SEO: seo?.page?.seo || ''
     },
     revalidate: 1,
   };
