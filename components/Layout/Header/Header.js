@@ -3,7 +3,7 @@ import ButtonSecondary from "../../Links/ButtonSecondary"
 import ButtonRound from "../../Links/ButtonRound"
 
 import Cross from "../../../public/image/icon/cross.svg"
-import Logo from "../../../public/image/lost-property-logo-new.svg"
+import Logo from "../../../public/image/lost-property-logo-black.svg"
 
 const API_URL = process.env.API_URL;
 
