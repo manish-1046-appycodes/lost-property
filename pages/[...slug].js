@@ -109,6 +109,7 @@ export async function getStaticProps({ params }) {
             pageModules: pageModules?.page?.pageModules?.pageModules || '',
             headerMenuItems: headerMenuItems?.menuItems?.edges || ''
         },
+        notFound: !page.page ? true : false,
         revalidate: 60,
     };
 }
