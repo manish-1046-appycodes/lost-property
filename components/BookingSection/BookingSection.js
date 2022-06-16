@@ -201,7 +201,7 @@ const BookingSection = () => {
     <div className="bg-cream-1  min-vh100 w-full top-0 left-0 z-10 flex items-center py-20 lg:py-40">
             <div className="container">
                 <div className="max-w-1430px mx-auto">
-                    <div className="md:flex md:space-x-20">
+                    <div className="md:flex md:items-center md:space-x-10 lg:space-x-20 space-y-10 md:space-y-0">
                         <div className="md:w-1/2 space-y-10">
                             <h3 className="font-display leading-none text-[50px] lg:text-[100px] lg:leading-none"><div className="inline-block text-left">Stay <br className="hidden md:block"/><em>a while</em></div></h3>
 
