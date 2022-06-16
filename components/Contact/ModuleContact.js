@@ -116,52 +116,32 @@ const ModuleContact = ({settings}) => {
                     <div className="max-w-1430px mx-auto">
                         <div className="md:flex md:space-x-10 space-y-10 md:space-y-0">
 
-                            <div className="md:w-1/2 space-y-10 flex flex-col justify-between">
-                                <h3 className="font-display leading-none text-[50px] lg:text-[100px] lg:leading-none">Get in <em>touch</em></h3>
+                            <div className="md:flex-1 space-y-10 flex flex-col justify-between">
+                                <h3 className="heading-brand-medium">Get in <em>touch</em></h3>
                                 
+
+                                <div className="wysiwyg md:text-[30px]">
+                                    <p>3-5 Ludgate Hill,<br/>
+                                    London</p>
+                                    <p>info@lostpropertyhotel.com<br/>
+                                    0204 5530 555</p>
+                                </div>
+
                                 <div className="wysiwyg mt-auto pt-10">
                                     <p>Brief Description Here</p>
                                 </div>
 
-                                <div className="aspect-video relative">
-                                    <div className="absolute w-full h-full"  ref={mapContainer} id="map"></div>
-                                </div>
+                                
                                 
                             </div>
 
-                            <div className="md:w-1/2 space-y-10 flex flex-col justify-between">
+                            <div className="md:flex-1 space-y-10 flex flex-col justify-between">
 
                                 
-
-                                
-                                { submitted && 
-                                <p className={`transition-all delay-500 absolute mb-10 uppercase`}>We look forward to finding your message.</p>}
-                                <form className={`transition-all ${submitted ? 'opacity-0 invisible' : ''} form`}>
-                                    
-                                    <div className="form-group" id="-ve-message">
-                                        <label className="hidden" htmlFor='message'>Address</label>
-                                        <textarea className="!h-[150px]" placeholder="Address" type='text' name='message'
-                                        onChange={(e)=>{setMessage(e.target.value)}}></textarea>
-                                    </div>
-
-                                    <div className="form-group" id="-ve-yourEmail">
-                                        <label className="hidden" htmlFor='email'>Email</label>
-                                        <input placeholder="Enter your email" type='email' name='your-email'
-                                        onChange={(e)=>{setEmail(e.target.value)}} />
-                                    </div>
-
-                                    <div className="form-group" id="-ve-telephone">
-                                        <label className="hidden" htmlFor='telephone'>Telephone</label>
-                                        <input placeholder="Telephone number" type='tel' name='telephone'
-                                        onChange={(e)=>{setTelephone(e.target.value)}} />
-                                    </div>
-                                    
-                                    <input className="!hidden" placeholder="Enter your email" type='text' name='hp1' value={hp1}
-                                        onChange={(e)=>{setHp1(e.target.value)}} />
-                                    <input className="!hidden" placeholder="Enter your email" type='text' name='hp2' value={hp2}
-                                        onChange={(e)=>{setHp2(e.target.value)}} />
-                                    <button className="button-tertiary" type='submit' onClick={(e)=>{handleSubmit(e)}}>Submit</button>
-                                </form >
+                                <div className="aspect-video relative">
+                                    <div className="absolute w-full h-full"  ref={mapContainer} id="map"></div>
+                                </div>
+                            
 
                                 <div class="aspect-video relative">
                                     <ImageFade
