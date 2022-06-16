@@ -22,9 +22,9 @@ export default async function (req, res) {
   if ( API_URL && WP_CF7_CONTACTID ) {
     const WP_CF7_FEEDBACK = API_URL+'/wp-json/contact-form-7/v1/contact-forms/'+WP_CF7_CONTACTID+'/feedback';
 
-
+    
     const body = JSON.parse(req.body);
-
+    
     const result = await fetch(WP_CF7_FEEDBACK, {
       method: 'POST',
       headers: {
