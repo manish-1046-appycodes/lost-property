@@ -123,8 +123,8 @@ const ModuleContact = ({settings}) => {
                                 <div className="wysiwyg md:text-[30px]">
                                     <p>3-5 Ludgate Hill,<br/>
                                     London</p>
-                                    <p>info@lostpropertyhotel.com<br/>
-                                    0204 5530 555</p>
+                                    <p><a className="hover:underline" href="mailto:info@lostpropertyhotel.com">info@lostpropertyhotel.com</a><br/>
+                                    <a className="hover:underline" href="tel:02045530555">0204 5530 555</a></p>
                                 </div>
 
                                 <div className="wysiwyg mt-auto pt-10">
