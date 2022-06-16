@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Head from "next/head";
 
 import { DateRange } from 'react-date-range';
 import { addDays } from 'date-fns';
@@ -6,6 +7,9 @@ import { addDays } from 'date-fns';
 import DatePickerSvg from "../../public/image/icon/datepicker.svg";
 import GuestsSvg from "../../public/image/icon/guests.svg";
 import CrossSvg from "../../public/image/icon/cross.svg";
+
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW53aWNoZGVzaWduIiwiYSI6ImNrYWRtam9kbDFuaWUyeHM5N2s2cm55NGgifQ.tk1-NvEu4k83F2KSs_2Fog';
 
 const dateNow = () => {
         
@@ -66,7 +70,8 @@ const BookingSection = () => {
     const [formStartDate, setFormStartDate] = useState(dateNowForm);
     const [formEndDate, setFormEndDate] = useState(dateTomorrowForm);
 
-
+    const mapContainer = useRef(null);
+    const map = useRef(null);
 
     useEffect( () => {
         const startDate = new Date(state[0].startDate);
@@ -87,6 +92,30 @@ const BookingSection = () => {
         const endDay = ("0" + endDate.getDate()).slice(-2)
         
         setFormEndDate(endYear+'-'+endMonth+'-'+endDay);
+
+        if (map.current) return; // initialize map only once
+
+        map.current = new mapboxgl.Map({
+            container: mapContainer.current,
+            style: 'mapbox://styles/greenwichdesign/cl4gu86sv000t14ogo25kq4dd',
+            //bounds: BOUNDS,
+            interactive: false,
+            center: [-0.102050, 51.513790],
+            zoom: 14
+        });
+
+        // Create a DOM element for each marker.
+        var markerHTML = document.createElement('div');
+        markerHTML.className = `map-pin`;
+        markerHTML.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="25.83" height="38.237" viewBox="0 0 25.83 38.237">
+        <path class="fill-white" id="Path_132" data-name="Path 132" d="M1268.925,104.02a12.415,12.415,0,0,0-12.415,12.415c0,6.857,12.415,24.455,12.415,24.455s12.415-17.6,12.415-24.455A12.415,12.415,0,0,0,1268.925,104.02Zm0,16.486a3.465,3.465,0,1,1,3.465-3.465A3.465,3.465,0,0,1,1268.925,120.506Z" transform="translate(-1256.01 -103.52)" fill="none" stroke="#faf7f3" stroke-miterlimit="10" stroke-width="1"/>
+      </svg>`;
+        
+
+        new mapboxgl.Marker(markerHTML, {anchor: 'center', offset: [-0,-0]})
+        .setLngLat([-0.102050, 51.513790])
+        //.setPopup(popup)
+        .addTo(map.current);
 
     }, [state]);
 
@@ -165,12 +194,20 @@ const BookingSection = () => {
     
     
     return (
+    <>
+    <Head>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    </Head>
     <div className="bg-cream-1  min-vh100 w-full top-0 left-0 z-10 flex items-center py-20 lg:py-40">
             <div className="container">
                 <div className="max-w-1430px mx-auto">
-                    <div className="md:flex">
-                        <div className="md:w-1/2 md:flex">
-                            <h3 className="heading-brand-medium block mb-10 text-center"><div className="inline-block text-left">Stay <br className="hidden md:block"/><em>a while</em></div></h3>
+                    <div className="md:flex md:space-x-20">
+                        <div className="md:w-1/2 space-y-10">
+                            <h3 className="font-display leading-none text-[50px] lg:text-[100px] lg:leading-none"><div className="inline-block text-left">Stay <br className="hidden md:block"/><em>a while</em></div></h3>
+
+                            <div className="aspect-video relative">
+                                    <div className="absolute w-full h-full"  ref={mapContainer} id="map"></div>
+                            </div>
                         </div>
                         <div className="md:w-1/2">
 
@@ -276,6 +313,7 @@ const BookingSection = () => {
                 </div>
             </div>
     </div>
+    </>
     );
 };
 
