@@ -117,18 +117,21 @@ const ModuleContact = ({settings}) => {
                         <div className="md:flex md:space-x-10 space-y-10 md:space-y-0">
 
                             <div className="md:flex-1 space-y-10 flex flex-col justify-between">
-                                <h3 className="heading-brand-medium">Get in <em>touch</em></h3>
+                                <h3 className="font-display leading-none text-[50px] lg:text-[100px] lg:leading-none">Get in <em>touch</em></h3>
                                 
 
-                                <div className="wysiwyg md:text-[30px]">
+                                <div className="wysiwyg md:text-[30px] !mb-10">
                                     <p>3-5 Ludgate Hill,<br/>
                                     London</p>
                                     <p><a className="hover:underline" href="mailto:info@lostpropertyhotel.com">info@lostpropertyhotel.com</a><br/>
                                     <a className="hover:underline" href="tel:02045530555">0204 5530 555</a></p>
                                 </div>
 
-                                <div className="wysiwyg mt-auto pt-10">
-                                    <p>Brief Description Here</p>
+                                <div className="wysiwyg !mt-auto">
+                                <p>The Lost Property Hotel is simple to get to. Located on Ludgate Hill in the heart of London, you will find us just a 2 minute walk away from the beautiful St Paul’s Cathedral and 6 minutes from Millennium Bridge on foot.</p>
+<p>For those arriving by tube, the hotel can be easily accessed via the Central Line at St Paul’s Station or via the Circle and District Line at Blackfriars Station.</p>
+<p>Flying into Gatwick airport? The Thameslink network provides services directly to City Thameslink Station, located just a 2 minute walk from Lost Property Hotel.</p>
+<p>Parking is also available 5 minutes away by foot at Baynard House Car Park. This multi-storey car park offers plenty of spaces, electric vehicle charging bays and is open 24-hours every day of the year.</p>
                                 </div>
 
                                 
@@ -138,12 +141,12 @@ const ModuleContact = ({settings}) => {
                             <div className="md:flex-1 space-y-10 flex flex-col justify-between">
 
                                 
-                                <div className="aspect-video relative">
+                                <div className="aspect-video relative basis-[50%]">
                                     <div className="absolute w-full h-full"  ref={mapContainer} id="map"></div>
                                 </div>
                             
 
-                                <div class="aspect-video relative">
+                                <div class="aspect-video relative basis-[50%]">
                                     <ImageFade
                                     src="/image/del/carousel/item-2-c.jpg"
                                     layout="fill"
