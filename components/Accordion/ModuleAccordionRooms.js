@@ -67,7 +67,7 @@ const ModuleAccordionRooms = ( {settings} ) => {
                         { row?.contentDropdown?.column1?.amenities && 
                         (<>
                         <p className="uppercase mb-5">Ameneties</p>
-                        <div className="pl-9">
+                        <div className="">
                         <ul>
                         {row?.contentDropdown?.column1?.amenities.split('<br />').map( (amenetie, key) => (
                             <li key={key}>{amenetie}</li>
