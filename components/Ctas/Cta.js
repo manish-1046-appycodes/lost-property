@@ -3,7 +3,8 @@ import ButtonSecondary from "../Links/ButtonSecondary";
 
 const Cta = ({ bgClass, textColor, copy, title, img, btnTitle, btnUrl, alt}) => {
   return (
-    <div className={`w-full xl:w-1/2 overflow-hidden flex flex-col ${bgClass} ${textColor} ${alt ? 'lg:grid-rows-[0fr_1fr] lg:grid lg:grid-cols-2' : ''}`}>
+    <>
+    <div className={`w-full xl:flex-1 overflow-hidden flex flex-col ${bgClass} ${textColor} ${alt ? 'lg:grid-rows-[0fr_1fr] lg:grid lg:grid-cols-2' : ''}`}>
             
         <div className={`ml-auto w-8/12  my-6 lg:my-14 ${alt ? 'lg:order-3 lg:ml-0 lg:w-full lg:my-0' : '2xl:w-1/2'}`}>
             <div className={`container ${ alt ? '' : 'pl-0'} `}>
@@ -31,7 +32,7 @@ const Cta = ({ bgClass, textColor, copy, title, img, btnTitle, btnUrl, alt}) => 
         </div>
 
         { alt && (
-        <div className={`ml-auto w-8/12  ${alt ? 'hidden lg:block lg:w-full lg:order-2 lg:ml-0 relative' : '2xl:w-1/2'}`}>
+        <div className={`ml-auto w-8/12  ${alt ? 'hidden lg:block lg:w-full lg:order-2 lg:ml-0 relative lg:min-h-[500px]' : '2xl:w-1/2'}`}>
         <ImageFade
             src={img}
             alt="ALT"
@@ -44,6 +45,7 @@ const Cta = ({ bgClass, textColor, copy, title, img, btnTitle, btnUrl, alt}) => 
         </div>)}
 
     </div>
+    </>
    );
 };
 
