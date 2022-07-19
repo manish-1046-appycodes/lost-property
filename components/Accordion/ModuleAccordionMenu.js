@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import Script from 'next/script'
 
 import ButtonRound from '../Links/ButtonRound'
+import ButtonRoundExternal from "../Links/ButtonRoundExternal";
 import ImageFade from "../ImageFade/ImageFade";
 
 const bookUrl = 'https://www.opentable.co.uk/r/lost-property-st-pauls-london-curio-collection-by-hilton-reservations-london?restref=269142&lang=en-GB&ot_source=Restaurant%20website';
@@ -23,7 +24,7 @@ const Row = ({rowName, datetime, menuDownload, description, descriptionColumns, 
                 }
             </div>
             <div className="btn-toggle hidden"><ButtonRound url="#" title="Share" bg="bg-white" color="text-current" size="small" alt="isAlt"/></div>
-            <ButtonRound url={bookUrl} target="_blank" title="Reserve" bg="bg-white" color="text-black" size="small"/>
+            <ButtonRoundExternal url={bookUrl} target="_blank" title="Reserve" bg="bg-white" color="text-black" size="small"/>
         </div>
         <div className="lg:pt-2">
           <button data-accordiontoggle className="z-10 transform duration-500 text-grey-1 relative w-[26px] h-[26px] lg:w-[68px] lg:h-[68px]" aria-hidden="true">
