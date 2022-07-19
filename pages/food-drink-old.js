@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 
 import Head from 'next/head'
-
+import Script from 'next/script'
 import Layout from '../components/Layout/Layout'
 
+import AccordionMenu from '../components/Accordion/AccordionMenu'
 import Billboard from '../components/Billboard/Billboard'
 import Carousel from '../components/Carousel/Carousel'
 import Marquee from '../components/Marquee/Marquee'
@@ -153,9 +154,23 @@ const Billboard_1 = {
     }
   }
 
-export default function Page({test, SEO}) {
+  const opentableURL = '//www.opentable.co.uk/widget/reservation/loader?rid=269142&type=standard&theme=standard&color=1&iframe=true&domain=couk&lang=en-GB&newtab=false&ot_source=Restaurant%20website';
 
-    useEffect(() => {gsapSettings.init()}, []);
+  export default function Page({test, SEO}) {
+
+    useEffect(() => {
+      
+
+      // load open table script
+      const script = document.createElement('script');
+      script.src=opentableURL;
+      script.async = true;
+      document.querySelector('#openTableWidget').appendChild(script);
+      
+
+      gsapSettings.init()
+    
+    }, []);
 
     return (
     <>
@@ -165,17 +180,16 @@ export default function Page({test, SEO}) {
 
         <FoodDrinkCarousel carouselItems={carouselItems1}/>
         
-        <div>
-          <script type='text/javascript' src='//www.opentable.co.uk/widget/reservation/loader?rid=269142&type=standard&theme=standard&color=1&iframe=true&domain=couk&lang=en-GB&newtab=false&ot_source=Restaurant%20website'></script>
-        </div>
+        <div id="openTableWidget" className='pb-28 lg:pb-52 flex justify-center'/>
         
         <Marquee words={MarqueeWords1}/>
         <Carousel imgs={carouselItems2} colourTheme="blue"/>
 
-        <div className="py-[170px] xl:py-[200px]">
-
-
+        <div className='py-28 lg:py-52'>
+          <AccordionMenu/>
         </div>
+
+        <div className="py-[170px] xl:py-[200px]"></div>
 
         <Marquee words={MarqueeWords2}/>
         <Carousel imgs={carouselItems3} colourTheme="blue"/>

@@ -14,6 +14,9 @@ const ModuleAccordionRooms = dynamic(() => import("../Accordion/ModuleAccordionR
 const ModuleExplore = dynamic(() => import("../ExploreMap/ModuleExplore"));
 const ModuleContact = dynamic(() => import("../Contact/ModuleContact"));
 const InfoBlocks = dynamic(() => import("../InfoBlocks"));
+const ModuleFoodCarousel = dynamic(() => import("../FoodDrinkCarousel/ModuleFoodDrinkCarousel"));
+const ModuleAccordionMenu = dynamic(() => import("../Accordion/ModuleAccordionMenu"));
+const OpenTableWidget = dynamic(() => import("../OpenTableWidget/OpenTableWidget"));
 
 const PageModules = ({pageModules, postType = 'page'}) => {
 
@@ -87,6 +90,15 @@ const PageModules = ({pageModules, postType = 'page'}) => {
 
             case `${upper}_Pagemodules_PageModules_InfoBlocks2Column`:
                 return <InfoBlocks key={i} settings={pageModule}/>
+
+            case `${upper}_Pagemodules_PageModules_FooddrinkCarousel`:
+                return <ModuleFoodCarousel key={i} carouselItems={pageModule}/>
+
+            case `${upper}_Pagemodules_PageModules_AccordionMenu`:
+                return <ModuleAccordionMenu key={i} rows={pageModule}/>
+
+            case `${upper}_Pagemodules_PageModules_OpenBookingWidget`:
+                return <OpenTableWidget key={i} rows={pageModule}/>
             
         }   
         
