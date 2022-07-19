@@ -164,8 +164,11 @@ export default function Page({test, SEO}) {
         <Meta SEO={SEO}/>
 
         <FoodDrinkCarousel carouselItems={carouselItems1}/>
-
-
+        
+        <div>
+          <script type='text/javascript' src='//www.opentable.co.uk/widget/reservation/loader?rid=269142&type=standard&theme=standard&color=1&iframe=true&domain=couk&lang=en-GB&newtab=false&ot_source=Restaurant%20website'></script>
+        </div>
+        
         <Marquee words={MarqueeWords1}/>
         <Carousel imgs={carouselItems2} colourTheme="blue"/>
 
