@@ -7,9 +7,9 @@ import ImageFade from "../ImageFade/ImageFade";
 
 const bookUrl = 'https://www.opentable.co.uk/r/lost-property-st-pauls-london-curio-collection-by-hilton-reservations-london?restref=269142&lang=en-GB&ot_source=Restaurant%20website';
 
-const Row = ({rowName, datetime, menuDownload, description, image}) => {
+const Row = ({rowName, datetime, menuDownload, description, descriptionColumns, image}) => {
 
-   return ( 
+    return ( 
   <div className="accordion-row relative min-h-[85px] lg:min-h-[150px] border-t border-current">
 
     <div className="container relative">
@@ -45,7 +45,7 @@ const Row = ({rowName, datetime, menuDownload, description, image}) => {
                 
 
                     {description && 
-                        <div className="wysiwyg" dangerouslySetInnerHTML={ { __html: description} }  />
+                        <div className={`wysiwyg ${descriptionColumns == 2 && 'sm:columns-2 sm:gap-10'} `} dangerouslySetInnerHTML={ { __html: description} }  />
                     }
 
                
@@ -111,10 +111,12 @@ const AccordionMenu = ({rows}) => {
         
         rows.accordionRows.map( (row, i) => (
         <Row 
+            key={i+`accRow`}
             rowName={row?.rowName}
             datetime={row?.datetime}
             menuDownload={row?.menuDownload}
             description={row?.description}
+            descriptionColumns={row?.descriptionColumns}
             image={row?.image}
             />
         ))
