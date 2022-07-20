@@ -43,13 +43,13 @@
 
     /* Header */
     .main-nav {
-        @apply text-white space-y-5 fixed bg-blue-1 max-vh100 w-full bottom-0 text-[50px] sm:text-[90px] uppercase flex items-end invisible opacity-0 transition-[opacity,visibility,transform]  flex;
+        @apply text-white space-y-5 fixed bg-blue-1 max-vh100 w-full bottom-0 text-[40px] sm:text-[80px] uppercase flex items-end invisible opacity-0 transition-[opacity,visibility,transform]  flex;
 
         ul {
             @apply w-full overflow-auto max-h-full;
             
             li {
-                @apply flex justify-center border-b border-white opacity-50 pointer-events-none px-2;
+                @apply flex justify-center border-b border-white opacity-50 pointer-events-none px-[10px] sm:px-[20px];
                 
                 
 
