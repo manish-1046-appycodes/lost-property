@@ -43,7 +43,7 @@
 
     /* Header */
     .main-nav {
-        @apply text-white space-y-5 fixed bg-blue-1 max-vh100 w-full bottom-0 text-[40px] sm:text-[80px] uppercase flex items-end invisible opacity-0 transition-[opacity,visibility,transform]  flex;
+        @apply text-white space-y-5 fixed bg-blue-1 max-vh100 w-full bottom-0 text-[40px] sm:text-[70px] 3xl:text-[80px] uppercase flex items-end invisible opacity-0 transition-[opacity,visibility,transform]  flex;
 
         ul {
             @apply w-full overflow-auto max-h-full;
