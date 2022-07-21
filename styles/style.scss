@@ -183,7 +183,7 @@
     
 
     /* Slides */
-    .slides-container {
+    .slides-container,.slides-container2 {
         .slide + .slide {
             @apply absolute left-0 top-0;
         }
