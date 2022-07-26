@@ -2,6 +2,7 @@
 import Script from 'next/script'
 
 import ButtonRound from '../Links/ButtonRound'
+import ButtonRoundExternal from '../Links/ButtonRoundExternal'
 import ImageFade from "../ImageFade/ImageFade";
 import Link from "next/link";
 
@@ -11,7 +12,6 @@ const { motion, useAnimation } = require("framer-motion");
 
 const AccordionRooms = ({posts}) => {
 
-  
 
   const controls = useAnimation();
   const { ref2, inView } = useInView();
@@ -67,7 +67,11 @@ const AccordionRooms = ({posts}) => {
               <div className="lg:pt-4">{formatDate(post.node.modifiedGmt)}</div>
               <div className="lg:pt-4 col-span-1 lg:col-span-1 transition-opacity duration-500 hide-sub">{post?.node?.postSettings?.archiveViewSettings?.tableRowTitle}</div>
               <div className="accordion-btn-initial justify-self-end duration-500 ease-in-out">
-                <ButtonRound url={post?.node?.uri} title="Read <br/>More" bg="bg-red-1" size="small"/>
+                  { post?.node?.postSettings?.postGeneralSettings?.postLinkType == 'external' ?
+                  <ButtonRoundExternal url={post?.node?.postSettings?.postGeneralSettings?.enterExternalPostLink} title="Read <br/>More" bg="bg-red-1" size="small"/>
+                  : 
+                  <ButtonRound url={post?.node?.uri} title="Read <br/>More" bg="bg-red-1" size="small"/>
+                  }
               </div>
               <div className="lg:pt-2">
                 <button data-accordiontoggle className="z-10 transform duration-500 text-grey-1 relative w-[26px] h-[26px] lg:w-[68px] lg:h-[68px]" aria-hidden="true">
@@ -99,6 +103,18 @@ const AccordionRooms = ({posts}) => {
 
                   { post?.node?.featuredImage?.node?.sourceUrl &&
                     <>
+
+                    { post?.node?.postSettings?.postGeneralSettings?.postLinkType == 'external' ? 
+                    <a href={post?.node?.postSettings?.postGeneralSettings?.enterExternalPostLink} target="_blank" className="pt-[100%] lg:pt-[82%] relative block z-10">
+                      <ImageFade
+                        src={post?.node?.featuredImage?.node?.sourceUrl}
+                        objectFit="cover"
+                        objectPosition="center"
+                        alt={post?.node?.featuredImage?.node?.altText}
+                        layout="fill"
+                      />
+                    </a>
+                    :
                     <Link href={post?.node?.uri}>
                     <a className="pt-[100%] lg:pt-[82%] relative block z-10">
                       <ImageFade
@@ -110,6 +126,7 @@ const AccordionRooms = ({posts}) => {
                       />
                     </a>
                     </Link>
+                    }
                     <div
                         ref={ref2}
                         initial="hidden"
@@ -131,7 +148,11 @@ const AccordionRooms = ({posts}) => {
                 </div>
       
                 <div className="actions absolute bottom-0 left-0 flex space-x-3 lg:space-x-5 py-3 lg:py-9">
+                  { post?.node?.postSettings?.postGeneralSettings?.postLinkType == 'external' ?
+                  <ButtonRoundExternal url={post?.node?.postSettings?.postGeneralSettings?.enterExternalPostLink} title="Read <br/>More" bg="bg-red-1" size="small"/>
+                  : 
                   <ButtonRound url={post?.node?.uri} title="Read <br/>More" bg="bg-red-1" size="small"/>
+                  }
                 </div>
       
               </div>

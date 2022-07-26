@@ -4,6 +4,7 @@ import Script from 'next/script'
 
 import ButtonRound from '../Links/ButtonRound'
 import ImageFade from "../ImageFade/ImageFade";
+import Slider from "./Slider/Slider";
 
 
 const ModuleAccordionRooms = ( {settings} ) => {
@@ -82,18 +83,31 @@ const ModuleAccordionRooms = ( {settings} ) => {
                   </div>
 
                   <div className=" w-1/2 lg:w-full lg:pt-9 ml-auto lg:ml-0">
-                    <div className="pt-[100%] relative">
-                      { row?.contentDropdown?.image?.sourceUrl && 
-                      <ImageFade
-                        src={row.contentDropdown?.image?.sourceUrl}
-                        objectFit="cover"
-                        objectPosition="center"
-                        alt="ALT"
-                        layout="fill"
-                      />
-                      }
-                    </div>
+
+                    {  ( row?.contentDropdown?.imageType === 'carousel' && 
+                    row?.contentDropdown?.carouselImages )  ?
+                      
+                      <Slider parent={ref} imgs={row?.contentDropdown?.carouselImages}/>
+
+                    :
+                      <div className="pt-[100%] relative">
+                        { row?.contentDropdown?.image?.sourceUrl && 
+                        <ImageFade
+                          src={row.contentDropdown?.image?.sourceUrl}
+                          objectFit="cover"
+                          objectPosition="center"
+                          alt="ALT"
+                          layout="fill"
+                        />
+                        }
+                      </div>
+                    }
+                    
+
+                    
+
                   </div>
+
                   <div className="invisible hidden lg:block">
                     <button className="text-grey-1 relative w-[26px] h-[26px] lg:w-[68px] lg:h-[68px]" aria-hidden="true">
                       <span className="w-full h-[1px] bg-current absolute top-1/2 left-0"></span>

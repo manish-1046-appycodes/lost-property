@@ -115,7 +115,8 @@
     /* Accordions */
     
     .grid-5 {
-        grid-template-columns: 1fr 1fr 1fr 2.9fr min-content;
+        //grid-template-columns: 1fr 1fr 1fr 2.9fr min-content;
+        grid-template-columns: 1fr 1fr 1fr minmax(41%,2.9fr) min-content;
     }
     .grid-4-mob {
         grid-template-columns: 1fr 2fr  2.9fr min-content;
