@@ -64,7 +64,7 @@ const AccordionRooms = ({posts}) => {
 
           <div className="container relative toggle-position">
             <div className="max-w-1430px mx-auto grid grid-4-sub gap-4 lg:gap-9 py-3 lg:py-4">
-              <div className="lg:pt-4">{formatDate(post.node.modifiedGmt)}</div>
+              <div className="lg:pt-4">{formatDate(post.node.date)}</div>
               <div className="lg:pt-4 col-span-1 lg:col-span-1 transition-opacity duration-500 hide-sub">{post?.node?.postSettings?.archiveViewSettings?.tableRowTitle}</div>
               <div className="accordion-btn-initial justify-self-end duration-500 ease-in-out">
                   { post?.node?.postSettings?.postGeneralSettings?.postLinkType == 'external' ?

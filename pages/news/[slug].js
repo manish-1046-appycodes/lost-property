@@ -39,7 +39,7 @@ export default function Page({page, SEO, pageModules}) {
                 <div className='container'>
                     <div className="max-w-1430px mx-auto ">
                         
-                        <time className='mt-5 mb-10 block' dateTime={page?.post?.modified}>{formatDate(page?.post?.modified)}</time>
+                        <time className='mt-5 mb-10 block' dateTime={page?.post?.date}>{formatDate(page?.post?.date)}</time>
                         <div className='max-w-[50%] space-y-6 lg:space-y-16'>
                             <h1 className='text-[42px] lg:text-[72px] leading-12'>{page?.post?.title}</h1>
 
