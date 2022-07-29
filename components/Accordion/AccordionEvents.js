@@ -48,7 +48,7 @@ const AccordionRooms = ({posts}) => {
 
     const year = postDate.getFullYear().toString().slice(-2);
 
-    return `${postDate.getDate()}.${postDate.getMonth()}.${year}`;
+    return `${postDate.getDate()}.${postDate.getMonth()+ 1}.${year}`;
   }
 
   return (
