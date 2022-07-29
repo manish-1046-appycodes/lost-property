@@ -2,20 +2,21 @@ import React, { useEffect, useRef } from 'react'
 
 import ImageFade from '../../ImageFade/ImageFade';
 
-const Slider = ({parent, imgs}) => {
+const Slider = ({parent, imgs, count}) => {
 
-    const ref = useRef(null)
+    const ref = useRef(null);
+    const refDots = useRef(null);
 
     useEffect( () => {
         
-        const slider = document.querySelector(".slider");
+        const slider = ref.current;
         const slides = slider.querySelectorAll(".slide");
-        const container = document.querySelector(".slider-inner");
+        const container = slider.querySelector(".slider-inner");
         let dur = 0.5;
         let offsets = [];
         let oldSlide = 0;
         let activeSlide = 0;
-        let dots = document.querySelector(".slider-dots");
+        let dots = refDots.current;
         let navDots = [];
         let iw = slider.offsetWidth;
 
@@ -164,7 +165,7 @@ const Slider = ({parent, imgs}) => {
                 </article>
 
                 { caption &&
-                <div className='font-display p-2 lg:p-5' dangerouslySetInnerHTML={ {__html: caption}}/>
+                <div className='font-display p-2 lg:p-5 !pb-0' dangerouslySetInnerHTML={ {__html: caption}}/>
                 }
 
             </div> )}
@@ -177,7 +178,7 @@ const Slider = ({parent, imgs}) => {
         
 
     </div>
-    <div className="slider-dots flex space-x-2"></div>
+    <div ref={refDots} className="slider-dots flex space-x-2 mt-5"></div>
     </>
   )
 }

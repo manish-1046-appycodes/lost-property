@@ -87,7 +87,7 @@ const ModuleAccordionRooms = ( {settings} ) => {
                     {  ( row?.contentDropdown?.imageType === 'carousel' && 
                     row?.contentDropdown?.carouselImages )  ?
                       
-                      <Slider parent={ref} imgs={row?.contentDropdown?.carouselImages}/>
+                      <Slider parent={ref} imgs={row?.contentDropdown?.carouselImages} count={key}/>
 
                     :
                       <div className="pt-[100%] relative">
