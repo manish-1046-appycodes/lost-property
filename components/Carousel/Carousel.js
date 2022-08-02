@@ -1,4 +1,4 @@
-
+import { useEffect, useRef } from "react";
 import ImageFade from "../ImageFade/ImageFade"
 
 function pad(num, size) {
@@ -8,6 +8,18 @@ function pad(num, size) {
 }
 
 const Carousel = ({imgs, colourTheme}) => {
+
+    const ref = useRef();
+    
+    useEffect( () => {
+        Draggable.create(ref.current.querySelector('.carousel'), {
+            type:"x",
+            bounds: ref.current,
+            //throwProps:true,
+            inertia: true
+        });
+    }, []);
+
     return (
         <div id="carousel" className={`overflow-hidden w-full carousel-wrap ${colourTheme == 'blue' ? 'text-blue-1' : 'text-cream-1'}`}>
             <div className="carousel overflow-hidden flex w-fit">

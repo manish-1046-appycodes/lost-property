@@ -78,7 +78,7 @@ const Row = ({rowName, datetime, menuDownload, description, descriptionColumns, 
           </div>
 
           <div className="actions absolute bottom-0 left-0 flex space-x-3  py-3 lg:hidden">
-            <ButtonRound class="hidden" url="#" title="Share" bg="bg-white-1" size="small"  alt="isAlt"/>
+            <ButtonRound className="hidden" url="#" title="Share" bg="bg-white-1" size="small"  alt="isAlt"/>
             {menuDownload?.mediaItemUrl &&
             <ButtonRound url={menuDownload.mediaItemUrl} download target="_blank" title="Down<br/>Load" bg="bg-white-1" size="small" alt="isAlt"/>
             }

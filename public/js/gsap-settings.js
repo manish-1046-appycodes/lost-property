@@ -2,13 +2,14 @@ const gsapSettings = {
 
 
     carousels: () => {
+        
+        /*
         Draggable.create('.carousel', {
             type:"x",
             bounds: document.querySelector(".carousel-wrap"),
             //throwProps:true,
             inertia: true
-            
-        });
+        });*/
     },
 
     carouselLoop: () => {

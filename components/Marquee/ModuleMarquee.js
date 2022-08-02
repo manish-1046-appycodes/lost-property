@@ -37,7 +37,7 @@ const ModuleMarquee = ({words}) => {
     }, [ref]);
 
     return (
-    <section  ref={ref} className="marquee overflow-x-hidden relative font-display text-[50px] lg:text-[140px] leading-[1.15] lg:leading-[1.15] select-none">
+    <section  ref={ref} className="marquee overflow-hidden relative font-display text-[50px] lg:text-[140px] leading-[1.15] lg:leading-[1.15] select-none">
         <div className="marquee__inner w-fit flex flex-row" aria-hidden="true">
             
         <div className="marquee__part flex  shrink-0" dangerouslySetInnerHTML={ {__html: words+' &nbsp;'}}/>
