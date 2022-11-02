@@ -24,7 +24,7 @@ const ModuleCarousel = ({settings}) => {
     return (
         <div ref={ref} id="carousel" className={`overflow-hidden w-full carousel-wrap ${settings?.settings?.colourTheme == 'blue' ? 'text-blue-1' : 'text-cream-1'}`}>
             { settings?.invisibleh1 &&
-            <h1 className="hidden">{settings?.invisibleh1}</h1>
+            <h1 className="hidden" dangerouslySetInnerHTML={ {__html: settings?.invisibleh1}}></h1>
             }
             <div className="carousel overflow-hidden flex w-fit">
                 
