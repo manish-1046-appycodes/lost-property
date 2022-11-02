@@ -9,10 +9,10 @@ import AccordionEvents from '../../components/Accordion/AccordionEvents'
 import Marquee from '../../components/Marquee/Marquee'
 import PageFade from '../../components/PageFade'
 import Meta from '../../components/Meta/Meta'
-import { getPageSeo, getPosts, getHeaderMenuItems } from '../../lib/gql-query'
+import { getPageSeo, getPosts, getHeaderMenuItems,getPageSettings } from '../../lib/gql-query'
 
 
-export default function Page({posts}) {
+export default function Page({posts, pageSettings}) {
 
   useEffect(() => {gsapSettings.init()}, []);
 
@@ -63,6 +63,9 @@ export default function Page({posts}) {
 
   return (
     <>
+    { pageSettings?.invisibleh1 &&
+      <h1 className='hidden'>{pageSettings?.invisibleh1}</h1>
+    }
     <PageFade>
         
 
@@ -97,11 +100,14 @@ export async function getStaticProps({ params }) {
 
   // Get SEO stuff
   const seo = await getPageSeo('/news/', 'URI');
+  // Get Page Settings
+  const pageSettings = await getPageSettings('/news/', 'URI');
 
   return {
     props: {
       posts: posts || '',
       headerMenuItems: headerMenuItems?.menuItems?.edges || '',
+      pageSettings: pageSettings?.page?.pageSettings?.pageSettings || '',
       SEO: seo?.page?.seo || ''
     },
     revalidate: 1,

@@ -20,7 +20,6 @@ import Header from "./Header/Header"
 const Layout = ({page, SEO, children, border, colourTheme, headerBgColor, headerMenuItems}) => {
     
     const Router = useRouter();
-    
     const [notice, setNotice] = useState(true);
     const [headerThemeBg, setHeaderThemeBg] = useState('dark');
     const [themeBg, setThemeBg] = useState('white');
@@ -86,6 +85,7 @@ const Layout = ({page, SEO, children, border, colourTheme, headerBgColor, header
         <div className={`leading-13 text-sm lg:leading-13 lg:text-21px  ${ themeBg == 'blue' ? "bg-blue-1 text-white" : "bg-cream-1"}`}>
             
             <Head>
+                <link rel="alternate" hreflang="en" href={`https://lostpropertyhotel.com${Router.asPath}`} />
                 <title>Escape to Lost Property Hotel Near St. Pauls Cathedral</title>
                 <meta name="description" content="Indulge in the lost arts and activities of eccentric living. this new hotel offers 145 stylish rooms, a restaurant and coffee house. Escape with us now" />
                 <meta name="robots" content="max-image-preview:large"></meta>

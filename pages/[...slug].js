@@ -11,8 +11,7 @@ import { NotFound404 } from '../components/NotFound404/NotFound404'
 
 import { isCustomPageUri } from '../lib/slugs'
 
-export default function Page({page, SEO, pageModules}) {
-    
+export default function Page({page, SEO, pageModules, pageSettings}) {
     
     
     useEffect(() => {gsapSettings.init()}, []);
@@ -25,6 +24,11 @@ export default function Page({page, SEO, pageModules}) {
 
     return (
         <>
+
+        { pageSettings?.invisibleh1 &&
+            <h1 className='hidden'>{pageSettings?.invisibleh1}</h1>
+        }
+        
         <PageFade>
             
             <PageModules pageModules={pageModules}/>
