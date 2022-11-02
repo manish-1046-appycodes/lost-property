@@ -6,7 +6,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW53aWNoZGVzaWduIiwiYSI6ImNrYWRtam9kbDFua
 const BOUNDS = [-8.952656,49.870521,1.632071,58.771582];
 
 const ModuleContact = ({settings}) => {
-
+    
     const [hp1, setHp1] = useState('')
     const [hp2, setHp2] = useState('hp')
     const [telephone, setTelephone] = useState('')
@@ -127,11 +127,7 @@ const ModuleContact = ({settings}) => {
                                     <a className="hover:underline" href="tel:02045530555">0204 5530 555</a></p>
                                 </div>
 
-                                <div className="wysiwyg !mt-auto">
-                                <p>The Lost Property Hotel is simple to get to. Located on Ludgate Hill in the heart of London, you will find us just a 2 minute walk away from the beautiful St Paul’s Cathedral and 6 minutes from Millennium Bridge on foot.</p>
-<p>For those arriving by tube, the hotel can be easily accessed via the Central Line at St Paul’s Station or via the Circle and District Line at Blackfriars Station.</p>
-<p>Flying into Gatwick airport? The Thameslink network provides services directly to City Thameslink Station, located just a 2 minute walk from Lost Property Hotel.</p>
-<p>Parking is also available 5 minutes away by foot at Baynard House Car Park. This multi-storey car park offers plenty of spaces, electric vehicle charging bays and is open 24-hours every day of the year.</p>
+                                <div className="wysiwyg !mt-auto" dangerouslySetInnerHTML={ {__html: settings?.copy }}>
                                 </div>
 
                                 
@@ -146,7 +142,7 @@ const ModuleContact = ({settings}) => {
                                 </div>
                             
 
-                                <div class="aspect-video relative basis-[50%]">
+                                <div className="aspect-video relative basis-[50%]">
                                     <ImageFade
                                     src="/image/del/carousel/item-2-c.jpg"
                                     layout="fill"

@@ -79,7 +79,7 @@ const PageModules = ({pageModules, postType = 'page'}) => {
 
             case `${upper}_Pagemodules_PageModules_Contact`:
 
-                return <ModuleContact key={i} />
+                return <ModuleContact key={i} settings={pageModule} />
 
             case `${upper}_Pagemodules_PageModules_CopyImageCta`:
 

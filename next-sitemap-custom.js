@@ -4,6 +4,6 @@ module.exports = {
     changefreq: 'monthly',
     priority: 0.7,
     sitemapSize: 5000,
-    exclude: ['/events', '/events/event'],
+    exclude: ['/events', '/events/event', '/news/news'],
     
   }
