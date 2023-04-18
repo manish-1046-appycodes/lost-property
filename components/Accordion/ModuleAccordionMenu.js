@@ -18,7 +18,9 @@ const Row = ({
   image,
 }) => {
   const clickedOnReserve = () => {
-    gtag("event", "Clicked Find Table");
+    if (gtag) {
+      gtag("event", "Clicked Find Table");
+    }
   };
 
   return (
