@@ -18,6 +18,26 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`username`
+
+`password`
+
+`NEXT_PUBLIC_BASE_URL`
+
+`API_URL`
+
+`NEXT_PUBLIC_API_URL`
+
+`WP_CF7_CONTACTID`
+
+`NEXT_PUBLIC_MAILCHIMP_USER_ID`
+
+`NEXT_PUBLIC_MAILCHIMP_ID`
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
