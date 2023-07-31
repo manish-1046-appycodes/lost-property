@@ -34,6 +34,13 @@ class MyDocument extends Document {
               }, 5000);`,
             }}
           />
+          {/* gtags */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7LLCT7RE4"></script>
+          <script 
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-F7LLCT7RE4');`
+          }}/> 
+
         </Head>
         <body>
           <Main />
