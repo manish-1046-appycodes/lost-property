@@ -78,7 +78,7 @@ const ModuleBillboard = ({ settings }) => {
   const captionCaptionClass =
     settings.billboardType === "caption_img" &&
     settings.imagePosition === "right"
-      ? "absolute w-1/2 left-0 top-1/2"
+      ? "absolute w-1/2 left-0 top-1/2 z-20"
       : "absolute w-auto right-0 top-1/2";
 
   let contentAlignmentHorizMob;
@@ -195,7 +195,7 @@ const ModuleBillboard = ({ settings }) => {
           className={`lg:min-h-screen  md:relative  flex flex-col ${contentAlignmentVerticalMob} ${contentAlignmentVertical}`}
         >
           <div
-            className={`flex ${contentAlignmentHorizMob} md:justify-around md:relative`}
+            className={`flex ${contentAlignmentHorizMob} md:justify-around md:relative z-10`}
           >
             <div
               className={`w-9/12 w-[280px] md:w-6/12 max-w-[598px] p-4 lg:px-14 lg:py-9 text-center  flex flex-col justify-between items-center space-y-4 md:relative ${
@@ -305,7 +305,7 @@ const ModuleBillboard = ({ settings }) => {
           {settings.billboardType === "caption_full" && (
             <div
               ref={ref1}
-              className=" heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-8vh]"
+              className=" heading-brand-large font-display absolute bottom-0 mb-[-40px] lg:mb-[-8vh] z-20"
               dangerouslySetInnerHTML={{ __html: settings.backgroundCaption }}
             ></div>
           )}
@@ -346,7 +346,7 @@ const ModuleBillboard = ({ settings }) => {
 
           <div
             ref={ref2}
-            className={`overflow-hidden absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}
+            className={`overflow-hidden  absolute w-full md:w-1/2  left-0 absolute w-full md:w-1/2  bottom-0 left-0 ${imageMobPad} ${captionImgClass} `}
           >
             <div ref={ref2_child} className="relative h-full w-full">
               <ImageFade
