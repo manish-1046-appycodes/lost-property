@@ -1,11 +1,9 @@
-import { useState, createRef } from "react";
-
+import { createRef } from "react";
 import Link from "next/link";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
-
 import RailWay1 from "../../../public/image/icon/railway-1.svg";
 import RailWay2 from "../../../public/image/icon/railway-2.svg";
 import ImageFade from "../../ImageFade/ImageFade";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 const url =
   "https://dominvsgroup.us9.list-manage.com/subscribe/post?u=fbd0df3072af596790bcd00e7&amp;id=c5e73a01bb";
@@ -89,23 +87,23 @@ const Footer = ({ border }) => {
             >
               Subscribe to newsletter
             </button>
-            <ul>
+            <ul className="">
               <li>
                 <a
                   href="https://www.instagram.com/lostpropertystpauls/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Instagram
+                  <FaInstagram />
                 </a>
               </li>
-              <li>
+              <li className="mt-1">
                 <a
                   href="https://www.facebook.com/lostpropertystpauls/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Facebook
+                  <FaFacebook />
                 </a>
               </li>
             </ul>
