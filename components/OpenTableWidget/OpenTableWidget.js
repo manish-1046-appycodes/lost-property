@@ -7,16 +7,24 @@ const OpenTableWidget = ({ carouselItems }) => {
   useEffect(() => {
     // load OpenTable script
     const script = document.createElement("script");
+    console.log(script);
     script.src = opentableURL;
     script.async = true;
     const openTableWidget = document.querySelector("#openTableWidget");
+    console.log(openTableWidget);
     openTableWidget.appendChild(script);
 
     // add event listener to the form inside the iframe
     script.onload = () => {
       const iframe = document.querySelector("#openTableWidget iframe");
+      console.log("yo", iframe);
+      iframe.width = "555";
       const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      // console.log(iframeDoc);
+      // const mainElement = iframeDoc.querySelector(".ot-dtp-picker");
+      // mainElement.style.boxSizing = "border-box";
       const form = iframeDoc.querySelector(".ot-dtp-picker-form");
+      console.log(form);
       if (iframe && iframeDoc && form) {
         form.addEventListener("submit", (e) => {
           if (gtag) {
