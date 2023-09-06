@@ -22,7 +22,7 @@ const ModulePageIntro = ({ settings }) => {
   }, [ref]);
 
   return (
-    <header className="page-intro min-h-screen flex items-center py-20 lg:py-28 overflow-hidden">
+    <header className="page-intro min-h-screen flex items-center py-20 md:pb-[22rem] pb-[12rem] lg:pt-20 lg:pb-48 overflow-hidden">
       <div className="container">
         {settings?.image?.sourceUrl && (
           <div className="w-11/12 mx-auto max-w-[598px] mt-[25px] lg:mt-[70px]">

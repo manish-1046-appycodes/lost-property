@@ -19,6 +19,7 @@ import { NotFound404 } from "../components/NotFound404/NotFound404";
 import { isCustomPageUri } from "../lib/slugs";
 
 export default function Page({ page, SEO, pageModules, pageSettings }) {
+  console.log("coming from slug", pageModules);
   useEffect(() => {
     gsapSettings.init();
   }, []);

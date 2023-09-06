@@ -13,7 +13,7 @@ import {
 import PageModules from "../components/ACF/PageModules";
 
 export default function Page({ page, SEO, pageModules }) {
-  console.log("from index", pageModules);
+  console.log("coming from index", PageModules);
   useEffect(() => {
     gsapSettings.init();
   }, []);
