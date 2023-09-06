@@ -86,6 +86,7 @@ const Footer = ({ border }) => {
                 console.log("Button Clicked for mailchimp popup");
                 showPopup();
               }}
+              className="font-display"
             >
               Subscribe to newsletter
             </button>
