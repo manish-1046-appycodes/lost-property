@@ -17,6 +17,7 @@ const OpenTableWidget = ({ carouselItems }) => {
       const iframe = document.querySelector("#openTableWidget iframe");
       const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
       const form = iframeDoc.querySelector(".ot-dtp-picker-form");
+      console.log(form);
       if (iframe && iframeDoc && form) {
         form.addEventListener("submit", (e) => {
           if (gtag) {
