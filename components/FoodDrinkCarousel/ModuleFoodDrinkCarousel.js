@@ -131,17 +131,17 @@ const FoodDrinkCarousel = ({ carouselItems }) => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container test-me">
         <div className="max-w-1430px mx-auto ">
           <div className=" w-full slides-container2">
-            <div className="transform translate-x-[-60%] lg:translate-x-0 w-full slides-inner relative">
+            <div className="transform translate-x-[-80%] lg:translate-x-0 w-full slides-inner relative">
               {carouselItems?.carouselImages &&
                 carouselItems?.carouselImages.map((carouselItem, i) => (
                   <article
                     key={i}
-                    className="w-[150%] lg:w-10/12 relative shrink-0 ml-3 slide "
+                    className="w-[180%] lg:w-6/12 relative ml-2 slide"
                   >
-                    <div className="w-7/12 lg:w-6/12 relative">
+                    <div className="w-7/12 lg:w-9/12 relative">
                       <div className="pt-[100%] relative">
                         {carouselItem?.sourceUrl && (
                           <ImageFade
