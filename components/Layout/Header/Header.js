@@ -165,7 +165,7 @@ const Header = ({
           </Link>
 
           <ul
-            className={`text-18px xl:text-32px flex space-x-6 m-auto mr-0 z-10 ${
+            className={`text-18px xl:text-32px md:pt-[4rem] lg:pt-[0] flex space-x-6 m-auto mr-0 z-10 ${
               navOpenState ? "opacity-100" : "opacity-0"
             }`}
           >
