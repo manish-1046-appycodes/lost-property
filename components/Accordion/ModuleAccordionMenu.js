@@ -119,7 +119,7 @@ const Row = ({
             <div className="actions absolute bottom-0 left-0 flex space-x-3  py-3 lg:hidden">
               <ButtonRound
                 className="hidden"
-                url="#"
+                url={`https://www.facebook.com/sharer/sharer.php?u=${menuDownload.mediaItemUrl}`}
                 title="Share"
                 bg="bg-white-1"
                 size="small"
