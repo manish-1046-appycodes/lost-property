@@ -76,7 +76,7 @@ const ModuleCarousel = ({ settings }) => {
             >
               <article
                 key={key}
-                className="relative pt-[103.5vw] lg:pt-[41.7vw] shrink-0 group lg:ml-3 lg:w-[83.333333vw]lg:w-[50vw]"
+                className="relative pt-[103.5vw] lg:pt-[41.7vw] shrink-0 group lg:ml-3 lg:w-[83.333333vw] lg:w-[50vw]"
               >
                 <ImageFade
                   src={item?.image?.sourceUrl}
