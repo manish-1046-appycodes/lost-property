@@ -1,6 +1,9 @@
-import { useEffect, useRef } from "react";
 import ImageFade from "../ImageFade/ImageFade";
-import { FaAngleLeft, FaAngleRight, FaArrowLeft, FaBeer } from "react-icons/fa";
+import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function pad(num, size) {
   num = num.toString();
   while (num.length < size) num = "0" + num;
@@ -8,61 +11,72 @@ function pad(num, size) {
 }
 
 const ModuleCarousel = ({ settings }) => {
-  const ref = useRef();
+  function SampleNextArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={`${className} right-arrow !right-0`} onClick={onClick}>
+        <LiaAngleRightSolid />
+      </div>
+    );
+  }
 
-  useEffect(() => {
-    Draggable.create(ref.current.querySelector(".carousel"), {
-      type: "x",
-      bounds: ref.current,
-      //throwProps:true,
-      inertia: true,
-    });
-  }, []);
-
-  const carouselFunc = (e, direction) => {
-    e.preventDefault();
-    let width = ref.current.offsetWidth;
-    console.log("This is element width", width);
-    console.log("scrollvalue", ref.current.scrollLeft);
-    if (direction === "right") {
-      ref.current.scrollLeft += 370;
-    } else {
-      ref.current.scrollLeft -= 370;
-    }
+  function SamplePrevArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={`${className} left-arrow !left-0`} onClick={onClick}>
+        <LiaAngleLeftSolid />
+      </div>
+    );
+  }
+  const setting = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   return (
-    <div className="flex relative">
-      {" "}
-      <button
-        onClick={(e) => carouselFunc(e, "left")}
-        className="text-black text-xl absolute z-10 top-1/2 transform -translate-y-1/2"
-      >
-        <FaAngleLeft className="text-[3.2rem] text-black-1 bg-white bg-opacity-50" />
-      </button>
-      <div
-        ref={ref}
-        id="carousel"
-        style={{ scrollBehavior: "smooth", transition: "1s ease-in-out" }}
-        className={`overflow-hidden w-full carousel-wrap ${
-          settings?.settings?.colourTheme == "blue"
-            ? "text-blue-1"
-            : "text-cream-1"
-        }`}
-      >
-        {settings?.invisibleh1 && (
-          <h1
-            className="hidden"
-            dangerouslySetInnerHTML={{ __html: settings?.invisibleh1 }}
-          ></h1>
-        )}
-        <div className="carousel overflow-hidden flex w-fit">
-          {settings?.carouselItems &&
-            settings?.carouselItems.length &&
-            settings?.carouselItems.map((item, key) => (
+    <div
+      className={`overflow-hidden w-full ${
+        settings?.settings?.colourTheme == "blue"
+          ? "text-blue-1"
+          : "text-cream-1"
+      }`}
+    >
+      {settings?.invisibleh1 && (
+        <h1
+          className="hidden"
+          dangerouslySetInnerHTML={{ __html: settings?.invisibleh1 }}
+        ></h1>
+      )}
+      <Slider {...setting}>
+        {settings?.carouselItems &&
+          settings?.carouselItems.length &&
+          settings?.carouselItems.map((item, key) => (
+            <div
+              key={key}
+              className="overflow-hidden flex w-fit justify-center carousel"
+            >
               <article
                 key={key}
-                className="relative pt-[103.5vw] lg:pt-[41.7vw] shrink-0 group ml-3 w-[83.333333vw] lg:w-[50vw]"
+                className="relative pt-[103.5vw] lg:pt-[41.7vw] shrink-0 group lg:ml-3 lg:w-[83.333333vw]lg:w-[50vw]"
               >
                 <ImageFade
                   src={item?.image?.sourceUrl}
@@ -94,16 +108,9 @@ const ModuleCarousel = ({ settings }) => {
                   </div>
                 )}
               </article>
-            ))}
-        </div>
-      </div>
-      <button
-        onClick={(e) => carouselFunc(e, "right")}
-        className="text-black text-xl absolute z-1 top-1/2 transform -translate-y-1/2 right-0"
-      >
-        {" "}
-        <FaAngleRight className="text-[3.2rem] text-black-1 bg-white bg-opacity-60" />
-      </button>
+            </div>
+          ))}
+      </Slider>
     </div>
   );
 };

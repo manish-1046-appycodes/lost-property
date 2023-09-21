@@ -214,16 +214,3 @@
 
 .rdrInputRangeInput {
 }
-
-/* BOOKING WIDGET [Food and Drink] */
-
-div#openTableWidget div iframe {
-  transform: scale(1.5);
-  display: block;
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-.ot-dtp-picker {
-  width: 250px !important;
-}
